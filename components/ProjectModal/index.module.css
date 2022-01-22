@@ -1,0 +1,174 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.openModal {
+  top: 0;
+}
+.modalBoobleTop {
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -40%;
+  font-weight: 200;
+  transform: rotate(233deg);
+  z-index: -10;
+}
+.modalBoobleBottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -80%;
+  left: -40%;
+  font-weight: 200;
+  transform: rotate(55deg);
+  z-index: -10;
+}
+.contentWrapper {
+  box-shadow: var(--box-shadow-hover);
+  width: 100%;
+  padding: 20px;
+  max-width: 800px;
+  min-width: 350px;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background: var(--bg-gradiant);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.closeBtn {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  right: -5px;
+  transition: all 0.3s ease-in-out;
+}
+.closeBtn:focus-within,
+.closeBtn:hover {
+  transform: scale(1.2);
+}
+.closeBtn button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+}
+
+.closeBtn button:focus {
+  outline-offset: 3px;
+  outline-color: var(--secondary-light);
+}
+.carouselWrapper {
+  width: 100%;
+  margin: 10px auto;
+  height: 400px;
+}
+.contentWrapper h3 {
+  text-transform: capitalize;
+}
+.contentWrapper h4 {
+  text-decoration: underline;
+}
+
+.contentWrapper b {
+  width: 80px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.linksBlock {
+  display: flex;
+  display: flex;
+  gap: 10px;
+}
+.linksBlock a {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  background: var(--primary-dark);
+  padding-right: 8px;
+  color: #fff;
+  opacity: 0.9;
+  border-radius: 4px;
+}
+.linksBlock a:hover,
+.linksBlock a:focus {
+  outline-color: var(--secondary-light);
+  outline-offset: 3px;
+  opacity: 1;
+}
+.featuresList {
+  list-style: none;
+  padding: 0;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.featuresList li::before {
+  content: "✓ ";
+  font-weight: 800;
+  color: var(--primary-main);
+  margin-right: 5px;
+}
+.dataBlock b {
+  margin-right: 5px;
+  white-space: pre;
+}
+.dataBlock p {
+  align-items: center;
+  display: flex;
+}
+
+.techList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.techList span {
+  text-transform: capitalize;
+  padding: 1px 6px;
+  background: var(--secondary-main);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+@media (min-width: 600px) {
+  .contentWrapper {
+    padding: 40px;
+  }
+  .carouselWrapper {
+    margin: 20px auto;
+  }
+  .contentWrapper b {
+    width: 90px;
+  }
+  .closeBtn {
+    width: 30px;
+    height: 30px;
+  }
+}

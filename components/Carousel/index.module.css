@@ -1,0 +1,103 @@
+.sliderContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-main);
+}
+
+.controlsWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 25px;
+  z-index: 55;
+  padding: 0 16px;
+}
+
+.slide {
+  position: absolute;
+
+  overflow: hidden;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.activeSlide {
+  display: block;
+  opacity: 1;
+}
+.controlWrapper {
+  position: relative;
+
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.controlWrapper button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+  transform: rotate(45deg);
+}
+.controlWrapper button:focus {
+  outline-color: var(--secondary-light);
+  outline-offset: 3px;
+}
+
+.control {
+  border: none;
+
+  height: 20px;
+  width: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.controlWrapper:hover .control {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.controlLeft {
+  border-left: 5px solid var(--primary-main);
+  border-bottom: 5px solid var(--primary-main);
+  transform: rotate(45deg);
+}
+.controlRight {
+  border-top: 5px solid var(--primary-main);
+  border-right: 5px solid var(--primary-main);
+  transform: rotate(45deg);
+}
+
+.indicatorWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 20;
+}
+.indicatorDot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 5px;
+  cursor: pointer;
+  background: transparent;
+}
+.activeIndicatorDot {
+  background: #fff;
+}

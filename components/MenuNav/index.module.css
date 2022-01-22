@@ -1,0 +1,94 @@
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  z-index: 200;
+  background: var(--primary-main);
+  overflow-y: auto;
+  transition: all 0.5s ease-in-out;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.openMenu {
+  top: 0;
+}
+.closeBtn {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 600px) {
+  .closeBtn {
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 25px;
+  }
+}
+.closeBtn button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+}
+.closeBtn:focus-within,
+.closeBtn:hover {
+  transform: scale(1.2);
+}
+.closeBtn button:focus {
+  outline-offset: 3px;
+  outline-color: var(--secondary-light);
+}
+.menu ul {
+  padding: 0;
+  list-style: none;
+  margin: 50px auto;
+  margin-top: 60px;
+  width: max-content;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+.menu ul li {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  transition: all 0.2s ease-in-out;
+}
+.menu ul li a:focus {
+  outline-color: var(--secondary-light);
+  outline-offset: 2rem;
+}
+
+.menu ul li a h2 {
+  color: #ffffff;
+
+  transition: all 0.2s ease-in-out;
+}
+.menu ul li:focus-within,
+.menu ul li:hover {
+  background: var(--primary-light);
+}
+.menu ul li:focus-within,
+.menu ul li:hover h2 {
+  transform: scale(1.2);
+}
+
+.activeLink {
+  text-decoration: underline;
+}

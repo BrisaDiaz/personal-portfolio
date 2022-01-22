@@ -1,0 +1,19 @@
+.button {
+  padding: 8px 16px;
+  position: relative;
+  background: var(--secondary-main);
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+.button:hover {
+  background: var(--secondary-dark);
+}
+.button:active,
+.button:focus {
+  outline: 2px solid var(--secondary-light);
+  outline-offset: 3px;
+}
