@@ -187,6 +187,7 @@ export const PROJECTS = [
   {
     name: "hotel room booking app",
     captions: [
+      "https://res.cloudinary.com/myproyects/image/upload/v1642911391/proyects/Teddy_Yu_1_evj9x0.svg",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707488/proyects/Captura_de_pantalla_2022-01-20_155932-min_y0xpcg.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707501/proyects/screencapture-localhost-3000-room-1-2022-01-16-15_57_18-min_1_pq2is5.png",
@@ -235,6 +236,7 @@ export const PROJECTS = [
   {
     name: "wikifit app",
     captions: [
+      "https://res.cloudinary.com/myproyects/image/upload/v1642911404/proyects/2_hkqv7p.svg",
       "https://drive.google.com/uc?export=view&id=1-ikXofV1rAwzt44j-qdDUY0bun_bxSxJ",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707494/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-auth-signin-2022-01-19-14_36_56-min_n6wsuu.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642708557/proyects/screencapture-localhost-3000-macros-calculator-2021-12-14-01_54_03-min_pkzts9.png",
@@ -289,6 +291,7 @@ export const PROJECTS = [
   {
     name: "delivery app",
     captions: [
+      "https://res.cloudinary.com/myproyects/image/upload/v1642911391/proyects/Happy_1_1_ycx49b.svg",
       "https://res.cloudinary.com/myproyects/image/upload/v1642716747/proyects/lk-min_tazetv.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642716738/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_58_45-min_yid3wi.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642716740/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_10-min_krlpen.png",
@@ -358,6 +361,7 @@ export const PROJECTS = [
   {
     name: "fotographer porafolio",
     captions: [
+      "https://res.cloudinary.com/myproyects/image/upload/v1642911393/proyects/2_1_i7sb9j.svg",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707844/proyects/screencapture-127-0-0-1-5500-Fotographer-web-page-index-html-2022-01-18-18_06_05_k77cnh.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707974/proyects/photograph-2_a5jauh.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707495/proyects/photograph-3-min_xzau6f.png",

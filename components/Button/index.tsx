@@ -2,7 +2,6 @@ import styles from "./index.module.css";
 export default function Button({
   onClick,
   text,
-  className,
 }: {
   onClick: () => void;
   text: string;
