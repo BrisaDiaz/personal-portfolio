@@ -22,6 +22,7 @@ export default function ProyectModal({
   };
   const { tabIndex } = useModalFocus({
     isOpen,
+    onEscape: onClose,
     moldalSelector: '[aria-label="proyect modal"]',
   });
   return (

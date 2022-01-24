@@ -72,10 +72,6 @@ const Home: NextPage = () => {
   }, []);
 
   const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      handleCloseMenu();
-    }
-
     if (event.key === "m") {
       handleOpenMenu();
     }
