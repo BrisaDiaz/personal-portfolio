@@ -3,12 +3,16 @@ export default function Button({
   onClick,
   text,
 }: {
-  onClick: () => void;
+  onClick?: () => void;
   text: string;
   className?: any;
 }) {
   return (
-    <button className={styles.button} onClick={onClick} tabIndex={0}>
+    <button
+      className={styles.button}
+      onClick={() => onClick && onClick()}
+      tabIndex={0}
+    >
       {text}
     </button>
   );

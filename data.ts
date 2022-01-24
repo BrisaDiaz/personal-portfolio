@@ -237,9 +237,8 @@ export const PROJECTS = [
     name: "wikifit app",
     captions: [
       "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_r60diw.png",
-
-      "https://res.cloudinary.com/myproyects/image/upload/c_thumb,h_398,w_710/v1642707454/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-search-2022-01-19-14_40_16-min_lrko8u.png",
       "https://res.cloudinary.com/myproyects/image/upload/c_fill,h_398,w_710/v1643000022/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-auth-signin-2022-01-19-14_36_56-min_n6wsuu.png",
+      "https://res.cloudinary.com/myproyects/image/upload/c_thumb,h_398,w_710/v1642707454/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-search-2022-01-19-14_40_16-min_lrko8u.png",
 
       "https://res.cloudinary.com/myproyects/image/upload/v1642708557/proyects/screencapture-localhost-3000-macros-calculator-2021-12-14-01_54_03-min_pkzts9.png",
     ],

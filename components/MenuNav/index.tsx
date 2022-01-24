@@ -45,11 +45,7 @@ export default function MenuNav({
                 onClick={() => onNavegate(link.href)}
                 tabIndex={tabIndex}
               >
-                <h2
-                  className={activeLink === link.href ? styles.activeLink : ""}
-                >
-                  {link.title}
-                </h2>
+                <h2>{link.title}</h2>
               </a>
             </li>
           ))}

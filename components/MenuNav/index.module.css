@@ -45,7 +45,7 @@
 }
 .closeBtn:focus-within,
 .closeBtn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .closeBtn button:focus {
   outline-offset: 3px;
@@ -67,12 +67,13 @@
 .menu ul li {
   width: 100%;
   text-align: center;
-  padding: 30px 0;
+  padding: 1rem 0;
   transition: all 0.2s ease-in-out;
 }
+
 .menu ul li a:focus {
   outline-color: var(--secondary-light);
-  outline-offset: 2rem;
+  outline-offset: 1rem;
 }
 
 .menu ul li a h2 {

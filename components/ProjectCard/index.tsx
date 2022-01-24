@@ -1,6 +1,8 @@
 import styles from "./index.module.css";
-import Carousel from "@/components/Carousel/index";
+
 import Button from "@/components/Button/index";
+import { generateImageUrl } from "utils";
+import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 export default function ProjectCard({
   project,
   onReadMore,
@@ -17,16 +19,20 @@ export default function ProjectCard({
       className={styles.projectCard}
       aria-label={project.name + " project"}
     >
-      <h3>{project.name}</h3>
       <div className={styles.projectImagesWrapper}>
-        <Carousel captions={project.captions} width={350} height={250} />
-      </div>
-      <div>
-        <h4>Summary</h4>
-        <p>{project.summary}</p>
-      </div>
-      <div className={styles.projectCardBtn}>
-        <Button onClick={onReadMore} text="Read More" />
+        <ImagePlaceholder
+          src={project.captions[0]}
+          alt="project caption"
+          objectFit="cover"
+        />
+
+        <div className={styles.content}>
+          <h4>{project.name}</h4>
+          <p>{project.summary}</p>
+          <div className={styles.projectCardBtn}>
+            <Button onClick={onReadMore} text="Read More" />
+          </div>
+        </div>
       </div>
     </article>
   );

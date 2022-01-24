@@ -55,12 +55,16 @@ export default function ProyectModal({
         <h3>{project?.name}</h3>
         <div className={styles.carouselWrapper}>
           <Carousel
-            captions={project?.captions || []}
+            captions={project?.captions?.slice(1) || []}
             width={800}
             height={500}
             tabIndex={tabIndex}
           />
+          <div className={styles.backdrop}>
+            <Image src="/icons/screen_rotation.svg" layout="fill" />
+          </div>
         </div>
+
         <section>
           <h4>Summary</h4>
           <p>{project?.summary}</p>

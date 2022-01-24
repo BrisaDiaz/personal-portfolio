@@ -33,6 +33,7 @@ const Home: NextPage = () => {
     isOpen: false,
     activeLink: "aboutMe",
   });
+
   const handleCloseModal = () => {
     setModalState({
       isOpen: false,
@@ -93,11 +94,29 @@ const Home: NextPage = () => {
       menuBottomRef.current.focus();
     }
   }, []);
-  const handleNavegateToContact = () => {
-    if (window) {
-      window.scrollTo(-50, 0);
+  const handleBodyState = () => {
+    if (document) {
+      const body = window.document.body;
+      const pageContainer = window.document.querySelector(
+        "#_next"
+      ) as HTMLHtmlElement;
+
+      if (!body || !pageContainer) return;
+      pageContainer.style.width = "100vw";
+      if (modalState.isOpen || menuState.isOpen) {
+        body.style.top = `-${window.scrollY}px`;
+        body.style.position = "fixed";
+      } else {
+        const scrollY = body.style.top;
+        body.style.position = "relative";
+        body.style.top = "";
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
     }
   };
+  React.useEffect(() => {
+    handleBodyState();
+  }, [modalState.isOpen, menuState.isOpen]);
 
   return (
     <div>
@@ -111,7 +130,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main
+        className={`${styles.main} ${
+          modalState.isOpen || (menuState.isOpen && styles.fixed)
+        }`}
+      >
         <div className={styles.menuBtn}>
           <button
             onClick={handleOpenMenu}
@@ -157,10 +180,9 @@ const Home: NextPage = () => {
                 and personal development as well as help me achieve personal and
                 organizational goals.
               </p>
-              <Button
-                text="Lest get in touch!"
-                onClick={() => handleNavegateToContact()}
-              />
+              <a href="#aboutMe" tabIndex={-1}>
+                <Button text="Lest get in touch!" />
+              </a>
             </div>
 
             <div className={styles.bannerIllustration}>
@@ -186,14 +208,6 @@ function ProyectsSection({
 }) {
   return (
     <div style={{ position: "relative" }}>
-      <div className={styles.waveBG}>
-        <Image
-          layout="fill"
-          src="/svg/wave-bg.svg"
-          alt="background"
-          loading="eager"
-        />
-      </div>
       <section className={styles.container} id="projects">
         <h2>Projects</h2>
 
@@ -348,7 +362,7 @@ function MainSection() {
 
       <div className={styles.mainSectionContent}>
         <div className={styles.mainSectionText}>
-          <h2>{"Hi!, I'm Brisa Díaz"}</h2>
+          <h3>{"Hi!, I'm Brisa Díaz"}</h3>
           <h1>{"I'm a Frontend Developer"}</h1>
           <p>
             {" "}

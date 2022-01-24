@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
 import useCarousel from "@/hooks/useCarousel";
-import { generateImageUrl } from "utils";
+
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 export default function Carousel({
   captions,
@@ -30,7 +30,7 @@ export default function Carousel({
           }`}
         >
           <ImagePlaceholder
-            src={generateImageUrl(caption, { width, height, quality: 100 })}
+            src={caption}
             alt="project caption"
             objectFit={objectFit}
           />
