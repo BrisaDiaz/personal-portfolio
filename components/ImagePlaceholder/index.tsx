@@ -27,6 +27,7 @@ export default function Placeholder({
           onLoadedData={() => setIsLoded(true)}
           onLoad={() => setIsLoded(true)}
           onLoadStart={() => setIsLoded(false)}
+          objectPosition={"center center"}
           onError={() => {
             setIsLoded(true);
             setError(true);

@@ -270,8 +270,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  max-width: 1130px;
+  justify-content: center;
+  max-width: 1250px;
   margin: 0 auto;
 }
 .bannerIllustration {
@@ -327,6 +327,9 @@
   }
   .personalInfoWrapper {
     margin-bottom: 200px;
+  }
+  .callToActionBanner .wrapper {
+    justify-content: start;
   }
   .personalInfoWrapper ul li p {
     opacity: 1;

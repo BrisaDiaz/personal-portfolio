@@ -73,7 +73,6 @@ const Home: NextPage = () => {
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       handleCloseMenu();
-      handleCloseModal();
     }
 
     if (event.key === "m") {

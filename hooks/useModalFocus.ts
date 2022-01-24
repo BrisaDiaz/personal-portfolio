@@ -2,9 +2,11 @@ import React from "react";
 export default function useModalFocus({
   moldalSelector,
   isOpen,
+  onEscape,
 }: {
   moldalSelector: string;
   isOpen: boolean;
+  onEscape?: () => void;
 }) {
   const [tabIndex, setTabIndex] = React.useState<-1 | 0>(-1);
   React.useEffect(() => {
@@ -17,6 +19,7 @@ export default function useModalFocus({
     const focusableElements =
       'a,button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     const modal = document.querySelector(moldalSelector);
+
     if (!modal) return;
 
     const firstFocusableElement = modal.querySelectorAll(
@@ -28,6 +31,8 @@ export default function useModalFocus({
     ] as HTMLElement; // get last element to be focused inside modal
 
     document.addEventListener("keydown", function (e) {
+      e.key === "Escape" && onEscape && onEscape();
+
       let isTabPressed = e.key === "Tab" || e.keyCode === 9;
 
       if (!isTabPressed) {

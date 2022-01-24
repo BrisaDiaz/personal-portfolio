@@ -35,7 +35,7 @@ export default function ProyectModal({
         className={styles.contentWrapper}
         onMouseEnter={() => setisInteracting(true)}
         onTouchStart={() => setisInteracting(true)}
-        onTouchEnd={() => setisInteracting(false)}
+        onMouseLeave={() => setisInteracting(false)}
       >
         <div className={styles.modalBoobleTop}>
           <Image layout="fill" src="/svg/booble.svg" alt="booble" />
@@ -55,7 +55,6 @@ export default function ProyectModal({
         <h3>{project?.name}</h3>
         <div className={styles.carouselWrapper}>
           <Carousel
-            objectFit="cover"
             captions={project?.captions || []}
             width={800}
             height={500}
