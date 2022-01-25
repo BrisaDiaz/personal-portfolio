@@ -231,7 +231,7 @@ export const PROJECTS = [
       password: "admin",
     },
     source_code: "https://github.com/BrisaDiaz/hotel_booker_app",
-    demo: "https://hotel-booker-app.vercel.app",
+    demo: "https://hotel-booker-app.vercel.app/signin",
   },
   {
     name: "wikifit app",
