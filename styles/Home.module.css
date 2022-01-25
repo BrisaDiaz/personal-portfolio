@@ -172,10 +172,10 @@
   display: grid;
   width: 100%;
   justify-items: center;
-  background: #c78989;
+  background: var(--secondary-light);
 
   gap: 4px;
-  border: 4px solid var(--primary-main);
+  border: 4px solid var(--secondary-light);
   border-bottom: 0;
   grid-template-columns: 1fr;
 }
