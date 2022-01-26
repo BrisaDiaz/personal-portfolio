@@ -400,7 +400,7 @@ function MainSection() {
                 href="https://goo.gl/maps/FXX1dQVPgc9De7eRA"
                 target="_blank"
                 rel="noreferrer"
-                title="Pace of residence"
+                title="Place of residence"
               >
                 <Image
                   width={25}
@@ -416,7 +416,12 @@ function MainSection() {
           </ul>
           <ul>
             <li>
-              <a href="tel:+54 351 3850064" target="_blank" rel="noreferrer">
+              <a
+                href="tel:+54 351 3850064"
+                target="_blank"
+                rel="noreferrer"
+                title="Telephone number"
+              >
                 <Image
                   width={25}
                   height={25}
@@ -424,7 +429,6 @@ function MainSection() {
                   loading="eager"
                   aria-hidden="true"
                   alt="telephone number"
-                  title="Telephone"
                 />
                 <p>+54 351 3850064</p>
               </a>
