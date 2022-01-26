@@ -93,12 +93,9 @@ const Home: NextPage = () => {
   const handleBodyState = () => {
     if (document) {
       const body = window.document.body;
-      const pageContainer = window.document.querySelector(
-        "#_next"
-      ) as HTMLHtmlElement;
 
-      if (!body || !pageContainer) return;
-      pageContainer.style.width = "100vw";
+      if (!body) return;
+
       if (modalState.isOpen || menuState.isOpen) {
         body.style.top = `-${window.scrollY}px`;
         body.style.position = "fixed";
@@ -225,7 +222,7 @@ function EducationSection() {
   return (
     <section id="education" className={styles.container}>
       <div className={styles.strenghtsSectionWrapper}>
-        <div className={styles.EducationSection}>
+        <div className={styles.educationSectionContent}>
           <h2>Education</h2>
           <p>
             I have technical background, I studied for 7 years and was able to

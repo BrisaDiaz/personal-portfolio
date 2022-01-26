@@ -152,7 +152,7 @@
 .techsContainer a:focus figure {
   background: var(--light-text-contrast);
   border-radius: 4px;
-  border: 1px solid var(--secondary-light);
+  box-shadow: var(--box-shadow);
 }
 .techsContainer figure:hover .techImage,
 .techsContainer a:focus figure .techImage {
@@ -191,18 +191,21 @@
 .strenghtsSectionWrapper:nth-child(2) {
   margin: 30px 0;
 }
-.EducationSection,
+.educationSectionContent {
+  padding-bottom: 0;
+}
+.educationSectionContent,
 .skillsSection {
   max-width: 550px;
 }
 
-.EducationSection h2 {
+.educationSectionContent h2 {
   font-weight: 800;
   color: unset;
   margin: 0.5rem 0 1rem;
 }
 
-.EducationSection ul,
+.educationSectionContent ul,
 .skillsSection ul {
   padding: 1rem 0;
   padding-right: 0;
@@ -211,13 +214,13 @@
 
   flex-direction: column;
 }
-.EducationSection ul li,
+.educationSectionContent ul li,
 .skillsSection ul li {
   position: relative;
   margin-left: 1.5rem;
   line-height: 1.5rem;
 }
-.EducationSection ul li:before {
+.educationSectionContent ul li:before {
   content: "?";
   position: absolute;
   font-weight: 800;
@@ -254,7 +257,7 @@
   height: 400px;
   z-index: -10;
 
-  margin-bottom: -50px;
+  margin-bottom: -150px;
 
   position: relative;
   transform: scale(1.3);
@@ -362,6 +365,9 @@
   .bannerIllustration span {
     transform: scale(1.3);
   }
+  .educationSectionContent {
+    padding-bottom: 30px;
+  }
 }
 @media (min-width: 750px) {
   .projectsContainer {
@@ -384,6 +390,7 @@
   }
   .planingllustration {
     margin-top: 100px;
+    margin-bottom: 0;
   }
   .skillsSection {
     order: 2;
@@ -393,7 +400,7 @@
   }
 }
 @media (min-width: 1050px) {
-  .EducationSection,
+  .educationSectionContent,
   .skillsSection {
     max-width: 600px;
   }

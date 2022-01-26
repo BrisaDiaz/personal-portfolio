@@ -399,7 +399,7 @@ export const SKILLS = [
   "Experience with Unit Testing and End to End testing.",
   "Experience implementing rendering techniques like SSG, SSR and ISR.",
   "Experience in configuration of the dependencies and mangment of compatibility issues.",
-  "Knowledge in algorithms, design patterns, and modularization.",
+  "Knowledge in design patterns and modularization.",
   "First hand knowledge of the work of a web designer and a back-end developer.",
   "Ability of tracking bugs, detecting bad practices and correcting them right away.",
   "Ability to quickly become familiar with new technologies.",
