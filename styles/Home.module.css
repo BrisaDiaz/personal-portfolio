@@ -152,6 +152,7 @@
 .techsContainer a:focus figure {
   background: var(--light-text-contrast);
   border-radius: 4px;
+
   box-shadow: var(--box-shadow);
 }
 .techsContainer figure:hover .techImage,

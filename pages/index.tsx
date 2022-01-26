@@ -114,7 +114,9 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
+        <html lang="en-us" />
         <title>Brisa Díaz | Frontend Developer 👩‍💻</title>
+
         <meta
           name="description"
           content="I'm a web developer, spetialist in frontend and passionate of creating sofwere soluctions."
@@ -127,6 +129,7 @@ const Home: NextPage = () => {
         className={`${styles.main} ${
           modalState.isOpen || (menuState.isOpen && styles.fixed)
         }`}
+        role="main"
       >
         <div className={styles.menuBtn}>
           <button
@@ -138,6 +141,7 @@ const Home: NextPage = () => {
           <Image
             width={26}
             height={26}
+            aria-hidden="true"
             src="/icons/menu.svg"
             alt="menu"
             loading="eager"
@@ -184,6 +188,7 @@ const Home: NextPage = () => {
                 src="/svg/agreetment.svg"
                 alt="background"
                 loading="eager"
+                aria-hidden="true"
               />
             </div>
           </div>
@@ -269,6 +274,7 @@ function EducationSection() {
               src="/svg/planing-illustration.svg"
               alt="planing illustration"
               loading="eager"
+              aria-hidden="true"
             />
           </div>
         </div>
@@ -295,6 +301,7 @@ function SlillsSection() {
               src="/svg/programing-illustration.svg"
               alt="programing illustration"
               loading="eager"
+              aria-hidden="true"
             />
           </div>
         </div>
@@ -321,8 +328,9 @@ function TechStackSection() {
             target="_blank"
             rel="noreferrer"
             key={tech.name}
+            title={`Link to ${tech.name} documentation`}
           >
-            <figure>
+            <figure role="figure">
               <div className={styles.techImage}>
                 <ImagePlaceholder
                   src={tech.image}
@@ -350,6 +358,7 @@ function MainSection() {
           src="/svg/welcome-illustration-split.svg"
           alt="welcome"
           loading="eager"
+          aria-hidden="true"
         />
       </div>
 
@@ -382,8 +391,9 @@ function MainSection() {
                 src="/icons/birthday.svg"
                 alt="birthday date"
                 loading="eager"
+                aria-hidden="true"
               />
-              <p>11/18/2000</p>
+              <p title="birthday">11/18/2000</p>
             </li>
             <li>
               <a
@@ -397,6 +407,7 @@ function MainSection() {
                   src="/icons/address.svg"
                   alt="home address"
                   loading="eager"
+                  aria-hidden="true"
                 />
                 <p>Córdoba - Argentina</p>
               </a>
@@ -410,6 +421,7 @@ function MainSection() {
                   height={25}
                   src="/icons/telephone.svg"
                   loading="eager"
+                  aria-hidden="true"
                   alt="telephone number"
                 />
                 <p>+54 351 3850064</p>
@@ -426,6 +438,7 @@ function MainSection() {
                   height={25}
                   src="/icons/email.svg"
                   alt="email"
+                  aria-hidden="true"
                   loading="eager"
                 />
                 <p>brisaabigaildiaz2000@gmail.com</p>
@@ -445,6 +458,7 @@ function MainSection() {
                   height={25}
                   src="/icons/linkedin.svg"
                   alt="linkendin"
+                  aria-hidden="true"
                 />
 
                 <p>/brisa-díaz</p>
@@ -462,6 +476,7 @@ function MainSection() {
                   src="/icons/github.svg"
                   alt="github"
                   loading="eager"
+                  aria-hidden="true"
                 />
                 <p>/BrisaDiaz</p>
               </a>

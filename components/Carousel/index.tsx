@@ -21,7 +21,11 @@ export default function Carousel({
   });
 
   return (
-    <div className={styles.sliderContainer}>
+    <div
+      className={styles.sliderContainer}
+      role="slider"
+      aria-valuenow={currentSlide}
+    >
       {captions.map((caption, index) => (
         <div
           key={caption}
@@ -38,12 +42,12 @@ export default function Carousel({
       ))}
       <div className={styles.controlsWrapper}>
         <div className={styles.controlWrapper}>
-          <button onClick={onPrev} tabIndex={tabIndex || 0} />
+          <button onClick={onPrev} tabIndex={tabIndex || 0} aria-label="prev" />
           <div className={`${styles.control} ${styles.controlLeft}`} />
         </div>
 
         <div className={styles.controlWrapper}>
-          <button onClick={onNext} tabIndex={tabIndex || 0} />
+          <button onClick={onNext} tabIndex={tabIndex || 0} aria-label="next" />
           <div className={`${styles.control} ${styles.controlRight}`} />
         </div>
       </div>
