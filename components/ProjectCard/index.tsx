@@ -15,10 +15,7 @@ export default function ProjectCard({
   };
 }) {
   return (
-    <article
-      className={styles.projectCard}
-      aria-label={project.name + " project"}
-    >
+    <article className={styles.projectCard} role="article">
       <div className={styles.projectImagesWrapper}>
         <ImagePlaceholder
           src={project.captions[0]}

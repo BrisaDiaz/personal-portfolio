@@ -35,12 +35,13 @@ export default function MenuNav({
           src="/icons/close.svg"
           alt="clouse"
           objectFit="contain"
+          aria-hidden="true"
         />
       </div>
-      <nav>
+      <nav role="menubar">
         <ul>
           {links.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} role="menuitem">
               <a
                 href={link.href}
                 onClick={() => onNavegate(link.href)}

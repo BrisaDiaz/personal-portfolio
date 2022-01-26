@@ -28,7 +28,8 @@ export default function ProyectModal({
   return (
     <aside
       tabIndex={tabIndex}
-      aria-label="proyect modal"
+      aria-label="proyect details"
+      role="complementary"
       className={`${styles.modal} ${isOpen ? styles.openModal : ""}`}
       onClick={() => handleModalInteraction()}
     >
@@ -77,12 +78,14 @@ export default function ProyectModal({
                 target="_blank"
                 rel="noreferrer"
                 tabIndex={tabIndex}
+                title="Link to live demo"
               >
                 <Image
                   width={25}
                   height={25}
                   src="/icons/website.svg"
                   alt="demo"
+                  aria-hidden="true"
                 />
                 Live Demo
               </a>
@@ -92,11 +95,13 @@ export default function ProyectModal({
                 href={project?.source_code}
                 target="_blank"
                 rel="noreferrer"
+                title="Link to source code"
                 tabIndex={tabIndex}
               >
                 <Image
                   width={25}
                   height={25}
+                  aria-hidden="true"
                   src="/icons/code.svg"
                   alt="source code"
                 />
