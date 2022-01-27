@@ -148,13 +148,7 @@
 .techsContainer figure h5 {
   transition: all 0.2s ease-in-out;
 }
-.techsContainer figure:hover,
-.techsContainer a:focus figure {
-  background: var(--light-text-contrast);
-  border-radius: 4px;
 
-  box-shadow: var(--box-shadow);
-}
 .techsContainer figure:hover .techImage,
 .techsContainer a:focus figure .techImage {
   transform: scale(1.15);
