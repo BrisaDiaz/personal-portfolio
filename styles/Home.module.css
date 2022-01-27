@@ -143,13 +143,15 @@
   text-align: center;
   justify-content: center;
 }
+.techsContainer figure figcaption {
+  margin: 1rem auto;
+  font-size: 14px;
+  font-weight: 600;
+}
 .techsContainer a:focus-within {
   outline-color: var(--secondary-light);
 
   outline-offset: 1rem;
-}
-.techsContainer figure h5 {
-  transition: all 0.2s ease-in-out;
 }
 
 .techsContainer figure:hover .techImage,

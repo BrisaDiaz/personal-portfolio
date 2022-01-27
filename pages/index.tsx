@@ -114,15 +114,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <html lang="en-us" />
         <title>Brisa Díaz | Frontend Developer 👩‍💻</title>
-
-        <meta
-          name="description"
-          content="I'm a web developer, spetialist in frontend and passionate of creating sofwere soluctions."
-        />
-
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main
@@ -332,16 +324,10 @@ function TechStackSection() {
           >
             <figure role="figure">
               <div className={styles.techImage}>
-                <ImagePlaceholder
-                  src={tech.image}
-                  alt={tech.name}
-                  objectFit="contain"
-                />
+                <ImagePlaceholder src={tech.image} alt="" objectFit="contain" />
               </div>
 
-              <figcaption>
-                <h5>{tech.name}</h5>
-              </figcaption>
+              <figcaption>{tech.name}</figcaption>
             </figure>
           </a>
         ))}
@@ -384,7 +370,7 @@ function MainSection() {
         </div>
         <div className={styles.personalInfoWrapper}>
           <ul>
-            <li>
+            <li title="birthday">
               <Image
                 width={25}
                 height={25}
@@ -394,9 +380,7 @@ function MainSection() {
                 aria-hidden="true"
               />
 
-              <time dateTime="2000-11-18" title="birthday">
-                11/18/2000
-              </time>
+              <time dateTime="2000-11-18">11/18/2000</time>
             </li>
             <li>
               <a

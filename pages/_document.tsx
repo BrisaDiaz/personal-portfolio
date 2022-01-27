@@ -1,9 +1,13 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
+  static async getInitialProps(ctx: any) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
   render() {
     return (
-      <Html>
+      <Html lang="en-us">
         <Head>
           <link
             rel="apple-touch-icon"
@@ -88,6 +92,13 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap"
             rel="stylesheet"
           />
+
+          <meta
+            name="description"
+            content="I'm a web developer, spetialist in frontend and passionate of creating sofwere soluctions."
+          />
+
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

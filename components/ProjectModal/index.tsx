@@ -50,11 +50,11 @@ export default function ProyectModal({
           <Image
             layout="fill"
             src="/icons/close.svg"
-            alt="clouse button"
+            alt=""
             objectFit="contain"
           />
         </div>
-        <h3>{project?.name}</h3>
+        {project?.name && <h3>{project?.name}</h3>}
         <div className={styles.carouselWrapper}>
           <Carousel
             captions={project?.captions?.slice(1) || []}
@@ -63,10 +63,13 @@ export default function ProyectModal({
             tabIndex={tabIndex}
           />
           <div className={styles.backdrop}>
-            <Image src="/icons/screen_rotation.svg" layout="fill" />
+            <Image
+              src="/icons/screen_rotation.svg"
+              layout="fill"
+              alt="please rotate screem"
+            />
           </div>
         </div>
-
         <section>
           <h4>Summary</h4>
           <p>{project?.summary}</p>
