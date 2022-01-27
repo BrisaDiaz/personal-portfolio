@@ -374,12 +374,12 @@ function MainSection() {
             stimulate my mind.
           </p>
           <p>
-            It has been two years since I discover the potental of programing
-            and found my passion in it , until now I have been working on
-            personal projects like websites and web applications of different
-            kinds of topics in which I trained my ability to understand
-            requirements, design the business logic and translate them into an
-            actual working application in the form of sourcecode.
+            It has been almost two years since I discover the potental of
+            programing and found my passion in it , until now I have been
+            working on personal projects like websites and web applications of
+            different kinds of topics in which I trained my ability to
+            understand requirements, design the business logic and translate
+            them into an actual working application in the form of sourcecode.
           </p>
         </div>
         <div className={styles.personalInfoWrapper}>
@@ -393,7 +393,9 @@ function MainSection() {
                 loading="eager"
                 aria-hidden="true"
               />
-              <p title="birthday">11/18/2000</p>
+              <time dateTime="2000-11-18" title="birthday">
+                11/18/2000
+              </time>
             </li>
             <li>
               <a
