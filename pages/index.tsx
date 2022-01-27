@@ -393,6 +393,7 @@ function MainSection() {
                 loading="eager"
                 aria-hidden="true"
               />
+
               <time dateTime="2000-11-18" title="birthday">
                 11/18/2000
               </time>

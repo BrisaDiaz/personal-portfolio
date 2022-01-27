@@ -81,7 +81,8 @@
   gap: 1rem;
 }
 
-.personalInfoWrapper ul li p {
+.personalInfoWrapper ul li p,
+.personalInfoWrapper ul li time {
   opacity: 0;
   background: var(--secondary-main);
   padding: 0 6px;
@@ -90,7 +91,9 @@
 }
 
 .personalInfoWrapper ul li:hover p,
+.personalInfoWrapper ul li:hover time,
 .personalInfoWrapper ul li a:focus,
+.personalInfoWrapper ul li a:focus time,
 .personalInfoWrapper ul li a:focus p {
   opacity: 1;
   outline-offset: 3px;
@@ -348,7 +351,8 @@
   .callToActionBanner .wrapper {
     justify-content: start;
   }
-  .personalInfoWrapper ul li p {
+  .personalInfoWrapper ul li p,
+  .personalInfoWrapper ul li time {
     opacity: 1;
   }
   .callToActionBanner .wrapper .content {
