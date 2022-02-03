@@ -76,6 +76,7 @@ const Home: NextPage = () => {
       handleOpenMenu();
     }
   };
+
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown, false);
 
@@ -83,27 +84,19 @@ const Home: NextPage = () => {
       document.removeEventListener("keydown", handleKeyDown, false);
     };
   }, []);
-
-  const menuBottomRef: any = React.useRef(null);
-  React.useEffect(() => {
-    if (menuBottomRef && menuBottomRef.current) {
-      menuBottomRef.current.focus();
-    }
-  }, []);
   const handleBodyState = () => {
     if (document) {
       const body = window.document.body;
+      const html = window.document?.querySelector("html");
 
-      if (!body) return;
+      if (!body || !html) return;
 
       if (modalState.isOpen || menuState.isOpen) {
-        body.style.top = `-${window.scrollY}px`;
-        body.style.position = "fixed";
+        body.style.overflow = "hidden";
+        html.style.overflow = "hidden";
       } else {
-        const scrollY = body.style.top;
-        body.style.position = "relative";
-        body.style.top = "";
-        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+        body.style.overflowY = "auto";
+        html.style.overflowY = "auto";
       }
     }
   };
@@ -124,11 +117,7 @@ const Home: NextPage = () => {
         role="main"
       >
         <div className={styles.menuBtn}>
-          <button
-            onClick={handleOpenMenu}
-            ref={menuBottomRef}
-            aria-label="menu"
-          />
+          <button onClick={handleOpenMenu} aria-label="menu" />
 
           <Image
             width={26}

@@ -35,6 +35,7 @@
   z-index: -10;
 }
 .contentWrapper {
+  position: static;
   box-shadow: var(--box-shadow-hover);
   width: 100%;
   padding: 20px;

@@ -23,6 +23,7 @@
   box-sizing: border-box;
   color: var(--secondary-dark);
 }
+
 html,
 body {
   padding: 0;
@@ -36,9 +37,11 @@ body {
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
 }
-body {
+
+.noScroll {
   overflow: hidden;
 }
+
 p,
 a,
 b {

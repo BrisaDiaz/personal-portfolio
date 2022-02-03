@@ -27,6 +27,7 @@ export default function ProjectModal({
   });
   return (
     <aside
+      aria-hidden={isOpen ? "true" : false}
       tabIndex={tabIndex}
       aria-label="project details"
       role="complementary"
