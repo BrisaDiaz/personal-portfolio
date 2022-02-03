@@ -81,6 +81,7 @@ h4 {
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
+  display: none;
 }
 
 *::-webkit-scrollbar-track {
@@ -93,4 +94,9 @@ h4 {
   height: 50px;
   cursor: default;
   border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+  *::-webkit-scrollbar {
+    display: block;
+  }
 }
