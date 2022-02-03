@@ -112,7 +112,7 @@
 
   margin-top: 300px;
 }
-.chekedTechIllustration {
+.checkedTechIllustration {
   position: absolute;
   bottom: 0;
   z-index: -10;
@@ -180,15 +180,15 @@
   grid-template-columns: 1fr;
 }
 
-.strenghtsSectionWrapper {
+.strengthsSectionWrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.strenghtsSectionWrapper div {
+.strengthsSectionWrapper div {
   width: 100%;
 }
-.strenghtsSectionWrapper:nth-child(2) {
+.strengthsSectionWrapper:nth-child(2) {
   margin: 30px 0;
 }
 .educationSectionContent {
@@ -251,7 +251,7 @@
   flex: 1;
   z-index: -20;
 }
-.planingllustration {
+.planningllustration {
   overflow: visible;
   width: 100%;
   height: 400px;
@@ -264,10 +264,10 @@
   z-index: -20;
 }
 
-.planingllustration [alt="planing illustration"] {
+.planningllustration [alt="planning illustration"] {
   transform: scale(1.3);
 }
-.planingllustration span {
+.planningllustration span {
   overflow: visible !important;
 }
 .techSkillsIllustrationSection {
@@ -385,11 +385,11 @@
     column-gap: 40px;
   }
 
-  .strenghtsSectionWrapper {
+  .strengthsSectionWrapper {
     flex-direction: row;
     align-items: center;
   }
-  .planingllustration {
+  .planningllustration {
     margin-top: 100px;
     margin-bottom: 0;
   }

@@ -19,7 +19,7 @@ export default function MenuNav({
   const { tabIndex } = useModalFocus({
     isOpen,
     onEscape: onClose,
-    moldalSelector: '[aria-label="navegation menu"]',
+    modalSelector: '[aria-label="navegation menu"]',
   });
 
   return (

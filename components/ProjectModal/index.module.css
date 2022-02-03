@@ -13,7 +13,7 @@
 .openModal {
   top: 0;
 }
-.modalBoobleTop {
+.modalBobbleTop {
   overflow-x: hidden;
   position: absolute;
   width: 100%;
@@ -24,7 +24,7 @@
   transform: rotate(233deg);
   z-index: -10;
 }
-.modalBoobleBottom {
+.modalBobbleBottom {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -45,7 +45,7 @@
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  background: var(--bg-gradiant);
+  background: var(--bg-gradient);
 
   overflow-y: auto;
   overflow-x: hidden;

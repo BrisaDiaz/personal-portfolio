@@ -5,7 +5,7 @@ import { Project } from "interfaces";
 import Carousel from "@/components/Carousel/index";
 import useModalFocus from "@/hooks/useModalFocus";
 import Image from "next/image";
-export default function ProyectModal({
+export default function ProjectModal({
   onClose,
   isOpen,
   project,
@@ -14,7 +14,7 @@ export default function ProyectModal({
   isOpen: boolean;
   project: Project | null;
 }) {
-  const [isInteracting, setisInteracting] = React.useState<boolean>(false);
+  const [isInteracting, setIsInteracting] = React.useState<boolean>(false);
 
   const handleModalInteraction = () => {
     if (isInteracting) return;
@@ -23,27 +23,27 @@ export default function ProyectModal({
   const { tabIndex } = useModalFocus({
     isOpen,
     onEscape: onClose,
-    moldalSelector: '[aria-label="proyect modal"]',
+    modalSelector: '[aria-label="project modal"]',
   });
   return (
     <aside
       tabIndex={tabIndex}
-      aria-label="proyect details"
+      aria-label="project details"
       role="complementary"
       className={`${styles.modal} ${isOpen ? styles.openModal : ""}`}
       onClick={() => handleModalInteraction()}
     >
       <article
         className={styles.contentWrapper}
-        onMouseEnter={() => setisInteracting(true)}
-        onTouchStart={() => setisInteracting(true)}
-        onMouseLeave={() => setisInteracting(false)}
+        onMouseEnter={() => setIsInteracting(true)}
+        onTouchStart={() => setIsInteracting(true)}
+        onMouseLeave={() => setIsInteracting(false)}
       >
-        <div className={styles.modalBoobleTop}>
-          <Image layout="fill" src="/svg/booble.svg" alt="booble" />
+        <div className={styles.modalBobbleTop}>
+          <Image layout="fill" src="/svg/bobble.svg" alt="bobble" />
         </div>
-        <div className={styles.modalBoobleBottom}>
-          <Image layout="fill" src="/svg/booble.svg" alt="booble" />
+        <div className={styles.modalBobbleBottom}>
+          <Image layout="fill" src="/svg/bobble.svg" alt="bobble" />
         </div>
         <div className={styles.closeBtn}>
           <button onClick={onClose} aria-label="close" />
@@ -66,7 +66,7 @@ export default function ProyectModal({
             <Image
               src="/icons/screen_rotation.svg"
               layout="fill"
-              alt="please rotate screem"
+              alt="please rotate screen"
             />
           </div>
         </div>

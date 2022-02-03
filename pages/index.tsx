@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       selectedProject: selectedProject,
     });
   };
-  const handleNavegation = (href: string) => {
+  const handleNavigation = (href: string) => {
     setMenuState({
       isOpen: false,
       activeLink: href,
@@ -144,18 +144,18 @@ const Home: NextPage = () => {
           links={MENU_LINKS}
           onClose={handleCloseMenu}
           activeLink={menuState.activeLink}
-          onNavegate={handleNavegation}
+          onNavegate={handleNavigation}
         />
         <MainSection />
         <TechStackSection />
 
-        <ProyectsSection onSelectProject={handleOpenModal} />
+        <ProjectsSection onSelectProject={handleOpenModal} />
         <ProjectModal
           onClose={() => handleCloseModal()}
           isOpen={modalState.isOpen}
           project={modalState.selectedProject}
         />
-        <SlillsSection />
+        <SkillsSection />
         <article className={styles.callToActionBanner}>
           <div className={styles.wrapper}>
             <div className={styles.content}>
@@ -177,7 +177,7 @@ const Home: NextPage = () => {
             <div className={styles.bannerIllustration}>
               <Image
                 layout="fill"
-                src="/svg/agreetment.svg"
+                src="/svg/agreement.svg"
                 alt="background"
                 loading="eager"
                 aria-hidden="true"
@@ -191,7 +191,7 @@ const Home: NextPage = () => {
   );
 };
 
-function ProyectsSection({
+function ProjectsSection({
   onSelectProject,
 }: {
   onSelectProject: (project: Project) => void;
@@ -218,13 +218,13 @@ function ProyectsSection({
 function EducationSection() {
   return (
     <section id="education" className={styles.container}>
-      <div className={styles.strenghtsSectionWrapper}>
+      <div className={styles.strengthsSectionWrapper}>
         <div className={styles.educationSectionContent}>
           <h2>Education</h2>
           <p>
             I have technical background, I studied for 7 years and was able to
             obtained the title of mechanical technician in a public high school,
-            throught which shaped my ability to work in a team by combining my
+            through which shaped my ability to work in a team by combining my
             knowledge and skills with those of my colleagues, making use of
             ingenuity and creativity to develop projects and solve problems with
             the limited resources we had.
@@ -232,7 +232,7 @@ function EducationSection() {
           <p>
             My transition in a technical high school also played a very
             important role the manner and mentality with which I work and to
-            beeing able to evaluate and plan projects in advance, by questioning
+            being able to evaluate and plan projects in advance, by questioning
             aspects of it such as:
           </p>
           <ul>
@@ -260,11 +260,11 @@ function EducationSection() {
           </ul>
         </div>
         <div className={styles.softSkillsIllustrationSection}>
-          <div className={styles.planingllustration}>
+          <div className={styles.planningllustration}>
             <Image
               layout="fill"
-              src="/svg/planing-illustration.svg"
-              alt="planing illustration"
+              src="/svg/planning-illustration.svg"
+              alt="planning illustration"
               loading="eager"
               aria-hidden="true"
             />
@@ -274,10 +274,10 @@ function EducationSection() {
     </section>
   );
 }
-function SlillsSection() {
+function SkillsSection() {
   return (
     <section id="skills" className={styles.container}>
-      <div className={styles.strenghtsSectionWrapper}>
+      <div className={styles.strengthsSectionWrapper}>
         <div className={styles.skillsSection}>
           <h2>Skills</h2>
           <ul>
@@ -304,7 +304,7 @@ function SlillsSection() {
 function TechStackSection() {
   return (
     <section className={styles.container} id="techStack">
-      <div className={styles.chekedTechIllustration}>
+      <div className={styles.checkedTechIllustration}>
         <Image
           layout="fill"
           src="/svg/check-task-illustration.svg"
@@ -360,12 +360,12 @@ function MainSection() {
             stimulate my mind.
           </p>
           <p>
-            It has been almost two years since I discover the potental of
+            It has been almost two years since I discover the potential of
             programing and found my passion in it , until now I have been
             working on personal projects like websites and web applications of
             different kinds of topics in which I trained my ability to
             understand requirements, design the business logic and translate
-            them into an actual working application in the form of sourcecode.
+            them into an actual working application in the form of source code.
           </p>
         </div>
         <div className={styles.personalInfoWrapper}>
@@ -452,7 +452,7 @@ function MainSection() {
                   loading="eager"
                   height={25}
                   src="/icons/linkedin.svg"
-                  alt="linkendin"
+                  alt="linkedin"
                   aria-hidden="true"
                 />
 

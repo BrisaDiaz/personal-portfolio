@@ -27,7 +27,7 @@ export default function useCarousel({
   const moveToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-  const nextcurrentSlide = () => {
+  const nextCurrentSlide = () => {
     setCurrentSlide(currentSlide + 1);
     if (currentSlide === items.length - 1) {
       setCurrentSlide(0);
@@ -36,7 +36,7 @@ export default function useCarousel({
 
   React.useEffect(() => {
     if (!autoPlay) return;
-    const intervalId = setInterval(nextcurrentSlide, interval || 4000);
+    const intervalId = setInterval(nextCurrentSlide, interval || 4000);
     return () => clearInterval(intervalId);
   });
 
