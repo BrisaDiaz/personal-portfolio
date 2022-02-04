@@ -22,7 +22,7 @@ export default function ProjectModal({
   };
   const { tabIndex } = useModalFocus({
     isOpen,
-    onEscape: onClose,
+    onEscape: () => onClose(),
     modalSelector: '[aria-label="project modal"]',
   });
   return (
@@ -128,7 +128,7 @@ export default function ProjectModal({
               </div>
             </>
           ) : null}
-          <h4>Features</h4>
+          <h4>Some Features</h4>
           <ul className={styles.featuresList}>
             {project?.features?.map((feature) => (
               <li key={feature}>{feature}</li>

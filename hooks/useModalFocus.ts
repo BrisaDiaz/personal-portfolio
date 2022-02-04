@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 export default function useModalFocus({
   modalSelector,
   isOpen,
@@ -31,8 +31,6 @@ export default function useModalFocus({
     ] as HTMLElement; // get last element to be focused inside modal
 
     document.addEventListener("keydown", function (e) {
-      e.key === "Escape" && onEscape && onEscape();
-
       let isTabPressed = e.key === "Tab" || e.keyCode === 9;
 
       if (!isTabPressed) {
@@ -57,5 +55,16 @@ export default function useModalFocus({
 
     firstFocusableElement.focus();
   };
+  const handleAutoClose = (e: KeyboardEvent) => {
+    if (e.key === "Escape" && onEscape) {
+      onEscape();
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("keydown", handleAutoClose, false);
+    return () =>
+      document.removeEventListener("keydown", handleAutoClose, false);
+  }, []);
+
   return { tabIndex };
 }

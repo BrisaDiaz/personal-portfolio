@@ -7,26 +7,26 @@ export default function MenuNav({
   links,
   onClose,
   activeLink,
-  onNavegate,
+  onNavigate,
 }: {
   isOpen: boolean;
   links: Array<{ title: string; href: string }>;
   onClose: () => void;
 
   activeLink: string;
-  onNavegate: (href: string) => void;
+  onNavigate: (href: string) => void;
 }) {
   const { tabIndex } = useModalFocus({
     isOpen,
-    onEscape: onClose,
-    modalSelector: '[aria-label="navegation menu"]',
+    onEscape: () => onClose(),
+    modalSelector: '[aria-label="navigation menu"]',
   });
 
   return (
     <aside
       tabIndex={tabIndex}
       className={`${styles.menu} ${isOpen ? styles.openMenu : ""}`}
-      aria-label="navegation menu"
+      aria-label="navigation menu"
     >
       <div className={styles.closeBtn}>
         <button onClick={onClose} aria-label="close" tabIndex={tabIndex} />
@@ -44,7 +44,7 @@ export default function MenuNav({
             <li key={link.href} role="menuitem">
               <a
                 href={link.href}
-                onClick={() => onNavegate(link.href)}
+                onClick={() => onNavigate(link.href)}
                 tabIndex={tabIndex}
               >
                 <h2>{link.title}</h2>

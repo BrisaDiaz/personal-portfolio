@@ -133,7 +133,7 @@ const Home: NextPage = () => {
           links={MENU_LINKS}
           onClose={handleCloseMenu}
           activeLink={menuState.activeLink}
-          onNavegate={handleNavigation}
+          onNavigate={handleNavigation}
         />
         <MainSection />
         <TechStackSection />
