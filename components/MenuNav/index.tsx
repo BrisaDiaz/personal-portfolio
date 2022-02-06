@@ -33,7 +33,7 @@ export default function MenuNav({
         <Image
           layout="fill"
           src="/icons/close.svg"
-          alt=""
+          alt="close"
           objectFit="contain"
           aria-hidden="true"
         />

@@ -114,7 +114,6 @@ const Home: NextPage = () => {
         className={`${styles.main} ${
           modalState.isOpen || (menuState.isOpen && styles.fixed)
         }`}
-        role="main"
       >
         <div className={styles.menuBtn}>
           <button onClick={handleOpenMenu} aria-label="menu" />
@@ -313,7 +312,12 @@ function TechStackSection() {
           >
             <figure role="figure">
               <div className={styles.techImage}>
-                <ImagePlaceholder src={tech.image} alt="" objectFit="contain" />
+                <ImagePlaceholder
+                  src={tech.image}
+                  alt="placeholder"
+                  aria-hidden="true"
+                  objectFit="contain"
+                />
               </div>
 
               <figcaption>{tech.name}</figcaption>

@@ -92,12 +92,17 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap"
             rel="stylesheet"
           />
-
+          <meta name="author" content="Brisa Díaz" />
+          <meta charSet="utf-8" />
           <meta
             name="description"
-            content="I'm a web developer, spetialist in frontend and passionate of creating sofwere soluctions."
+            content="I'm a web developer, specialist in frontend and passionate of creating software solutions."
           />
-
+          <meta
+            name="keywords"
+            content="web developer,frontend developer,front end developer,front-end developer,frontend engineer,full stack developer,fullstack developer,full-stack developer,brisa diaz,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
+            key="titleKeywords"
+          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>

@@ -51,7 +51,8 @@ export default function ProjectModal({
           <Image
             layout="fill"
             src="/icons/close.svg"
-            alt=""
+            alt="close"
+            aria-hidden="true"
             objectFit="contain"
           />
         </div>
