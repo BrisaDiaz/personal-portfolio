@@ -349,8 +349,8 @@ function MainSection() {
             {" "}
             I describe myself as a proactive, curious and determined person,
             passionate of providing solutions to problems in a creative and
-            ingenious way and who does not hesitate to accept challenges that
-            stimulate my mind.
+            ingenious way and who does not hesitate to leave the comfort zone to
+            and sees them as an opportunity to improve.
           </p>
           <p>
             It has been almost two years since I discover the potential of

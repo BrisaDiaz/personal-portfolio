@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { env } from "env";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -78,6 +79,19 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/favicon-16x16.png"
           />
+          <meta property="og:title" content="Brisa Diaz - Frontend Developer" />
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content="/org.png" />
+          <meta property="og:url" content={env.NEXT_PUBLIC_SITE_URL} />
+          <meta name="twitter:card" content="summary_large_image" />
+
+          <meta
+            property="og:description"
+            content="I'm enthusiastic frontend developer, passionate about learning innovative and technologies digital-product development."
+          />
+          <meta property="og:site_name" content={env.NEXT_PUBLIC_SITE_NAME} />
+          <meta name="twitter:image:alt" content="brisa diaz portfolio" />
+
           <link rel="manifest" href="/manifest.json" />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -96,7 +110,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="I'm a web developer, specialist in frontend and passionate of creating software solutions."
+            content="I'm enthusiastic frontend developer, passionate about learning innovative and technologies digital-product development."
           />
           <meta
             name="keywords"
