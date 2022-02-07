@@ -1,0 +1,60 @@
+.socialBar {
+  display: flex;
+  margin-top: -20px;
+  position: fixed;
+  left: -35px;
+  top: 0;
+  z-index: 100;
+  transform: scale(0.6);
+  flex-direction: column;
+}
+
+.socialBar a {
+  padding: 20px;
+  font-size: 30px;
+  transition: all 0.5s ease-out;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  transform: translateX(-18px);
+}
+
+.socialBar a:hover,
+.socialBar a:focus {
+  transform: translateX(27px);
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.instagram {
+  background: #125688;
+  color: white;
+}
+
+.reddit {
+  background: #ff5700;
+  color: white;
+}

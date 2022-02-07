@@ -1,5 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -11,6 +12,7 @@ import { useState } from "react";
 import { Project } from "interfaces";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import Button from "@/components/Button/index";
+import SocialShareButtons from "@/components/SocialShareButtons/index";
 const MENU_LINKS = [
   { title: "About Me", href: "#aboutMe" },
   { title: "Tech Stack", href: "#techStack" },
@@ -134,6 +136,7 @@ const Home: NextPage = () => {
           activeLink={menuState.activeLink}
           onNavigate={handleNavigation}
         />
+        <SocialShareButtons />
         <MainSection />
         <TechStackSection />
 
