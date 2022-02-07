@@ -19,6 +19,8 @@ const NotFoundPage: NextPage = () => {
             src="/svg/404-illustration.svg"
             alt="404 illustration"
             aria-hidden="true"
+            placeholder="blur"
+            blurDataURL="/svg/404-illustration.svg"
           />
         </div>
         <div className={styles.content}>
@@ -30,7 +32,7 @@ const NotFoundPage: NextPage = () => {
           <p>It seems like the content your looking for dose not exist .</p>
           <p>
             {
-              " But don't worry!, you can start over searching from the home page."
+              " But don't worry!, you can start over  by searching from the home page."
             }
           </p>
           <Link href="/" passHref>

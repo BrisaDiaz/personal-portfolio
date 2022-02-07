@@ -282,11 +282,10 @@
   transform: scale(1.3);
 }
 .callToActionBanner {
-  width: 100%;
-
-  margin: 0 auto;
-  margin-bottom: 30px;
+  width: 85%;
+  margin: 10px auto 20px;
   background: var(--light-text-contrast);
+  border-radius: 20px;
 }
 .callToActionBanner .wrapper {
   display: flex;

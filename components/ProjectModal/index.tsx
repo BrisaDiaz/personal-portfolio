@@ -75,6 +75,38 @@ export default function ProjectModal({
         <section>
           <h4>Summary</h4>
           <p>{project?.summary}</p>
+          <h4>Technologies</h4>
+          <p className={styles.techList}>
+            <b>Language:</b>
+            <span>{project?.language}</span>
+          </p>
+          <p className={styles.techList}>
+            <b>Hosting:</b>
+            <span>{project?.technologies?.hosting}</span>
+          </p>
+
+          <p className={styles.techList}>
+            <b>Frontend:</b>
+            {project?.technologies?.frontend.map((tech: string) => (
+              <span key={tech}>{tech}</span>
+            ))}
+          </p>
+          {project?.technologies?.backend ? (
+            <p className={styles.techList}>
+              <b>Backend:</b>
+              {project?.technologies?.backend?.map((tech: string) => (
+                <span key={tech}>{tech}</span>
+              ))}
+            </p>
+          ) : null}
+          {project?.technologies?.testing ? (
+            <p className={styles.techList}>
+              <b>Tests:</b>
+              {project?.technologies?.testing?.map((tech: string) => (
+                <span key={tech}>{tech}</span>
+              ))}
+            </p>
+          ) : null}
           <h4>Links</h4>
           <div className={styles.linksBlock}>
             <p>
@@ -135,38 +167,6 @@ export default function ProjectModal({
               <li key={feature}>{feature}</li>
             ))}
           </ul>
-          <h4>Technologies</h4>
-          <p className={styles.techList}>
-            <b>Language:</b>
-            <span>{project?.language}</span>
-          </p>
-          <p className={styles.techList}>
-            <b>Hosting:</b>
-            <span>{project?.technologies?.hosting}</span>
-          </p>
-
-          <p className={styles.techList}>
-            <b>Frontend:</b>
-            {project?.technologies?.frontend.map((tech: string) => (
-              <span key={tech}>{tech}</span>
-            ))}
-          </p>
-          {project?.technologies?.backend ? (
-            <p className={styles.techList}>
-              <b>Backend:</b>
-              {project?.technologies?.backend?.map((tech: string) => (
-                <span key={tech}>{tech}</span>
-              ))}
-            </p>
-          ) : null}
-          {project?.technologies?.testing ? (
-            <p className={styles.techList}>
-              <b>Tests:</b>
-              {project?.technologies?.testing?.map((tech: string) => (
-                <span key={tech}>{tech}</span>
-              ))}
-            </p>
-          ) : null}
         </section>
       </article>
     </aside>
