@@ -4,8 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@env": ["env.ts"]
+      "@/hooks/*": ["hooks/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
