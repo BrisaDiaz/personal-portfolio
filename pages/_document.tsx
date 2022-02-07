@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { env } from "env";
+import { env } from "@env";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {

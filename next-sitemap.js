@@ -1,4 +1,4 @@
-import { env } from "env";
+import { env } from "@env";
 const siteUrl = env.NEXT_PUBLIC_SITE_URL;
 module.exports = {
   siteUrl,
