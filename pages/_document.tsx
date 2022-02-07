@@ -114,7 +114,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="I'm enthusiastic frontend developer, passionate about learning innovative and technologies digital-product development."
+            content="I'm enthusiastic frontend developer, passionate about learning innovative technologies digital-product development."
           />
           <meta
             name="keywords"
