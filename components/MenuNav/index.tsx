@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./index.module.css";
 import Image from "next/image";
 import useModalFocus from "@/hooks/useModalFocus";
@@ -44,16 +45,18 @@ export default function MenuNav({
       <nav role="menubar">
         <ul>
           {links.map((link) => (
-            <li key={link.href} role="menuitem">
-              <a
-                href={link.href}
-                title={link.title + " section"}
-                onClick={() => onNavigate(link.href)}
-                tabIndex={tabIndex}
-              >
-                {link.title}
-              </a>
-            </li>
+            <Link key={link.href} href={link.href} passHref>
+              <li key={link.href} role="menuitem">
+                <a
+                  href=""
+                  title={link.title + " section"}
+                  onClick={() => onNavigate(link.href)}
+                  tabIndex={tabIndex}
+                >
+                  {link.title}
+                </a>
+              </li>
+            </Link>
           ))}
         </ul>
       </nav>

@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Brisa Díaz | Frontend Developer 👩‍💻</title>
+        <title>Brisa Díaz | Frontend Development Specialist 👩‍💻</title>
       </Head>
 
       <main
@@ -160,9 +160,11 @@ const Home: NextPage = () => {
                 and personal development as well as help me achieve personal and
                 organizational goals.
               </p>
-              <a href="#aboutMe" title="about me section" tabIndex={-1}>
-                <Button text="Lest get in touch!" />
-              </a>
+              <Link href="#aboutMe" passHref>
+                <a href="" title="about me section" tabIndex={-1}>
+                  <Button text="Lest get in touch!" />
+                </a>
+              </Link>
             </div>
 
             <div className={styles.bannerIllustration}>
@@ -343,7 +345,7 @@ function MainSection() {
       <div className={styles.mainSectionContent}>
         <div className={styles.mainSectionText}>
           <h1>
-            <span> {"Hi!, I'm Brisa Díaz\n"}</span>
+            <span> {"Hi!, I'm brisa díaz\n"}</span>
             <br />
             {"I'm a Frontend Developer"}
           </h1>

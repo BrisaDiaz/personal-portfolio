@@ -102,7 +102,10 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta charSet="utf-8" />
 
-          <meta property="og:title" content="Brisa Diaz - Frontend Developer" />
+          <meta
+            property="og:title"
+            content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
+          />
           <meta property="og:type" content="article" />
           <meta property="og:image" content="/org.png" />
           <meta property="og:url" content={env.NEXT_PUBLIC_SITE_URL} />
@@ -116,7 +119,7 @@ class MyDocument extends Document {
           />
           <meta
             property="twitter:title"
-            content="Brisa Diaz - Frontend Developer"
+            content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
           />
           <meta property="twitter:image" content="/org.png" />
           <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
@@ -130,7 +133,7 @@ class MyDocument extends Document {
           />
           <meta
             name="keywords"
-            content="brisa diaz,web developer,frontend developer,fullstack developer,front end developer,front-end developer,frontend engineer,full stack developer,full-stack developer,app,applications,web apps,web applications,software,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
+            content="brisa diaz,web developer,frontend developer,fullstack developer,front end developer,front-end developer,frontend engineer,full stack developer,full-stack developer,app,applications,web apps,web applications,specialist,web development,software,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
             key="titleKeywords"
           />
 
