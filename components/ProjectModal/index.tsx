@@ -61,7 +61,7 @@ export default function ProjectModal({
             aria-hidden="true"
             placeholder="blur"
             loading="eager"
-            blurDataURL="/svg/close.svg"
+            blurDataURL="/icons/close.svg"
             objectFit="contain"
           />
         </div>
@@ -124,7 +124,6 @@ export default function ProjectModal({
                 href={project?.demo}
                 target="_blank"
                 rel="noreferrer"
-                tabIndex={tabIndex}
                 title="Link to live demo"
               >
                 <Image
@@ -144,7 +143,6 @@ export default function ProjectModal({
                 target="_blank"
                 rel="noreferrer"
                 title="Link to source code"
-                tabIndex={tabIndex}
               >
                 <Image
                   width={25}

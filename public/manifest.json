@@ -1,5 +1,12 @@
 {
-  "name": "App",
+  "name": "Brisa Díaz | Frontend Developer",
+  "short_name": "Brisa Díaz",
+  "version": "0.1",
+  "manifest_version": 2,
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
   "background_color": "#fff",
   "theme_color": "#3f3d56",
   "icons": [
@@ -42,6 +49,18 @@
     {
       "src": "/android-icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "density": "4.0"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "density": "4.0"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "density": "4.0"
     }

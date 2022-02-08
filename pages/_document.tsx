@@ -65,6 +65,18 @@ class MyDocument extends Document {
           <link
             rel="icon"
             type="image/png"
+            sizes="256x256"
+            href="/icon-256x256.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/icon-512x512.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
             sizes="32x32"
             href="/favicon-32x32.png"
           />
@@ -147,11 +159,6 @@ class MyDocument extends Document {
             key="titleKeywords"
           />
 
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `</script><link rel='preload' href='style.css' as='style' onload="this.onload=null;this.rel='stylesheet'"/><script>`,
-            }}
-          />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
