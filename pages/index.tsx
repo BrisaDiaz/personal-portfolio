@@ -160,7 +160,7 @@ const Home: NextPage = () => {
                 and personal development as well as help me achieve personal and
                 organizational goals.
               </p>
-              <a href="#aboutMe" tabIndex={-1}>
+              <a href="#aboutMe" title="about me section" tabIndex={-1}>
                 <Button text="Lest get in touch!" />
               </a>
             </div>
@@ -343,7 +343,7 @@ function MainSection() {
       <div className={styles.mainSectionContent}>
         <div className={styles.mainSectionText}>
           <h1>
-            <span> {"Hi!, I'm Brisa Díaz"}</span>
+            <span> {"Hi!, I'm Brisa Díaz\n"}</span>
             <br />
             {"I'm a Frontend Developer"}
           </h1>

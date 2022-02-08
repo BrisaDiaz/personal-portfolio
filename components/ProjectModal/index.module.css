@@ -103,11 +103,15 @@
 .backdrop span {
   transform: scale(0.5);
 }
-.contentWrapper h3 {
+.contentWrapper h2 {
   text-transform: capitalize;
+  font-size: 25px;
+
+  margin-top: 0.5em;
 }
-.contentWrapper h4 {
+.contentWrapper h3 {
   text-decoration: underline;
+  font-size: 18px !important;
   text-underline-offset: 1px;
 }
 
@@ -127,16 +131,19 @@
   gap: 3px;
   align-items: center;
   background: var(--primary-dark);
+  padding: 2px 0;
   padding-right: 8px;
+  font-size: 14px;
   color: #fff;
   opacity: 0.9;
   border-radius: 4px;
 }
-.linksBlock a:hover,
+.linksBlock a:hover {
+  opacity: 1;
+}
 .linksBlock a:focus {
   outline-color: var(--secondary-light);
   outline-offset: 3px;
-  opacity: 1;
 }
 .featuresList {
   list-style: "revert";
@@ -166,11 +173,12 @@
 }
 .techList span {
   text-transform: capitalize;
-  padding: 1px 6px;
+  padding: 2px 6px;
   background: var(--secondary-main);
   color: #fff;
-  font-size: 14px;
-  border-radius: 4px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  border-radius: 2px;
 }
 @media (min-width: 600px) {
   .contentWrapper {
@@ -179,6 +187,7 @@
   .carouselWrapper {
     margin: 20px auto;
   }
+
   .contentWrapper b {
     width: 90px;
   }

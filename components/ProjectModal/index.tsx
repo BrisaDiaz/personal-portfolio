@@ -65,7 +65,7 @@ export default function ProjectModal({
             objectFit="contain"
           />
         </div>
-        {project?.name && <h3>{project?.name}</h3>}
+        {project?.name && <h2>{project?.name}</h2>}
         <div className={styles.carouselWrapper}>
           <Carousel
             captions={project?.captions?.slice(1) || []}
@@ -84,9 +84,9 @@ export default function ProjectModal({
           </div>
         </div>
         <section>
-          <h4>Summary</h4>
+          <h3>Summary</h3>
           <p>{project?.summary}</p>
-          <h4>Technologies</h4>
+          <h3>Technologies</h3>
           <p className={styles.techList}>
             <b>Language:</b>
             <span>{project?.language}</span>
@@ -118,7 +118,7 @@ export default function ProjectModal({
               ))}
             </p>
           ) : null}
-          <h4>Links</h4>
+          <h3>Links</h3>
           <div className={styles.linksBlock}>
             <p>
               <a
@@ -165,7 +165,7 @@ export default function ProjectModal({
           </div>
           {project?.testingUser ? (
             <>
-              <h4>Testing User</h4>
+              <h3>Testing User</h3>
               <div className={styles.dataBlock}>
                 <p>
                   <b>Email:</b>
@@ -178,7 +178,7 @@ export default function ProjectModal({
               </div>
             </>
           ) : null}
-          <h4>Some Features</h4>
+          <h3>Some Features</h3>
           <ul className={styles.featuresList}>
             {project?.features?.map((feature) => (
               <li key={feature}>{feature}</li>

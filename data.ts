@@ -74,7 +74,7 @@ export const TECHS = [
   },
 
   {
-    name: "React Testing Library",
+    name: "React Testing",
     stack: "testing",
     image: "/techs/react-testing-library.svg",
     resource_url:
@@ -185,7 +185,7 @@ export const TECHS = [
 ];
 export const PROJECTS = [
   {
-    name: "hotel room booking app",
+    name: "hotel booking app",
     captions: [
       "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_2_aqjj3g.png",
       "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_398,w_710/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.png",

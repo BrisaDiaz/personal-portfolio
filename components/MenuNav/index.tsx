@@ -47,6 +47,7 @@ export default function MenuNav({
             <li key={link.href} role="menuitem">
               <a
                 href={link.href}
+                title={link.title + " section"}
                 onClick={() => onNavigate(link.href)}
                 tabIndex={tabIndex}
               >

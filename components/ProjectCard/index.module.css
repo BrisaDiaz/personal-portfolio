@@ -38,7 +38,9 @@
   transform: scale(0);
   transition: all 0.5s ease-in-out;
 }
-.projectCard .content h4 {
+.projectCard .content h3 {
+  font-size: 25px;
+  font-weight: 600;
   margin-bottom: 1rem;
   color: var(--primary-main);
   text-transform: capitalize;
@@ -48,8 +50,7 @@
 }
 .content .projectCardBtn {
   position: relative;
-
-  padding-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;

@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 
 import Button from "@/components/Button/index";
-import { generateImageUrl } from "utils";
+
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 export default function ProjectCard({
   project,
@@ -24,7 +24,7 @@ export default function ProjectCard({
         />
 
         <div className={styles.content}>
-          <h4>{project.name}</h4>
+          <h3 className="typography-h4">{project.name}</h3>
           <p>{project.summary}</p>
           <div className={styles.projectCardBtn}>
             <Button onClick={onReadMore} text="Read More" />
