@@ -176,7 +176,7 @@
   padding: 2px 6px;
   background: var(--secondary-main);
   color: #fff;
-  letter-spacing: 1px;
+
   font-size: 12px;
   border-radius: 2px;
 }
@@ -187,9 +187,11 @@
   .carouselWrapper {
     margin: 20px auto;
   }
-
+  .contentWrapper h2 {
+    font-size: 30px;
+  }
   .contentWrapper b {
-    width: 90px;
+    width: 75px;
   }
   .closeBtn {
     width: 30px;
