@@ -49,25 +49,25 @@ b {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 800;
   margin: 0;
 }
 h2 {
-  font-size: 24px;
+  font-size: 34px;
   font-family: "IM Fell Double Pica", serif;
 
   margin: 0;
   color: var(--primary-dark);
 }
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0;
   font-family: "IM Fell Double Pica", serif;
 }
 h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
   font-family: "IM Fell Double Pica", serif;

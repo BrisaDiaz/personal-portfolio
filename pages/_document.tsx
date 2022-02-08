@@ -1,11 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { env } from "env";
-
+import { schemaData } from "schemaData";
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
+
   render() {
     return (
       <Html lang="en-us">
@@ -79,18 +80,6 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/favicon-16x16.png"
           />
-          <meta property="og:title" content="Brisa Diaz - Frontend Developer" />
-          <meta property="og:type" content="article" />
-          <meta property="og:image" content="/org.png" />
-          <meta property="og:url" content={env.NEXT_PUBLIC_SITE_URL} />
-          <meta name="twitter:card" content="summary_large_image" />
-
-          <meta
-            property="og:description"
-            content="I'm enthusiastic frontend developer, passionate about learning innovative and technologies digital-product development."
-          />
-          <meta property="og:site_name" content={env.NEXT_PUBLIC_SITE_NAME} />
-          <meta name="twitter:image:alt" content="brisa diaz portfolio" />
 
           <link rel="manifest" href="/manifest.json" />
           <meta name="msapplication-TileColor" content="#ffffff" />
@@ -99,29 +88,63 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=optional"
             rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=optional "
             rel="stylesheet"
           />
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           />
-          <meta name="author" content="Brisa Díaz" />
+          <link rel="icon" href="/favicon.ico" />
           <meta charSet="utf-8" />
+
+          <meta property="og:title" content="Brisa Diaz - Frontend Developer" />
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content="/org.png" />
+          <meta property="og:url" content={env.NEXT_PUBLIC_SITE_URL} />
+          <meta
+            property="og:description"
+            content="I'm enthusiastic frontend developer, passionate about learning innovative technologies and digital-product development."
+          />
+          <meta
+            name="twitter:card"
+            content="I'm enthusiastic frontend developer, passionate about learning innovative technologies and digital-product development."
+          />
+          <meta
+            property="twitter:title"
+            content="Brisa Diaz - Frontend Developer"
+          />
+          <meta property="twitter:image" content="/org.png" />
+          <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
+          <meta name="twitter:creator" content="Brisa Diaz" />
+          <meta name="author" content="Brisa Díaz" />
+          <meta name="twitter:image:alt" content="brisa diaz portfolio" />
+
           <meta
             name="description"
             content="I'm enthusiastic frontend developer, passionate about learning innovative technologies digital-product development."
           />
           <meta
             name="keywords"
-            content="web developer,frontend developer,front end developer,front-end developer,frontend engineer,full stack developer,fullstack developer,full-stack developer,brisa diaz,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
+            content="brisa diaz,web developer,frontend developer,fullstack developer,front end developer,front-end developer,frontend engineer,full stack developer,full-stack developer,app,applications,web apps,web applications,software,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
             key="titleKeywords"
           />
-          <link rel="icon" href="/favicon.ico" />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `</script><link rel='preload' href='style.css' as='style' onload="this.onload=null;this.rel='stylesheet'"/><script>`,
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schemaData),
+            }}
+          />
         </Head>
         <body>
           <Main />

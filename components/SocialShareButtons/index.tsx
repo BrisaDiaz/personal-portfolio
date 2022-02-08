@@ -44,16 +44,17 @@ export default function SocialShareButton() {
     },
   ];
   return (
-    <div className={styles.socialBar}>
+    <nav className={styles.socialBar} aria-label="social share">
       {SOCIALS.map((social) => (
         <a
           target="_blank"
           key={social.name}
+          title={"share on " + social.name}
           href={social.shareUrl}
           rel="noreferrer"
           className={social.cassName}
         />
       ))}
-    </div>
+    </nav>
   );
 }

@@ -76,20 +76,30 @@
   outline-offset: 1rem;
 }
 
-.menu ul li a h2 {
+.menu ul li a {
   color: #ffffff;
 
-  transition: all 0.2s ease-in-out;
+  font-size: 24px;
+  font-family: "IM Fell Double Pica", serif;
+  display: block;
+  margin: 0;
+
+  transition: all 0.3s ease-in-out;
 }
 .menu ul li:focus-within,
 .menu ul li:hover {
   background: var(--primary-light);
 }
 .menu ul li:focus-within,
-.menu ul li:hover h2 {
-  transform: scale(1.2);
+.menu ul li:hover a {
+  transform: scale(1.1);
 }
 
 .activeLink {
   text-decoration: underline;
+}
+@media (min-width: 600px) {
+  .menu ul li a {
+    font-size: 38px;
+  }
 }

@@ -171,6 +171,8 @@ const Home: NextPage = () => {
                 src="/svg/agreement.svg"
                 alt="background"
                 loading="eager"
+                placeholder="blur"
+                blurDataURL="/svg/agreement.svg"
                 aria-hidden="true"
               />
             </div>
@@ -215,40 +217,28 @@ function EducationSection() {
           <p>
             I have technical background, I studied for 7 years and was able to
             obtained the title of mechanical technician in a public high school,
-            through which shaped my ability to work in a team by combining my
-            knowledge and skills with those of my colleagues, making use of
-            ingenuity and creativity to develop projects and solve problems with
-            the limited resources we had.
+            witch played a very important role in the manner I work, both
+            individually and within a team, by been flexible,looking for a way
+            to combine and take advantage of the knowledge and skills within the
+            team, amd by making use of ingenuity and creativity to create things
+            and solve problems with limited resources.
           </p>
           <p>
-            My transition in a technical high school also played a very
-            important role the manner and mentality with which I work and to
-            being able to evaluate and plan projects in advance, by questioning
-            aspects of it such as:
+            Later on, during the beginning of the pandemic , i studied
+            engineering for 3 months where I was introduced to programming and
+            learned a lot about what it takes to carry out a project, but also
+            how to know how to search and filter sources of knowledge by myself
+            and how to form a team and build relationships with people I did not
+            know.
           </p>
-          <ul>
-            <li>
-              {" "}
-              What do we want to create or what problem we want to solve?{" "}
-            </li>
-            <li>What tools and knowledge do we need?</li>
-            <li>What are the resources we can count on? </li>
-            <li>
-              Those things that we currently do not have, is there any way in
-              which we are able to obtain the same or a substitute that fits the
-              needs of the project?{" "}
-            </li>
-            <li> What are the tasks that must be performed to carry it out?</li>
-            <li>
-              {" "}
-              How are we going to divide the work, who is going to do what?{" "}
-            </li>
-            <li>
-              {" "}
-              What tasks should be prioritized and how are we going to
-              coordinate to complete them on time and try not to block others?
-            </li>
-          </ul>
+          <p>
+            I can say that my educational training helped me discover that with
+            programming I can work alongside experts who love what they do and
+            who have the same desire to satisfy their creative needs, to be in a
+            constant process of learning and progress, in where I can be part of
+            something great that is capable of reaching and helping many people
+            in their day to day.
+          </p>
         </div>
         <div className={styles.softSkillsIllustrationSection}>
           <div className={styles.planningllustration}>
@@ -256,8 +246,9 @@ function EducationSection() {
               layout="fill"
               src="/svg/planning-illustration.svg"
               alt="planning illustration"
-              loading="eager"
               aria-hidden="true"
+              placeholder="blur"
+              blurDataURL="/svg/planning.svg"
             />
           </div>
         </div>
@@ -266,13 +257,15 @@ function EducationSection() {
   );
 }
 function SkillsSection() {
+  const skillsFirtsHalf = SKILLS.slice(0, SKILLS.length / 2);
+  const skillsSecondHalf = SKILLS.slice(skillsFirtsHalf.length, -1);
   return (
     <section id="skills" className={styles.container}>
       <div className={styles.strengthsSectionWrapper}>
         <div className={styles.skillsSection}>
           <h2>Skills</h2>
           <ul>
-            {SKILLS.map((skill, index) => (
+            {skillsFirtsHalf.map((skill, index) => (
               <li key={index}>{skill}</li>
             ))}
           </ul>
@@ -283,11 +276,20 @@ function SkillsSection() {
               layout="fill"
               src="/svg/programing-illustration.svg"
               alt="programing illustration"
-              loading="eager"
+              placeholder="blur"
+              blurDataURL="/svg/programing-illustration.svg"
               aria-hidden="true"
             />
           </div>
         </div>
+      </div>
+      <div className={`${styles.skillsSection} ${styles.fluid}`}>
+        {" "}
+        <ul>
+          {skillsSecondHalf.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );
@@ -295,14 +297,6 @@ function SkillsSection() {
 function TechStackSection() {
   return (
     <section className={styles.container} id="techStack">
-      <div className={styles.checkedTechIllustration}>
-        <Image
-          layout="fill"
-          src="/svg/check-task-illustration.svg"
-          alt="techs learned"
-          loading="eager"
-        />
-      </div>
       <h2>Tech Stack</h2>
       <div className={styles.techsContainer}>
         {TECHS.map((tech) => (
@@ -311,7 +305,7 @@ function TechStackSection() {
             target="_blank"
             rel="noreferrer"
             key={tech.name}
-            title={`Link to ${tech.name} documentation`}
+            title={tech.name}
           >
             <figure role="figure">
               <div className={styles.techImage}>
@@ -341,13 +335,18 @@ function MainSection() {
           alt="welcome"
           loading="eager"
           aria-hidden="true"
+          placeholder="blur"
+          blurDataURL="/svg/welcome-illustration-split.svg"
         />
       </div>
 
       <div className={styles.mainSectionContent}>
         <div className={styles.mainSectionText}>
-          <h3>{"Hi!, I'm Brisa Díaz"}</h3>
-          <h1>{"I'm a Frontend Developer"}</h1>
+          <h1>
+            <span> {"Hi!, I'm Brisa Díaz"}</span>
+            <br />
+            {"I'm a Frontend Developer"}
+          </h1>
           <p>
             {" "}
             I describe myself as a proactive, curious and determined person,
@@ -361,7 +360,7 @@ function MainSection() {
             working on personal projects like websites and web applications of
             different kinds of topics in which I trained my ability to
             understand requirements, design the business logic and translate
-            them into an actual working application in the form of source code.
+            them into actual working applications.
           </p>
         </div>
         <div className={styles.personalInfoWrapper}>
@@ -372,8 +371,8 @@ function MainSection() {
                 height={25}
                 src="/icons/birthday.svg"
                 alt="birthday date"
-                loading="eager"
                 aria-hidden="true"
+                loading="eager"
               />
 
               <time dateTime="2000-11-18">11/18/2000</time>
@@ -390,8 +389,8 @@ function MainSection() {
                   height={25}
                   src="/icons/address.svg"
                   alt="home address"
-                  loading="eager"
                   aria-hidden="true"
+                  loading="eager"
                 />
                 <p>Córdoba - Argentina</p>
               </a>
@@ -409,9 +408,9 @@ function MainSection() {
                   width={25}
                   height={25}
                   src="/icons/telephone.svg"
-                  loading="eager"
                   aria-hidden="true"
                   alt="telephone number"
+                  loading="eager"
                 />
                 <p>+54 351 3850064</p>
               </a>
@@ -445,11 +444,11 @@ function MainSection() {
               >
                 <Image
                   width={25}
-                  loading="eager"
                   height={25}
                   src="/icons/linkedin.svg"
                   alt="linkedin"
                   aria-hidden="true"
+                  loading="eager"
                 />
 
                 <p>/brisa-díaz</p>
@@ -465,9 +464,9 @@ function MainSection() {
                 <Image
                   width={25}
                   height={25}
+                  loading="eager"
                   src="/icons/github.svg"
                   alt="github"
-                  loading="eager"
                   aria-hidden="true"
                 />
                 <p>/BrisaDiaz</p>

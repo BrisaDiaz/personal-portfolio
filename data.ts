@@ -153,7 +153,7 @@ export const TECHS = [
     resource_url: "https://nodemailer.com/about",
   },
   {
-    name: "Google Cloud Console ",
+    name: "Google API's ",
     stack: "backend",
     image: "/techs/google-cloud-console.svg",
     resource_url: "https://console.cloud.google.com/",
@@ -215,7 +215,7 @@ export const PROJECTS = [
       "Real time form validation.",
       "Push notifications",
       "Request supported : GET, PUT, POST.",
-      "Database seed with: default hotel and rooms categories,languages,facilities,services,activities,amenities and admin user.",
+      "Database seed with: default hotel and application data .",
     ],
     language: "Typescript",
     technologies: {
@@ -385,19 +385,20 @@ export const PROJECTS = [
   },
 ];
 export const SKILLS = [
-  "Experience implementing keyboard accessibility.",
-  "Knowledge in design patterns and modularization.",
   "Strong proficiency in JavaScript and DOM manipulation.",
   "Experience in creating responsive UI implementations.",
   "Experience integrating Typescript in a medium size project.",
   "Experience with JSON and RESTful/GraphQL services.",
   "Experience with Unit Testing and End to End testing.",
-  "Experience with the JavaScript ecosystem.",
+
   "Experience implementing rendering techniques like SSG, SSR and ISR.",
   "Experience implementing keyboard accessibility.",
+
+  "Experience with JavaScript on the backend.",
   "Experience setting up and scaling projects.",
+  "Knowledge in SEO optimization.",
   "Knowledge in design patterns and modularization.",
-  "Ownership-oriented mindset about the product.",
+
   "Ability to quickly get acquainted with new technologies and flexibility to adapt to new requirements.",
   "Experience working in a team environment.",
   "Tendency to convey confidence and security, to listen, show interest and be open-minded about the needs of the people around me.",

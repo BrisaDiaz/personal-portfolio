@@ -35,7 +35,10 @@ export default function MenuNav({
           src="/icons/close.svg"
           alt="close"
           objectFit="contain"
+          loading="eager"
           aria-hidden="true"
+          placeholder="blur"
+          blurDataURL="/svg/close.svg"
         />
       </div>
       <nav role="menubar">
@@ -47,7 +50,7 @@ export default function MenuNav({
                 onClick={() => onNavigate(link.href)}
                 tabIndex={tabIndex}
               >
-                <h2>{link.title}</h2>
+                {link.title}
               </a>
             </li>
           ))}

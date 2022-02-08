@@ -23,14 +23,14 @@ export default function ProjectModal({
   const { tabIndex } = useModalFocus({
     isOpen,
     onEscape: () => onClose(),
-    modalSelector: '[aria-label="project modal"]',
+    modalSelector: '[id="project modal"]',
   });
   return (
     <aside
       aria-hidden={isOpen ? "true" : false}
       tabIndex={tabIndex}
-      aria-label="project details"
       role="complementary"
+      id="project modal"
       className={`${styles.modal} ${isOpen ? styles.openModal : ""}`}
       onClick={() => handleModalInteraction()}
     >
@@ -41,7 +41,13 @@ export default function ProjectModal({
         onMouseLeave={() => setIsInteracting(false)}
       >
         <div className={styles.modalBobbleTop}>
-          <Image layout="fill" src="/svg/bobble.svg" alt="bobble" />
+          <Image
+            layout="fill"
+            src="/svg/bobble.svg"
+            alt="bobble"
+            placeholder="blur"
+            blurDataURL="/svg/bobble.svg"
+          />
         </div>
         <div className={styles.modalBobbleBottom}>
           <Image layout="fill" src="/svg/bobble.svg" alt="bobble" />
@@ -53,6 +59,9 @@ export default function ProjectModal({
             src="/icons/close.svg"
             alt="close"
             aria-hidden="true"
+            placeholder="blur"
+            loading="eager"
+            blurDataURL="/svg/close.svg"
             objectFit="contain"
           />
         </div>
@@ -69,6 +78,8 @@ export default function ProjectModal({
               src="/icons/screen_rotation.svg"
               layout="fill"
               alt="please rotate screen"
+              placeholder="blur"
+              blurDataURL="/svg/screen_rotation.svg"
             />
           </div>
         </div>
@@ -122,6 +133,9 @@ export default function ProjectModal({
                   height={25}
                   src="/icons/website.svg"
                   alt="demo"
+                  loading="eager"
+                  placeholder="blur"
+                  blurDataURL="/svg/website.svg"
                   aria-hidden="true"
                 />
                 Live Demo
@@ -141,6 +155,9 @@ export default function ProjectModal({
                   aria-hidden="true"
                   src="/icons/code.svg"
                   alt="source code"
+                  placeholder="blur"
+                  blurDataURL="/svg/code.svg"
+                  loading="eager"
                 />
                 Source Code
               </a>

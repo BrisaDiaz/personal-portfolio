@@ -24,6 +24,8 @@ export default function Placeholder({
           src={error ? "/icons/refresh.svg" : src}
           layout="fill"
           alt={alt}
+          placeholder="blur"
+          blurDataURL={src}
           onLoadedData={() => setIsLoded(true)}
           onLoad={() => setIsLoded(true)}
           onLoadStart={() => setIsLoded(false)}

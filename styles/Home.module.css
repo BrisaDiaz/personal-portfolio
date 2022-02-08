@@ -15,6 +15,9 @@
 
   overflow: visible;
 }
+.fluid {
+  min-width: max-content;
+}
 .menuBtn {
   top: 16px;
   right: 16px;
@@ -39,18 +42,23 @@
 }
 
 .mainSectionContent {
-  padding-top: 60px;
+  padding-top: 40px;
 
   position: relative;
   z-index: 10;
 }
-.mainSectionContent h3 {
+.mainSectionContent h1 span {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  font-family: "IM Fell Double Pica", serif;
   color: var(--primary-dark);
 }
 
 .mainSectionContent .mainSectionText p {
   margin: 20px 0;
   max-width: 600px;
+  line-height: 1.5em;
 }
 .mainSectionContent .mainSectionText p:last-child {
   margin-bottom: 20px;
@@ -110,23 +118,15 @@
   top: 0;
   z-index: -10;
 
-  margin-top: 300px;
-}
-.checkedTechIllustration {
-  position: absolute;
-  bottom: 0;
-  z-index: -10;
-  width: 350px;
-  height: 350px;
-  transform: scale(1.4);
+  margin-top: 400px;
 }
 
 .techsContainer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
-  row-gap: 18px;
+  gap: 5px;
+  row-gap: 0;
   margin-top: 50px;
 
   transition: all 0.2s ease-in-out;
@@ -137,9 +137,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 110px;
+  width: 80px;
   margin: 0;
   padding-top: 1rem;
+  height: min-content;
   text-align: center;
   justify-content: center;
 }
@@ -151,7 +152,7 @@
 .techsContainer a:focus-within {
   outline-color: var(--secondary-light);
 
-  outline-offset: 1rem;
+  outline-offset: 3px;
 }
 
 .techsContainer figure:hover .techImage,
@@ -160,8 +161,8 @@
 }
 .techImage {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,15 +198,18 @@
 .educationSectionContent,
 .skillsSection {
   max-width: 550px;
+  line-height: 1.5em;
 }
-
+.skillsSection h2 {
+  margin-bottom: 0.8em;
+}
 .educationSectionContent h2 {
   font-weight: 800;
   color: unset;
-  margin: 0.5rem 0 1rem;
+
+  margin: 0.5rem 0 1em;
 }
 
-.educationSectionContent ul,
 .skillsSection ul {
   padding: 1rem 0;
   padding-right: 0;
@@ -214,24 +218,13 @@
 
   flex-direction: column;
 }
-.educationSectionContent ul li,
+
 .skillsSection ul li {
   position: relative;
   margin-left: 1.5rem;
   line-height: 1.5rem;
 }
-.educationSectionContent ul li:before {
-  content: "?";
-  position: absolute;
-  font-weight: 800;
-  background: var(--light-text-contrast);
-  color: var(--primary-dark);
-  left: -25px;
-  transform: scale(0.8);
-  font-size: 14px;
-  border-radius: 50%;
-  padding: 0 6px;
-}
+
 .skillsSection ul li:before {
   content: "✓";
   font-size: 12px;
@@ -239,7 +232,7 @@
   font-weight: 800;
   background: var(--light-text-contrast);
   color: var(--primary-dark);
-  left: -28px;
+  left: -25px;
   transform: scale(0.8);
 
   border-radius: 50%;
@@ -257,7 +250,7 @@
   height: 400px;
   z-index: -10;
 
-  margin-bottom: -150px;
+  margin-bottom: -50px;
 
   position: relative;
   transform: scale(1.3);
@@ -285,7 +278,7 @@
   width: 90%;
   margin: 10px auto 20px;
   background: var(--light-text-contrast);
-  border-radius: 20px;
+  border-radius: 12px;
 }
 .callToActionBanner .wrapper {
   display: flex;
@@ -298,14 +291,14 @@
 .bannerIllustration {
   position: relative;
   width: 320px;
-
+  line-height: 1.5em;
   height: 300px;
-  align-self: flex-start;
 }
 .callToActionBanner .content {
   margin-bottom: 0;
   padding: 30px 16px;
   margin: 0 auto;
+  line-height: 1.5em;
 }
 
 .callToActionBanner button {
@@ -330,6 +323,7 @@
   .main h2 {
     font-size: 38px;
   }
+  .mainSectionContent h1 span,
   .main h3 {
     font-size: 28px;
   }
@@ -341,7 +335,9 @@
     padding-bottom: 30px;
     max-width: 1250px;
   }
-
+  .mainSectionContent {
+    padding-top: 10px;
+  }
   .welcomeIllustration {
     margin-right: -10%;
     margin-top: 350px;
@@ -389,6 +385,9 @@
   .strengthsSectionWrapper {
     flex-direction: row;
     align-items: center;
+  }
+  .programingIllustration {
+    transform: scale(1);
   }
   .planningllustration {
     margin-top: 100px;

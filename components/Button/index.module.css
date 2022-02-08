@@ -8,9 +8,11 @@
   font-weight: 700;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
+  border: 2px solid var(--secondary-main);
 }
 .button:hover {
   background: var(--secondary-dark);
+  border: 2px solid var(--secondary-dark);
 }
 .button:active,
 .button:focus {

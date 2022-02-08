@@ -1,12 +1,14 @@
 .socialBar {
   display: flex;
-  margin-top: -20px;
+  margin-bottom: -20px;
   position: fixed;
-  left: -35px;
-  top: 0;
+
+  bottom: 0;
+
   z-index: 100;
-  transform: scale(0.6);
-  flex-direction: column;
+  transform: scale(0.5);
+
+  flex-direction: row;
 }
 
 .socialBar a {
@@ -16,12 +18,11 @@
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  transform: translateX(-18px);
 }
-
-.socialBar a:hover,
 .socialBar a:focus {
-  transform: translateX(27px);
+  outline-color: var(--secondary-light);
+  outline-offset: 3px;
+  opacity: 1;
 }
 
 .facebook {
@@ -57,4 +58,24 @@
 .reddit {
   background: #ff5700;
   color: white;
+}
+@media (min-width: 768px) {
+  .socialBar {
+    left: -0.5rem;
+    margin-top: -20px;
+
+    top: 0;
+    z-index: 100;
+    transform: scale(0.6);
+    flex-direction: column;
+  }
+
+  .socialBar a {
+    transform: unset;
+  }
+  .socialBar a:hover,
+  .socialBar a:focus {
+    transform: unset;
+    opacity: 0.8;
+  }
 }
