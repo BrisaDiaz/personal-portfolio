@@ -137,7 +137,7 @@ class MyDocument extends Document {
           />
           <meta
             name="keywords"
-            content="brisa diaz,web developer,frontend developer,fullstack developer,front end developer,front-end developer,frontend engineer,full stack developer,full-stack developer,app,applications,web apps,web applications,specialist,web development,software,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
+            content="brisa diaz,web developer,frontend developer,fullstack developer,front end developer,front-end developer,frontend engineer,full stack developer,full-stack developer,app,application,experience,knowledge,work,working,project,projects,team,skills,SEO,web apps,web applications,specialist,web development,software,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
             key="titleKeywords"
           />
 

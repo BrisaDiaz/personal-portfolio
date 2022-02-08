@@ -192,7 +192,7 @@ function ProjectsSection({
   onSelectProject: (project: Project) => void;
 }) {
   return (
-    <div style={{ position: "relative" }}>
+    <div className="relative">
       <section className={styles.container} id="projects">
         <h2>Projects</h2>
 

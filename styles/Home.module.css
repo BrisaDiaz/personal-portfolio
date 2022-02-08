@@ -16,7 +16,10 @@
   overflow: visible;
 }
 .fluid {
-  min-width: max-content;
+  min-width: 100%;
+}
+.relative {
+  position: relative;
 }
 .menuBtn {
   top: 16px;
