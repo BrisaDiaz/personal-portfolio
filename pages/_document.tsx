@@ -107,8 +107,12 @@ class MyDocument extends Document {
             content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
           />
           <meta property="og:type" content="article" />
-          <meta property="og:image" content="/org.png" />
+          <meta property="og:image" content="/org.jpg" />
           <meta property="og:url" content={env.NEXT_PUBLIC_SITE_URL} />
+          <meta property="og:site_name" content={env.NEXT_PUBLIC_SITE_NAME} />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           <meta
             property="og:description"
             content="I'm enthusiastic frontend developer, passionate about learning innovative technologies and digital-product development."
@@ -121,9 +125,9 @@ class MyDocument extends Document {
             property="twitter:title"
             content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
           />
-          <meta property="twitter:image" content="/org.png" />
+          <meta property="twitter:image" content="/org.jpg" />
           <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
-          <meta name="twitter:creator" content="Brisa Diaz" />
+          <meta name="twitter:creator" content="Brisa Díaz" />
           <meta name="author" content="Brisa Díaz" />
           <meta name="twitter:image:alt" content="brisa diaz portfolio" />
 
