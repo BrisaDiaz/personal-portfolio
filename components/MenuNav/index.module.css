@@ -51,7 +51,7 @@
   outline-offset: 3px;
   outline-color: var(--secondary-light);
 }
-.menu ul {
+.menu nav {
   padding: 0;
   list-style: none;
   margin: 50px auto;
@@ -64,19 +64,19 @@
 
   width: 100%;
 }
-.menu ul li {
+.menu a {
   width: 100%;
   text-align: center;
   padding: 1rem 0;
   transition: all 0.2s ease-in-out;
 }
 
-.menu ul li a:focus {
+.menu a:focus {
   outline-color: var(--secondary-light);
   outline-offset: 1rem;
 }
 
-.menu ul li a {
+.menu a {
   color: #ffffff;
 
   font-size: 24px;
@@ -86,12 +86,12 @@
 
   transition: all 0.3s ease-in-out;
 }
-.menu ul li:focus-within,
-.menu ul li:hover {
+
+.menu a:hover {
   background: var(--primary-light);
 }
-.menu ul li:focus-within,
-.menu ul li:hover a {
+
+.menu a {
   transform: scale(1.1);
 }
 

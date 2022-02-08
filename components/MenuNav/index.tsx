@@ -25,6 +25,8 @@ export default function MenuNav({
 
   return (
     <aside
+      role="complementary"
+      aria-hidden={isOpen ? "true" : false}
       tabIndex={tabIndex}
       className={`${styles.menu} ${isOpen ? styles.openMenu : ""}`}
       aria-label="navigation menu"
@@ -42,23 +44,19 @@ export default function MenuNav({
           blurDataURL="/svg/close.svg"
         />
       </div>
-      <nav role="menubar">
-        <ul>
-          {links.map((link) => (
-            <Link key={link.href} href={link.href} passHref>
-              <li key={link.href} role="menuitem">
-                <a
-                  href=""
-                  title={link.title + " section"}
-                  onClick={() => onNavigate(link.href)}
-                  tabIndex={tabIndex}
-                >
-                  {link.title}
-                </a>
-              </li>
-            </Link>
-          ))}
-        </ul>
+      <nav aria-label="primary" role="menubar">
+        {links.map((link) => (
+          <Link key={link.href} href={link.href} passHref>
+            <a
+              role="menuitem"
+              href=""
+              title={link.title + " section"}
+              onClick={() => onNavigate(link.href)}
+            >
+              {link.title}
+            </a>
+          </Link>
+        ))}
       </nav>
     </aside>
   );

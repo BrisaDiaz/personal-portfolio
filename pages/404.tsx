@@ -18,7 +18,6 @@ const NotFoundPage: NextPage = () => {
             layout="fill"
             src="/svg/404-illustration.svg"
             alt="404 illustration"
-            aria-hidden="true"
             placeholder="blur"
             blurDataURL="/svg/404-illustration.svg"
           />

@@ -24,6 +24,8 @@
 .menuBtn {
   top: 16px;
   right: 16px;
+  width: 26px;
+  height: 34px;
   margin-left: auto;
   width: fit-content;
   z-index: 50;
@@ -80,7 +82,10 @@
 
   padding-right: 10px;
 }
-
+.personalInfoWrapper ul li span {
+  width: 25px;
+  height: 25px;
+}
 .personalInfoWrapper ul li,
 .personalInfoWrapper ul li a {
   height: min-content;
@@ -95,7 +100,7 @@
 
 .personalInfoWrapper ul li p,
 .personalInfoWrapper ul li time {
-  opacity: 0;
+  opacity: 0.1;
   background: var(--secondary-main);
   padding: 0 6px;
   color: #fff;

@@ -25,6 +25,7 @@ export default function Carousel({
       className={styles.sliderContainer}
       role="slider"
       aria-valuenow={currentSlide}
+      aria-label="image carrousel"
     >
       {captions.map((caption, index) => (
         <div

@@ -78,8 +78,7 @@ export default function ProjectModal({
               src="/icons/screen_rotation.svg"
               layout="fill"
               alt="please rotate screen"
-              placeholder="blur"
-              blurDataURL="/svg/screen_rotation.svg"
+              loading="eager"
             />
           </div>
         </div>
@@ -134,8 +133,6 @@ export default function ProjectModal({
                   src="/icons/website.svg"
                   alt="demo"
                   loading="eager"
-                  placeholder="blur"
-                  blurDataURL="/svg/website.svg"
                   aria-hidden="true"
                 />
                 Live Demo
@@ -155,8 +152,6 @@ export default function ProjectModal({
                   aria-hidden="true"
                   src="/icons/code.svg"
                   alt="source code"
-                  placeholder="blur"
-                  blurDataURL="/svg/code.svg"
                   loading="eager"
                 />
                 Source Code

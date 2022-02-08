@@ -122,8 +122,7 @@ const Home: NextPage = () => {
 
           <Image
             width={26}
-            height={26}
-            aria-hidden="true"
+            height={30}
             src="/icons/menu.svg"
             alt="menu"
             loading="eager"
@@ -175,7 +174,6 @@ const Home: NextPage = () => {
                 loading="eager"
                 placeholder="blur"
                 blurDataURL="/svg/agreement.svg"
-                aria-hidden="true"
               />
             </div>
           </div>
@@ -248,9 +246,8 @@ function EducationSection() {
               layout="fill"
               src="/svg/planning-illustration.svg"
               alt="planning illustration"
-              aria-hidden="true"
               placeholder="blur"
-              blurDataURL="/svg/planning.svg"
+              blurDataURL="/svg/planning-illustration.svg"
             />
           </div>
         </div>
@@ -280,7 +277,6 @@ function SkillsSection() {
               alt="programing illustration"
               placeholder="blur"
               blurDataURL="/svg/programing-illustration.svg"
-              aria-hidden="true"
             />
           </div>
         </div>
@@ -313,8 +309,7 @@ function TechStackSection() {
               <div className={styles.techImage}>
                 <ImagePlaceholder
                   src={tech.image}
-                  alt="placeholder"
-                  aria-hidden="true"
+                  alt={tech.name + " logo"}
                   objectFit="contain"
                 />
               </div>
@@ -336,7 +331,6 @@ function MainSection() {
           src="/svg/welcome-illustration-split.svg"
           alt="welcome"
           loading="eager"
-          aria-hidden="true"
           placeholder="blur"
           blurDataURL="/svg/welcome-illustration-split.svg"
         />
@@ -373,7 +367,6 @@ function MainSection() {
                 height={25}
                 src="/icons/birthday.svg"
                 alt="birthday date"
-                aria-hidden="true"
                 loading="eager"
               />
 
@@ -391,7 +384,6 @@ function MainSection() {
                   height={25}
                   src="/icons/address.svg"
                   alt="home address"
-                  aria-hidden="true"
                   loading="eager"
                 />
                 <p>Córdoba - Argentina</p>
@@ -410,7 +402,6 @@ function MainSection() {
                   width={25}
                   height={25}
                   src="/icons/telephone.svg"
-                  aria-hidden="true"
                   alt="telephone number"
                   loading="eager"
                 />
@@ -429,7 +420,6 @@ function MainSection() {
                   height={25}
                   src="/icons/email.svg"
                   alt="email"
-                  aria-hidden="true"
                   loading="eager"
                 />
                 <p>brisaabigaildiaz2000@gmail.com</p>
@@ -449,7 +439,6 @@ function MainSection() {
                   height={25}
                   src="/icons/linkedin.svg"
                   alt="linkedin"
-                  aria-hidden="true"
                   loading="eager"
                 />
 
@@ -469,7 +458,6 @@ function MainSection() {
                   loading="eager"
                   src="/icons/github.svg"
                   alt="github"
-                  aria-hidden="true"
                 />
                 <p>/BrisaDiaz</p>
               </a>

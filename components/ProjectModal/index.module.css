@@ -113,6 +113,7 @@
   text-decoration: underline;
   font-size: 18px !important;
   text-underline-offset: 1px;
+  color: var(--secondary-dark);
 }
 
 .contentWrapper b {
