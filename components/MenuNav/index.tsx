@@ -39,9 +39,6 @@ export default function MenuNav({
           alt="close"
           objectFit="contain"
           loading="eager"
-          aria-hidden="true"
-          placeholder="blur"
-          blurDataURL="/svg/close.svg"
         />
       </div>
       <nav aria-label="primary" role="menubar">

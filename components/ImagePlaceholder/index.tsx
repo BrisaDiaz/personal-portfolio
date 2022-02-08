@@ -23,7 +23,7 @@ export default function Placeholder({
           objectFit={objectFit ? objectFit : error ? "contain" : "cover"}
           src={error ? "/icons/refresh.svg" : src}
           layout="fill"
-          alt={alt}
+          alt={isLoaded ? alt : "loading spinner"}
           onLoadedData={() => setIsLoded(true)}
           onLoad={() => setIsLoded(true)}
           onLoadStart={() => setIsLoded(false)}

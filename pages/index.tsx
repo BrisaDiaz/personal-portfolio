@@ -160,8 +160,8 @@ const Home: NextPage = () => {
                 organizational goals.
               </p>
               <Link href="#aboutMe" passHref>
-                <a href="" title="about me section" tabIndex={-1}>
-                  <Button text="Lest get in touch!" />
+                <a href="" title="about me section">
+                  <Button text="Lest get in touch!" tabIndex={-1} />
                 </a>
               </Link>
             </div>
