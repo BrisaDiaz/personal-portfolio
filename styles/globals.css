@@ -49,6 +49,10 @@ a,
 b {
   text-decoration: none;
 }
+a:focus button {
+  outline: transparent;
+  outline-offset: 3px;
+}
 
 h1 {
   font-size: 40px;
@@ -100,6 +104,7 @@ h4 {
   cursor: default;
   border: 1px solid transparent;
 }
+
 @media (min-width: 768px) {
   *::-webkit-scrollbar {
     display: block;

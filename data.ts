@@ -185,10 +185,11 @@ export const TECHS = [
 ];
 export const PROJECTS = [
   {
+    id: 4,
     name: "hotel booking app",
     captions: [
       "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_2_aqjj3g.png",
-      "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_398,w_710/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.png",
+      "https://res.cloudinary.com/myproyects/image/upload/c_fill,h_500,w_1200/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707488/proyects/Captura_de_pantalla_2022-01-20_155932-min_y0xpcg.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707501/proyects/screencapture-localhost-3000-room-1-2022-01-16-15_57_18-min_1_pq2is5.png",
       "https://res.cloudinary.com/myproyects/image/upload/v1642707491/proyects/screencapture-localhost-3000-admin-hotel-2022-01-16-16_00_02-min_1_g7qilp.png",
@@ -238,13 +239,14 @@ export const PROJECTS = [
     demo: "https://hotel-booker-app.vercel.app/signin",
   },
   {
+    id: 3,
     name: "wikifit app",
     captions: [
       "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_r60diw.png",
-      "https://res.cloudinary.com/myproyects/image/upload/c_fill,h_398,w_710/v1643000022/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-auth-signin-2022-01-19-14_36_56-min_n6wsuu.png",
-      "https://res.cloudinary.com/myproyects/image/upload/c_thumb,h_398,w_710/v1642707454/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-search-2022-01-19-14_40_16-min_lrko8u.png",
+      "https://res.cloudinary.com/myproyects/image/upload/v1644361152/proyects/wki-2-min_x0zsph.png",
+      "https://res.cloudinary.com/myproyects/image/upload/v1644361150/proyects/wiki-1-min_jf6jpm.png",
 
-      "https://res.cloudinary.com/myproyects/image/upload/v1642708557/proyects/screencapture-localhost-3000-macros-calculator-2021-12-14-01_54_03-min_pkzts9.png",
+      "https://res.cloudinary.com/myproyects/image/upload/v1644361144/proyects/wki-3-min_xc4vrl.png",
     ],
     summary:
       "Application created to search for recipes and calculate nutritional requirements adjusted to the profile and diet of users.",
@@ -289,14 +291,15 @@ export const PROJECTS = [
     demo: "https://fitness-wiki-nextjs-app.vercel.app",
   },
   {
+    id: 2,
     name: "delivery app",
     captions: [
       "https://res.cloudinary.com/myproyects/image/upload/v1643991147/burger_rgepyv.png",
-      "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_east,h_398,w_710,y_690/v1642716747/proyects/lk-min_tazetv.png",
-      "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_398,w_710/v1642716738/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_58_45-min_yid3wi.png",
+      "https://res.cloudinary.com/myproyects/image/upload/v1644361165/proyects/burger-2-min_oatxvw.png",
+      "https://res.cloudinary.com/myproyects/image/upload/v1644361146/proyects/burger-1-min_qu6v2e.png",
 
       "https://res.cloudinary.com/myproyects/image/upload/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.png",
-      "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_398,w_710,y_1242/v1642716732/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-17_01_06-min_gwnomp.png",
+      "https://res.cloudinary.com/myproyects/image/upload/v1644361139/proyects/burger-3-min_y4eorf.png",
     ],
     summary:
       "Application created for the management of the menu online and real-time monitoring of the status of orders.",
@@ -353,6 +356,7 @@ export const PROJECTS = [
     demo: "https://fast-food-delivery-app.herokuapp.com",
   },
   {
+    id: 1,
     name: "photographer portfolio",
     captions: [
       "https://res.cloudinary.com/myproyects/image/upload/v1642998071/proyects/target_3_jhisbz.png",
@@ -381,7 +385,7 @@ export const PROJECTS = [
       `Smooth scroll to top button.`,
     ],
     source_code: "https://github.com/BrisaDiaz/Photographer_web_page",
-    demo: "https://brisadiaz.github.io/Fotographer_web_page",
+    demo: "https://brisadiaz.github.io/Photographer_web_page",
   },
 ];
 export const SKILLS = [

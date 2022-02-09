@@ -9,17 +9,21 @@ export default function MenuNav({
   onClose,
   activeLink,
   onNavigate,
+  onOpen,
 }: {
   isOpen: boolean;
   links: Array<{ title: string; href: string }>;
   onClose: () => void;
-
+  onOpen?: () => void;
   activeLink: string;
   onNavigate: (href: string) => void;
 }) {
   const { tabIndex } = useModalFocus({
     isOpen,
-    onEscape: () => onClose(),
+    onOpen: () => onOpen,
+    openKey: "m",
+    closeKey: "Escape",
+    onClose: () => onClose(),
     modalSelector: '[aria-label="navigation menu"]',
   });
 

@@ -2,15 +2,23 @@ import React, { useEffect } from "react";
 export default function useModalFocus({
   modalSelector,
   isOpen,
-  onEscape,
+  onClose,
+  openKey,
+  closeKey,
+  onOpen,
 }: {
   modalSelector: string;
   isOpen: boolean;
-  onEscape?: () => void;
+  openKey?: string;
+  closeKey?: string;
+  onClose?: () => void;
+  onOpen?: () => void;
 }) {
   const [tabIndex, setTabIndex] = React.useState<-1 | 0>(-1);
   React.useEffect(() => {
+    handleBodyState();
     if (!isOpen) return setTabIndex(-1);
+
     setTabIndex(0);
     handleFocus();
   }, [isOpen]);
@@ -55,16 +63,34 @@ export default function useModalFocus({
 
     firstFocusableElement.focus();
   };
-  const handleAutoClose = (e: KeyboardEvent) => {
-    if (e.key === "Escape" && onEscape) {
-      onEscape();
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (isOpen && e.key === closeKey && onClose) {
+      onClose();
+    }
+    if (!isOpen && e.key === openKey && onOpen) {
+      onOpen();
     }
   };
   useEffect(() => {
-    document.addEventListener("keydown", handleAutoClose, false);
-    return () =>
-      document.removeEventListener("keydown", handleAutoClose, false);
+    document.addEventListener("keydown", handleKeydown, false);
+    return () => document.removeEventListener("keydown", handleKeydown, false);
   }, []);
+  function handleBodyState() {
+    if (document) {
+      const body = window.document.body;
+      const html = window.document?.querySelector("html");
+
+      if (!body || !html) return;
+
+      if (isOpen) {
+        body.style.overflow = "hidden";
+        html.style.overflow = "hidden";
+      } else {
+        body.style.overflowY = "auto";
+        html.style.overflowY = "auto";
+      }
+    }
+  }
 
   return { tabIndex };
 }

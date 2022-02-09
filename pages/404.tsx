@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Button from "@/components/Button/index";
 import Link from "next/link";
-import styles from "../styles/NotFound.module.css";
+import styles from "@/styles/NotFound.module.css";
 const NotFoundPage: NextPage = () => {
   return (
     <div>

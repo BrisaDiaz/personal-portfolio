@@ -3,9 +3,9 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "@/styles/Home.module.css";
 import ProjectCard from "@/components/ProjectCard";
-import ProjectModal from "@/components/ProjectModal";
+
 import MenuNav from "@/components/MenuNav/index";
 import { TECHS, PROJECTS, SKILLS } from "data";
 import { useState } from "react";
@@ -21,13 +21,6 @@ const MENU_LINKS = [
   { title: "Education", href: "#education" },
 ];
 const Home: NextPage = () => {
-  const [modalState, setModalState] = useState<{
-    isOpen: boolean;
-    selectedProject: Project | null;
-  }>({
-    isOpen: false,
-    selectedProject: null,
-  });
   const [menuState, setMenuState] = useState<{
     isOpen: boolean;
     activeLink: string;
@@ -36,18 +29,6 @@ const Home: NextPage = () => {
     activeLink: "aboutMe",
   });
 
-  const handleCloseModal = () => {
-    setModalState({
-      isOpen: false,
-      selectedProject: null,
-    });
-  };
-  const handleOpenModal = (selectedProject: Project) => {
-    setModalState({
-      isOpen: true,
-      selectedProject: selectedProject,
-    });
-  };
   const handleNavigation = (href: string) => {
     setMenuState({
       isOpen: false,
@@ -66,45 +47,6 @@ const Home: NextPage = () => {
       isOpen: false,
     });
   };
-  React.useEffect(() => {
-    const body = document.querySelector("main");
-    body?.addEventListener("focus", (event) => {
-      console.log(event.target);
-    });
-  }, []);
-
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "m") {
-      handleOpenMenu();
-    }
-  };
-
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown, false);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown, false);
-    };
-  }, []);
-  const handleBodyState = () => {
-    if (document) {
-      const body = window.document.body;
-      const html = window.document?.querySelector("html");
-
-      if (!body || !html) return;
-
-      if (modalState.isOpen || menuState.isOpen) {
-        body.style.overflow = "hidden";
-        html.style.overflow = "hidden";
-      } else {
-        body.style.overflowY = "auto";
-        html.style.overflowY = "auto";
-      }
-    }
-  };
-  React.useEffect(() => {
-    handleBodyState();
-  }, [modalState.isOpen, menuState.isOpen]);
 
   return (
     <div>
@@ -112,11 +54,7 @@ const Home: NextPage = () => {
         <title>Brisa Díaz | Frontend Development Specialist 👩‍💻</title>
       </Head>
 
-      <main
-        className={`${styles.main} ${
-          modalState.isOpen || (menuState.isOpen && styles.fixed)
-        }`}
-      >
+      <main className={styles.main}>
         <div className={styles.menuBtn}>
           <button onClick={handleOpenMenu} aria-label="menu" />
 
@@ -131,6 +69,7 @@ const Home: NextPage = () => {
         <MenuNav
           isOpen={menuState.isOpen}
           links={MENU_LINKS}
+          onOpen={handleOpenMenu}
           onClose={handleCloseMenu}
           activeLink={menuState.activeLink}
           onNavigate={handleNavigation}
@@ -139,12 +78,8 @@ const Home: NextPage = () => {
         <MainSection />
         <TechStackSection />
 
-        <ProjectsSection onSelectProject={handleOpenModal} />
-        <ProjectModal
-          onClose={() => handleCloseModal()}
-          isOpen={modalState.isOpen}
-          project={modalState.selectedProject}
-        />
+        <ProjectsSection />
+
         <SkillsSection />
         <article className={styles.callToActionBanner}>
           <div className={styles.wrapper}>
@@ -184,11 +119,7 @@ const Home: NextPage = () => {
   );
 };
 
-function ProjectsSection({
-  onSelectProject,
-}: {
-  onSelectProject: (project: Project) => void;
-}) {
+function ProjectsSection() {
   return (
     <div className="relative">
       <section className={styles.container} id="projects">
@@ -196,11 +127,7 @@ function ProjectsSection({
 
         <div className={styles.projectsContainer}>
           {PROJECTS.map((project) => (
-            <ProjectCard
-              key={project.name}
-              project={project}
-              onReadMore={() => onSelectProject(project)}
-            />
+            <ProjectCard key={project.name} project={project} />
           ))}
           <div />
         </div>

@@ -1,0 +1,221 @@
+.main {
+  min-height: 100vh;
+  position: relative;
+  max-width: 1410px;
+  overflow: hidden;
+  margin: 0 auto;
+  color: var(--secondary-dark);
+}
+.modalBobbleTop {
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -40%;
+  font-weight: 200;
+  transform: rotate(233deg);
+  z-index: -10;
+}
+.breadcrumbBar span {
+  text-transform: capitalize;
+}
+.breadcrumbBar span + span:before,
+.breadcrumbBar span + span:before {
+  padding: 8px;
+  color: hsl(0, 0%, 0%);
+  content: "/\00a0";
+}
+
+.breadcrumbBar span a {
+  color: var(--primary-main);
+  text-decoration: none;
+}
+
+.breadcrumbBar span a:hover,
+.breadcrumbBar span a:focus {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  outline: none;
+}
+
+.container {
+  padding: 16px 20px;
+  padding-bottom: 40px;
+  position: relative;
+  margin: 0 auto;
+
+  overflow: visible;
+}
+.carouselWrapper {
+  width: 100%;
+  margin: 10px 0;
+  height: 400px;
+
+  position: relative;
+}
+.backdrop {
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  background: #00000085;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+
+  opacity: 1;
+  transform: scale(1);
+}
+
+.backdrop span {
+  transform: scale(0.5);
+}
+.main h2 {
+  text-transform: capitalize;
+  font-size: 25px;
+
+  margin-top: 0.5em;
+}
+.main h3 {
+  font-size: 18px;
+  margin: 1em 0;
+  color: var(--secondary-dark);
+}
+
+.container b {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  font-weight: 400;
+  color: var(--secondary-main);
+}
+.userBlock {
+  width: max-content;
+  border-radius: 12px;
+  background: #e9dcdd;
+  padding: 0.1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.userBlock b {
+  margin-right: 5px;
+  white-space: pre;
+  color: var(--primary-dark);
+}
+.userBlock p {
+  align-items: center;
+  display: flex;
+}
+.linksBlock {
+  display: flex;
+  margin-top: 1.5rem;
+  align-self: end;
+  display: flex;
+  height: min-content;
+  gap: 10px;
+}
+.linksBlock p {
+  display: flex;
+
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+.linksBlock a {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  background: var(--primary-dark);
+  padding: 2px 0;
+  padding-right: 8px;
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  opacity: 0.9;
+  border-radius: 4px;
+}
+.techList b {
+  width: 70px;
+}
+.linksBlock a:hover {
+  opacity: 1;
+}
+.linksBlock a:focus {
+  outline-color: var(--secondary-light);
+  outline-offset: 3px;
+}
+.featuresList {
+  list-style: "revert";
+  padding: 0;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+  list-style: revert;
+  line-height: 2em;
+}
+
+.techList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.techList span {
+  text-transform: capitalize;
+  padding: 2px 6px;
+  background: var(--secondary-main);
+  color: #fff;
+
+  font-size: 12px;
+  border-radius: 2px;
+}
+@media (min-width: 600px) {
+  .main {
+    font-size: 16px;
+  }
+
+  .main h2 {
+    font-size: 38px;
+  }
+  .mainSectionContent h1 span,
+  .main h3 {
+    font-size: 28px;
+    margin: 1em 0;
+  }
+
+  .container {
+    padding: 30px 60px;
+    padding-bottom: 30px;
+    max-width: 1250px;
+  }
+  .container {
+    padding: 40px;
+  }
+
+  .carouselWrapper {
+    margin: 20px 0;
+  }
+  .container h2 {
+    font-size: 30px;
+  }
+  .techList b {
+    width: 80px;
+  }
+  .techList span {
+    font-size: 14px;
+  }
+}
+@media (min-width: 900px) {
+  .featuresList {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  .carouselWrapper {
+    height: 500px;
+  }
+}
+
+@media (min-width: 450px) {
+  .backdrop {
+    opacity: 0;
+    transform: scale(0);
+  }
+}

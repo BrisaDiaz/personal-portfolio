@@ -50,8 +50,13 @@
 }
 .content .projectCardBtn {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
+}
+.content .projectCardBtn a:focus {
+  outline: 2px solid var(--secondary-light);
+  outline-offset: 3px;
+  border-radius: 8px;
 }

@@ -73,7 +73,7 @@
 
 .menu a:focus {
   outline-color: var(--secondary-light);
-  outline-offset: 1rem;
+  outline-offset: 0;
 }
 
 .menu a {
