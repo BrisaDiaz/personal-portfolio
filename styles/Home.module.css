@@ -302,6 +302,7 @@
   width: 320px;
   line-height: 1.5em;
   height: 300px;
+  margin: 0 auto;
 }
 .callToActionBanner .content {
   margin-bottom: 0;

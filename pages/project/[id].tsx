@@ -22,11 +22,11 @@ const ProjectPage: NextPage<{ project: Project }> = ({ project }) => {
             aria-label="breadcrumbs"
             className={styles.breadcrumbBar}
           >
-            <Link href="/" passHref>
-              <span>
-                <a href="">Home</a>
-              </span>
-            </Link>
+            <span>
+              <Link href="/" passHref>
+                <a>Home</a>
+              </Link>
+            </span>
 
             <Link href="/#projects" passHref>
               <span>
@@ -35,7 +35,7 @@ const ProjectPage: NextPage<{ project: Project }> = ({ project }) => {
             </Link>
             <span>{project.name}</span>
           </nav>
-          <div className={styles.modalBobbleTop}>
+          <div className={styles.bobble}>
             <Image
               layout="fill"
               src="/svg/bobble.svg"
@@ -55,7 +55,8 @@ const ProjectPage: NextPage<{ project: Project }> = ({ project }) => {
             <div className={styles.backdrop}>
               <Image
                 src="/icons/screen_rotation.svg"
-                layout="fill"
+                width={320}
+                height={400}
                 alt="please rotate screen"
                 loading="eager"
               />

@@ -64,6 +64,7 @@ const Home: NextPage = () => {
             src="/icons/menu.svg"
             alt="menu"
             loading="eager"
+            b
           />
         </div>
         <MenuNav

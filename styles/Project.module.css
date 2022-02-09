@@ -6,16 +6,19 @@
   margin: 0 auto;
   color: var(--secondary-dark);
 }
-.modalBobbleTop {
-  overflow-x: hidden;
+.bobble {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -40%;
   right: -40%;
+  overflow: visible;
   font-weight: 200;
-  transform: rotate(233deg);
+  transform: rotate(213deg);
   z-index: -10;
+}
+.bobble span {
+  overflow: visible !important;
 }
 .breadcrumbBar span {
   text-transform: capitalize;
@@ -28,13 +31,12 @@
 }
 
 .breadcrumbBar span a {
-  color: var(--primary-main);
+  color: var(--primary-dark);
   text-decoration: none;
 }
 
 .breadcrumbBar span a:hover,
 .breadcrumbBar span a:focus {
-  color: var(--primary-dark);
   text-decoration: underline;
   outline: none;
 }
@@ -63,7 +65,9 @@
   width: 100%;
   height: 100%;
   transition: all 0.3s ease-in-out;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   transform: scale(1);
 }
@@ -92,7 +96,7 @@
 .userBlock {
   width: max-content;
   border-radius: 12px;
-  background: #e9dcdd;
+  background: #f5eeef;
   padding: 0.1rem 1.5rem;
   margin-top: 1.5rem;
 }
