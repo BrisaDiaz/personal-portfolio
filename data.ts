@@ -124,23 +124,12 @@ export const TECHS = [
     resource_url: "https://socket.io/docs/v4",
   },
   {
-    name: "Next PWA",
-    categories: ["other"],
-    image: "/techs/next-pwa.svg",
-    resource_url: "https://github.com/shadowwalker/next-pwa",
-  },
-  {
     name: "Next Auth",
     categories: ["other"],
     image: "/techs/next-auth.svg",
     resource_url: "https://next-auth.js.org/",
   },
-  {
-    name: "Json WTk",
-    categories: ["other"],
-    image: "/techs/json-wtk.svg",
-    resource_url: "https://jwt.io/introduction",
-  },
+
   {
     name: "Cloudinary",
     categories: ["other"],
@@ -153,35 +142,12 @@ export const TECHS = [
     image: "/techs/nodemailer.svg",
     resource_url: "https://nodemailer.com/about",
   },
-  {
-    name: "Google API's ",
-    categories: ["other"],
-    image: "/techs/google-cloud-console.svg",
-    resource_url: "https://console.cloud.google.com/",
-  },
-  {
-    name: "vercel",
-    categories: ["other"],
-    image: "/techs/vercel.svg",
-    resource_url: "https://vercel.com",
-  },
-  {
-    name: "Heroku",
-    categories: ["other"],
-    image: "/techs/heroku.svg",
-    resource_url: "https://www.heroku.com",
-  },
+
   {
     name: "Git",
     categories: ["other"],
     image: "/techs/git.svg",
     resource_url: "https://git-scm.com/doc",
-  },
-  {
-    name: "NPM",
-    categories: ["other"],
-    image: "/techs/npm.svg",
-    resource_url: "https://docs.npmjs.com/",
   },
 ];
 export const PROJECTS = [

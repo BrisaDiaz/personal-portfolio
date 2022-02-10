@@ -154,7 +154,7 @@
 
 .techsContainer figure {
   display: flex;
-
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 80px;
@@ -170,7 +170,13 @@
   font-size: 14px;
   font-weight: 600;
 }
-
+.techsContainer figure:hover:after {
+  content: "◥";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--primary-main);
+}
 .techsContainer a:focus-within {
   outline-color: var(--secondary-light);
   outline-offset: 3px;
@@ -180,11 +186,7 @@
 .techsContainer a:focus figure .techImage {
   transform: scale(1.15);
 }
-.techsContainer a:hover .techDescription,
-.techsContainer a:focus .techDescription {
-  transform: translate(50%, 100%) scale(1);
-  opacity: 1;
-}
+
 .techImage {
   position: relative;
   width: 40px;
@@ -200,10 +202,10 @@
   display: grid;
   width: 100%;
   justify-items: center;
-  background: var(--secondary-light);
+  background: var(--light-text-contrast);
 
   gap: 4px;
-  border: 4px solid var(--secondary-light);
+  border: 4px solid var(--light-text-contrast);
   border-bottom: 0;
   grid-template-columns: 1fr;
 }
