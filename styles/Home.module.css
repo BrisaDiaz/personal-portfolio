@@ -202,14 +202,14 @@
   display: grid;
   width: 100%;
   justify-items: center;
-  background: var(--light-text-contrast);
 
-  gap: 4px;
-  border: 4px solid var(--light-text-contrast);
-  border-bottom: 0;
+  grid-gap: 0.1rem;
+
   grid-template-columns: 1fr;
 }
-
+.projectsContainer article {
+  border: 2px solid var(--light-text-contrast);
+}
 .strengthsSectionWrapper {
   display: flex;
   flex-direction: column;

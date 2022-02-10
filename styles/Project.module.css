@@ -104,6 +104,7 @@
   margin-right: 5px;
   white-space: pre;
   color: var(--primary-dark);
+  text-decoration: none;
 }
 .userBlock p {
   align-items: center;
