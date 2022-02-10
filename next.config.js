@@ -6,6 +6,7 @@ const nextConfig = {
       "camo.githubusercontent.com",
       "drive.google.com",
       "res.cloudinary.com",
+      "www.w3.org",
     ],
   },
 };

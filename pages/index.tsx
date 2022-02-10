@@ -1,11 +1,11 @@
-import React from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import type { NextPage } from "next";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import ProjectCard from "@/components/ProjectCard";
-
+import Checkbox from "@/components/Checkbox";
 import MenuNav from "@/components/MenuNav/index";
 import { TECHS, PROJECTS, SKILLS } from "data";
 import { useState } from "react";
@@ -13,6 +13,7 @@ import { Project } from "interfaces";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import Button from "@/components/Button/index";
 import SocialShareButtons from "@/components/SocialShareButtons/index";
+
 const MENU_LINKS = [
   { title: "About Me", href: "#aboutMe" },
   { title: "Tech Stack", href: "#techStack" },
@@ -28,7 +29,21 @@ const Home: NextPage = () => {
     isOpen: false,
     activeLink: "aboutMe",
   });
-
+  const [activeTechCategories, setActiveTechCategories] = useState([
+    "frontend",
+    "backend",
+    "testing",
+    "other",
+  ]);
+  const handleTechCategories = (e: ChangeEvent<HTMLInputElement>) => {
+    const category = e.target.name;
+    if (activeTechCategories.includes(category)) {
+      return setActiveTechCategories(
+        activeTechCategories.filter((cat) => cat !== category)
+      );
+    }
+    setActiveTechCategories([...activeTechCategories, category]);
+  };
   const handleNavigation = (href: string) => {
     setMenuState({
       isOpen: false,
@@ -64,7 +79,6 @@ const Home: NextPage = () => {
             src="/icons/menu.svg"
             alt="menu"
             loading="eager"
-            b
           />
         </div>
         <MenuNav
@@ -77,7 +91,10 @@ const Home: NextPage = () => {
         />
         <SocialShareButtons />
         <MainSection />
-        <TechStackSection />
+        <TechStackSection
+          handleTechCategories={handleTechCategories}
+          activeTechCategories={activeTechCategories}
+        />
 
         <ProjectsSection />
 
@@ -220,10 +237,43 @@ function SkillsSection() {
     </section>
   );
 }
-function TechStackSection() {
+function TechStackSection({
+  handleTechCategories,
+  activeTechCategories,
+}: {
+  handleTechCategories: (e: ChangeEvent<HTMLInputElement>) => void;
+  activeTechCategories: string[];
+}) {
   return (
     <section className={styles.container} id="techStack">
       <h2>Tech Stack</h2>
+      <div className={styles.TechsFilterBar}>
+        <Checkbox
+          name="frontend"
+          label="Frontend"
+          defaultChecked={true}
+          onChange={handleTechCategories}
+        />
+        <Checkbox
+          name="backend"
+          label="Backend"
+          defaultChecked={true}
+          onChange={handleTechCategories}
+        />
+        <Checkbox
+          name="testing"
+          label="Testing"
+          defaultChecked={true}
+          onChange={handleTechCategories}
+        />
+        <Checkbox
+          name="other"
+          label="Other"
+          defaultChecked={true}
+          onChange={handleTechCategories}
+        />
+      </div>
+
       <div className={styles.techsContainer}>
         {TECHS.map((tech) => (
           <a
@@ -233,7 +283,16 @@ function TechStackSection() {
             key={tech.name}
             title={tech.name}
           >
-            <figure role="figure">
+            <figure
+              role="figure"
+              className={
+                tech.categories.some((category) =>
+                  Boolean(activeTechCategories.includes(category))
+                )
+                  ? ""
+                  : styles.halfVisible
+              }
+            >
               <div className={styles.techImage}>
                 <ImagePlaceholder
                   src={tech.image}

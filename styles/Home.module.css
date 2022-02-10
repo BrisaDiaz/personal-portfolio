@@ -21,11 +21,14 @@
 .relative {
   position: relative;
 }
+.halfVisible {
+  opacity: 0.4;
+}
 .menuBtn {
   top: 16px;
   right: 16px;
   width: 26px;
-  height: 34px;
+  height: 30px;
   margin-left: auto;
   width: fit-content;
   z-index: 50;
@@ -129,21 +132,29 @@
 
   margin-top: 400px;
 }
-
+.TechsFilterBar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.TechsFilterBar > div {
+  width: 140px;
+}
 .techsContainer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 5px;
   row-gap: 0;
-  margin-top: 50px;
-
+  margin-top: 20px;
+  column-gap: 1rem;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
 }
 
 .techsContainer figure {
   display: flex;
+
   flex-direction: column;
   align-items: center;
   width: 80px;
@@ -152,21 +163,27 @@
   height: min-content;
   text-align: center;
   justify-content: center;
+  transition: all 0.5s ease-in-out;
 }
 .techsContainer figure figcaption {
   margin: 1rem auto;
   font-size: 14px;
   font-weight: 600;
 }
+
 .techsContainer a:focus-within {
   outline-color: var(--secondary-light);
-
   outline-offset: 3px;
 }
 
 .techsContainer figure:hover .techImage,
 .techsContainer a:focus figure .techImage {
   transform: scale(1.15);
+}
+.techsContainer a:hover .techDescription,
+.techsContainer a:focus .techDescription {
+  transform: translate(50%, 100%) scale(1);
+  opacity: 1;
 }
 .techImage {
   position: relative;
@@ -177,6 +194,7 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
+
 .projectsContainer {
   margin: 50px 0;
   display: grid;
