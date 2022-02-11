@@ -2,18 +2,19 @@
   min-height: 100vh;
   position: relative;
   max-width: 1410px;
-  overflow: hidden;
+  overflow: auto;
+
   margin: 0 auto;
   color: var(--secondary-dark);
 }
 
 .container {
+  scroll-margin-top: 60px;
   padding: 16px 20px;
   padding-bottom: 40px;
   position: relative;
   margin: 0 auto;
-
-  overflow: visible;
+  overflow-x: hidden;
 }
 .fluid {
   min-width: 100%;
@@ -47,6 +48,20 @@
 .menuBtn button:focus {
   outline-offset: 0.5rem;
   outline-color: var(--secondary-light);
+}
+.aboutMeSection {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.aboutMeIllustration svg {
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  width: 150%;
+  margin-top: -200px;
 }
 
 .mainSectionContent {
@@ -120,25 +135,17 @@
   outline-color: var(--secondary-light);
 }
 
-.welcomeIllustration {
-  width: 100%;
-  position: absolute;
-  height: 600px;
-  max-width: 1029px;
-  max-height: 872px;
-  right: 0;
-  top: 0;
-  z-index: -10;
-
-  margin-top: 400px;
-}
 .TechsFilterBar {
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid var(--light-text-contrast);
   margin-top: 30px;
+  max-width: max-content;
+  padding: 0 1rem;
+  border-radius: 12px;
 }
 .TechsFilterBar > div {
-  width: 140px;
+  width: 120px;
 }
 .techsContainer {
   display: flex;
@@ -146,7 +153,7 @@
   flex-wrap: wrap;
   gap: 5px;
   row-gap: 0;
-  margin-top: 20px;
+  margin-top: 2rem;
   column-gap: 1rem;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
@@ -203,7 +210,7 @@
   width: 100%;
   justify-items: center;
 
-  grid-gap: 0.1rem;
+  grid-gap: 0.5rem;
 
   grid-template-columns: 1fr;
 }
@@ -220,6 +227,16 @@
 }
 .strengthsSectionWrapper:nth-child(2) {
   margin: 30px 0;
+}
+.educationIllustration {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.educationIllustration svg {
+  width: 100%;
+  height: auto;
+  justify-self: center;
+  max-width: 500px;
 }
 .educationSectionContent {
   padding-bottom: 0;
@@ -265,49 +282,30 @@
   transform: scale(0.8);
 
   border-radius: 50%;
-  padding: 2px 6px;
+  padding: 0px 6px;
 }
 
-.softSkillsIllustrationSection,
 .techSkillsIllustrationSection {
   flex: 1;
   z-index: -20;
 }
-.planningllustration {
-  overflow: visible;
-  width: 100%;
-  height: 400px;
-  z-index: -10;
 
-  margin-bottom: -50px;
-
-  position: relative;
-  transform: scale(1.3);
-  z-index: -20;
-}
-
-.planningllustration [alt="planning illustration"] {
-  transform: scale(1.3);
-}
-.planningllustration span {
-  overflow: visible !important;
-}
 .techSkillsIllustrationSection {
   margin-bottom: -50px;
 }
-.programingIllustration {
-  width: 300px;
-  height: 400px;
+.programingIllustration svg {
   position: relative;
   z-index: -10;
   margin: auto;
-  transform: scale(1.3);
+
+  height: auto;
 }
 .callToActionBanner {
   width: 90%;
   margin: 10px auto 20px;
   background: var(--light-text-contrast);
   border-radius: 12px;
+  overflow: hidden;
 }
 .callToActionBanner .wrapper {
   display: flex;
@@ -323,6 +321,9 @@
   line-height: 1.5em;
   height: 300px;
   margin: 0 auto;
+}
+.bannerIllustration svg {
+  width: 100%;
 }
 .callToActionBanner .content {
   margin-bottom: 0;
@@ -348,7 +349,7 @@
     font-size: 16px;
   }
   .main h1 {
-    font-size: 55px;
+    font-size: 45px;
   }
   .main h2 {
     font-size: 38px;
@@ -366,13 +367,15 @@
     padding-bottom: 30px;
     max-width: 1250px;
   }
+
+  .aboutMeIllustration svg {
+    margin-top: -350px;
+  }
+
   .mainSectionContent {
     padding-top: 10px;
   }
-  .welcomeIllustration {
-    margin-right: -10%;
-    margin-top: 350px;
-  }
+
   .personalInfoWrapper {
     margin-bottom: 200px;
   }
@@ -393,8 +396,7 @@
     outline-offset: 3px;
     border-radius: 8px;
   }
-  .bannerIllustration span {
-    transform: scale(1.3);
+  .bannerIllustration svg {
     margin: 0 auto;
   }
   .educationSectionContent {
@@ -408,8 +410,18 @@
   .skillsSection {
     margin-bottom: 0;
   }
+  .programingIllustration svg {
+    max-width: 450px;
+  }
 }
+
 @media (min-width: 900px) {
+  .menuBtn {
+    display: none;
+  }
+  .aboutMeSection {
+    margin-top: 4.5rem;
+  }
   .personalInfoWrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -422,13 +434,7 @@
     flex-direction: row;
     align-items: center;
   }
-  .programingIllustration {
-    transform: scale(1);
-  }
-  .planningllustration {
-    margin-top: 100px;
-    margin-bottom: 0;
-  }
+
   .skillsSection {
     order: 2;
   }
@@ -437,6 +443,27 @@
   }
 }
 @media (min-width: 1050px) {
+  .container {
+    overflow-x: visible;
+  }
+  .bannerIllustration svg {
+    margin-left: -60px;
+    transform: scale(1.1);
+  }
+  .aboutMeSection {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .aboutMeSection .aboutMeIllustration svg {
+    margin-top: 0;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -60px;
+  }
+  .aboutMeSection + section {
+    margin-top: -0;
+  }
+
   .educationSectionContent,
   .skillsSection {
     max-width: 600px;
@@ -446,10 +473,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .welcomeIllustration {
-    margin-top: 150px;
-    margin-right: -15%;
-  }
   .personalInfoWrapper {
     margin-bottom: 0;
   }

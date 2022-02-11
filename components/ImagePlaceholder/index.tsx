@@ -6,31 +6,38 @@ export default function Placeholder({
   src,
   alt,
   objectFit,
+  layout,
+  spinnerSize,
 }: {
   src: string;
+  layout?: "fill" | "responsive";
   alt: string;
   objectFit?: "contain" | "cover";
+  spinnerSize?: "small" | "medium" | "large";
 }) {
-  const [isLoaded, setIsLoded] = useState<boolean>(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   return (
     <div className={styles.container}>
       <div className={`${styles.spinner} ${isLoaded ? styles.hidden : ""}`}>
-        <Spinner />
+        <Spinner
+          aria-live="polite"
+          aria-busy={isLoaded ? "false" : "true"}
+          size={spinnerSize || "medium"}
+        />
       </div>
       <div className={styles.image}>
         <Image
-          objectFit={objectFit ? objectFit : error ? "contain" : "cover"}
-          src={error ? "/icons/refresh.svg" : src}
-          layout="fill"
-          alt={isLoaded ? alt : "loading spinner"}
-          onLoadedData={() => setIsLoded(true)}
-          onLoad={() => setIsLoded(true)}
-          onLoadStart={() => setIsLoded(false)}
+          objectFit={objectFit ? objectFit : "cover"}
+          src={src}
+          layout={layout || "fill"}
+          alt={alt}
+          onLoadedData={() => setIsLoaded(true)}
+          onLoad={() => setIsLoaded(true)}
+          onLoadStart={() => setIsLoaded(false)}
           objectPosition={"center center"}
           onError={() => {
-            setIsLoded(true);
-            setError(true);
+            setIsLoaded(true);
           }}
         />
       </div>

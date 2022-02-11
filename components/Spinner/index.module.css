@@ -6,7 +6,13 @@
   margin-left: -20px;
   margin-top: -20px;
 }
-
+.small {
+  margin-left: -10px;
+  transform: scale(0.5);
+}
+.large {
+  transform: scale(1.5);
+}
 .lds-default div {
   position: absolute;
   width: 6px;

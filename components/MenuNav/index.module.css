@@ -103,3 +103,45 @@
     font-size: 38px;
   }
 }
+@media (min-width: 900px) {
+  .menu {
+    background: transparent;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid var(--light-text-contrast);
+  }
+  .menu nav {
+    padding: 1em 0;
+    margin: 0;
+    width: max-content;
+    justify-content: flex-end;
+
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    padding-right: 100px;
+  }
+  .menu nav a {
+    font-size: 1rem;
+    color: var(--secondary-dark);
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+  .menu nav a:hover,
+  .menu nav a:focus {
+    outline: none;
+    background: unset;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .menu nav a:focus {
+    outline: none;
+  }
+  .closeBtn {
+    display: none;
+  }
+}

@@ -2,24 +2,24 @@ import React, { ChangeEvent, useEffect } from "react";
 import type { NextPage } from "next";
 import Link from "next/link";
 import Head from "next/head";
-import Image from "next/image";
+
 import styles from "@/styles/Home.module.css";
 import ProjectCard from "@/components/ProjectCard";
 import Checkbox from "@/components/Checkbox";
 import MenuNav from "@/components/MenuNav/index";
 import { TECHS, PROJECTS, SKILLS } from "data";
 import { useState } from "react";
-import { Project } from "interfaces";
+import SVG from "@/components/SVG";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import Button from "@/components/Button/index";
 import SocialShareButtons from "@/components/SocialShareButtons/index";
-
+import Illustration from "@/components/Illustration";
 const MENU_LINKS = [
   { title: "About Me", href: "#aboutMe" },
   { title: "Tech Stack", href: "#techStack" },
   { title: "Projects", href: "#projects" },
-  { title: "Skills", href: "#skills" },
-  { title: "Education", href: "#education" },
+  { title: "Accomplishments", href: "#accomplishments" },
+  { title: "Motivation", href: "#motivation" },
 ];
 const Home: NextPage = () => {
   const [menuState, setMenuState] = useState<{
@@ -72,14 +72,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.menuBtn}>
           <button onClick={handleOpenMenu} aria-label="menu" />
-
-          <Image
-            width={26}
-            height={30}
-            src="/icons/menu.svg"
-            alt="menu"
-            loading="eager"
-          />
+          <SVG name="menu" />
         </div>
         <MenuNav
           isOpen={menuState.isOpen}
@@ -120,14 +113,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className={styles.bannerIllustration}>
-              <Image
-                layout="fill"
-                src="/svg/agreement.svg"
-                alt="background"
-                loading="eager"
-                placeholder="blur"
-                blurDataURL="/svg/agreement.svg"
-              />
+              <Illustration name="agreement" />
             </div>
           </div>
         </article>
@@ -155,10 +141,10 @@ function ProjectsSection() {
 }
 function EducationSection() {
   return (
-    <section id="education" className={styles.container}>
+    <section id="motivation" className={styles.container}>
       <div className={styles.strengthsSectionWrapper}>
         <div className={styles.educationSectionContent}>
-          <h2>Education</h2>
+          <h2>Motivation</h2>
           <p>
             I have technical background, I studied for 7 years and was able to
             obtained the title of mechanical technician in a public high school,
@@ -185,44 +171,30 @@ function EducationSection() {
             in their day to day.
           </p>
         </div>
-        <div className={styles.softSkillsIllustrationSection}>
-          <div className={styles.planningllustration}>
-            <Image
-              layout="fill"
-              src="/svg/planning-illustration.svg"
-              alt="planning illustration"
-              placeholder="blur"
-              blurDataURL="/svg/planning-illustration.svg"
-            />
-          </div>
+        <div className={styles.educationIllustration}>
+          <Illustration name="planning" />
         </div>
       </div>
     </section>
   );
 }
 function SkillsSection() {
-  const skillsFirtsHalf = SKILLS.slice(0, SKILLS.length / 2);
-  const skillsSecondHalf = SKILLS.slice(skillsFirtsHalf.length, -1);
+  const skillsFirstHalf = SKILLS.slice(0, SKILLS.length / 2);
+  const skillsSecondHalf = SKILLS.slice(skillsFirstHalf.length, -1);
   return (
-    <section id="skills" className={styles.container}>
+    <section id="accomplishments" className={styles.container}>
       <div className={styles.strengthsSectionWrapper}>
         <div className={styles.skillsSection}>
-          <h2>Skills</h2>
+          <h2>Accomplishments</h2>
           <ul>
-            {skillsFirtsHalf.map((skill, index) => (
+            {skillsFirstHalf.map((skill, index) => (
               <li key={index}>{skill}</li>
             ))}
           </ul>
         </div>
         <div className={styles.techSkillsIllustrationSection}>
           <div className={styles.programingIllustration}>
-            <Image
-              layout="fill"
-              src="/svg/programing-illustration.svg"
-              alt="programing illustration"
-              placeholder="blur"
-              blurDataURL="/svg/programing-illustration.svg"
-            />
+            <Illustration name="programing" />
           </div>
         </div>
       </div>
@@ -296,6 +268,7 @@ function TechStackSection({
               <div className={styles.techImage}>
                 <ImagePlaceholder
                   src={tech.image}
+                  spinnerSize="small"
                   alt={tech.name + " logo"}
                   objectFit="contain"
                 />
@@ -311,18 +284,10 @@ function TechStackSection({
 }
 function MainSection() {
   return (
-    <section className={styles.container} id="aboutMe">
-      <div className={styles.welcomeIllustration}>
-        <Image
-          layout="fill"
-          src="/svg/welcome-illustration-split.svg"
-          alt="welcome"
-          loading="eager"
-          placeholder="blur"
-          blurDataURL="/svg/welcome-illustration-split.svg"
-        />
-      </div>
-
+    <section
+      className={`${styles.container} ${styles.aboutMeSection}`}
+      id="aboutMe"
+    >
       <div className={styles.mainSectionContent}>
         <div className={styles.mainSectionText}>
           <h1>
@@ -338,45 +303,13 @@ function MainSection() {
             and sees them as an opportunity to improve.
           </p>
           <p>
-            It has been almost two years since I discover the potential of
-            programing and found my passion in it , until now I have been
-            working on personal projects like websites and web applications of
-            different kinds of topics in which I trained my ability to
-            understand requirements, design the business logic and translate
-            them into actual working applications.
+            I have almost two years of experience working on personal projects
+            like websites and web applications of different kinds of topics in
+            which I trained my ability to understand requirements, design the
+            business logic and translate them into actual working applications.
           </p>
         </div>
         <div className={styles.personalInfoWrapper}>
-          <ul>
-            <li title="birthday">
-              <Image
-                width={25}
-                height={25}
-                src="/icons/birthday.svg"
-                alt="birthday date"
-                loading="eager"
-              />
-
-              <time dateTime="2000-11-18">11/18/2000</time>
-            </li>
-            <li>
-              <a
-                href="https://goo.gl/maps/FXX1dQVPgc9De7eRA"
-                target="_blank"
-                rel="noreferrer"
-                title="Place of residence"
-              >
-                <Image
-                  width={25}
-                  height={25}
-                  src="/icons/address.svg"
-                  alt="home address"
-                  loading="eager"
-                />
-                <p>Córdoba - Argentina</p>
-              </a>
-            </li>
-          </ul>
           <ul>
             <li>
               <a
@@ -385,13 +318,8 @@ function MainSection() {
                 rel="noreferrer"
                 title="Telephone number"
               >
-                <Image
-                  width={25}
-                  height={25}
-                  src="/icons/telephone.svg"
-                  alt="telephone number"
-                  loading="eager"
-                />
+                <SVG name="telephone-fill" />
+
                 <p>+54 351 3850064</p>
               </a>
             </li>
@@ -402,13 +330,7 @@ function MainSection() {
                 rel="noreferrer"
                 title="Email"
               >
-                <Image
-                  width={25}
-                  height={25}
-                  src="/icons/email.svg"
-                  alt="email"
-                  loading="eager"
-                />
+                <SVG name="email-fill" />
                 <p>brisaabigaildiaz2000@gmail.com</p>
               </a>
             </li>
@@ -421,13 +343,7 @@ function MainSection() {
                 rel="noreferrer"
                 title="Linkedin profile"
               >
-                <Image
-                  width={25}
-                  height={25}
-                  src="/icons/linkedin.svg"
-                  alt="linkedin"
-                  loading="eager"
-                />
+                <SVG name="linkedin-fill" />
 
                 <p>/brisa-díaz</p>
               </a>
@@ -439,18 +355,16 @@ function MainSection() {
                 rel="noreferrer"
                 title="Github repository"
               >
-                <Image
-                  width={25}
-                  height={25}
-                  loading="eager"
-                  src="/icons/github.svg"
-                  alt="github"
-                />
+                <SVG name="github-fill" />
                 <p>/BrisaDiaz</p>
               </a>
             </li>
           </ul>
         </div>
+      </div>
+      <div className={styles.aboutMeIllustration}>
+        {" "}
+        <Illustration name="welcome" />
       </div>
     </section>
   );

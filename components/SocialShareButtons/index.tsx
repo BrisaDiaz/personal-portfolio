@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./index.module.css";
+import Logo from "./Logo";
 
 export default function SocialShareButton() {
   const [pageUrl, setPageUrl] = React.useState("");
@@ -19,27 +20,27 @@ export default function SocialShareButton() {
   const SOCIALS = [
     {
       name: "facebook",
-      cassName: `${styles.facebook} fa-facebook fa`,
+      cassName: `${styles.facebook}`,
       shareUrl: SHARE_LINKS["facebook"] + pageUrl,
     },
     {
       name: "twitter",
-      cassName: `${styles.twitter} fa-twitter fa`,
+      cassName: `${styles.twitter} `,
       shareUrl: SHARE_LINKS["twitter"] + pageUrl,
     },
     {
       name: "google",
-      cassName: `${styles.google} fa-google fa`,
+      cassName: `${styles.google} `,
       shareUrl: SHARE_LINKS["google"] + pageUrl,
     },
     {
       name: "linkedin",
-      cassName: `${styles.linkedin} fa-linkedin fa`,
+      cassName: `${styles.linkedin} `,
       shareUrl: SHARE_LINKS["linkedin"] + pageUrl,
     },
     {
       name: "reddit",
-      cassName: `${styles.reddit} fa-reddit fa`,
+      cassName: `${styles.reddit} `,
       shareUrl: SHARE_LINKS["reddit"] + pageUrl,
     },
   ];
@@ -53,7 +54,9 @@ export default function SocialShareButton() {
           href={social.shareUrl}
           rel="noreferrer"
           className={social.cassName}
-        />
+        >
+          <Logo name={social.name} />
+        </a>
       ))}
     </nav>
   );

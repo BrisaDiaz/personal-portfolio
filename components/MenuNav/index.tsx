@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./index.module.css";
-import Image from "next/image";
+
 import useModalFocus from "@/hooks/useModalFocus";
+import SVG from "@/components/SVG";
 export default function MenuNav({
   isOpen,
   links,
@@ -37,13 +38,7 @@ export default function MenuNav({
     >
       <div className={styles.closeBtn}>
         <button onClick={onClose} aria-label="close" tabIndex={tabIndex} />
-        <Image
-          layout="fill"
-          src="/icons/close.svg"
-          alt="close"
-          objectFit="contain"
-          loading="eager"
-        />
+        <SVG name="close" color="white" />
       </div>
       <nav aria-label="primary" role="menubar">
         {links.map((link) => (

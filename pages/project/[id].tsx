@@ -1,5 +1,5 @@
 import React from "react";
-
+import SVG from "@/components/SVG";
 import { PROJECTS } from "data";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -8,7 +8,10 @@ import { Project } from "interfaces";
 import Carousel from "@/components/Carousel/index";
 import Link from "next/link";
 import styles from "@/styles/Project.module.css";
-const ProjectPage: NextPage<{ project: Project }> = ({ project }) => {
+const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
+  project,
+  notFound,
+}) => {
   return (
     <div>
       <Head>
@@ -87,14 +90,7 @@ const ProjectPage: NextPage<{ project: Project }> = ({ project }) => {
                   rel="noreferrer"
                   title="Link to live demo"
                 >
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/icons/website.svg"
-                    alt="demo"
-                    loading="eager"
-                    aria-hidden="true"
-                  />
+                  <SVG name="website-fill" />
                   Live Demo
                 </a>
               </p>
@@ -105,14 +101,7 @@ const ProjectPage: NextPage<{ project: Project }> = ({ project }) => {
                   rel="noreferrer"
                   title="Link to source code"
                 >
-                  <Image
-                    width={25}
-                    height={25}
-                    aria-hidden="true"
-                    src="/icons/code.svg"
-                    alt="source code"
-                    loading="eager"
-                  />
+                  <SVG name="code-fill" />
                   Source Code
                 </a>
               </p>
@@ -176,9 +165,15 @@ export async function getStaticPaths() {
 
 export function getStaticProps({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id);
+  const project = PROJECTS.find((project) => project.id === projectId);
+  if (!project) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
-      project: PROJECTS.find((project) => project.id === projectId),
+      project,
     },
   };
 }

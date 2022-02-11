@@ -50,14 +50,19 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
-  scroll-margin: -30px;
+
+  scroll-margin-top: 60px;
   font-size: 14px;
+
   position: relative;
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
   font-display: swap;
 }
-
+#content {
+  position: relative;
+  top: 110px;
+}
 .noScroll {
   overflow: hidden;
 }

@@ -363,7 +363,7 @@ export const SKILLS = [
   "Experience with Unit Testing and End to End testing.",
 
   "Experience implementing rendering techniques like SSG, SSR and ISR.",
-  "Experience implementing keyboard accessibility.",
+  "Experience implementing accessible web sites.",
 
   "Experience with JavaScript on the backend.",
   "Experience setting up and scaling projects.",
@@ -371,8 +371,8 @@ export const SKILLS = [
   "Knowledge in design patterns and modularization.",
 
   "Ability to quickly get acquainted with new technologies and flexibility to adapt to new requirements.",
-  "Experience working in a team environment.",
-  "Tendency to convey confidence and security, to listen, show interest and be open-minded about the needs of the people around me.",
+  // "Experience working in a team environment.",
+  // "Tendency to convey confidence and security, to listen, show interest and be open-minded about the needs of the people around me.",
   "Ability to work autonomously and to be proactive.",
   "Capacity for self-analysis and predisposition to continuously improve.",
 ];

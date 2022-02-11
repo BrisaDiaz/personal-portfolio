@@ -6,6 +6,7 @@
   margin: 0 auto;
   color: var(--secondary-dark);
 }
+
 .bobble {
   position: absolute;
   width: 100%;
@@ -22,6 +23,7 @@
 }
 .breadcrumbBar span {
   text-transform: capitalize;
+  font-family: "IM Fell Double Pica", serif;
 }
 .breadcrumbBar span + span:before,
 .breadcrumbBar span + span:before {
@@ -91,6 +93,7 @@
   text-decoration: underline;
   text-underline-offset: 1px;
   font-weight: 400;
+  font-family: "IM Fell Double Pica", serif;
   color: var(--secondary-main);
 }
 .userBlock {

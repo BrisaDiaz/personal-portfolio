@@ -1,9 +1,10 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+
 import Button from "@/components/Button/index";
 import Link from "next/link";
+import Illustration from "@/components/Illustration";
 import styles from "@/styles/NotFound.module.css";
 const NotFoundPage: NextPage = () => {
   return (
@@ -14,13 +15,7 @@ const NotFoundPage: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.illustration}>
-          <Image
-            layout="fill"
-            src="/svg/404-illustration.svg"
-            alt="404 illustration"
-            placeholder="blur"
-            blurDataURL="/svg/404-illustration.svg"
-          />
+          <Illustration name="404" />
         </div>
         <div className={styles.content}>
           <h1>
