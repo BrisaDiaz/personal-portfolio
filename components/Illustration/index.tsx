@@ -1209,5 +1209,34 @@ export default function Illustration({ name }: { name: string }) {
         fill="#cacaca"
       />
     </svg>
+  ) : name === "bobble" ? (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="660"
+      height="602"
+      viewBox="0 0 660 602"
+      fill="none"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M337.875 22.6968C407.216 21.2196 478.968 -18.6242 540.627 13.1318C604.713 46.1378 648.823 116.541 658.728 187.944C668.045 255.101 608.57 308.942 590.737 374.355C571.476 445.012 608.925 540.691 550.522 584.878C492.341 628.896 410.579 571.724 337.875 565.665C273.552 560.304 207.422 579.962 149.512 551.456C85.1624 519.78 19.1913 470.853 3.21835 400.932C-12.523 332.024 46.2546 271.716 70.4348 205.298C93.4462 142.091 85.7527 59.5684 141.305 21.6389C196.776 -16.2357 270.722 24.1274 337.875 22.6968Z"
+        fill="url(#paint0_linear_236_34)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_236_34"
+          x1="330.145"
+          y1="0.881592"
+          x2="330.145"
+          y2="601.403"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#EDDCDC" />
+          <stop offset="0.636373" stopColor="#D5CFDC" stopOpacity="0.380622" />
+          <stop offset="1" stopColor="#C6C7DC" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
   ) : null;
 }

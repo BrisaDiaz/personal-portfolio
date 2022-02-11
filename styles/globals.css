@@ -78,12 +78,13 @@ a:focus button {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 800;
   margin: 0;
+  line-height: 1em;
 }
 h2 {
-  font-size: 34px;
+  font-size: 30px;
   font-family: "IM Fell Double Pica", serif;
 
   margin: 0;

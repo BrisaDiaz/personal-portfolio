@@ -1,7 +1,8 @@
 export interface Project {
   id: number;
+  slug: string;
   name: string;
-  captions: string[];
+  captions: { src: string; alt: string }[];
   summary: string;
   language: string;
   features: string[];

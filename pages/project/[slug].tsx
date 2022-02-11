@@ -8,6 +8,7 @@ import { Project } from "interfaces";
 import Carousel from "@/components/Carousel/index";
 import Link from "next/link";
 import styles from "@/styles/Project.module.css";
+import Illustration from "@/components/Illustration";
 const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
   project,
   notFound,
@@ -38,15 +39,6 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             </Link>
             <span>{project.name}</span>
           </nav>
-          <div className={styles.bobble}>
-            <Image
-              layout="fill"
-              src="/svg/bobble.svg"
-              alt="bobble"
-              placeholder="blur"
-              blurDataURL="/svg/bobble.svg"
-            />
-          </div>
 
           {project?.name && <h2>{project?.name}</h2>}
           <div className={styles.carouselWrapper}>
@@ -56,13 +48,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
               height={500}
             />
             <div className={styles.backdrop}>
-              <Image
-                src="/icons/screen_rotation.svg"
-                width={320}
-                height={400}
-                alt="please rotate screen"
-                loading="eager"
-              />
+              <Illustration name="screen-rotation" />
             </div>
           </div>
           <section>
@@ -83,28 +69,25 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
               </>
             ) : null}
             <div className={styles.linksBlock}>
-              <p>
-                <a
-                  href={project?.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Link to live demo"
-                >
-                  <SVG name="website-fill" />
-                  Live Demo
-                </a>
-              </p>
-              <p>
-                <a
-                  href={project?.source_code}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Link to source code"
-                >
-                  <SVG name="code-fill" />
-                  Source Code
-                </a>
-              </p>
+              <a
+                href={project?.demo}
+                target="_blank"
+                rel="noreferrer"
+                title="Link to live demo"
+              >
+                <SVG name="website-fill" />
+                Live Demo
+              </a>
+
+              <a
+                href={project?.source_code}
+                target="_blank"
+                rel="noreferrer"
+                title="Link to source code"
+              >
+                <SVG name="code-fill" />
+                Source Code
+              </a>
             </div>
 
             <h3>Technologies</h3>
@@ -133,7 +116,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             ) : null}
             {project?.technologies?.testing ? (
               <p className={styles.techList}>
-                <b>Tests:</b>
+                <b>Testing:</b>
                 {project?.technologies?.testing?.map((tech: string) => (
                   <span key={tech}>{tech}</span>
                 ))}
@@ -157,15 +140,14 @@ export default ProjectPage;
 export async function getStaticPaths() {
   return {
     paths: PROJECTS.map((project) => ({
-      params: { id: project.id.toString() },
+      params: { slug: project.slug },
     })),
     fallback: false,
   };
 }
 
-export function getStaticProps({ params }: { params: { id: string } }) {
-  const projectId = parseInt(params.id);
-  const project = PROJECTS.find((project) => project.id === projectId);
+export function getStaticProps({ params }: { params: { slug: string } }) {
+  const project = PROJECTS.find((project) => project.slug === params.slug);
   if (!project) {
     return {
       notFound: true,

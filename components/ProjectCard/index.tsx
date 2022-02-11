@@ -8,8 +8,8 @@ export default function ProjectCard({ project }: { project: Project }) {
     <article className={styles.projectCard} role="article">
       <div className={styles.projectImagesWrapper}>
         <ImagePlaceholder
-          src={project.captions[0]}
-          alt="project caption"
+          src={project.captions[0].src}
+          alt={project.captions[0].alt}
           objectFit="cover"
         />
 
@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <h3 className="typography-h4">{project.name}</h3>
           <p>{project.summary}</p>
           <div className={styles.projectCardBtn}>
-            <Link href={`/project/${project.id}`} passHref>
+            <Link href={`/project/${project.slug}`} passHref>
               <a href="">
                 <Button text="Read More" tabIndex={-1} />
               </a>

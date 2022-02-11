@@ -137,14 +137,14 @@ class MyDocument extends Document {
             property="twitter:title"
             content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
           />
-          <meta
-            property="twitter:image"
-            content="/brisa-diaz-frontend-developer-portfolio-logo.jpg"
-          />
+          <meta property="twitter:image" content={env.NEXT_PUBLIC_SITE_LOGO} />
           <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
           <meta name="twitter:creator" content="Brisa Díaz" />
           <meta name="author" content="Brisa Díaz" />
-          <meta name="twitter:image:alt" content="portfolio logo" />
+          <meta
+            name="twitter:image:alt"
+            content="Brisa Díaz frontend developer"
+          />
 
           <meta
             name="description"

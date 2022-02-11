@@ -7,20 +7,6 @@
   color: var(--secondary-dark);
 }
 
-.bobble {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -40%;
-  right: -40%;
-  overflow: visible;
-  font-weight: 200;
-  transform: rotate(213deg);
-  z-index: -10;
-}
-.bobble span {
-  overflow: visible !important;
-}
 .breadcrumbBar span {
   text-transform: capitalize;
   font-family: "IM Fell Double Pica", serif;
@@ -74,25 +60,25 @@
   transform: scale(1);
 }
 
-.backdrop span {
+.backdrop svg {
   transform: scale(0.5);
 }
 .main h2 {
   text-transform: capitalize;
   font-size: 25px;
 
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 .main h3 {
-  font-size: 18px;
-  margin: 1em 0;
+  font-size: 20px;
+  margin: 1em 0 0.5rem;
   color: var(--secondary-dark);
 }
 
 .container b {
   text-decoration: underline;
   text-underline-offset: 1px;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "IM Fell Double Pica", serif;
   color: var(--secondary-main);
 }
@@ -121,36 +107,36 @@
   height: min-content;
   gap: 10px;
 }
-.linksBlock p {
-  display: flex;
-
-  display: flex;
-  gap: 10px;
-  margin: 0;
-}
 .linksBlock a {
   display: flex;
-  gap: 3px;
   align-items: center;
   background: var(--primary-dark);
-  padding: 2px 0;
+  border: 10px;
+  margin: 0;
+  border-radius: 4px;
+
+  padding-left: 2px;
   padding-right: 8px;
-  font-size: 14px;
+  opacity: 0.95;
+  font-size: 12px;
   margin: 0;
   color: #fff;
-  opacity: 0.9;
-  border-radius: 4px;
+}
+.linksBlock a svg {
+  margin-right: 2px;
 }
 .techList b {
-  width: 70px;
+  width: 60px;
 }
-.linksBlock a:hover {
+.linksBlock a:hover,
+.linksBlock a:focus {
   opacity: 1;
 }
 .linksBlock a:focus {
   outline-color: var(--secondary-light);
   outline-offset: 3px;
 }
+
 .featuresList {
   list-style: "revert";
   padding: 0;
@@ -205,8 +191,9 @@
     font-size: 30px;
   }
   .techList b {
-    width: 80px;
+    width: 70px;
   }
+  .linksBlock a,
   .techList span {
     font-size: 14px;
   }

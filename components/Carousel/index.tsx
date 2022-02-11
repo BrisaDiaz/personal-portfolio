@@ -10,7 +10,7 @@ export default function Carousel({
   height,
   tabIndex,
 }: {
-  captions: Array<string>;
+  captions: { src: string; alt: string }[];
   objectFit?: "contain" | "cover";
   width: number;
   height: number;
@@ -29,14 +29,14 @@ export default function Carousel({
     >
       {captions.map((caption, index) => (
         <div
-          key={caption}
+          key={caption.alt}
           className={`${styles.slide} ${
             currentSlide === index ? styles.activeSlide : ""
           }`}
         >
           <ImagePlaceholder
-            src={caption}
-            alt="project caption"
+            src={caption.src}
+            alt={caption.alt}
             objectFit={objectFit}
           />
         </div>
