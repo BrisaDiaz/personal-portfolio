@@ -35,6 +35,7 @@ export default function Carousel({
           }`}
         >
           <ImagePlaceholder
+            spinnerSize="large"
             src={caption.src}
             alt={caption.alt}
             objectFit={objectFit}

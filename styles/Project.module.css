@@ -57,12 +57,8 @@
   justify-content: center;
   align-items: center;
   opacity: 1;
-  transform: scale(1);
 }
 
-.backdrop svg {
-  transform: scale(0.5);
-}
 .main h2 {
   text-transform: capitalize;
   font-size: 25px;

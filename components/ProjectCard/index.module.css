@@ -4,6 +4,11 @@
 
   transition: all 0.5s ease-in-out;
 }
+.projectCard a:focus {
+  outline: 2px solid var(--secondary-light);
+  outline-offset: 6px;
+  border-radius: 8px;
+}
 .projectCard img {
   border-radius: 12px;
 }
@@ -48,18 +53,7 @@
 
   margin: 8px 0;
 }
-.content .projectCardBtn {
-  position: relative;
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
-}
-.content .projectCardBtn a:focus {
-  outline: 2px solid var(--secondary-light);
-  outline-offset: 3px;
-  border-radius: 8px;
-}
+
 @media (min-width: 600px) {
   .projectCard .content h3 {
     font-size: 25px;
