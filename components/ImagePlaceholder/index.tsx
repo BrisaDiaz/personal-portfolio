@@ -8,15 +8,20 @@ export default function Placeholder({
   objectFit,
   layout,
   spinnerSize,
+  priority,
+  ...rest
 }: {
+  width?: number;
+  height?: number;
+  priority?: boolean;
   src: string;
-  layout?: "fill" | "responsive";
+  layout?: "fill" | "responsive" | "fixed";
   alt: string;
   objectFit?: "contain" | "cover";
   spinnerSize?: "small" | "medium" | "large";
 }) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+
   return (
     <div className={styles.container}>
       <div className={`${styles.spinner} ${isLoaded ? styles.hidden : ""}`}>
@@ -32,6 +37,8 @@ export default function Placeholder({
           src={src}
           layout={layout || "fill"}
           alt={alt}
+          {...rest}
+          priority={priority || false}
           onLoadedData={() => setIsLoaded(true)}
           onLoad={() => setIsLoaded(true)}
           onLoadStart={() => setIsLoaded(false)}

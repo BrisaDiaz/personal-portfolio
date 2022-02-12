@@ -1,30 +1,35 @@
 export const TECHS = [
   {
     name: "HTML",
+    logoName: "html",
     categories: ["frontend"],
     image: "/techs/html.svg",
     resource_url: "https://developer.mozilla.org/es/docs/Web/HTML",
   },
   {
     name: "CSS",
+    logoName: "css",
     categories: ["frontend"],
     image: "/techs/css.svg",
     resource_url: "https://developer.mozilla.org/es/docs/Web/CSS",
   },
   {
     name: "Javascript",
+    logoName: "javascript",
     categories: ["frontend", "backend"],
     image: "/techs/javascript.svg",
     resource_url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
   },
   {
     name: "Typescript",
+    logoName: "typescript",
     categories: ["frontend", "backend"],
     image: "/techs/typescript.svg",
     resource_url: "https://www.typescriptlang.org",
   },
   {
     name: "React",
+    logoName: "react",
     categories: ["frontend"],
     image: "/techs/react.svg",
     resource_url: "https://es.reactjs.org/docs/getting-started.html",
@@ -32,6 +37,7 @@ export const TECHS = [
 
   {
     name: "Next.js",
+    logoName: "next-js",
     categories: ["frontend"],
     image: "/techs/next-js.svg",
     resource_url: "https://nextjs.org/docs/getting-started",
@@ -39,18 +45,21 @@ export const TECHS = [
 
   {
     name: "Material-UI",
+    logoName: "material-ui",
     categories: ["frontend"],
     image: "/techs/material-ui.svg",
     resource_url: "https://mui.com/",
   },
   {
     name: "Styled Components",
+    logoName: "styled-components",
     categories: ["frontend"],
     image: "/techs/styled-components.svg",
     resource_url: "https://styled-components.com/",
   },
   {
     name: "Tailwind",
+    logoName: "tailwind",
     categories: ["frontend"],
     image: "/techs/tailwind.svg",
     resource_url: "https://tailwindcss.com",
@@ -58,6 +67,7 @@ export const TECHS = [
 
   {
     name: "React Testing",
+    logoName: "react-testing-library",
     categories: ["testing"],
     image: "/techs/react-testing-library.svg",
     resource_url:
@@ -65,66 +75,77 @@ export const TECHS = [
   },
   {
     name: "Jest",
+    logoName: "jest",
     categories: ["testing"],
     image: "/techs/jest.svg",
     resource_url: "https://jestjs.io/docs/getting-started",
   },
   {
     name: "Cypress",
+    logoName: "cypress",
     categories: ["testing"],
     image: "/techs/cypress.svg",
     resource_url: "https://docs.cypress.io",
   },
   {
     name: "Apollo GraphQL",
+    logoName: "apollo",
     categories: ["backend", "backend"],
     image: "/techs/graphql.svg",
     resource_url: "https://www.apollographql.com/docs/react",
   },
   {
     name: "Node.js",
+    logoName: "node",
     categories: ["backend"],
     image: "/techs/nodejs.svg",
     resource_url: "https://nodejs.org/es/docs",
   },
   {
     name: "Express",
+    logoName: "express",
     categories: ["backend"],
     image: "/techs/express.svg",
     resource_url: "https://expressjs.com/",
   },
   {
     name: "MongoDB",
+    logoName: "mongodb",
     categories: ["backend"],
     image: "/techs/mongodb.svg",
     resource_url: "https://docs.mongodb.com",
   },
   {
     name: "Mongoose",
+    logoName: "mongoose",
     categories: ["backend"],
     image: "/techs/mongoose.svg",
     resource_url: "https://mongoosejs.com/",
   },
   {
     name: "PostgreSQL",
+    logoName: "postgresql",
     categories: ["backend"],
     image: "/techs/postgresql.svg",
     resource_url: "https://www.postgresql.org/docs",
   },
   {
     name: "Prisma",
+    logoName: "prisma",
     categories: ["backend"],
     image: "/techs/prisma-3.svg",
     resource_url: "https://www.prisma.io/docs",
   },
   {
     name: "Socket.io",
+    logoName: "socket-io",
     categories: ["backend", "frontend"],
     image: "/techs/socket-io.svg",
     resource_url: "https://socket.io/docs/v4",
   },
   {
     name: "Next Auth",
+    logoName: "next-auth",
     categories: ["other"],
     image: "/techs/next-auth.svg",
     resource_url: "https://next-auth.js.org/",
@@ -132,12 +153,14 @@ export const TECHS = [
 
   {
     name: "Cloudinary",
+    logoName: "cloudinary",
     categories: ["other"],
     image: "/techs/cloudinary.svg",
     resource_url: "https://cloudinary.com/documentation",
   },
   {
     name: "Nodemailer ",
+    logoName: "nodemailer",
     categories: ["other"],
     image: "/techs/nodemailer.svg",
     resource_url: "https://nodemailer.com/about",
@@ -145,6 +168,7 @@ export const TECHS = [
 
   {
     name: "Git",
+    logoName: "git",
     categories: ["other"],
     image: "/techs/git.svg",
     resource_url: "https://git-scm.com/doc",

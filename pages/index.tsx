@@ -10,6 +10,7 @@ import MenuNav from "@/components/MenuNav/index";
 import { TECHS, PROJECTS, SKILLS } from "data";
 import { useState } from "react";
 import SVG from "@/components/SVG";
+import TechLogo from "@/components/TechLogo";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import Button from "@/components/Button/index";
 import SocialShareButtons from "@/components/SocialShareButtons/index";
@@ -266,12 +267,7 @@ function TechStackSection({
               }
             >
               <div className={styles.techImage}>
-                <ImagePlaceholder
-                  src={tech.image}
-                  spinnerSize="small"
-                  alt={tech.name + " logo"}
-                  objectFit="contain"
-                />
+                <TechLogo name={tech.logoName} />
               </div>
 
               <figcaption>{tech.name}</figcaption>

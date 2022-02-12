@@ -13,6 +13,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               src={project.captions[0].src}
               alt={project.captions[0].alt}
               objectFit="cover"
+              priority={true}
             />
 
             <div className={styles.content}>
