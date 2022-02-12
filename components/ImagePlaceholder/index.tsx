@@ -9,6 +9,7 @@ export default function Placeholder({
   layout,
   spinnerSize,
   priority,
+  showSpinner,
   ...rest
 }: {
   width?: number;
@@ -19,8 +20,9 @@ export default function Placeholder({
   alt: string;
   objectFit?: "contain" | "cover";
   spinnerSize?: "small" | "medium" | "large";
+  showSpinner?: boolean;
 }) {
-  const [isLoaded, setIsLoaded] = useState<boolean>(priority || false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(showSpinner ? false : true);
 
   return (
     <div className={styles.container}>
@@ -39,13 +41,11 @@ export default function Placeholder({
           alt={alt}
           {...rest}
           priority={priority || false}
-          onLoadedData={() => setIsLoaded(true)}
-          onLoad={() => setIsLoaded(true)}
-          onLoadStart={() => setIsLoaded(false)}
+          onLoadedData={() => showSpinner && setIsLoaded(true)}
+          onLoad={() => showSpinner && setIsLoaded(true)}
+          onLoadStart={() => showSpinner && setIsLoaded(false)}
           objectPosition={"center center"}
-          onError={() => {
-            setIsLoaded(true);
-          }}
+          onError={() => showSpinner && setIsLoaded(true)}
         />
       </div>
     </div>
