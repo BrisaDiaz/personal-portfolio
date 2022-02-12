@@ -20,7 +20,7 @@ export default function Placeholder({
   objectFit?: "contain" | "cover";
   spinnerSize?: "small" | "medium" | "large";
 }) {
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(priority || false);
 
   return (
     <div className={styles.container}>
