@@ -19,6 +19,9 @@
 .fluid {
   min-width: 100%;
 }
+.fullHeight {
+  min-height: 100vh;
+}
 .relative {
   position: relative;
 }
