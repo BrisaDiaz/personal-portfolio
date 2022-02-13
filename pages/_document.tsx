@@ -148,7 +148,7 @@ class MyDocument extends Document {
 
           <meta
             name="description"
-            content="I'm enthusiastic frontend developer, passionate about learning innovative technologies digital-product development."
+            content="I'm enthusiastic frontend developer width almost 2 years of experience and accumulated  knowledge on the development of websites and fullstack web applications."
           />
           <meta
             name="keywords"
