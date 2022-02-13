@@ -184,8 +184,8 @@ export default function SVG({
     </svg>
   ) : name === "website-fill" ? (
     <svg
-      width="25"
-      height="25"
+      width={width || "25"}
+      height={height || "25"}
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -20,3 +20,11 @@ export interface Project {
   source_code: string;
   demo: string;
 }
+
+export interface Technology {
+  name: string;
+  logoName: string;
+  categories: Array<string>;
+  image: string;
+  resource_url: string;
+}

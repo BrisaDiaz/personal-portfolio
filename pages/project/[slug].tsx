@@ -75,7 +75,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 rel="noreferrer"
                 title="Link to live demo"
               >
-                <SVG name="website-fill" />
+                <SVG name="website-fill" width={20} height={20} />
                 Live Demo
               </a>
 
@@ -85,7 +85,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 rel="noreferrer"
                 title="Link to source code"
               >
-                <SVG name="code-fill" />
+                <SVG name="code-fill" width={20} height={20} />
                 Source Code
               </a>
             </div>

@@ -38,9 +38,9 @@ export default function Carousel({
             spinnerSize="large"
             src={caption.src}
             alt={caption.alt}
-            showSpinner={true}
             objectFit={objectFit}
           />
+          <span>{index + 1 + "/" + captions.length}</span>
         </div>
       ))}
       <div className={styles.controlsWrapper}>

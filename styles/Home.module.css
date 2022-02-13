@@ -22,9 +22,7 @@
 .relative {
   position: relative;
 }
-.halfVisible {
-  opacity: 0.4;
-}
+
 .menuBtn {
   top: 16px;
   right: 16px;
@@ -62,16 +60,16 @@
   height: auto;
   bottom: 0;
   width: 150%;
-  margin-top: -200px;
+  margin-top: -150px;
 }
 
-.mainSectionContent {
+.content {
   padding-top: 40px;
 
   position: relative;
   z-index: 10;
 }
-.mainSectionContent h1 span {
+.content h1 span {
   font-size: 24px;
   font-weight: 600;
   margin: 0;
@@ -80,33 +78,34 @@
   color: var(--primary-dark);
 }
 
-.mainSectionContent .mainSectionText p {
+.content .text p {
   margin: 20px 0;
   max-width: 600px;
   line-height: 1.5em;
 }
-.mainSectionContent .mainSectionText p:last-child {
+.content .text p:last-child {
   margin-bottom: 20px;
 }
-.personalInfoWrapper {
+.contact {
   max-width: 600px;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  font-style: inherit;
 }
-.personalInfoWrapper ul {
+.contact ul {
   padding: 0;
   list-style: none;
   margin: 5px 0;
 
   padding-right: 10px;
 }
-.personalInfoWrapper ul li span {
+.contact ul li span {
   width: 25px;
   height: 25px;
 }
-.personalInfoWrapper ul li,
-.personalInfoWrapper ul li a {
+.contact ul li,
+.contact ul li a {
   height: min-content;
   display: flex;
 
@@ -117,92 +116,18 @@
   gap: 1rem;
 }
 
-.personalInfoWrapper ul li p,
-.personalInfoWrapper ul li time {
-  opacity: 0.1;
+.contact ul li p,
+.contact ul li time {
   background: var(--secondary-main);
   padding: 0 6px;
   color: #fff;
   transition: all 0.2s ease-in-out;
 }
 
-.personalInfoWrapper ul li:hover p,
-.personalInfoWrapper ul li:hover time,
-.personalInfoWrapper ul li a:focus,
-.personalInfoWrapper ul li a:focus time,
-.personalInfoWrapper ul li a:focus p {
-  opacity: 1;
+.contact ul li:hover,
+.contact ul li a:focus {
   outline-offset: 3px;
   outline-color: var(--secondary-light);
-}
-
-.TechsFilterBar {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid var(--light-text-contrast);
-  margin-top: 30px;
-  max-width: max-content;
-  padding: 0 1rem;
-  border-radius: 12px;
-}
-.TechsFilterBar > div {
-  width: 120px;
-}
-.techsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  row-gap: 0;
-  margin-top: 2rem;
-  column-gap: 1rem;
-  transition: all 0.2s ease-in-out;
-  border-radius: 8px;
-}
-
-.techsContainer figure {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  width: 80px;
-  margin: 0;
-  padding-top: 1rem;
-  height: min-content;
-  text-align: center;
-  justify-content: center;
-  transition: all 0.5s ease-in-out;
-}
-.techsContainer figure figcaption {
-  margin: 1rem auto;
-  font-size: 14px;
-  font-weight: 600;
-}
-.techsContainer figure:hover:after {
-  content: "◥";
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: var(--primary-main);
-}
-.techsContainer a:focus-within {
-  outline-color: var(--secondary-light);
-  outline-offset: 3px;
-}
-
-.techsContainer figure:hover .techImage,
-.techsContainer a:focus figure .techImage {
-  transform: scale(1.15);
-}
-
-.techImage {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
 }
 
 .projectsContainer {
@@ -338,8 +263,8 @@
   margin-top: 1rem;
 }
 @media (max-width: 600px) {
-  .personalInfoWrapper ul li,
-  .personalInfoWrapper ul a {
+  .contact ul li,
+  .contact ul a {
     flex-direction: row-reverse;
   }
 }
@@ -369,24 +294,21 @@
     margin-left: 15%;
   }
 
-  .mainSectionContent {
+  .content {
     padding-top: 10px;
   }
-  .mainSectionContent h1 span,
+  .content h1 span,
   .main h3 {
     font-size: 28px;
   }
 
-  .personalInfoWrapper {
+  .contact {
     margin-bottom: 200px;
   }
   .callToActionBanner .wrapper {
     justify-content: start;
   }
-  .personalInfoWrapper ul li p,
-  .personalInfoWrapper ul li time {
-    opacity: 1;
-  }
+
   .callToActionBanner .wrapper .content {
     padding: 30px 60px;
     max-width: 700px;
@@ -426,7 +348,7 @@
   .aboutMeIllustration svg {
     margin-top: -250px;
   }
-  .personalInfoWrapper {
+  .contact {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 40px;
@@ -477,7 +399,7 @@
   }
 }
 @media (min-width: 1200px) {
-  .personalInfoWrapper {
+  .contact {
     margin-bottom: 0;
   }
 }

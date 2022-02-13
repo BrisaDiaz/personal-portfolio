@@ -1,17 +1,14 @@
-import React, { ChangeEvent, useEffect } from "react";
+import React from "react";
 import type { NextPage } from "next";
 import Link from "next/link";
 import Head from "next/head";
-
+import { TECHS, PROJECTS, SKILLS } from "data";
 import styles from "@/styles/Home.module.css";
 import ProjectCard from "@/components/ProjectCard";
-import Checkbox from "@/components/Checkbox";
 import MenuNav from "@/components/MenuNav/index";
-import { TECHS, PROJECTS, SKILLS } from "data";
-import { useState } from "react";
+
 import SVG from "@/components/SVG";
-import TechLogo from "@/components/TechLogo";
-import ImagePlaceholder from "@/components/ImagePlaceholder/index";
+import TechnologiesPanel from "@/components/TechnologiesPanel";
 import Button from "@/components/Button/index";
 import SocialShareButtons from "@/components/SocialShareButtons/index";
 import Illustration from "@/components/Illustration";
@@ -23,28 +20,14 @@ const MENU_LINKS = [
   { title: "Motivation", href: "#motivation" },
 ];
 const Home: NextPage = () => {
-  const [menuState, setMenuState] = useState<{
+  const [menuState, setMenuState] = React.useState<{
     isOpen: boolean;
     activeLink: string;
   }>({
     isOpen: false,
     activeLink: "aboutMe",
   });
-  const [activeTechCategories, setActiveTechCategories] = useState([
-    "frontend",
-    "backend",
-    "testing",
-    "other",
-  ]);
-  const handleTechCategories = (e: ChangeEvent<HTMLInputElement>) => {
-    const category = e.target.name;
-    if (activeTechCategories.includes(category)) {
-      return setActiveTechCategories(
-        activeTechCategories.filter((cat) => cat !== category)
-      );
-    }
-    setActiveTechCategories([...activeTechCategories, category]);
-  };
+
   const handleNavigation = (href: string) => {
     setMenuState({
       isOpen: false,
@@ -85,10 +68,7 @@ const Home: NextPage = () => {
         />
         <SocialShareButtons />
         <MainSection />
-        <TechStackSection
-          handleTechCategories={handleTechCategories}
-          activeTechCategories={activeTechCategories}
-        />
+        <TechStackSection />
 
         <ProjectsSection />
 
@@ -210,71 +190,11 @@ function SkillsSection() {
     </section>
   );
 }
-function TechStackSection({
-  handleTechCategories,
-  activeTechCategories,
-}: {
-  handleTechCategories: (e: ChangeEvent<HTMLInputElement>) => void;
-  activeTechCategories: string[];
-}) {
+function TechStackSection() {
   return (
     <section className={styles.container} id="techStack">
       <h2>Tech Stack</h2>
-      <div className={styles.TechsFilterBar}>
-        <Checkbox
-          name="frontend"
-          label="Frontend"
-          defaultChecked={true}
-          onChange={handleTechCategories}
-        />
-        <Checkbox
-          name="backend"
-          label="Backend"
-          defaultChecked={true}
-          onChange={handleTechCategories}
-        />
-        <Checkbox
-          name="testing"
-          label="Testing"
-          defaultChecked={true}
-          onChange={handleTechCategories}
-        />
-        <Checkbox
-          name="other"
-          label="Other"
-          defaultChecked={true}
-          onChange={handleTechCategories}
-        />
-      </div>
-
-      <div className={styles.techsContainer}>
-        {TECHS.map((tech) => (
-          <a
-            href={tech.resource_url}
-            target="_blank"
-            rel="noreferrer"
-            key={tech.name}
-            title={tech.name}
-          >
-            <figure
-              role="figure"
-              className={
-                tech.categories.some((category) =>
-                  Boolean(activeTechCategories.includes(category))
-                )
-                  ? ""
-                  : styles.halfVisible
-              }
-            >
-              <div className={styles.techImage}>
-                <TechLogo name={tech.logoName} />
-              </div>
-
-              <figcaption>{tech.name}</figcaption>
-            </figure>
-          </a>
-        ))}
-      </div>
+      <TechnologiesPanel technologies={TECHS} />
     </section>
   );
 }
@@ -284,8 +204,8 @@ function MainSection() {
       className={`${styles.container} ${styles.aboutMeSection}`}
       id="aboutMe"
     >
-      <div className={styles.mainSectionContent}>
-        <div className={styles.mainSectionText}>
+      <div className={styles.content}>
+        <div className={styles.text}>
           <h1>
             <span> {"Hi!, I'm brisa díaz\n"}</span>
             <br />
@@ -305,7 +225,7 @@ function MainSection() {
             business logic and translate them into actual working applications.
           </p>
         </div>
-        <div className={styles.personalInfoWrapper}>
+        <address className={styles.contact}>
           <ul>
             <li>
               <a
@@ -356,7 +276,7 @@ function MainSection() {
               </a>
             </li>
           </ul>
-        </div>
+        </address>
       </div>
       <div className={styles.aboutMeIllustration}>
         {" "}
