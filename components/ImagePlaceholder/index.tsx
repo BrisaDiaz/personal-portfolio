@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Spinner from "@/components/Spinner/index";
 import styles from "./index.module.css";
+
 export default function Placeholder({
   src,
   alt,

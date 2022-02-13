@@ -1,0 +1,58 @@
+.callToActionBanner {
+  width: 90%;
+  margin: 10px auto 20px;
+  background: var(--light-text-contrast);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.callToActionBanner .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.callToActionBanner .content {
+  margin-bottom: 0;
+  padding: 30px 16px;
+  margin: 0 auto;
+  line-height: 1.5em;
+}
+
+.callToActionBanner button {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.bannerIllustration {
+  position: relative;
+  width: 320px;
+  line-height: 1.5em;
+  height: 300px;
+  margin: 0 auto;
+}
+.bannerIllustration svg {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .callToActionBanner .wrapper {
+    justify-content: start;
+  }
+
+  .callToActionBanner .wrapper .content {
+    padding: 30px 60px;
+    max-width: 700px;
+    margin: 0;
+  }
+  .callToActionBanner .wrapper a:focus {
+    outline: 2px solid var(--secondary-light);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+}
+@media (min-width: 900px) {
+  .callToActionBanner {
+    width: 85%;
+  }
+}
