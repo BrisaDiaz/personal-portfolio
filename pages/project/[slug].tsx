@@ -15,7 +15,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
   return (
     <div>
       <Head>
-        <title>Brisa Díaz | Project {project.name}</title>
+        <title>Brisa Díaz | {project.name}</title>
       </Head>
 
       <main className={`main ${styles.main}`}>

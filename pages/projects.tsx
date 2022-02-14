@@ -11,7 +11,7 @@ const Projects: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Brisa Díaz | Frontend Development Specialist 👩‍💻</title>
+        <title>Brisa Díaz | Projects</title>
       </Head>
       <WithNavbar>
         <main className="main">
