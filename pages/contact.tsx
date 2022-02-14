@@ -1,17 +1,14 @@
 import React from "react";
-import dynamic from "next/dynamic";
+
 import type { NextPage } from "next";
 import WithNavbar from "@/components/Layouts/WithNavbar";
 import Head from "next/head";
-import { SKILLS } from "data";
-import styles from "@/styles/Home.module.css";
+import { PROJECTS } from "data";
 
 import SocialShareButtons from "@/components/SocialShareButtons/index";
-
-import AboutMeSection from "@/components/Home/AboutMeSection";
-import SkillsSection from "@/components/Home/SkillsSection";
-
-const Home: NextPage = () => {
+import ProjectsSection from "@/components/Home/ProjectsSection";
+import Banner from "@/components/Home/Banner";
+const Technologies: NextPage = () => {
   return (
     <div>
       <Head>
@@ -19,13 +16,11 @@ const Home: NextPage = () => {
       </Head>
       <WithNavbar>
         <main className="main">
-          <AboutMeSection styles={styles} />
-
-          <SkillsSection skills={SKILLS} styles={styles} />
+          <Banner />
         </main>
       </WithNavbar>
     </div>
   );
 };
 
-export default Home;
+export default Technologies;

@@ -1,6 +1,15 @@
+.bannerContainer {
+  padding: 0 20px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
 .callToActionBanner {
-  width: 90%;
   margin: 10px auto 20px;
+  width: inherit;
   background: var(--light-text-contrast);
   border-radius: 12px;
   overflow: hidden;
@@ -10,7 +19,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 1250px;
   margin: 0 auto;
 }
 .callToActionBanner .content {
@@ -18,41 +26,96 @@
   padding: 30px 16px;
   margin: 0 auto;
   line-height: 1.5em;
+  width: 100%;
+}
+.callToActionBanner .content .text {
+  max-width: 700px;
+}
+.callToActionBanner .content div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact {
+  max-width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+
+  grid-gap: 0;
+  column-gap: 2rem;
+  margin-top: 10px;
+  font-style: inherit;
+  font-size: 12px;
+}
+.contact ul {
+  padding: 0;
+  list-style: none;
+  margin: 5px 0;
+  margin: 0;
 }
 
-.callToActionBanner button {
-  font-weight: 600;
-  margin-top: 1rem;
+.contact ul li,
+.contact ul li a {
+  height: min-content;
+  display: flex;
+
+  list-style: none;
+  margin: 1.5rem 0;
+  height: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact ul li p,
+.contact ul li time {
+  background: var(--secondary-main);
+  padding: 0 6px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact ul li:hover,
+.contact ul li a:focus {
+  outline-offset: 3px;
+  outline-color: var(--secondary-light);
 }
 .bannerIllustration {
-  position: relative;
   width: 320px;
-  line-height: 1.5em;
-  height: 300px;
   margin: 0 auto;
 }
 .bannerIllustration svg {
   width: 100%;
 }
-
+.callToActionBanner .wrapper a:focus {
+  outline: 2px solid var(--secondary-light);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
 @media (min-width: 600px) {
+  .bannerContainer {
+    padding: 0 60px;
+    max-width: 1250px;
+    min-height: calc(100vh - 80px);
+  }
   .callToActionBanner .wrapper {
     justify-content: start;
   }
 
   .callToActionBanner .wrapper .content {
     padding: 30px 60px;
-    max-width: 700px;
+
     margin: 0;
   }
-  .callToActionBanner .wrapper a:focus {
-    outline: 2px solid var(--secondary-light);
-    outline-offset: 3px;
-    border-radius: 8px;
+  .callToActionBanner .content h3 {
+    font-size: 25px;
+  }
+  .contact {
+    font-size: 14px;
   }
 }
-@media (min-width: 900px) {
-  .callToActionBanner {
-    width: 85%;
+@media (min-width: 1200px) {
+  .bannerIllustration {
+    margin: 0;
+    margin-left: auto;
+    margin-top: -120px;
   }
 }

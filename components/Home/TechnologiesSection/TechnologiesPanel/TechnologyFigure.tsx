@@ -1,5 +1,5 @@
 import React from "react";
-import TechLogo from "@/components/TechLogo";
+import TechLogo from "@/components/Home/TechnologiesSection/TechLogo";
 import { Technology } from "interfaces";
 function TechnologyFigure({
   className,
@@ -24,4 +24,4 @@ function TechnologyFigure({
   );
 }
 
-export default React.memo(TechnologyFigure);
+export default TechnologyFigure;

@@ -29,12 +29,10 @@ export default function MenuNav({
   });
 
   return (
-    <aside
-      role="complementary"
+    <header
       aria-hidden={isOpen ? "true" : false}
       tabIndex={tabIndex}
       className={`${styles.menu} ${isOpen ? styles.openMenu : ""}`}
-      aria-label="navigation menu"
     >
       <div className={styles.closeBtn}>
         <button onClick={onClose} aria-label="close" tabIndex={tabIndex} />
@@ -54,6 +52,6 @@ export default function MenuNav({
           </Link>
         ))}
       </nav>
-    </aside>
+    </header>
   );
 }

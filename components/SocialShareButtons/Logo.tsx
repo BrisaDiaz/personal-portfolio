@@ -11,7 +11,7 @@ export default function Logo({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      width={width || "20"}
+      width={width || "15"}
     >
       <path
         fill={color || "white"}
@@ -22,7 +22,7 @@ export default function Logo({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 640 512"
-      width={width || "30"}
+      width={width || "22"}
     >
       <path
         fill={color || "white"}
@@ -33,7 +33,7 @@ export default function Logo({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      width={width || "25"}
+      width={width || "20"}
     >
       <path
         fill={color || "white"}
@@ -44,7 +44,7 @@ export default function Logo({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      width={width || "25"}
+      width={width || "18"}
     >
       <path
         fill={color || "white"}
@@ -55,7 +55,7 @@ export default function Logo({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 320 512"
-      width={width || "15"}
+      width={width || "12"}
     >
       <path
         fill={color || "white"}

@@ -1,0 +1,21 @@
+.panel {
+  margin: 50px 0;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+
+  grid-gap: 0.5rem;
+
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .panel {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .panel {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

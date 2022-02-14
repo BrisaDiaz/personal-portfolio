@@ -38,6 +38,14 @@ body {
   transition: all 0.3s ease-in-out;
   font-display: swap;
 }
+.main {
+  margin: 2rem auto 0;
+  position: relative;
+  max-width: 1410px;
+  overflow: auto;
+
+  color: var(--secondary-dark);
+}
 
 .noScroll {
   overflow: hidden;
@@ -70,6 +78,7 @@ h3 {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+  margin-bottom: 0.5em;
   font-family: "IM Fell Double Pica", serif;
 }
 h4 {
@@ -108,5 +117,34 @@ h4 {
 @media (min-width: 768px) {
   *::-webkit-scrollbar {
     display: block;
+  }
+}
+
+.container {
+  scroll-margin-top: 100px;
+  padding: 16px 20px;
+
+  position: relative;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  .container {
+    padding: 30px 60px;
+    max-width: 1250px;
+  }
+  .main {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+
+  h4 {
+    font-size: 18px;
   }
 }

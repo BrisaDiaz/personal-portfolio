@@ -1,12 +1,9 @@
-import SVG from "@/components/SVG";
-import Illustration from "@/components/Illustration";
+
+import Illustration from "@/components/Home/Illustration";
 
 export default function AboutMeSection({ styles }: { styles: any }) {
   return (
-    <section
-      className={`${styles.container} ${styles.aboutMeSection}`}
-      id="aboutMe"
-    >
+    <section className={`container ${styles.aboutMeSection}`} id="/">
       <div className={styles.content}>
         <div className={styles.text}>
           <h1>
@@ -28,58 +25,6 @@ export default function AboutMeSection({ styles }: { styles: any }) {
             business logic and translate them into actual working applications.
           </p>
         </div>
-        <address className={styles.contact}>
-          <ul>
-            <li>
-              <a
-                href="tel:+54 351 3850064"
-                target="_blank"
-                rel="noreferrer"
-                title="Telephone number"
-              >
-                <SVG name="telephone-fill" />
-
-                <p>+54 351 3850064</p>
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:brisaabigaildiaz2000@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                title="Email"
-              >
-                <SVG name="email-fill" />
-                <p>brisaabigaildiaz2000@gmail.com</p>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/brisa-d%C3%ADaz/"
-                target="_blank"
-                rel="noreferrer"
-                title="Linkedin profile"
-              >
-                <SVG name="linkedin-fill" />
-
-                <p>/brisa-díaz</p>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/BrisaDiaz"
-                target="_blank"
-                rel="noreferrer"
-                title="Github repository"
-              >
-                <SVG name="github-fill" />
-                <p>/BrisaDiaz</p>
-              </a>
-            </li>
-          </ul>
-        </address>
       </div>
       <div className={styles.aboutMeIllustration}>
         {" "}

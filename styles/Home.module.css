@@ -1,78 +1,27 @@
-.main {
-  min-height: 100vh;
-  position: relative;
-  max-width: 1410px;
-  overflow: auto;
-
-  margin: 0 auto;
-  color: var(--secondary-dark);
-}
-
-.container {
-  scroll-margin-top: 60px;
-  padding: 16px 20px;
-  padding-bottom: 40px;
-  position: relative;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
 .fluid {
   min-width: 100%;
 }
-.fullHeight {
-  min-height: 100vh;
-}
-.relative {
-  position: relative;
-}
 
-.menuBtn {
-  top: 16px;
-  right: 16px;
-  width: 26px;
-  height: 30px;
-  margin-left: auto;
-  width: fit-content;
-  z-index: 50;
-  position: fixed;
-}
-.menuBtn button {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: transparent;
-  z-index: 10;
-  cursor: pointer;
-}
-.menuBtn button:focus {
-  outline-offset: 0.5rem;
-  outline-color: var(--secondary-light);
-}
 .aboutMeSection {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
   margin-bottom: 0;
 }
 
 .aboutMeIllustration svg {
-  width: 100%;
-  max-width: 600px;
   height: auto;
   bottom: 0;
   width: 150%;
-  margin-top: -150px;
 }
 
-.content {
-  padding-top: 40px;
-
+.aboutMeSection .content {
   position: relative;
   z-index: 10;
+  margin: auto;
 }
-.content h1 span {
+.aboutMeSection .content h1 span {
   font-size: 24px;
   font-weight: 600;
   margin: 0;
@@ -81,137 +30,29 @@
   color: var(--primary-dark);
 }
 
-.content .text p {
+.aboutMeSection .content .text p {
   margin: 20px 0;
-  max-width: 600px;
+
   line-height: 1.5em;
 }
-.content .text p:last-child {
+.aboutMeSection .content .text p:last-child {
   margin-bottom: 20px;
 }
-.contact {
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  font-style: inherit;
-}
-.contact ul {
-  padding: 0;
-  list-style: none;
-  margin: 5px 0;
 
-  padding-right: 10px;
-}
-.contact ul li span {
-  width: 25px;
-  height: 25px;
-}
-.contact ul li,
-.contact ul li a {
-  height: min-content;
-  display: flex;
-
-  list-style: none;
-  margin: 1.5rem 0;
-  height: 1rem;
-  align-items: center;
-  gap: 1rem;
+.aboutMeSection + section {
+  margin-top: -160x;
 }
 
-.contact ul li p,
-.contact ul li time {
-  background: var(--secondary-main);
-  padding: 0 6px;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
+.skillsWrapper {
+  margin-bottom: 0;
 }
-
-.contact ul li:hover,
-.contact ul li a:focus {
-  outline-offset: 3px;
-  outline-color: var(--secondary-light);
-}
-
-.projectsContainer {
-  margin: 50px 0;
-  display: grid;
-  width: 100%;
-  justify-items: center;
-
-  grid-gap: 0.5rem;
-
-  grid-template-columns: 1fr;
-}
-.projectsContainer article {
-  border: 2px solid var(--light-text-contrast);
-}
-.strengthsSectionWrapper {
+.splitWrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.strengthsSectionWrapper div {
+.splitWrapper div {
   width: 100%;
-}
-.strengthsSectionWrapper:nth-child(2) {
-  margin: 30px 0;
-}
-.educationIllustration {
-  max-width: 500px;
-  margin: 0 auto;
-}
-.educationIllustration svg {
-  width: 100%;
-  height: auto;
-  justify-self: center;
-  max-width: 500px;
-}
-.educationSectionContent {
-  padding-bottom: 0;
-}
-.educationSectionContent,
-.skillsSection {
-  max-width: 550px;
-  line-height: 1.5em;
-}
-.skillsSection h2 {
-  margin-bottom: 0.8em;
-}
-.educationSectionContent h2 {
-  font-weight: 800;
-  color: unset;
-
-  margin: 0.5rem 0 1em;
-}
-
-.skillsSection ul {
-  padding: 1rem 0;
-  padding-right: 0;
-  display: flex;
-  gap: 1rem;
-
-  flex-direction: column;
-}
-
-.skillsSection ul li {
-  position: relative;
-  margin-left: 1.5rem;
-  line-height: 1.5rem;
-}
-
-.skillsSection ul li:before {
-  content: "✓";
-  font-size: 12px;
-  position: absolute;
-  font-weight: 800;
-  background: var(--light-text-contrast);
-  color: var(--primary-dark);
-  left: -25px;
-  transform: scale(0.8);
-
-  border-radius: 50%;
-  padding: 0px 6px;
 }
 
 .techSkillsIllustrationSection {
@@ -219,9 +60,6 @@
   z-index: -20;
 }
 
-.techSkillsIllustrationSection {
-  margin-bottom: -50px;
-}
 .programingIllustration svg {
   position: relative;
   z-index: -10;
@@ -229,180 +67,69 @@
 
   height: auto;
 }
-.callToActionBanner {
-  width: 90%;
-  margin: 10px auto 20px;
-  background: var(--light-text-contrast);
-  border-radius: 12px;
-  overflow: hidden;
-}
-.callToActionBanner .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 1250px;
-  margin: 0 auto;
-}
-.bannerIllustration {
-  position: relative;
-  width: 320px;
-  line-height: 1.5em;
-  height: 300px;
-  margin: 0 auto;
-}
-.bannerIllustration svg {
-  width: 100%;
-}
-.callToActionBanner .content {
-  margin-bottom: 0;
-  padding: 30px 16px;
-  margin: 0 auto;
-  line-height: 1.5em;
-}
-
-.callToActionBanner button {
-  font-weight: 600;
-  margin-top: 1rem;
-}
-@media (max-width: 600px) {
-  .contact ul li,
-  .contact ul a {
-    flex-direction: row-reverse;
-  }
-}
 
 @media (min-width: 600px) {
-  .main {
-    font-size: 16px;
-  }
-  .main h1 {
-    font-size: 45px;
-  }
-  .main h2 {
-    font-size: 38px;
-  }
-
-  .main h4 {
-    font-size: 18px;
-  }
-  .container {
-    padding: 30px 60px;
-    padding-bottom: 30px;
-    max-width: 1250px;
-  }
-
   .aboutMeIllustration svg {
-    margin-top: -350px;
-    margin-left: 15%;
+    margin-left: 20%;
+    width: 100%;
   }
 
-  .content {
-    padding-top: 10px;
-  }
-  .content h1 span,
+  .aboutMeSection .content h1 span,
   .main h3 {
     font-size: 28px;
   }
 
-  .contact {
-    margin-bottom: 200px;
-  }
-  .callToActionBanner .wrapper {
-    justify-content: start;
-  }
-
-  .callToActionBanner .wrapper .content {
-    padding: 30px 60px;
-    max-width: 700px;
-    margin: 0;
-  }
-  .callToActionBanner .wrapper a:focus {
-    outline: 2px solid var(--secondary-light);
-    outline-offset: 3px;
-    border-radius: 8px;
-  }
-  .bannerIllustration svg {
-    margin: 0 auto;
-  }
-  .educationSectionContent {
-    padding-bottom: 30px;
-  }
-}
-@media (min-width: 750px) {
-  .projectsContainer {
-    grid-template-columns: 1fr 1fr;
-  }
-  .skillsSection {
-    margin-bottom: 0;
-  }
-  .programingIllustration svg {
-    max-width: 450px;
+  .aboutMeSection + section {
+    margin-top: -160px;
   }
 }
 
 @media (min-width: 900px) {
-  .menuBtn {
-    display: none;
-  }
-  .aboutMeSection {
-    margin-top: 4.5rem;
-  }
   .aboutMeIllustration svg {
-    margin-top: -250px;
+    width: 100%;
+
+    margin-left: 30%;
   }
-  .contact {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 40px;
+  .aboutMeSection .content .text p {
+    max-width: 600px;
   }
-  .callToActionBanner {
-    width: 85%;
+  .aboutMeSection + section {
+    margin-top: -100px;
   }
-  .strengthsSectionWrapper {
+
+  .splitWrapper {
     flex-direction: row;
     align-items: center;
   }
 
-  .skillsSection {
+  .skillsWrapper {
     order: 2;
   }
   .techSkillsIllustrationSection {
     order: 1;
   }
+  .skillsWrapper {
+    max-width: 50%;
+  }
+  .techSkillsIllustrationSection svg {
+    margin-right: 10%;
+  }
 }
-@media (min-width: 1050px) {
-  .container {
-    overflow-x: visible;
-  }
-  .bannerIllustration svg {
-    margin-left: -60px;
-    transform: scale(1.1);
-  }
+
+@media (min-width: 1200px) {
   .aboutMeSection {
     flex-direction: row;
     align-items: flex-end;
   }
+
   .aboutMeSection .aboutMeIllustration svg {
     margin-top: 0;
     max-width: 100%;
     height: auto;
+    margin-left: 10%;
     margin-bottom: -60px;
   }
   .aboutMeSection + section {
-    margin-top: -0;
-  }
-
-  .educationSectionContent,
-  .skillsSection {
-    max-width: 600px;
-  }
-  .projectsContainer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1200px) {
-  .contact {
-    margin-bottom: 0;
+    margin-top: 0;
   }
 }

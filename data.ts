@@ -448,20 +448,13 @@ export const SKILLS = [
   "Strong proficiency in JavaScript and DOM manipulation.",
   "Experience in creating responsive UI implementations.",
   "Experience integrating Typescript in a medium size project.",
-  "Experience with JSON and RESTful/GraphQL services.",
+  "Experience consuming and creating RESTful/GraphQL API's.",
   "Experience with Unit Testing and End to End testing.",
-
   "Experience implementing rendering techniques like SSG, SSR and ISR.",
-  "Experience implementing accessible web sites.",
-
-  "Experience with JavaScript on the backend.",
-  "Experience setting up and scaling projects.",
-  "Knowledge in SEO optimization.",
+  "Knowledge in SEO optimization and accessibility.",
   "Knowledge in design patterns and modularization.",
-
-  "Ability to quickly get acquainted with new technologies and flexibility to adapt to new requirements.",
-  // "Experience working in a team environment.",
-  // "Tendency to convey confidence and security, to listen, show interest and be open-minded about the needs of the people around me.",
+  "Flexibility to adapt to new requirements.",
+  "Ability to quickly get acquainted with new technologies.",
   "Ability to work autonomously and to be proactive.",
-  "Capacity for self-analysis and predisposition to continuously improve.",
+  "Capacity of self-analysis and predisposition to continuously improve.",
 ];

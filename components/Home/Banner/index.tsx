@@ -1,41 +1,82 @@
 import styles from "./index.module.css";
-import Link from "next/link";
-import Illustration from "@/components/Illustration";
-import Button from "@/components/Button/index";
-import useInView from "react-cool-inview";
-export default function Banner({ url }: { url: string }) {
-  const { observe, inView } = useInView({
-    onEnter: ({ unobserve }) => unobserve(), // only run once
-  });
+
+import Illustration from "@/components/Home/Illustration";
+
+import SVG from "@/components/SVG";
+export default function Banner() {
   return (
-    <article className={styles.callToActionBanner} ref={observe}>
-      {inView ? (
+    <section className={styles.bannerContainer}>
+      <article className={styles.callToActionBanner}>
         <div className={styles.wrapper}>
           <div className={styles.content}>
-            <h3>Are we compatible?</h3>
+            <h3>You think we can be a good match?</h3>
 
-            <p>
+            <p className={styles.text}>
               My ideal job is one that allows me to be in a position of
-              responsibility that utilize and makes the most of my skills and
+              responsibility, that utilize and makes the most of my skills and
               experience, in which I can join and work in an environment of
-              growth and excellence and that provides me with job satisfaction
-              and personal development as well as help me achieve personal and
-              organizational goals.
+              growth and excellence.
             </p>
-            <Link href="#aboutMe" passHref>
-              <a href="" title="about me section">
-                <Button text="Lest get in touch!" tabIndex={-1} />
-              </a>
-            </Link>
-          </div>
+            <div>
+              <address className={styles.contact}>
+                <ul>
+                  <li>
+                    <a
+                      href="tel:+54 351 3850064"
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Telephone number"
+                    >
+                      <SVG name="telephone-fill" />
 
-          <div className={styles.bannerIllustration}>
-            <Illustration name="agreement" />
+                      <p>+54 351 3850064</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:brisaabigaildiaz2000@gmail.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Email"
+                    >
+                      <SVG name="email-fill" />
+                      <p>brisaabigaildiaz2000@gmail.com</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/brisa-d%C3%ADaz/"
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Linkedin profile"
+                    >
+                      <SVG name="linkedin-fill" />
+
+                      <p>/brisa-díaz</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/BrisaDiaz"
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Github repository"
+                    >
+                      <SVG name="github-fill" />
+                      <p>/BrisaDiaz</p>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+              <div className={styles.bannerIllustration}>
+                <Illustration name="agreement" />
+              </div>
+            </div>
           </div>
         </div>
-      ) : (
-        <div className={styles.fullHeight} />
-      )}
-    </article>
+      </article>
+    </section>
   );
 }
