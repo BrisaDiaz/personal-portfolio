@@ -5,9 +5,8 @@ import WithNavbar from "@/components/Layouts/WithNavbar";
 import Head from "next/head";
 import { TECHS } from "data";
 
-
 import SocialShareButtons from "@/components/SocialShareButtons/index";
-import TechnologiesSection from "@/components/Home/TechnologiesSection";
+import TechnologiesSection from "@/components/Sections/TechnologiesSection";
 
 const Technologies: NextPage = () => {
   return (

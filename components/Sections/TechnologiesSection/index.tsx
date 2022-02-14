@@ -1,5 +1,5 @@
 import { Technology } from "interfaces";
-import TechnologiesPanel from "@/components/Home/TechnologiesSection/TechnologiesPanel";
+import TechnologiesPanel from "@/components/Sections/TechnologiesSection/TechnologiesPanel";
 
 export default function TechnologiesSection({
   technologies,

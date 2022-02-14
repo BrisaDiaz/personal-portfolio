@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import Illustration from "@/components/Home/Illustration";
+import Illustration from "@/components/Sections/Illustration";
 
 import SVG from "@/components/SVG";
 export default function Banner() {

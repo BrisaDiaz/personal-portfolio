@@ -6,8 +6,8 @@ import Head from "next/head";
 import { PROJECTS } from "data";
 
 import SocialShareButtons from "@/components/SocialShareButtons/index";
-import ProjectsSection from "@/components/Home/ProjectsSection";
-import Banner from "@/components/Home/Banner";
+import ProjectsSection from "@/components/Sections/ProjectsSection";
+import Banner from "@/components/Sections/Banner";
 const Technologies: NextPage = () => {
   return (
     <div>

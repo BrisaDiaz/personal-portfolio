@@ -1,5 +1,4 @@
-
-import Illustration from "@/components/Home/Illustration";
+import Illustration from "@/components/Sections/Illustration";
 
 export default function AboutMeSection({ styles }: { styles: any }) {
   return (

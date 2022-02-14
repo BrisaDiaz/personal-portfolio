@@ -1,5 +1,5 @@
 import React from "react";
-import TechLogo from "@/components/Home/TechnologiesSection/TechLogo";
+import TechLogo from "@/components/Sections/TechnologiesSection/TechLogo";
 import { Technology } from "interfaces";
 function TechnologyFigure({
   className,

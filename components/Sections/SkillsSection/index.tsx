@@ -1,4 +1,4 @@
-import Illustration from "@/components/Home/Illustration";
+import Illustration from "@/components/Sections/Illustration";
 import listStyles from "./List.module.css";
 
 export default function AccomplishmentsSection({

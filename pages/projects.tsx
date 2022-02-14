@@ -5,7 +5,7 @@ import WithNavbar from "@/components/Layouts/WithNavbar";
 import Head from "next/head";
 import { PROJECTS } from "data";
 
-import ProjectsSection from "@/components/Home/ProjectsSection";
+import ProjectsSection from "@/components/Sections/ProjectsSection";
 
 const Projects: NextPage = () => {
   return (

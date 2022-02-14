@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/Home/ProjectsSection/ProjectCard";
+import ProjectCard from "@/components/Sections/ProjectsSection/ProjectCard";
 import { Project } from "interfaces";
 import PanelStyles from "./ProjectsPanel.module.css";
 

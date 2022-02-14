@@ -6,10 +6,8 @@ import Head from "next/head";
 import { SKILLS } from "data";
 import styles from "@/styles/Home.module.css";
 
-import SocialShareButtons from "@/components/SocialShareButtons/index";
-
-import AboutMeSection from "@/components/Home/AboutMeSection";
-import SkillsSection from "@/components/Home/SkillsSection";
+import AboutMeSection from "@/components/Sections/AboutMeSection";
+import SkillsSection from "@/components/Sections/SkillsSection";
 
 const Home: NextPage = () => {
   return (
