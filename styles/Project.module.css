@@ -47,7 +47,6 @@
   font-weight: 600;
   opacity: 0.9;
   font-family: "IM Fell Double Pica", serif;
-  color: var(--secondary-main);
 }
 .userBlock {
   width: max-content;

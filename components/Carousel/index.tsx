@@ -64,8 +64,7 @@ export default function Carousel({
         >
           <ImagePlaceholder
             spinnerSize="large"
-            loading="lazy"
-            quality={85}
+            loading="eager"
             src={caption.src}
             alt={caption.alt}
             objectFit={objectFit}
