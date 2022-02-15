@@ -24,7 +24,7 @@ export interface Project {
 export interface Technology {
   name: string;
   logoName: string;
-  categories: Array<string>;
+  category: string;
   image: string;
   resource_url: string;
 }

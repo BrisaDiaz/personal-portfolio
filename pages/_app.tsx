@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <SocialShareButtons />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

@@ -10,10 +10,8 @@ export default function Panel({
   technologies: Technology[];
 }) {
   const [activeTechCategories, setActiveTechCategories] = React.useState([
+    "language",
     "frontend",
-    "backend",
-    "testing",
-    "other",
   ]);
   const handleTechCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     const category = e.target.name;
@@ -28,6 +26,12 @@ export default function Panel({
     <>
       <div className={styles.TechsFilterBar}>
         <Checkbox
+          name="language"
+          label="Language"
+          defaultChecked={true}
+          onChange={handleTechCategories}
+        />
+        <Checkbox
           name="frontend"
           label="Frontend"
           defaultChecked={true}
@@ -36,19 +40,19 @@ export default function Panel({
         <Checkbox
           name="backend"
           label="Backend"
-          defaultChecked={true}
+          defaultChecked={false}
           onChange={handleTechCategories}
         />
         <Checkbox
           name="testing"
           label="Testing"
-          defaultChecked={true}
+          defaultChecked={false}
           onChange={handleTechCategories}
         />
         <Checkbox
           name="other"
           label="Other"
-          defaultChecked={true}
+          defaultChecked={false}
           onChange={handleTechCategories}
         />
       </div>
@@ -59,11 +63,9 @@ export default function Panel({
             key={technology.name}
             technology={technology}
             className={`${styles.techFigure} ${
-              technology.categories.some((category) =>
-                Boolean(activeTechCategories.includes(category))
-              )
+              Boolean(activeTechCategories.includes(technology.category))
                 ? ""
-                : styles.halfVisible
+                : styles.invisible
             }`}
           />
         ))}

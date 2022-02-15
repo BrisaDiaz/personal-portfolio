@@ -24,17 +24,23 @@
 }
 
 .techFigure {
-  display: flex;
+  transition: all 1s ease-in-out;
+  content-visibility: auto;
+  opacity: 1;
+  order: 1;
+}
+.techFigure figure {
   position: relative;
   flex-direction: column;
   align-items: center;
   width: 80px;
   margin: 0;
   padding-top: 1rem;
+
+  justify-content: center;
+  display: flex;
   height: min-content;
   text-align: center;
-  justify-content: center;
-  transition: all 0.5s ease-in-out;
 }
 .techFigure svg {
   transition: all 0.3s ease-in-out;
@@ -60,6 +66,7 @@
 .techsContainer:focus-within svg {
   transform: scale(1.15);
 }
-.halfVisible {
-  opacity: 0.4;
+.invisible {
+  display: none;
+  order: 2;
 }
