@@ -1,14 +1,18 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import SVG from "@/components/SVG";
 import { PROJECTS } from "data";
 import type { NextPage } from "next";
 import Head from "next/head";
-import SocialShareButtons from "@/components/SocialShareButtons/index";
+
 import { Project } from "interfaces";
 import Carousel from "@/components/Carousel/index";
 import Link from "next/link";
 import styles from "@/styles/Project.module.css";
 
+const SocialShareButtons = dynamic(
+  () => import("@/components/SocialShareButtons/index")
+);
 const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
   project,
 }) => {
@@ -31,12 +35,11 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 <a>Home</a>
               </Link>
             </span>
-
-            <Link href="/projects" passHref>
-              <span>
+            <span>
+              <Link href="/projects" passHref>
                 <a href="">Projects</a>
-              </span>
-            </Link>
+              </Link>
+            </span>
             <span>{project.title}</span>
           </nav>
 

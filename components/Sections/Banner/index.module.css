@@ -10,7 +10,7 @@
 .callToActionBanner {
   margin: 10px auto 20px;
   width: inherit;
-  background: var(--light-text-contrast);
+  background: var(--secondary-extra-light);
   border-radius: 12px;
   overflow: hidden;
 }

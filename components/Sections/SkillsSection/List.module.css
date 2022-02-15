@@ -18,7 +18,7 @@
   font-size: 12px;
   position: absolute;
   font-weight: 800;
-  background: var(--light-text-contrast);
+  background: var(--secondary-extra-light);
   color: var(--primary-dark);
   left: -25px;
   transform: scale(0.8);

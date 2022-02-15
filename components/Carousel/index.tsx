@@ -55,23 +55,25 @@ export default function Carousel({
           </svg>
         </div>
       </div>
-      {captions.map((caption, index) => (
-        <div
-          key={caption.alt}
-          className={`${styles.slide} ${
-            currentSlide === index ? styles.activeSlide : ""
-          }`}
-        >
-          <ImagePlaceholder
-            spinnerSize="large"
-            loading="eager"
-            src={caption.src}
-            alt={caption.alt}
-            objectFit={objectFit}
-          />
-          <span>{index + 1 + "/" + captions.length}</span>
-        </div>
-      ))}
+      {isOpen
+        ? captions.map((caption, index) => (
+            <div
+              key={caption.alt}
+              className={`${styles.slide} ${
+                currentSlide === index ? styles.activeSlide : ""
+              }`}
+            >
+              <ImagePlaceholder
+                spinnerSize="large"
+                loading="eager"
+                src={caption.src}
+                alt={caption.alt}
+                objectFit={objectFit}
+              />
+              <span>{index + 1 + "/" + captions.length}</span>
+            </div>
+          ))
+        : null}
       <div className={styles.controlsWrapper}>
         <div className={styles.controlWrapper}>
           <button

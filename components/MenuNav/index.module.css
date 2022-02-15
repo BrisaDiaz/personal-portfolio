@@ -110,7 +110,7 @@
     height: fit-content;
     top: 0;
     background: #ffffff;
-    border-bottom: 1px solid var(--light-text-contrast);
+    border-bottom: 1px solid var(--secondary-extra-light);
   }
   .menu nav {
     padding: 1em 0;

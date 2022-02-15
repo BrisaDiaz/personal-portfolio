@@ -51,7 +51,7 @@
 .userBlock {
   width: max-content;
   border-radius: 12px;
-  background: #f5eeef;
+  background: var(--primary-extra-light);
   padding: 0.1rem 1.5rem;
   margin-top: 1.5rem;
 }
@@ -81,7 +81,7 @@
   margin: 0;
   border-radius: 4px;
   padding: 2px 6px 2px 2px;
-
+  font-weight: 600;
   opacity: 0.95;
   font-size: 12px;
   margin: 0;

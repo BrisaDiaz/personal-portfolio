@@ -3,7 +3,7 @@
   position: relative;
   margin: 0 auto;
   color: var(--secondary-dark);
-  background: var(--light-text-contrast);
+  background: var(--secondary-extra-light);
   display: flex;
   flex-direction: column;
   padding: 20px 0;

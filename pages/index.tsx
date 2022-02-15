@@ -1,5 +1,5 @@
 import React from "react";
-import dynamic from "next/dynamic";
+
 import type { NextPage } from "next";
 import WithNavbar from "@/components/Layouts/WithNavbar";
 import Head from "next/head";
