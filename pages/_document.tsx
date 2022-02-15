@@ -162,11 +162,6 @@ class MyDocument extends Document {
               __html: JSON.stringify(schemaData),
             }}
           />
-          <noscript>
-            JavaScript is required in order to use the website. In case you
-            disabled JavaScript, please enable it and reload the page.Otherwise
-            consider installing a javascript capable browser.{" "}
-          </noscript>
         </Head>
         <body>
           <Main />
