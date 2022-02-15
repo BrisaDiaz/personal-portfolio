@@ -1,4 +1,3 @@
-import React from "react";
 import dynamic from "next/dynamic";
 
 const TechLogo = dynamic(
@@ -30,4 +29,4 @@ function TechnologyFigure({
   );
 }
 
-export default React.memo(TechnologyFigure);
+export default TechnologyFigure;
