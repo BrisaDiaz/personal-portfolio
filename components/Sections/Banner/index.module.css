@@ -14,26 +14,26 @@
   border-radius: 12px;
   overflow: hidden;
 }
-.callToActionBanner .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
+
 .callToActionBanner .content {
   margin-bottom: 0;
-  padding: 30px 16px;
+  padding: 30px 2rem;
   margin: 0 auto;
   line-height: 1.5em;
   width: 100%;
 }
-.callToActionBanner .content .text {
-  max-width: 700px;
+.callToActionBanner .content h1 {
+  color: var(--primary-dark);
+}
+.callToActionBanner .content h2 {
+  margin: 0.5em 0;
+  color: var(--secondary-dark);
 }
 .callToActionBanner .content div {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 .contact {
   max-width: fit-content;
@@ -42,7 +42,7 @@
 
   grid-gap: 0;
   column-gap: 2rem;
-  margin-top: 10px;
+
   font-style: inherit;
   font-size: 12px;
 }
@@ -57,7 +57,7 @@
 .contact ul li a {
   height: min-content;
   display: flex;
-
+  border-radius: 0;
   list-style: none;
   margin: 1.5rem 0;
   height: 1rem;
@@ -85,11 +85,7 @@
 .bannerIllustration svg {
   width: 100%;
 }
-.callToActionBanner .wrapper a:focus {
-  outline: 2px solid var(--secondary-light);
-  outline-offset: 3px;
-  border-radius: 8px;
-}
+
 @media (min-width: 600px) {
   .bannerContainer {
     padding: 0 60px;
@@ -105,17 +101,11 @@
 
     margin: 0;
   }
-  .callToActionBanner .content h3 {
-    font-size: 25px;
-  }
+
   .contact {
     font-size: 14px;
   }
-}
-@media (min-width: 1200px) {
   .bannerIllustration {
-    margin: 0;
-    margin-left: auto;
-    margin-top: -120px;
+    margin-top: 2rem;
   }
 }

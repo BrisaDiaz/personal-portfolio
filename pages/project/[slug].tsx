@@ -39,7 +39,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             <span>{project.name}</span>
           </nav>
 
-          {project?.name && <h2>{project?.name}</h2>}
+          {project?.name && <h1 className="title2">{project?.name}</h1>}
           <div className={styles.carouselWrapper}>
             <Carousel
               captions={project?.captions?.slice(1) || []}
@@ -59,7 +59,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             </div>
           </div>
           <section>
-            <h3>Summary</h3>
+            <h2 className="title3">Summary</h2>
             <p>{project?.summary}</p>
             {project?.testingUser ? (
               <>
@@ -97,7 +97,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
               </a>
             </div>
 
-            <h3>Technologies</h3>
+            <h2 className="title3">Technologies</h2>
             <p className={styles.techList}>
               <b>Language:</b>
               <span>{project?.language}</span>
@@ -129,7 +129,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 ))}
               </p>
             ) : null}
-            <h3>Some Features</h3>
+            <h2 className="title3">Some Features</h2>
             <ul className={styles.featuresList}>
               {project?.features?.map((feature) => (
                 <li key={feature}>{feature}</li>

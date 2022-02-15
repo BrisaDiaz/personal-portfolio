@@ -13,7 +13,7 @@ export default function AccomplishmentsSection({
       <>
         <div className={styles.splitWrapper}>
           <div className={styles.skillsWrapper}>
-            <h2>Skills</h2>
+            <h2>Strengths</h2>
             <ul className={listStyles.list}>
               {skills.map((skill, index) => (
                 <li key={index} className={listStyles.listItem}>

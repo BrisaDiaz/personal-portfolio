@@ -8,7 +8,7 @@ export default function TechnologiesSection({
 }) {
   return (
     <section className="container" id="technologies">
-      <h2>Tech Stack</h2>
+      <h1 className="title2">Tech Stack</h1>
       <TechnologiesPanel technologies={technologies} />
     </section>
   );
