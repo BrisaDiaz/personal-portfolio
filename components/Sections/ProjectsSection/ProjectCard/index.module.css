@@ -9,9 +9,7 @@
   outline-offset: 6px;
   border-radius: 8px;
 }
-.projectCard .projectImagesWrapper img {
-  border-radius: 12px;
-}
+
 .projectCard:hover .content,
 .projectCard:focus-within .content {
   transform: scale(1);
@@ -23,6 +21,9 @@
   height: 230px;
 
   position: relative;
+}
+.projectImagesWrapper img {
+  border-radius: 12px;
 }
 .content {
   border-radius: 12px;

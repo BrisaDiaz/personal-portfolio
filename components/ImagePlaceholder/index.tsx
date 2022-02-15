@@ -11,9 +11,11 @@ export default function Placeholder({
   spinnerSize,
   priority,
   loading,
+  quality,
   ...rest
 }: {
   width?: number;
+  quality?: number;
   height?: number;
   priority?: boolean;
   loading: "eager" | "lazy";
@@ -34,7 +36,7 @@ export default function Placeholder({
           src={src}
           layout={layout || "fill"}
           alt={alt}
-          {...rest}
+          quality={quality || 75}
           loading={loading || "lazy"}
           priority={priority || false}
           objectPosition={"center center"}

@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             />
 
             <div className={styles.content}>
-              <h2 className="title3">{project.name}</h2>
+              <h2 className="title3">{project.title}</h2>
               <p>{project.summary}</p>
             </div>
           </div>

@@ -180,7 +180,8 @@ export const PROJECTS = [
   {
     id: 4,
     slug: "hotel_booking_app",
-    name: "hotel booking app",
+    title: "hotel booking app",
+    subtitle: "End-to-end type safety SPA ",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_2_aqjj3g.png",
@@ -253,7 +254,8 @@ export const PROJECTS = [
   {
     id: 3,
     slug: "wikifit_app",
-    name: "wikifit app",
+    title: "wikifit app",
+    subtitle: "Progressive web App",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_r60diw.png",
@@ -318,7 +320,8 @@ export const PROJECTS = [
   {
     id: 2,
     slug: "delivery_app",
-    name: "delivery app",
+    title: "delivery app",
+    subtitle: "With real time notifications SPA ",
 
     captions: [
       {
@@ -399,7 +402,9 @@ export const PROJECTS = [
   {
     id: 1,
     slug: "photographer_portfolio",
-    name: "photographer portfolio",
+    title: "photographer portfolio",
+    subtitle: "Modern e interactive website",
+
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642998071/proyects/target_3_jhisbz.png",

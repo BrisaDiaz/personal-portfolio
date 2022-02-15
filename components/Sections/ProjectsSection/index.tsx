@@ -9,7 +9,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
 
       <div className={PanelStyles.panel}>
         {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </section>
