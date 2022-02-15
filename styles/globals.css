@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Regular.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Black.ttf");
+  font-style: bolder;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "IM Fell Double Pica";
+  src: url("/fonts/IM_Fell_Double_Pica/IMFellDoublePica-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
 :root {
   --primary-main: #c78989;
   --primary-dark: #a0616a;
