@@ -184,27 +184,27 @@ export const PROJECTS = [
     subtitle: "End-to-end type safety SPA ",
     captions: [
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_2_aqjj3g.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642998067/proyects/target_2_aqjj3g.png",
         alt: "hotel booking app logo",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_fill,h_500,w_1200/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/c_fill,h_500,w_1200/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.png",
         alt: "search and filter hotels screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707488/proyects/Captura_de_pantalla_2022-01-20_155932-min_y0xpcg.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707488/proyects/Captura_de_pantalla_2022-01-20_155932-min_y0xpcg.png",
         alt: "hotel image gallery",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707501/proyects/screencapture-localhost-3000-room-1-2022-01-16-15_57_18-min_1_pq2is5.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707501/proyects/screencapture-localhost-3000-room-1-2022-01-16-15_57_18-min_1_pq2is5.png",
         alt: "hotel room details and reservation form",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707491/proyects/screencapture-localhost-3000-admin-hotel-2022-01-16-16_00_02-min_1_g7qilp.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707491/proyects/screencapture-localhost-3000-admin-hotel-2022-01-16-16_00_02-min_1_g7qilp.png",
         alt: "hotel rooms management admin screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707462/proyects/screencapture-localhost-3000-admin-hotel-bookings-2022-01-16-16_03_29-min_1_e1pbmy.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707462/proyects/screencapture-localhost-3000-admin-hotel-bookings-2022-01-16-16_03_29-min_1_e1pbmy.png",
         alt: "hotel bookings management admin screen",
       },
     ],
@@ -258,19 +258,19 @@ export const PROJECTS = [
     subtitle: "Progressive web App",
     captions: [
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_r60diw.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642998067/proyects/target_r60diw.png",
         alt: "wikifit app logo",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361152/proyects/wki-2-min_x0zsph.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1644361152/proyects/wki-2-min_x0zsph.png",
         alt: "login screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361150/proyects/wiki-1-min_jf6jpm.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1644361150/proyects/wiki-1-min_jf6jpm.png",
         alt: "search recipe and store in collection screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361144/proyects/wki-3-min_xc4vrl.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1644361144/proyects/wki-3-min_xc4vrl.png",
         alt: "ideal caloric and nutrients intake calculator",
       },
     ],
@@ -325,23 +325,23 @@ export const PROJECTS = [
 
     captions: [
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1643991147/burger_rgepyv.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1643991147/burger_rgepyv.png",
         alt: "delivery app logo",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361165/proyects/burger-2-min_oatxvw.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1644361165/proyects/burger-2-min_oatxvw.png",
         alt: "call to action hero slider",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361146/proyects/burger-1-min_qu6v2e.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1644361146/proyects/burger-1-min_qu6v2e.png",
         alt: "search on menu and add to cart screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.png",
         alt: "orders management  admin screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361139/proyects/burger-3-min_y4eorf.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1644361139/proyects/burger-3-min_y4eorf.png",
         alt: "load a new product admin screen",
       },
     ],
@@ -407,23 +407,23 @@ export const PROJECTS = [
 
     captions: [
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642998071/proyects/target_3_jhisbz.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642998071/proyects/target_3_jhisbz.png",
         alt: "photographer portfolio logo",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707844/proyects/screencapture-127-0-0-1-5500-Fotographer-web-page-index-html-2022-01-18-18_06_05_k77cnh.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707844/proyects/screencapture-127-0-0-1-5500-Fotographer-web-page-index-html-2022-01-18-18_06_05_k77cnh.png",
         alt: "website hero banner",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707974/proyects/photograph-2_a5jauh.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707974/proyects/photograph-2_a5jauh.png",
         alt: "portfolio gallery section",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707495/proyects/photograph-3-min_xzau6f.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707495/proyects/photograph-3-min_xzau6f.png",
         alt: "achievements counters and testimonials slider sections",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707468/proyects/screencapture-127-0-0-1-5500-Fotographer-web-page-contacto-contact-html-2022-01-18-18_06_26-min_pixtgh.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/f_auto/v1642707468/proyects/screencapture-127-0-0-1-5500-Fotographer-web-page-contacto-contact-html-2022-01-18-18_06_26-min_pixtgh.png",
         alt: "contact screen",
       },
     ],
