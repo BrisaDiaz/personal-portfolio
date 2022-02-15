@@ -5,7 +5,7 @@ import WithNavbar from "@/components/Layouts/WithNavbar";
 import Head from "next/head";
 import { SKILLS } from "data";
 import styles from "@/styles/Home.module.css";
-
+import SocialShareButtons from "@/components/SocialShareButtons/index";
 import AboutMeSection from "@/components/Sections/AboutMeSection";
 import SkillsSection from "@/components/Sections/SkillsSection";
 
@@ -17,6 +17,7 @@ const Home: NextPage = () => {
       </Head>
       <WithNavbar>
         <main className="main">
+          <SocialShareButtons />
           <AboutMeSection styles={styles} />
 
           <SkillsSection skills={SKILLS} styles={styles} />

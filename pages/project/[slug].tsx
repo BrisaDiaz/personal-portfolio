@@ -3,7 +3,7 @@ import SVG from "@/components/SVG";
 import { PROJECTS } from "data";
 import type { NextPage } from "next";
 import Head from "next/head";
-
+import SocialShareButtons from "@/components/SocialShareButtons/index";
 import { Project } from "interfaces";
 import Carousel from "@/components/Carousel/index";
 import Link from "next/link";
@@ -19,6 +19,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
       </Head>
 
       <main className={`main ${styles.main}`}>
+        <SocialShareButtons />
         <section className={`container ${styles.container}`}>
           <nav
             role="navigation"
