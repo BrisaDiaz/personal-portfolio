@@ -58,17 +58,15 @@ export default function Panel({
       </div>
 
       <div className={styles.techsContainer}>
-        {technologies.map((technology) => (
-          <TechnologyFigure
-            key={technology.name}
-            technology={technology}
-            className={`${styles.techFigure} ${
-              Boolean(activeTechCategories.includes(technology.category))
-                ? ""
-                : styles.invisible
-            }`}
-          />
-        ))}
+        {technologies.map((technology) =>
+          Boolean(activeTechCategories.includes(technology.category)) ? (
+            <TechnologyFigure
+              key={technology.name}
+              technology={technology}
+              className={styles.techFigure}
+            />
+          ) : null
+        )}
       </div>
     </>
   );
