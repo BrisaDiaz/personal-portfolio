@@ -18,7 +18,7 @@ function TechnologyFigure({
       href={technology.resource_url}
       target="_blank"
       rel="noreferrer"
-      title={technology.name}
+      title="documentation"
       className={className}
     >
       <figure role="figure">
