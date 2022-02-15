@@ -19,7 +19,7 @@
 .aboutMeSection .content {
   position: relative;
   z-index: 10;
-  margin: auto 0;
+  margin: 0 0 auto;
 }
 .aboutMeSection .content h1 span {
   font-size: 24px;
@@ -121,9 +121,7 @@
     flex-direction: row;
     align-items: flex-end;
   }
-  .aboutMeSection .content {
-    margin-bottom: auto;
-  }
+
   .aboutMeSection .aboutMeIllustration svg {
     margin-top: 0;
     max-width: 100%;
@@ -132,6 +130,7 @@
     margin-bottom: -60px;
   }
   .aboutMeSection + section {
+    margin: 0;
     margin-top: 4rem;
   }
 }
