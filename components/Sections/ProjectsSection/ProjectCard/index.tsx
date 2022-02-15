@@ -15,6 +15,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               objectFit="cover"
               priority={true}
               layout="fill"
+              loading="eager"
             />
 
             <div className={styles.content}>
