@@ -9,7 +9,7 @@
   outline-offset: 6px;
   border-radius: 8px;
 }
-.projectCard img {
+.projectCard .projectImagesWrapper img {
   border-radius: 12px;
 }
 .projectCard:hover .content,
