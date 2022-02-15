@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./index.module.css";
-
-import useModalFocus from "@/hooks/useModalFocus";
 import SVG from "@/components/SVG";
 export default function MenuNav({
   isOpen,
@@ -10,32 +8,20 @@ export default function MenuNav({
   onClose,
   activeLink,
   onNavigate,
-  onOpen,
 }: {
   isOpen: boolean;
   links: Array<{ title: string; href: string }>;
   onClose: () => void;
-  onOpen?: () => void;
   activeLink: string;
   onNavigate: (href: string) => void;
 }) {
-  const { tabIndex } = useModalFocus({
-    isOpen,
-    onOpen: () => onOpen,
-    openKey: "m",
-    closeKey: "Escape",
-    onClose: () => onClose(),
-    modalSelector: '[aria-label="navigation menu"]',
-  });
-
   return (
     <header
       aria-hidden={isOpen ? "true" : false}
-      tabIndex={tabIndex}
       className={`${styles.menu} ${isOpen ? styles.openMenu : ""}`}
     >
       <div className={styles.closeBtn}>
-        <button onClick={onClose} aria-label="close" tabIndex={tabIndex} />
+        <button onClick={onClose} aria-label="close" />
         <SVG name="close" color="white" />
       </div>
       <nav aria-label="primary" role="menubar">

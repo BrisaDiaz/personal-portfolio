@@ -39,8 +39,8 @@
   margin-bottom: 20px;
 }
 
-.aboutMeSection + section {
-  margin-top: -160x;
+.skillsSection {
+  margin-top: -100px;
 }
 
 .skillsWrapper {
@@ -79,10 +79,6 @@
   .aboutMeSection .content h1 span,
   .main h3 {
     font-size: 28px;
-  }
-
-  .aboutMeSection + section {
-    margin-top: -100px;
   }
 }
 
@@ -129,7 +125,7 @@
     margin-left: 10%;
     margin-bottom: -60px;
   }
-  .aboutMeSection + section {
+  .skillsSection {
     margin: 0;
     margin-top: 4rem;
   }

@@ -25,7 +25,7 @@
 
 .socialBar a:focus {
   outline-color: var(--secondary-light);
-  outline-offset: 3px;
+  outline-offset: 1px;
   opacity: 1;
 }
 

@@ -9,7 +9,10 @@ export default function AccomplishmentsSection({
   styles: any;
 }) {
   return (
-    <section className="container" id="accomplishments">
+    <section
+      className={`container ${styles.skillsSection}`}
+      id="accomplishments"
+    >
       <>
         <div className={styles.splitWrapper}>
           <div className={styles.skillsWrapper}>

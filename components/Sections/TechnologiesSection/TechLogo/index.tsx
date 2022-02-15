@@ -1,5 +1,4 @@
-import React from "react";
-function TechLogo({ name }: { name: string }) {
+export default function TechLogo({ name }: { name: string }) {
   return name === "apollo" ? (
     <>
       <svg
@@ -41637,4 +41636,4 @@ function TechLogo({ name }: { name: string }) {
     </>
   ) : null;
 }
-export default React.memo(TechLogo);
+

@@ -48,7 +48,6 @@ export default function WithNavbar({
       <MenuNav
         isOpen={menuState.isOpen}
         links={MENU_LINKS}
-        onOpen={handleOpenMenu}
         onClose={handleCloseMenu}
         activeLink={menuState.activeLink}
         onNavigate={handleNavigation}

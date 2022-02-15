@@ -8,6 +8,7 @@ function TechnologyFigure({
   className: string;
   technology: Technology;
 }) {
+  console.log(`rerendering ${technology.name}`);
   return (
     <a
       href={technology.resource_url}
