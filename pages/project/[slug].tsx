@@ -52,8 +52,6 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             />
           </div>
           <section>
-            <h2 className="title3">Summary</h2>
-            <p>{project?.summary}</p>
             {project?.testingUser ? (
               <>
                 <div className={styles.userBlock}>
@@ -122,12 +120,16 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 ))}
               </p>
             ) : null}
-            <h2 className="title3">Some Features</h2>
-            <ul className={styles.featuresList}>
-              {project?.features?.map((feature) => (
-                <li key={feature}>{feature}</li>
-              ))}
-            </ul>
+            {project?.features ? (
+              <>
+                <h2 className="title3">Some Features</h2>
+                <ul className={styles.featuresList}>
+                  {project?.features?.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
           </section>
         </section>
       </main>

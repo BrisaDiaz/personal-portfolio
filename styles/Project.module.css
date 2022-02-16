@@ -1,5 +1,6 @@
 .container {
   padding-top: 0;
+  padding-bottom: 3rem;
 }
 .breadcrumbBar span {
   text-transform: capitalize;
