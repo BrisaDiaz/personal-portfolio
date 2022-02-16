@@ -45,13 +45,11 @@
   text-decoration: underline;
   text-underline-offset: 1px;
   font-weight: 600;
-  opacity: 0.9;
-  font-family: "IM Fell Double Pica", serif;
 }
 .userBlock {
   width: max-content;
   border-radius: 12px;
-  background: var(--primary-extra-light);
+  background: var(--light-gray);
   padding: 0.1rem 1.5rem;
   margin-top: 1.5rem;
 }
@@ -81,7 +79,7 @@
   margin: 0;
   border-radius: 4px;
   padding: 6px 10px 6px 6px;
-  font-weight: 600;
+
   opacity: 0.95;
   font-size: 12px;
   margin: 0;
