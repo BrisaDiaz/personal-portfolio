@@ -78,7 +78,6 @@
   border-radius: 4px;
   padding: 2px 8px 2px 4px;
 
-  opacity: 0.95;
   font-size: 12px;
   margin: 0;
   color: #fff;
@@ -89,10 +88,7 @@
 .techList b {
   width: 60px;
 }
-.linksBlock a:hover,
-.linksBlock a:focus {
-  opacity: 1;
-}
+
 .linksBlock a:focus {
   outline-color: var(--secondary-light);
   outline-offset: 3px;
