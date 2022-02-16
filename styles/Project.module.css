@@ -90,6 +90,7 @@
 }
 .techList b {
   width: 60px;
+  font-family: "IM Fell Double Pica", serif;
 }
 .linksBlock a:hover,
 .linksBlock a:focus {
