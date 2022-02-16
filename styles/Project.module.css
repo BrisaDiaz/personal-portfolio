@@ -45,6 +45,7 @@
   text-decoration: underline;
   text-underline-offset: 1px;
   font-weight: 600;
+  font-family: "IM Fell Double Pica", serif;
 }
 .userBlock {
   width: max-content;
@@ -55,9 +56,6 @@
 }
 .userBlock b {
   margin-right: 5px;
-  white-space: pre;
-  color: var(--primary-dark);
-  text-decoration: none;
 }
 .userBlock p {
   align-items: center;
@@ -78,7 +76,7 @@
   border: 10px;
   margin: 0;
   border-radius: 4px;
-  padding: 6px 10px 6px 6px;
+  padding: 2px 8px 2px 4px;
 
   opacity: 0.95;
   font-size: 12px;
@@ -90,7 +88,6 @@
 }
 .techList b {
   width: 60px;
-  font-family: "IM Fell Double Pica", serif;
 }
 .linksBlock a:hover,
 .linksBlock a:focus {
