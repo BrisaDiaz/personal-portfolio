@@ -184,7 +184,7 @@ export const PROJECTS = [
     subtitle: "Accessible and SEO optimized website",
     captions: [
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644975406/proyects/image_-df_ddkb9k.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1644975406/proyects/image_-df_ddkb9k.webp",
         alt: "portfolio logo",
       },
       {
