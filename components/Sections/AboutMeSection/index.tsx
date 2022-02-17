@@ -19,10 +19,10 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           </p>
           <p>
             I have almost two years of experience working on different kinds of
-            projects like websites and web applications, working with
-            development techniques and state-of-the-art technologies specialized
-            in improving the user experience and the development and scalability
-            of digital products..
+            projects like websites and web applications, working with the most
+            cutting-edge web development technologies specialized in improving
+            the user experience, development and scalability of digital
+            products.
           </p>
         </div>
       </div>
