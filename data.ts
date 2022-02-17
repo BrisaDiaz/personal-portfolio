@@ -200,7 +200,7 @@ export const PROJECTS = [
         alt: "technology stack screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974929/proyects/project-min_dpa9fn.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974929/proyects/project-min_dpa9fn.webp",
         alt: "individual project screen",
       },
       {

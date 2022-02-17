@@ -43,8 +43,6 @@
 }
 
 .container b {
-  text-decoration: underline;
-  text-underline-offset: 1px;
   font-weight: 600;
   font-family: "IM Fell Double Pica", serif;
 }
@@ -73,15 +71,16 @@
 .linksBlock a {
   display: flex;
   align-items: center;
-  background: var(--primary-dark);
-  border: 10px;
+
   margin: 0;
   border-radius: 4px;
-  padding: 2px 8px 2px 4px;
-
+  padding-right: 5px;
   font-size: 12px;
   margin: 0;
-  color: #fff;
+  color: var(--primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
 }
 .linksBlock a svg {
   margin-right: 2px;
