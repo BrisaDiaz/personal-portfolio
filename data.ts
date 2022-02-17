@@ -396,7 +396,7 @@ export const PROJECTS = [
       "Lazy Load components and code splitting.",
       "Products and orders section skeletons.",
       "Loading modal and loading form indicators.",
-      "Complete authentication system width singup/email validation/login/ forgot password support.",
+      "Complete authentication system width signup/email validation/login/ forgot password support.",
       "Access to Public and Private routes base on roles.",
       "Functional contact section with form validation.",
       "Shopping cart.",
@@ -446,7 +446,7 @@ export const PROJECTS = [
     id: 1,
     slug: "photographer_portfolio",
     title: "photographer portfolio",
-    subtitle: "Modern e interactive website",
+    subtitle: "Modern and interactive website",
 
     captions: [
       {
