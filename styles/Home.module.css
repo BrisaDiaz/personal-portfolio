@@ -35,6 +35,13 @@
 
   line-height: 1.5em;
 }
+.aboutMeSection .content a:active:active,
+.aboutMeSection .content a:focus {
+  outline: 2px solid var(--secondary-light);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
 .aboutMeSection .content .text p:last-child {
   margin-bottom: 20px;
 }
