@@ -1,8 +1,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
-
+import Spinner from "@/components/Spinner";
 const TechLogo = dynamic(
-  () => import("@/components/Sections/TechnologiesSection/TechLogo")
+  () => import("@/components/Sections/TechnologiesSection/TechLogo"),
+  { loading: () => <Spinner size="small" /> }
 );
 
 import { Technology } from "interfaces";
