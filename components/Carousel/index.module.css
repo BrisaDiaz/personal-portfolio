@@ -25,7 +25,7 @@
   z-index: 100;
   font-size: 20px;
   padding: 3px;
-  background: #3f3d563b;
+  background: var(--primary-light);
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.5s ease;

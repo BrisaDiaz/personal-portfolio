@@ -1,21 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import SVG from "@/components/SVG";
 import { PROJECTS } from "data";
 import type { NextPage } from "next";
 import Head from "next/head";
-
+import useModalFocus from "@/hooks/useModalFocus";
 import { Project } from "interfaces";
 import Carousel from "@/components/Carousel/index";
 import Link from "next/link";
 import styles from "@/styles/Project.module.css";
-
+import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 const SocialShareButtons = dynamic(
   () => import("@/components/SocialShareButtons/index")
 );
 const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
   project,
 }) => {
+  const [backdropState, setBackdropState] = useState({
+    isOpen: false,
+    image: { src: "", alt: "" },
+  });
+
+  const openImageBackdrop = (image: { src: string; alt: string }) => {
+    setBackdropState({
+      isOpen: true,
+      image,
+    });
+  };
+  const closeBackdrop = () => {
+    setBackdropState({
+      isOpen: false,
+      image: { src: "", alt: "" },
+    });
+  };
   return (
     <div>
       <Head>
@@ -30,21 +47,23 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             aria-label="breadcrumbs"
             className={styles["breadcrumb-bar"]}
           >
-            <span className={styles["breadcrumb"]}>
+            <span className={styles["breadcrumb-bar__breadcrumb"]}>
               <Link href="/" passHref>
-                <a href="" className={styles["breadcrumb__link"]}>
+                <a href="" className={styles["breadcrumb-bar__link"]}>
                   Home
                 </a>
               </Link>
             </span>
-            <span className={styles["breadcrumb"]}>
+            <span className={styles["breadcrumb-bar__breadcrumb"]}>
               <Link href="/projects" passHref>
-                <a href="" className={styles["breadcrumb__link"]}>
+                <a href="" className={styles["breadcrumb-bar__link"]}>
                   Projects
                 </a>
               </Link>
             </span>
-            <span className={styles["breadcrumb"]}>{project.title}</span>
+            <span className={styles["breadcrumb-bar__breadcrumb"]}>
+              {project.title}
+            </span>
           </nav>
 
           {project?.subtitle && (
@@ -55,7 +74,9 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
 
           <div className={styles["carousel-container"]}>
             <Carousel
+              onZoom={openImageBackdrop}
               captions={project?.captions?.slice(1) || []}
+              objectFit="cover"
               width={1200}
               height={500}
             />
@@ -169,6 +190,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             ) : null} */}
           </section>
         </section>
+        <ImageBackdrop {...backdropState} onClose={closeBackdrop} />
       </main>
     </div>
   );
@@ -197,4 +219,47 @@ export function getStaticProps({ params }: { params: { slug: string } }) {
       project,
     },
   };
+}
+function ImageBackdrop({
+  isOpen,
+  image,
+  onClose,
+}: {
+  isOpen: boolean;
+  image: { src: string; alt: string };
+  onClose: () => void;
+}) {
+  const modalRef = React.useRef(null);
+  const { tabIndex } = useModalFocus({
+    isOpen,
+    onEscape: onClose,
+    ref: modalRef,
+  });
+
+  return (
+    <aside
+      ref={modalRef}
+      className={`${styles["image-backdrop"]} ${
+        isOpen ? styles["image-backdrop--open"] : ""
+      }`}
+    >
+      onClose
+      <button
+        onClick={onClose}
+        className={styles["image-backdrop__btn"]}
+        aria-label="close image backdrop"
+        tabIndex={tabIndex}
+      >
+        ❌
+      </button>
+      {isOpen ? (
+        <ImagePlaceholder
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+          objectFit="contain"
+        />
+      ) : null}
+    </aside>
+  );
 }

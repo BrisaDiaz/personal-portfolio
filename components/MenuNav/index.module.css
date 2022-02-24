@@ -14,40 +14,23 @@
 .menu--open {
   top: 0;
 }
-.close-button-container {
+.menu__close-btn {
   position: relative;
   float: right;
-  width: 20px;
-  height: 20px;
-  top: 15px;
-  right: 20px;
+  font-size: 1.3rem;
+  top: 1rem;
+  right: 0.5rem;
+  padding: 3px;
+  background: var(--primary-dark);
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
-}
-
-@media (min-width: 600px) {
-  .close-button-container {
-    position: relative;
-    float: right;
-    width: 30px;
-    height: 30px;
-    top: 20px;
-    right: 25px;
-  }
-}
-.close-button-container__button {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   z-index: 10;
   cursor: pointer;
-  background: transparent;
+
   border: transparent;
 }
-.close-button-container:focus-within,
-.close-button-container:hover {
-  transform: scale(1.1);
-}
-.close-button-container__button:focus {
+
+.menu__close-btn:focus {
   outline-offset: 3px;
   outline-color: var(--secondary-light);
 }
@@ -136,7 +119,7 @@
   .menu__nav-link:focus {
     outline: none;
   }
-  .close-button-container {
+  .menu__close-btn {
     display: none;
   }
   .menu + main {

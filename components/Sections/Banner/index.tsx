@@ -25,7 +25,7 @@ export default function Banner() {
                     href="tel:+54 351 3850064"
                     target="_blank"
                     rel="noreferrer"
-                    title="Telephone number"
+                    title="mobile number"
                   >
                     <SVG name="telephone-fill" />
 

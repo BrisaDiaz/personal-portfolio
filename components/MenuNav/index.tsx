@@ -20,14 +20,14 @@ export default function MenuNav({
       aria-hidden={isOpen ? "true" : false}
       className={`${styles.menu} ${isOpen ? styles["menu--open"] : ""}`}
     >
-      <div className={styles["close-button-container"]}>
-        <button
-          onClick={onClose}
-          aria-label="close"
-          className={styles["close-button-container__button"]}
-        />
-        <SVG name="close" color="white" />
-      </div>
+      <button
+        onClick={onClose}
+        aria-label="close menu"
+        className={styles["menu__close-btn"]}
+      >
+        ❌
+      </button>
+
       <nav aria-label="primary" role="menubar" className={styles["menu__nav"]}>
         {links.map((link) => (
           <Link key={link.href} href={link.href} passHref>

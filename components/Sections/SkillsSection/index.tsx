@@ -16,7 +16,7 @@ export default function AccomplishmentsSection({
       <>
         <div className={styles["skills-section__split-container"]}>
           <div className={styles["skills-section__skills-container"]}>
-            <h2>✨Strengths</h2>
+            <h2>🧱 Strengths</h2>
             <ul className={listStyles.list}>
               {skills.map((skill, index) => (
                 <li key={index} className={listStyles["list__list-item"]}>

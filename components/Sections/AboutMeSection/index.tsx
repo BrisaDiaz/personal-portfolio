@@ -9,12 +9,13 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           <h1 className={styles["about-section__title"]}>
             <span> {"Hi!, I'm brisa díaz\n"}</span>
             <br />
-            {"I'm a Frontend Developer"} 👩‍💻
+            {"I'm a Web Developer & Frontend specialist"}
+            <br />
           </h1>
 
           <p className={styles["about-section__text"]}>
             I have almost two years of experience working on different kinds of
-            projects like websites and web applications, working with the most
+            projects like websites and web applications, using the most
             cutting-edge web development technologies specialized in improving
             the user experience, development and scalability of digital
             products.

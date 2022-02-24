@@ -10,7 +10,9 @@ export default function Carousel({
   width,
   height,
   tabIndex,
+  onZoom,
 }: {
+  onZoom?: (img: { src: string; alt: string }) => void;
   captions: { src: string; alt: string; original?: string }[];
   objectFit?: "contain" | "cover";
   width: number;
@@ -68,9 +70,16 @@ export default function Carousel({
                 currentSlide === index ? styles["carousel__slide--active"] : ""
               }`}
             >
-              <ZoomBnt
-                onClick={() => window.open(caption?.original || caption.src)}
-              />
+              {onZoom ? (
+                <ZoomBnt
+                  onClick={() =>
+                    onZoom({
+                      src: caption?.original || caption.src,
+                      alt: caption.alt,
+                    })
+                  }
+                />
+              ) : null}
               <ImagePlaceholder
                 spinnerSize="large"
                 loading="eager"
@@ -118,6 +127,7 @@ function ZoomBnt({ onClick }: { onClick: () => void }) {
     <button
       className={styles["zoom-btn"]}
       aria-label="open zoom image"
+      title="open zoom"
       onClick={onClick}
     >
       🔍

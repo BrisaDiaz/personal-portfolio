@@ -215,7 +215,7 @@ export const PROJECTS = [
     subtitle: "Fully optimized website",
     captions: [
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644975406/proyects/image_-df_ddkb9k.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1645732503/proyects/project_qiaops.png",
 
         alt: "portfolio logo",
       },
@@ -359,10 +359,14 @@ export const PROJECTS = [
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361150/proyects/wiki-1-min_jf6jpm.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1642707454/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-search-2022-01-19-14_40_16-min_lrko8u.png",
         alt: "search recipe and store in collection screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361144/proyects/wki-3-min_xc4vrl.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1645735335/proyects/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d3166596a73415466516d6a4770495a37447143564f4639564639346d6832497154_zxmzpl.png",
         alt: "ideal caloric and nutrients intake calculator",
       },
     ],
@@ -422,18 +426,26 @@ export const PROJECTS = [
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361165/proyects/burger-2-min_oatxvw.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1645735028/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_57_33_og3iul.png",
         alt: "call to action hero slider",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361146/proyects/burger-1-min_qu6v2e.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1642716738/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_58_45-min_yid3wi.png",
         alt: "search on menu and add to cart screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.png",
         alt: "orders management  admin screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361139/proyects/burger-3-min_y4eorf.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1642716732/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-17_01_06-min_gwnomp.png",
         alt: "load a new product admin screen",
       },
     ],

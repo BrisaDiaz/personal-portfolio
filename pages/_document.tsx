@@ -92,7 +92,7 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/favicon-16x16.png"
           />
-
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -116,10 +116,7 @@ class MyDocument extends Document {
             content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
           />
           <meta property="og:type" content="article" />
-          <meta
-            property="og:image"
-            content="/brisa-diaz--frontend-developer-porfolio-logo.jpg"
-          />
+          <meta property="og:image" content="/org.png" />
           <meta property="og:url" content={env.NEXT_PUBLIC_SITE_URL} />
           <meta property="og:site_name" content={env.NEXT_PUBLIC_SITE_NAME} />
           <meta property="og:image:type" content="image/jpeg" />
@@ -127,17 +124,17 @@ class MyDocument extends Document {
           <meta property="og:image:height" content="630" />
           <meta
             property="og:description"
-            content="I'm enthusiastic frontend developer, passionate about learning innovative technologies and digital-product development."
+            content="I'm enthusiastic web developer, passionate about learning innovative technologies and digital-product development."
           />
           <meta
             name="twitter:card"
-            content="I'm enthusiastic frontend developer, passionate about learning innovative technologies and digital-product development."
+            content="I'm enthusiastic web developer, passionate about learning innovative technologies and digital-product development."
           />
           <meta
             property="twitter:title"
-            content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
+            content="Brisa Díaz | Web Developer & Frontend Specialist 👩‍💻"
           />
-          <meta property="twitter:image" content={env.NEXT_PUBLIC_SITE_LOGO} />
+          <meta property="twitter:image" content="/org.png" />
           <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
           <meta name="twitter:creator" content="Brisa Díaz" />
           <meta name="author" content="Brisa Díaz" />
@@ -148,7 +145,7 @@ class MyDocument extends Document {
 
           <meta
             name="description"
-            content="I'm enthusiastic frontend developer width almost 2 years of experience and accumulated  knowledge on the development of websites and fullstack web applications."
+            content="I'm enthusiastic web developer width  2 years of experience and accumulated  knowledge on the development of websites and fullstack  applications."
           />
           <meta
             name="keywords"

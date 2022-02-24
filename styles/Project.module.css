@@ -2,24 +2,67 @@
   padding-top: 0;
   padding-bottom: 3rem;
 }
-.breadcrumb {
+.image-backdrop {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.742);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.image-backdrop--open {
+  transform: scale(1);
+  opacity: 1;
+}
+.image-backdrop__btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  z-index: 10;
+  border-radius: 50%;
+  padding: 2px;
+  padding-bottom: 3px;
+  background: var(--secondary-extra-light);
+  font-size: 1.3rem;
+  border: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.image-backdrop__btn:focus {
+  outline-color: var(--secondary-light);
+  transform: scale(1.1);
+}
+.image-backdrop__btn:hover {
+  transform: scale(1.1);
+}
+
+.breadcrumb-bar {
+  position: relative;
+  top: 1rem;
+}
+.breadcrumb-bar__breadcrumb {
   text-transform: capitalize;
   font-family: "IM Fell Double Pica", serif;
 }
-.breadcrumb + .breadcrumb:before,
-.breadcrumb + .breadcrumb:before {
+.breadcrumb-bar__breadcrumb + .breadcrumb-bar__breadcrumb:before,
+.breadcrumb-bar__breadcrumb + .breadcrumb-bar__breadcrumb:before {
   padding: 8px;
   color: hsl(0, 0%, 0%);
   content: "/\00a0";
 }
 
-.breadcrumb__link {
+.breadcrumb-bar__link {
   color: var(--primary-dark);
   text-decoration: none;
 }
 
-.breadcrumb__link:hover,
-.breadcrumb__link:focus {
+.breadcrumb-bar__link:hover,
+.breadcrumb-bar__link:focus {
   text-decoration: underline;
   text-underline-offset: 1px;
   outline: none;
@@ -29,7 +72,7 @@
 .carousel-container {
   width: 100%;
   margin: 10px 0;
-  height: 400px;
+  height: 250px;
 
   position: relative;
 }
@@ -125,8 +168,12 @@
   border-radius: 2px;
 }
 @media (min-width: 600px) {
+  .image-backdrop__btn {
+    right: 1rem;
+  }
   .carousel-container {
     margin: 20px 0;
+    height: 350px;
   }
 
   .tech-ist__legend {
@@ -141,8 +188,5 @@
   .featuresList {
     column-count: 2;
     column-gap: 20px;
-  }
-  .carousel-container {
-    height: 500px;
   }
 }
