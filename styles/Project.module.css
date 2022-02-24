@@ -2,29 +2,31 @@
   padding-top: 0;
   padding-bottom: 3rem;
 }
-.breadcrumbBar span {
+.breadcrumb {
   text-transform: capitalize;
   font-family: "IM Fell Double Pica", serif;
 }
-.breadcrumbBar span + span:before,
-.breadcrumbBar span + span:before {
+.breadcrumb + .breadcrumb:before,
+.breadcrumb + .breadcrumb:before {
   padding: 8px;
   color: hsl(0, 0%, 0%);
   content: "/\00a0";
 }
 
-.breadcrumbBar span a {
+.breadcrumb__link {
   color: var(--primary-dark);
   text-decoration: none;
 }
 
-.breadcrumbBar span a:hover,
-.breadcrumbBar span a:focus {
+.breadcrumb__link:hover,
+.breadcrumb__link:focus {
   text-decoration: underline;
+  text-underline-offset: 1px;
   outline: none;
+  font-weight: 600;
 }
 
-.carouselWrapper {
+.carousel-container {
   width: 100%;
   margin: 10px 0;
   height: 400px;
@@ -32,43 +34,46 @@
   position: relative;
 }
 
-.main h1 {
+.page__title {
   text-transform: capitalize;
 
   margin-top: 1em;
 }
-.main h2 {
+.page__subtitle {
   margin: 1em 0 0.5rem;
   color: var(--secondary-dark);
 }
 
-.container b {
+.label {
   font-weight: 600;
   font-family: "IM Fell Double Pica", serif;
+  margin-right: 5px;
 }
-.userBlock {
-  width: max-content;
+.credentials {
+  width: 100%;
   border-radius: 12px;
   background: var(--light-gray);
   padding: 0.1rem 1.5rem;
-  margin-top: 1.5rem;
 }
-.userBlock b {
-  margin-right: 5px;
-}
-.userBlock p {
+
+.credentials__item {
   align-items: center;
   display: flex;
 }
-.linksBlock {
+.project-links {
+  width: 100%;
   display: flex;
-  margin-top: 1.5rem;
+
   align-self: end;
   display: flex;
   height: min-content;
   gap: 10px;
+
+  border-radius: 12px;
+  background: var(--light-gray);
+  padding: 1rem 1.5rem;
 }
-.linksBlock a {
+.project-links__link {
   display: flex;
   align-items: center;
 
@@ -79,17 +84,18 @@
   margin: 0;
   color: var(--primary-dark);
   text-decoration: underline;
+  text-decoration-style: dashed;
   text-underline-offset: 2px;
   font-weight: 600;
 }
-.linksBlock a svg {
+.project-links__link svg {
   margin-right: 2px;
 }
-.techList b {
+.tech-ist__legend {
   width: 60px;
 }
 
-.linksBlock a:focus {
+.project-links__link:focus {
   outline-color: var(--secondary-light);
   outline-offset: 3px;
 }
@@ -103,13 +109,13 @@
   line-height: 2em;
 }
 
-.techList {
+.tech-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
 }
-.techList span {
+.tech-list__chip {
   text-transform: capitalize;
   padding: 2px 6px;
   background: var(--primary-dark);
@@ -119,15 +125,15 @@
   border-radius: 2px;
 }
 @media (min-width: 600px) {
-  .carouselWrapper {
+  .carousel-container {
     margin: 20px 0;
   }
 
-  .techList b {
+  .tech-ist__legend {
     width: 70px;
   }
-  .linksBlock a,
-  .techList span {
+  .project-links__link,
+  .tech-list__chip {
     font-size: 14px;
   }
 }
@@ -136,7 +142,7 @@
     column-count: 2;
     column-gap: 20px;
   }
-  .carouselWrapper {
+  .carousel-container {
     height: 500px;
   }
 }

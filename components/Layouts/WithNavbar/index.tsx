@@ -41,8 +41,12 @@ export default function WithNavbar({
   ];
   return (
     <>
-      <div className={styles.menuBtn}>
-        <button onClick={handleOpenMenu} aria-label="menu" />
+      <div className={styles["button-container"]}>
+        <button
+          onClick={handleOpenMenu}
+          aria-label="menu"
+          className={styles["button-container__button"]}
+        />
         <SVG name="menu" />
       </div>
       <MenuNav

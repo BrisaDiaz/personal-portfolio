@@ -22,29 +22,38 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
         <title>Brisa Díaz | {project.title}</title>
       </Head>
 
-      <main className={`main ${styles.main}`}>
+      <main className={`main ${styles["page"]}`}>
         <SocialShareButtons />
         <section className={`container ${styles.container}`}>
           <nav
             role="navigation"
             aria-label="breadcrumbs"
-            className={styles.breadcrumbBar}
+            className={styles["breadcrumb-bar"]}
           >
-            <span>
+            <span className={styles["breadcrumb"]}>
               <Link href="/" passHref>
-                <a>Home</a>
+                <a href="" className={styles["breadcrumb__link"]}>
+                  Home
+                </a>
               </Link>
             </span>
-            <span>
+            <span className={styles["breadcrumb"]}>
               <Link href="/projects" passHref>
-                <a href="">Projects</a>
+                <a href="" className={styles["breadcrumb__link"]}>
+                  Projects
+                </a>
               </Link>
             </span>
-            <span>{project.title}</span>
+            <span className={styles["breadcrumb"]}>{project.title}</span>
           </nav>
 
-          {project?.subtitle && <h1 className="title2">{project?.subtitle}</h1>}
-          <div className={styles.carouselWrapper}>
+          {project?.subtitle && (
+            <h1 className={`title2 ${styles["page__title"]}`}>
+              {project?.subtitle}
+            </h1>
+          )}
+
+          <div className={styles["carousel-container"]}>
             <Carousel
               captions={project?.captions?.slice(1) || []}
               width={1200}
@@ -54,24 +63,29 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
           <section>
             {project?.testingUser ? (
               <>
-                <div className={styles.userBlock}>
-                  <p>
-                    <b>Email:</b>
+                <h2 className={`title3 ${styles["page__subtitle"]}`}>
+                  🔐 Credentials
+                </h2>
+                <div className={styles.credentials}>
+                  <p className={styles["credentials__item"]}>
+                    <b className={`${styles.label}`}>Email:</b>
                     {project?.testingUser?.email}
                   </p>
-                  <p>
-                    <b>Password:</b>
+                  <p className={styles["credentials__item"]}>
+                    <b className={`${styles.label}`}>Password:</b>
                     {project?.testingUser?.password}
                   </p>
                 </div>
               </>
             ) : null}
-            <div className={styles.linksBlock}>
+            <h2 className={`title3 ${styles["page__subtitle"]}`}>🌐 Links</h2>
+            <div className={styles["project-links"]}>
               <a
                 href={project?.demo}
                 target="_blank"
                 rel="noreferrer"
                 title="Link to live demo"
+                className={styles["project-links__link"]}
               >
                 <SVG name="website-fill" width={20} height={20} />
                 Live Demo
@@ -82,54 +96,77 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 target="_blank"
                 rel="noreferrer"
                 title="Link to source code"
+                className={styles["project-links__link"]}
               >
                 <SVG name="code-fill" width={20} height={20} />
                 Source Code
               </a>
             </div>
 
-            <h2 className="title3">Technologies</h2>
-            <p className={styles.techList}>
-              <b>Language:</b>
-              <span>{project?.language}</span>
+            <h2 className={`title3 ${styles["page__subtitle"]}`}>
+              🛠️ Technologies
+            </h2>
+            <p className={styles["tech-list"]}>
+              <b className={`${styles.label} ${styles["tech-list__legend"]}`}>
+                Language:
+              </b>
+              <span className={styles["tech-list__chip"]}>
+                {project?.language}
+              </span>
             </p>
-            <p className={styles.techList}>
-              <b>Hosting:</b>
-              <span>{project?.technologies?.hosting}</span>
+            <p className={styles["tech-list"]}>
+              <b className={`${styles.label} ${styles["tech-list__legend"]}`}>
+                Hosting:
+              </b>
+              <span className={styles["tech-list__chip"]}>
+                {project?.technologies?.hosting}
+              </span>
             </p>
 
-            <p className={styles.techList}>
-              <b>Frontend:</b>
+            <p className={styles["tech-list"]}>
+              <b className={`${styles.label} ${styles["tech-list__legend"]}`}>
+                Frontend:
+              </b>
               {project?.technologies?.frontend.map((tech: string) => (
-                <span key={tech}>{tech}</span>
+                <span key={tech} className={styles["tech-list__chip"]}>
+                  {tech}
+                </span>
               ))}
             </p>
             {project?.technologies?.backend ? (
-              <p className={styles.techList}>
-                <b>Backend:</b>
+              <p className={styles["tech-list"]}>
+                <b className={`${styles.label} ${styles["tech-list__legend"]}`}>
+                  Backend:
+                </b>
                 {project?.technologies?.backend?.map((tech: string) => (
-                  <span key={tech}>{tech}</span>
+                  <span className={styles["tech-list__chip"]} key={tech}>
+                    {tech}
+                  </span>
                 ))}
               </p>
             ) : null}
             {project?.technologies?.testing ? (
-              <p className={styles.techList}>
-                <b>Testing:</b>
+              <p className={styles["tech-list"]}>
+                <b className={`${styles.label}`}>Testing:</b>
                 {project?.technologies?.testing?.map((tech: string) => (
-                  <span key={tech}>{tech}</span>
+                  <span className={styles["tech-list__chip"]} key={tech}>
+                    {tech}
+                  </span>
                 ))}
               </p>
             ) : null}
-            {project?.features ? (
+            {/* {project?.features ? (
               <>
-                <h2 className="title3">Some Features</h2>
+                <h2 className={`title3 ${styles["page__subtitle"]}`}>
+                  🔥 Some Features
+                </h2>
                 <ul className={styles.featuresList}>
                   {project?.features?.map((feature) => (
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
               </>
-            ) : null}
+            ) : null} */}
           </section>
         </section>
       </main>

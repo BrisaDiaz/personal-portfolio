@@ -1,4 +1,4 @@
-.menuBtn {
+.button-container {
   top: 16px;
   right: 16px;
   width: 26px;
@@ -8,7 +8,7 @@
   z-index: 50;
   position: fixed;
 }
-.menuBtn button {
+.button-container__button {
   position: absolute;
   top: 0;
   width: 100%;
@@ -18,12 +18,12 @@
   z-index: 10;
   cursor: pointer;
 }
-.menuBtn button:focus {
+.button-container__button:focus {
   outline-offset: 0.5rem;
   outline-color: var(--secondary-light);
 }
 @media (min-width: 900px) {
-  .menuBtn {
+  .button-container {
     display: none;
   }
 }

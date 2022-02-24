@@ -1,4 +1,4 @@
-.socialBar {
+.bar {
   display: flex;
 
   position: fixed;
@@ -10,7 +10,7 @@
   flex-direction: row;
 }
 
-.socialBar a {
+.bar__link {
   padding: 10px 0;
   transition: all 0.5s ease-out;
   text-align: center;
@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.socialBar a:focus {
+.bar__link:focus {
   outline-color: var(--secondary-light);
   outline-offset: 1px;
   opacity: 1;
@@ -64,7 +64,7 @@
   color: white;
 }
 @media (min-width: 768px) {
-  .socialBar {
+  .bar {
     left: 0;
     margin-top: 10%;
     top: 0;
@@ -73,12 +73,12 @@
     flex-direction: column;
   }
 
-  .socialBar a {
+  .bar__link {
     transform: unset;
     border-radius: 0;
   }
-  .socialBar a:hover,
-  .socialBar a:focus {
+  .bar__link:hover,
+  .bar__link:focus {
     transform: unset;
     opacity: 0.8;
   }

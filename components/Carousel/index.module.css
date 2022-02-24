@@ -1,4 +1,4 @@
-.sliderContainer {
+.carousel {
   height: 100%;
   width: 100%;
   position: relative;
@@ -6,7 +6,52 @@
   border: 1px solid var(--primary-light);
 }
 
-.controlsWrapper {
+.carousel__slide {
+  position: absolute;
+
+  overflow: hidden;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  display: none;
+}
+.zoom-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 100;
+  font-size: 20px;
+  padding: 3px;
+  background: #3f3d563b;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+.zoom-btn:hover {
+  transform: scale(1.1);
+}
+.zoom-btn:focus {
+  outline-color: var(--secondary-light);
+}
+.carousel__slide span {
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 8px;
+  font-weight: 600;
+
+  border-bottom: transparent;
+  border-right: transparent;
+}
+.carousel__slide--active {
+  display: block;
+}
+.carousel__controls {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -19,40 +64,14 @@
   padding: 0 16px;
 }
 
-.slide {
-  position: absolute;
-
-  overflow: hidden;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  display: none;
-}
-.slide span {
-  z-index: 10;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 8px;
-  font-weight: 600;
-
-  border-bottom: transparent;
-  border-right: transparent;
-}
-.activeSlide {
-  display: block;
-}
-.controlWrapper {
+.nav-control {
   position: relative;
 
   cursor: pointer;
   height: 20px;
   width: 20px;
 }
-.controlWrapper button {
+.nav-control__button {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -62,55 +81,29 @@
   border: transparent;
   transform: rotate(45deg);
 }
-.sliderContainer button:focus {
+.carousel button:focus {
   outline-color: var(--secondary-light);
   outline-offset: 3px;
 }
 
-.control {
+.nav-control {
   border: none;
-
   height: 20px;
   width: 20px;
   transition: all 0.2s ease-in-out;
 }
-.controlWrapper:hover .control {
-  border-color: rgba(0, 0, 0, 0.5);
-}
-.controlLeft {
+
+.nav-control--left {
   border-left: 5px solid var(--primary-main);
   border-bottom: 5px solid var(--primary-main);
   transform: rotate(45deg);
 }
-.controlRight {
+.nav-control--right {
   border-top: 5px solid var(--primary-main);
   border-right: 5px solid var(--primary-main);
   transform: rotate(45deg);
 }
 
-.indicatorWrapper {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  height: 25px;
-  z-index: 20;
-}
-.indicatorDot {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  margin: 0 5px;
-  cursor: pointer;
-  background: transparent;
-}
-.activeIndicatorDot {
-  background: #fff;
-}
 .backdrop {
   position: absolute;
   z-index: 100;
@@ -125,10 +118,15 @@
   align-items: center;
   opacity: 1;
 }
-.backdrop .playWrapper {
+.backdrop--hidden {
+  direction: 0;
+  transform: scale(0);
+}
+
+.play-control {
   position: relative;
 }
-.playWrapper button {
+.play-control__button {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -136,8 +134,4 @@
   background: transparent;
   cursor: pointer;
   border-color: #fff;
-}
-.hidden {
-  direction: 0;
-  transform: scale(0);
 }

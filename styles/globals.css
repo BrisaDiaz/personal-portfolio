@@ -61,7 +61,7 @@ body {
   font-display: swap;
 }
 .main {
-  margin: 2rem auto 0;
+  margin: 3rem auto 0;
   position: relative;
   max-width: 1410px;
   overflow: auto;
@@ -88,7 +88,7 @@ h1,
   font-size: 35px;
   font-weight: 800;
   margin: 0;
-  line-height: 1em;
+  line-height: 1.1em;
 }
 h2,
 .title2 {

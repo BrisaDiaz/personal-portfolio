@@ -3,7 +3,7 @@ export interface Project {
   slug: string;
   title: string;
   subtitle: string;
-  captions: { src: string; alt: string }[];
+  captions: { src: string; alt: string; original?: string }[];
   summary: string;
   language: string;
   features?: string[];

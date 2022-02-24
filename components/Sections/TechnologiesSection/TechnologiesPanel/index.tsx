@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import Checkbox from "@/components/Checkbox";
 
 import { Technology } from "interfaces";
-import TechnologyFigure from "./TechnologyFigure";
+import TechnologyFigure from "../TechnologyFigure";
 export default function Panel({
   technologies,
 }: {
@@ -24,32 +24,37 @@ export default function Panel({
   };
   return (
     <>
-      <div className={styles.TechsFilterBar}>
+      <div className={styles["filter-bar"]}>
         <Checkbox
+          className={styles["filter-bar__filter"]}
           name="language"
           label="Language"
           defaultChecked={true}
           onChange={handleTechCategories}
         />
         <Checkbox
+          className={styles["filter-bar__filter"]}
           name="frontend"
           label="Frontend"
           defaultChecked={true}
           onChange={handleTechCategories}
         />
         <Checkbox
+          className={styles["filter-bar__filter"]}
           name="backend"
           label="Backend"
           defaultChecked={false}
           onChange={handleTechCategories}
         />
         <Checkbox
+          className={styles["filter-bar__filter"]}
           name="testing"
           label="Testing"
           defaultChecked={false}
           onChange={handleTechCategories}
         />
         <Checkbox
+          className={styles["filter-bar__filter"]}
           name="other"
           label="Other"
           defaultChecked={false}
@@ -57,14 +62,10 @@ export default function Panel({
         />
       </div>
 
-      <div className={styles.techsContainer}>
+      <div className={styles["tech-grid"]}>
         {technologies.map((technology) =>
           Boolean(activeTechCategories.includes(technology.category)) ? (
-            <TechnologyFigure
-              key={technology.name}
-              technology={technology}
-              className={styles.techFigure}
-            />
+            <TechnologyFigure key={technology.name} technology={technology} />
           ) : null
         )}
       </div>

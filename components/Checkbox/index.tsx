@@ -23,13 +23,13 @@ export default function Checkbox({
         disabled={disabled || false}
         type="checkbox"
         defaultChecked={defaultChecked || false}
-        className={styles["form-check-input"]}
+        className={styles["form-check__input"]}
         name={name}
         tabIndex={tabIndex || 0}
         id={name}
         onChange={(e) => onChange && onChange(e)}
       />
-      <label className={styles["form-check-label"]} htmlFor={name}>
+      <label className={styles["form-check__label"]} htmlFor={name}>
         {label}
       </label>
     </div>

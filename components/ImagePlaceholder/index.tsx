@@ -26,11 +26,11 @@ export default function Placeholder({
   spinnerSize?: "small" | "medium" | "large";
 }) {
   return (
-    <div className={styles.container}>
-      <div className={`${styles.spinner}`}>
+    <div className={styles["image-placeholder"]}>
+      <div className={`${styles["image-placeholder__spinner"]}`}>
         <Spinner size={spinnerSize || "medium"} />
       </div>
-      <div className={styles.image}>
+      <div className={styles["image-placeholder__image"]}>
         <Image
           objectFit={objectFit ? objectFit : "cover"}
           src={src}

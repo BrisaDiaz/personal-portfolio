@@ -1,4 +1,4 @@
-.main {
+.page {
   min-height: 100vh;
   position: relative;
   margin: 0 auto;
@@ -8,22 +8,31 @@
   flex-direction: column;
   padding: 20px 0;
 }
-.main strong {
+.page__link {
+  width: max-content;
+  height: min-content;
+  outline: 2px solid transparent;
+  border-radius: 4px;
+  outline-offset: 3px;
+}
+.page__link:focus {
+  outline: 2px solid var(--secondary-light);
+}
+.page strong {
   color: var(--primary-dark);
 }
-.main h1 {
-  font-size: 2.5em;
+.page__title {
   margin-bottom: 1rem;
 }
-.illustration {
+.page__illustration-container {
   width: 100vw;
-  height: 60vh;
+
   position: relative;
 }
-.illustration svg {
+.page__illustration-container svg {
   width: 100%;
 }
-.content {
+.page__content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -31,11 +40,13 @@
   padding: 1rem 2rem;
   max-width: 600px;
 }
-.content p {
+.page__text {
   margin: 0;
 }
-.content button {
-  margin: 2rem 0;
+.page__text--last {
+  margin-bottom: 2rem;
+}
+.page__button {
   justify-self: center;
   font-size: 1.2rem;
   padding: 0.7rem 1rem;
@@ -43,35 +54,27 @@
   border-color: var(--primary-dark);
 }
 @media (min-width: 600px) {
-  .main {
+  .page {
     font-size: 16px;
   }
-  .main h1 {
+  .page__title {
     font-size: 55px;
   }
-  .main h2 {
-    font-size: 38px;
-  }
-  .main h3 {
-    font-size: 28px;
-  }
-  .main h4 {
-    font-size: 18px;
-  }
-  .content button {
+
+  .page__button {
     font-size: 1.5rem;
     padding: 1rem 1.3rem;
   }
 }
 @media (min-width: 768px) {
-  .main {
+  .page {
     flex-direction: row;
   }
-  .illustration {
+  .page__illustration-container {
     width: 50vw;
     margin: auto 0;
   }
-  .content {
+  .page__content {
     margin: auto 0;
     height: 60vh;
     width: 50%;

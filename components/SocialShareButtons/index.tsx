@@ -20,32 +20,32 @@ export default function SocialShareButton() {
   const SOCIALS = [
     {
       name: "facebook",
-      cassName: `${styles.facebook}`,
+      className: `${styles.facebook}  ${styles["bar__link"]}`,
       shareUrl: SHARE_LINKS["facebook"] + pageUrl,
     },
     {
       name: "twitter",
-      cassName: `${styles.twitter} `,
+      className: `${styles.twitter} ${styles["bar__link"]}`,
       shareUrl: SHARE_LINKS["twitter"] + pageUrl,
     },
     {
       name: "google",
-      cassName: `${styles.google} `,
+      className: `${styles.google}  ${styles["bar__link"]} `,
       shareUrl: SHARE_LINKS["google"] + pageUrl,
     },
     {
       name: "linkedin",
-      cassName: `${styles.linkedin} `,
+      className: `${styles.linkedin}   ${styles["bar__link"]}`,
       shareUrl: SHARE_LINKS["linkedin"] + pageUrl,
     },
     {
       name: "reddit",
-      cassName: `${styles.reddit} `,
+      className: `${styles.reddit}  ${styles["bar__link"]} `,
       shareUrl: SHARE_LINKS["reddit"] + pageUrl,
     },
   ];
   return (
-    <nav className={styles.socialBar} aria-label="social share">
+    <nav className={styles.bar} aria-label="social share">
       {SOCIALS.map((social) => (
         <a
           target="_blank"
@@ -53,7 +53,7 @@ export default function SocialShareButton() {
           title={"share on " + social.name}
           href={social.shareUrl}
           rel="noreferrer"
-          className={social.cassName}
+          className={social.className}
         >
           <Logo name={social.name} />
         </a>

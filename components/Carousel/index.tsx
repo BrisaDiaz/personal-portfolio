@@ -11,7 +11,7 @@ export default function Carousel({
   height,
   tabIndex,
 }: {
-  captions: { src: string; alt: string }[];
+  captions: { src: string; alt: string; original?: string }[];
   objectFit?: "contain" | "cover";
   width: number;
   height: number;
@@ -26,14 +26,19 @@ export default function Carousel({
   };
   return (
     <div
-      className={styles.sliderContainer}
+      className={styles.carousel}
       role="slider"
       aria-valuenow={currentSlide}
       aria-label="image carrousel"
     >
-      <div className={`${styles.backdrop} ${isOpen ? styles.hidden : ""}`}>
-        <div className={styles.playWrapper}>
+      <div
+        className={`${styles.backdrop} ${
+          isOpen ? styles["backdrop--hidden"] : ""
+        }`}
+      >
+        <div className={styles["play-control"]}>
           <button
+            className={styles["play-control__button"]}
             onClick={() => openGallery()}
             aria-label="play gallery"
             title="Play Gallery"
@@ -59,10 +64,13 @@ export default function Carousel({
         ? captions.map((caption, index) => (
             <div
               key={caption.alt}
-              className={`${styles.slide} ${
-                currentSlide === index ? styles.activeSlide : ""
+              className={`${styles["carousel__slide"]} ${
+                currentSlide === index ? styles["carousel__slide--active"] : ""
               }`}
             >
+              <ZoomBnt
+                onClick={() => window.open(caption?.original || caption.src)}
+              />
               <ImagePlaceholder
                 spinnerSize="large"
                 loading="eager"
@@ -74,25 +82,45 @@ export default function Carousel({
             </div>
           ))
         : null}
-      <div className={styles.controlsWrapper}>
-        <div className={styles.controlWrapper}>
-          <button
-            onClick={onPrev}
-            tabIndex={isOpen ? tabIndex || 0 : -1}
-            aria-label="prev"
-          />
-          <div className={`${styles.control} ${styles.controlLeft}`} />
-        </div>
+      {captions.length > 1 ? (
+        <div className={styles["carousel__controls"]}>
+          <div className={styles["nav-control"]}>
+            <button
+              onClick={onPrev}
+              className={styles["nav-control__button"]}
+              tabIndex={isOpen ? tabIndex || 0 : -1}
+              aria-label="prev"
+            />
+            <div
+              className={`${styles["nav-control"]} ${styles["nav-control--left"]}`}
+            />
+          </div>
 
-        <div className={styles.controlWrapper}>
-          <button
-            onClick={onNext}
-            tabIndex={isOpen ? tabIndex || 0 : -1}
-            aria-label="next"
-          />
-          <div className={`${styles.control} ${styles.controlRight}`} />
+          <div className={styles["nav-control"]}>
+            <button
+              className={styles["nav-control__button"]}
+              onClick={onNext}
+              tabIndex={isOpen ? tabIndex || 0 : -1}
+              aria-label="next"
+            />
+            <div
+              className={`${styles["nav-control"]} ${styles["nav-control--right"]}`}
+            />
+          </div>
         </div>
-      </div>
+      ) : null}
     </div>
+  );
+}
+
+function ZoomBnt({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      className={styles["zoom-btn"]}
+      aria-label="open zoom image"
+      onClick={onClick}
+    >
+      🔍
+    </button>
   );
 }

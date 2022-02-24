@@ -1,4 +1,4 @@
-.TechsFilterBar {
+.filter-bar {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid var(--secondary-extra-light);
@@ -7,11 +7,11 @@
   padding: 0 1rem;
   border-radius: 12px;
 }
-.TechsFilterBar > div {
+.filter-bar__filter {
   width: 120px;
 }
 
-.techsContainer {
+.tech-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -21,52 +21,4 @@
   column-gap: 1rem;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
-}
-
-.techFigure {
-  transition: all 1s ease-in-out;
-  content-visibility: auto;
-  opacity: 1;
-  order: 1;
-}
-.techFigure figure {
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  width: 80px;
-  margin: 0;
-  padding-top: 1rem;
-
-  justify-content: center;
-  display: flex;
-  height: min-content;
-  text-align: center;
-}
-.techFigure svg {
-  transition: all 0.3s ease-in-out;
-}
-.techFigure figcaption {
-  margin: 1rem auto;
-  font-size: 14px;
-  font-weight: 600;
-}
-.techFigure:hover:after {
-  content: "◥";
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: var(--primary-main);
-}
-.techsContainer a:focus-within {
-  outline-color: var(--secondary-light);
-  outline-offset: 3px;
-}
-
-.techFigure:hover svg,
-.techsContainer:focus-within svg {
-  transform: scale(1.15);
-}
-.invisible {
-  display: none;
-  order: 2;
 }

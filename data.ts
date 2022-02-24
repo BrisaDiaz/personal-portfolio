@@ -178,33 +178,75 @@ export const TECHS = [
 ];
 export const PROJECTS = [
   {
-    id: 4,
+    id: 6,
+    slug: "ORTEX_login",
+    title: "ORTEX login",
+    subtitle: "ORTEX Technical task",
+    captions: [
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1645665799/proyects/ortex_1_ishhld.png",
+
+        alt: "portfolio logo",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1645412601/proyects/gif_myouif.gif",
+
+        alt: "screens resolutions",
+      },
+    ],
+    summary:
+      "Login page with automated unit tests, integration tests and performance audits.",
+
+    language: "Typescript",
+    technologies: {
+      frontend: ["next.js", "css"],
+      backend: ["tradingeconomics websocket API"],
+      testing: ["react-testing-library", "jest", "cypress", "lighthouse CL"],
+      hosting: "Vercel",
+    },
+
+    source_code: "https://github.com/BrisaDiaz/ORTEX_technical_task.git",
+    demo: "https://ortex-login-task.vercel.app",
+  },
+  {
+    id: 5,
     slug: "personal_portfolio",
     title: "Portfolio",
     subtitle: "Fully optimized website",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644975406/proyects/image_-df_ddkb9k.webp",
+
         alt: "portfolio logo",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974927/proyects/about-min_dxeisu.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1644974927/proyects/about-min_dxeisu.webp",
         alt: "about me screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974928/proyects/projects-min_iwlllt.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1644974928/proyects/projects-min_iwlllt.webp",
         alt: "projects screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974930/proyects/technologies-min_ldxfvo.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1644974930/proyects/technologies-min_ldxfvo.webp",
         alt: "technology stack screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974929/proyects/project-min_dpa9fn.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1644974929/proyects/project-min_dpa9fn.webp",
         alt: "individual project screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974931/proyects/contact-min_j5shla.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1644974931/proyects/contact-min_j5shla.webp",
         alt: "contact screen",
       },
     ],
@@ -213,7 +255,7 @@ export const PROJECTS = [
     language: "Typescript",
     technologies: {
       frontend: ["next.js", "css"],
-
+      testing: ["lighthouse", "wave.webaim"],
       hosting: "Netlify",
     },
 
@@ -222,28 +264,34 @@ export const PROJECTS = [
   },
   {
     id: 4,
-    slug: "hotel_booking_app",
-    title: "hotel booking app",
+    slug: "booking_app",
+    title: "booking app",
     subtitle: "End-to-end type safety SPA ",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_2_aqjj3g.webp",
+
         alt: "hotel booking app logo",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/c_fill,h_500,w_1200/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1642707470/proyects/screencapture-localhost-3000-search-2022-01-15-16_48_25-min_1_gedd9m.webp",
         alt: "search and filter hotels screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642707488/proyects/Captura_de_pantalla_2022-01-20_155932-min_y0xpcg.webp",
+
         alt: "hotel image gallery",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642707501/proyects/screencapture-localhost-3000-room-1-2022-01-16-15_57_18-min_1_pq2is5.webp",
+
         alt: "hotel room details and reservation form",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642707491/proyects/screencapture-localhost-3000-admin-hotel-2022-01-16-16_00_02-min_1_g7qilp.webp",
+
         alt: "hotel rooms management admin screen",
       },
       {
@@ -285,6 +333,7 @@ export const PROJECTS = [
         "cloudinary",
         "json JWT",
       ],
+
       hosting: "vercel",
     },
     testingUser: {
@@ -501,6 +550,8 @@ export const SKILLS = [
   "Experience consuming and creating RESTful/GraphQL API's.",
   "Experience with Unit Testing and End to End testing.",
   "Experience implementing rendering techniques like SSG, SSR and ISR.",
-  "Knowledge  and experience  applying SEO optimization and accessibility.",
+  "Experience implementing Github pipelines.",
+  "Experience  applying SEO optimization and accessibility.",
+
   "Ability to translate business logic into code.",
 ];

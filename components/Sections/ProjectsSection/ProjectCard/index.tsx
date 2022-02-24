@@ -5,10 +5,10 @@ import { Project } from "interfaces";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className={styles.projectCard} role="article">
+    <article className={styles["project-card"]} role="article">
       <Link href={`/project/${project.slug}`} passHref>
-        <a href="">
-          <div className={styles.projectImagesWrapper}>
+        <a href="" className={styles["project-card__link"]}>
+          <div className={styles["project-card__image-container"]}>
             <Image
               src={project.captions[0].src}
               alt={project.captions[0].alt}
@@ -18,9 +18,13 @@ export default function ProjectCard({ project }: { project: Project }) {
               loading="eager"
             />
 
-            <div className={styles.content}>
-              <h2 className="title3">{project.title}</h2>
-              <p>{project.summary}</p>
+            <div className={styles["project-card__content"]}>
+              <h2 className={`title3 ${styles["project-card__title"]} `}>
+                📁 {project.title}
+              </h2>
+              <p className={styles["project-card__summary"]}>
+                {project.summary}
+              </p>
             </div>
           </div>
         </a>

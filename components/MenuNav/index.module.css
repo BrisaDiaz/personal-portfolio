@@ -11,10 +11,10 @@
   max-width: 100vw;
   overflow: hidden;
 }
-.openMenu {
+.menu--open {
   top: 0;
 }
-.closeBtn {
+.close-button-container {
   position: relative;
   float: right;
   width: 20px;
@@ -25,7 +25,7 @@
 }
 
 @media (min-width: 600px) {
-  .closeBtn {
+  .close-button-container {
     position: relative;
     float: right;
     width: 30px;
@@ -34,7 +34,7 @@
     right: 25px;
   }
 }
-.closeBtn button {
+.close-button-container__button {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -43,19 +43,17 @@
   background: transparent;
   border: transparent;
 }
-.closeBtn:focus-within,
-.closeBtn:hover {
+.close-button-container:focus-within,
+.close-button-container:hover {
   transform: scale(1.1);
 }
-.closeBtn button:focus {
+.close-button-container__button:focus {
   outline-offset: 3px;
   outline-color: var(--secondary-light);
 }
-.menu nav {
-  padding: 0;
+.menu__nav {
   list-style: none;
-  margin: 50px auto;
-  margin-top: 60px;
+  padding: 100px 0;
   width: max-content;
   justify-content: center;
   display: flex;
@@ -64,19 +62,19 @@
 
   width: 100%;
 }
-.menu a {
+.menu__nav-link {
   width: 100%;
   text-align: center;
   padding: 1rem 0;
   transition: all 0.2s ease-in-out;
 }
 
-.menu a:focus {
+.menu__nav-link:focus {
   outline-color: var(--secondary-light);
   outline-offset: 0;
 }
 
-.menu a {
+.menu__nav-link {
   color: #ffffff;
 
   font-size: 24px;
@@ -87,19 +85,16 @@
   transition: all 0.3s ease-in-out;
 }
 
-.menu a:hover {
+.menu__nav-link:hover {
   background: var(--primary-light);
 }
 
-.menu a {
+.menu__nav-link {
   transform: scale(1.1);
 }
 
-.activeLink {
-  text-decoration: underline;
-}
 @media (min-width: 600px) {
-  .menu ul li a {
+  .menu__nav-link {
     font-size: 38px;
   }
 }
@@ -112,9 +107,9 @@
     background: #ffffff;
     border-bottom: 1px solid var(--secondary-extra-light);
   }
-  .menu nav {
+  .menu__nav {
     padding: 1em 0;
-    margin: 0;
+
     width: max-content;
     justify-content: flex-end;
 
@@ -124,24 +119,24 @@
     gap: 2rem;
     padding-right: 100px;
   }
-  .menu nav a {
+  .menu__nav-link {
     font-size: 1rem;
     color: var(--secondary-dark);
     width: fit-content;
     padding: 4px 8px;
     border-radius: 8px;
   }
-  .menu nav a:hover,
-  .menu nav a:focus {
+  .menu__nav-link:hover,
+  .menu__nav-link:focus {
     outline: none;
     background: unset;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
-  .menu nav a:focus {
+  .menu__nav-link:focus {
     outline: none;
   }
-  .closeBtn {
+  .close-button-container {
     display: none;
   }
   .menu + main {

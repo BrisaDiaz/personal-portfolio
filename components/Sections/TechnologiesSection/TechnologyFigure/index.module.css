@@ -1,0 +1,42 @@
+.tech-link {
+  transition: all 1s ease-in-out;
+  content-visibility: auto;
+  opacity: 1;
+  order: 1;
+}
+.tech-link {
+  outline-color: var(--secondary-light);
+  outline-offset: 3px;
+}
+.tech-link__figure {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  margin: 0;
+  padding-top: 1rem;
+
+  justify-content: center;
+  display: flex;
+  height: min-content;
+  text-align: center;
+}
+.tech-link svg {
+  transition: all 0.3s ease-in-out;
+}
+.tech-link__figcaption {
+  margin: 1rem auto;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tech-link:hover:after {
+  content: "◥";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--primary-main);
+}
+
+.tech-link:hover svg {
+  transform: scale(1.15);
+}

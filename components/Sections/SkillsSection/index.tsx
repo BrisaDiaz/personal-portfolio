@@ -10,22 +10,22 @@ export default function AccomplishmentsSection({
 }) {
   return (
     <section
-      className={`container ${styles.skillsSection}`}
+      className={`container ${styles["skills-section"]}`}
       id="accomplishments"
     >
       <>
-        <div className={styles.splitWrapper}>
-          <div className={styles.skillsWrapper}>
-            <h2>Strengths</h2>
+        <div className={styles["skills-section__split-container"]}>
+          <div className={styles["skills-section__skills-container"]}>
+            <h2>✨Strengths</h2>
             <ul className={listStyles.list}>
               {skills.map((skill, index) => (
-                <li key={index} className={listStyles.listItem}>
+                <li key={index} className={listStyles["list__list-item"]}>
                   {skill}
                 </li>
               ))}
             </ul>
           </div>
-          <div className={styles.techSkillsIllustrationSection}>
+          <div className={styles["skills-section__illustration-container"]}>
             <Illustration name="programing" />
           </div>
         </div>

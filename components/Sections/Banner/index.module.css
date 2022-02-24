@@ -1,13 +1,16 @@
-.bannerContainer {
+.container {
   padding: 0 20px;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
   width: 100%;
   align-items: center;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
 }
 
-.callToActionBanner {
+.banner {
   margin: 10px auto 20px;
   width: inherit;
   background: var(--secondary-extra-light);
@@ -15,97 +18,94 @@
   overflow: hidden;
 }
 
-.callToActionBanner .content {
+.banner__inner {
   margin-bottom: 0;
   padding: 30px 2rem;
   margin: 0 auto;
   line-height: 1.5em;
   width: 100%;
 }
-.callToActionBanner .content h1 {
+.banner__title {
   color: var(--primary-dark);
 }
-.callToActionBanner .content h2 {
+.banner__subtitle {
   margin: 0.5em 0;
   color: var(--secondary-dark);
 }
-.callToActionBanner .content div {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-}
-.contact {
+
+.banner__contact {
   max-width: fit-content;
   display: flex;
   flex-wrap: wrap;
-
+  margin: 0 auto;
   grid-gap: 0;
   column-gap: 2rem;
 
   font-style: inherit;
   font-size: 12px;
 }
-.contact ul {
+.banner__contact-list {
   padding: 0;
   list-style: none;
   margin: 5px 0;
   margin: 0;
 }
 
-.contact ul li,
-.contact ul li a {
+.banner__contact-list-item,
+.banner__contact-link {
   height: min-content;
   display: flex;
   border-radius: 0;
   list-style: none;
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
   height: 1rem;
   align-items: center;
   gap: 0.5rem;
 }
 
-.contact ul li p,
-.contact ul li time {
-  background: var(--secondary-main);
+.banner__contact-list-item p {
+  position: relative;
   padding: 0 6px;
   color: #fff;
   transition: all 0.2s ease-in-out;
+  z-index: 1;
 }
-
-.contact ul li:hover,
-.contact ul li a:focus {
+.banner__contact-list-item p::after {
+  box-sizing: content-box;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  border-radius: 2px;
+  padding-top: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  left: 0;
+  content: " ";
+  background: var(--secondary-main);
+}
+.banner__contact-list-item:hover,
+.banner__contact-list-item a:focus {
   outline-offset: 3px;
   outline-color: var(--secondary-light);
 }
-.bannerIllustration {
-  width: 320px;
+.banner__illustration {
   margin: 0 auto;
 }
-.bannerIllustration svg {
+.banner__illustration svg {
   width: 100%;
 }
 
 @media (min-width: 600px) {
-  .bannerContainer {
+  .banner {
     padding: 0 60px;
     max-width: 1250px;
-    min-height: calc(100vh - 80px);
-  }
-  .callToActionBanner .wrapper {
-    justify-content: start;
   }
 
-  .callToActionBanner .wrapper .content {
-    padding: 30px 60px;
-
-    margin: 0;
-  }
-
-  .contact {
+  .banner__contact {
     font-size: 14px;
   }
-  .bannerIllustration {
-    margin-top: 2rem;
+  .banner__illustration {
+    margin: 2rem 0;
   }
 }

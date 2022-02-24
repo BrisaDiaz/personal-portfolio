@@ -13,8 +13,8 @@ const NotFoundPage: NextPage = () => {
         <title>Brisa Díaz | 404</title>
       </Head>
 
-      <main className={styles.main}>
-        <div className={styles.illustration}>
+      <main className={styles.page}>
+        <div className={styles["page__illustration-container"]}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
@@ -103,21 +103,29 @@ const NotFoundPage: NextPage = () => {
             />
           </svg>
         </div>
-        <div className={styles.content}>
-          <h1>
+        <div className={styles["page__content"]}>
+          <h1 className={styles["page__title"]}>
             OOPS,
             <br />
             <strong>nothing </strong>here...
           </h1>
-          <p>It seems like the content your looking for dose not exist .</p>
-          <p>
+          <p className={styles["page__text"]}>
+            It seems like the content your looking for dose not exist .
+          </p>
+          <p
+            className={`${styles["page__text"]} ${styles["page__text--last"]}`}
+          >
             {
               " But don't worry!, you can start over  by searching from the home page."
             }
           </p>
           <Link href="/" passHref>
-            <a href="">
-              <Button text="Go Home" tabIndex={-1} />
+            <a href="" className={styles["page__link"]}>
+              <Button
+                text="Go Home"
+                tabIndex={-1}
+                className={styles["page__button"]}
+              />
             </a>
           </Link>
         </div>

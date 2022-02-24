@@ -6,22 +6,26 @@ export default function Spinner({
 }) {
   return (
     <div
-      className={`${styles["lds-default"]} ${
-        size === "small" ? styles.small : size === "large" ? styles.large : ""
+      className={`${styles["spinner"]} ${
+        size === "small"
+          ? styles["spinner--small"]
+          : size === "large"
+          ? styles["spinner--large"]
+          : ""
       }`}
     >
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
     </div>
   );
 }
