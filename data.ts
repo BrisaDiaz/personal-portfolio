@@ -536,7 +536,7 @@ export const PROJECTS = [
     language: "javascript",
     technologies: {
       frontend: ["vanilla javascript", "css", "html"],
-      hosting: "github pages",
+      hosting: "vercel",
     },
     features: [
       `Modularized javaScript code.`,
@@ -552,7 +552,7 @@ export const PROJECTS = [
       `Smooth scroll to top button.`,
     ],
     source_code: "https://github.com/BrisaDiaz/Photographer_web_page",
-    demo: "https://brisadiaz.github.io/Photographer_web_page",
+    demo: "https://photographer-portfolio.vercel.app",
   },
 ];
 export const SKILLS = [
