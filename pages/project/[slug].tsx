@@ -243,7 +243,6 @@ function ImageBackdrop({
         isOpen ? styles["image-backdrop--open"] : ""
       }`}
     >
-      onClose
       <button
         onClick={onClose}
         className={styles["image-backdrop__btn"]}
