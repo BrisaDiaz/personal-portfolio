@@ -24,14 +24,13 @@
   top: 0.5rem;
   right: 0.5rem;
   right: 0.5rem;
-  color: #f4f4f4;
-  text-shadow: 0 0 2px #000000;
+
   z-index: 10;
   border-radius: 50%;
 
-  padding: 0 6px;
-  background: transparent;
-  font-size: 1.5rem;
+  padding: 0 2px;
+  background: #00000030;
+
   border: transparent;
   cursor: pointer;
   transition: all 0.5s ease;

@@ -18,13 +18,11 @@
 .menu__close-btn {
   position: relative;
   float: right;
-  font-size: 2rem;
+
   top: 1rem;
   right: 1rem;
 
-  color: #f4f4f4;
-  text-shadow: 0 0 2px #000000;
-  padding: 0 6px;
+  padding: 0;
   background: transparent;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
