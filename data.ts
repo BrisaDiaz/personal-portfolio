@@ -178,7 +178,7 @@ export const TECHS = [
 ];
 export const PROJECTS = [
   {
-    id: 6,
+    id: 5,
     slug: "ORTEX_login",
     title: "ORTEX login",
     subtitle: "ORTEX Technical task",
@@ -208,60 +208,7 @@ export const PROJECTS = [
     source_code: "https://github.com/BrisaDiaz/ORTEX_technical_task.git",
     demo: "https://ortex-login-task.vercel.app",
   },
-  {
-    id: 5,
-    slug: "personal_portfolio",
-    title: "Portfolio",
-    subtitle: "Fully optimized website",
-    captions: [
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1645732503/proyects/project_qiaops.png",
 
-        alt: "portfolio logo",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974927/proyects/about-min_dxeisu.webp",
-        original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1644974927/proyects/about-min_dxeisu.webp",
-        alt: "about me screen",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974928/proyects/projects-min_iwlllt.webp",
-        original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1644974928/proyects/projects-min_iwlllt.webp",
-        alt: "projects screen",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974930/proyects/technologies-min_ldxfvo.webp",
-        original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1644974930/proyects/technologies-min_ldxfvo.webp",
-        alt: "technology stack screen",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974929/proyects/project-min_dpa9fn.webp",
-        original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1644974929/proyects/project-min_dpa9fn.webp",
-        alt: "individual project screen",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north_west,h_500,w_1150/v1644974931/proyects/contact-min_j5shla.webp",
-        original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1644974931/proyects/contact-min_j5shla.webp",
-        alt: "contact screen",
-      },
-    ],
-    summary: "Accessible, SEO and performance optimized static website.",
-
-    language: "Typescript",
-    technologies: {
-      frontend: ["next.js", "css"],
-      testing: ["lighthouse", "wave.webaim"],
-      hosting: "Netlify",
-    },
-
-    source_code: "https://github.com/BrisaDiaz/personal-portfolio.git",
-    demo: "https://brisa-diaz.netlify.app",
-  },
   {
     id: 4,
     slug: "booking_app",
@@ -281,7 +228,8 @@ export const PROJECTS = [
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642707488/proyects/Captura_de_pantalla_2022-01-20_155932-min_y0xpcg.webp",
-
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1645838092/proyects/screencapture-hotel-booker-app-vercel-app-hotel-1-2022-02-25-22_13_31_ckbnxb.webp",
         alt: "hotel image gallery",
       },
       {
@@ -515,20 +463,22 @@ export const PROJECTS = [
         alt: "photographer portfolio logo",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707844/proyects/screencapture-127-0-0-1-5500-Fotographer-web-page-index-html-2022-01-18-18_06_05_k77cnh.webp",
-        alt: "website hero banner",
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1645834038/proyects/screencapture-photographer-portfolio-vercel-app-2022-02-25-20_36_50_nchzqb.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1645834038/proyects/screencapture-photographer-portfolio-vercel-app-2022-02-25-20_36_50_nchzqb.webp",
+        alt: "website home page",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707974/proyects/photograph-2_a5jauh.webp",
-        alt: "portfolio gallery section",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707495/proyects/photograph-3-min_xzau6f.webp",
-        alt: "achievements counters and testimonials slider sections",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1642707468/proyects/screencapture-127-0-0-1-5500-Fotographer-web-page-contacto-contact-html-2022-01-18-18_06_26-min_pixtgh.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_custom,h_400,w_600,y_508,x_0/v1645834002/proyects/screencapture-photographer-portfolio-vercel-app-contacto-contact-html-2022-02-25-20_37_27_w5yciq.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1645834002/proyects/screencapture-photographer-portfolio-vercel-app-contacto-contact-html-2022-02-25-20_37_27_w5yciq.webp",
         alt: "contact screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,h_400,w_600/v1645833951/proyects/Captura_de_pantalla_2022-02-25_204752_yiw3fh.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1645833951/proyects/Captura_de_pantalla_2022-02-25_204752_yiw3fh.webp",
+        alt: "dispositive resolutions",
       },
     ],
 
