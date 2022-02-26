@@ -12,7 +12,7 @@ const Technologies: NextPage = () => {
         <title>Brisa Díaz | Contact 👩‍💻</title>
       </Head>
       <WithNavbar>
-        <main className="main">
+        <main className="main full-height ">
           <Banner />
         </main>
       </WithNavbar>

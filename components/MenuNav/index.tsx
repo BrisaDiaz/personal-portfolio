@@ -25,7 +25,7 @@ export default function MenuNav({
         aria-label="close menu"
         className={styles["menu__close-btn"]}
       >
-        ❌
+        ✖
       </button>
 
       <nav aria-label="primary" role="menubar" className={styles["menu__nav"]}>

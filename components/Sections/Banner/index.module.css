@@ -76,7 +76,7 @@
   position: absolute;
   width: 100%;
   height: 60%;
-  border-bottom: 2px solid var(--secondary-dark);
+  border-bottom: 1px dashed var(--secondary-dark);
   padding-top: 2px;
   top: 50%;
   transform: translateY(-50%);
@@ -86,10 +86,11 @@
   background: var(--light-gray);
 }
 .banner__contact-list-item:hover,
-.banner__contact-list-item a:focus {
+.banner__contact-list-item a:focus-visible {
   outline-offset: 3px;
   outline-color: var(--secondary-light);
 }
+
 .banner__illustration {
   margin: 0 auto;
 }

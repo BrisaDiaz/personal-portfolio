@@ -3,11 +3,10 @@ import React from "react";
 import type { NextPage } from "next";
 import WithNavbar from "@/components/Layouts/WithNavbar";
 import Head from "next/head";
-import { SKILLS } from "data";
+
 import styles from "@/styles/Home.module.css";
 import SocialShareButtons from "@/components/SocialShareButtons/index";
 import AboutMeSection from "@/components/Sections/AboutMeSection";
-import SkillsSection from "@/components/Sections/SkillsSection";
 
 const Home: NextPage = () => {
   return (
@@ -18,11 +17,9 @@ const Home: NextPage = () => {
         </title>
       </Head>
       <WithNavbar>
-        <main className="main">
+        <main className={`main full-height `}>
           <SocialShareButtons />
           <AboutMeSection styles={styles} />
-
-          <SkillsSection skills={SKILLS} styles={styles} />
         </main>
       </WithNavbar>
     </div>

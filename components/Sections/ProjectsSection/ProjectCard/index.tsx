@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
             <div className={styles["project-card__content"]}>
               <h2 className={`title3 ${styles["project-card__title"]} `}>
-                📁 {project.title}
+                {project.title}
               </h2>
               <p className={styles["project-card__summary"]}>
                 {project.summary}

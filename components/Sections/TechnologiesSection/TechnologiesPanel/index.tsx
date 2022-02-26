@@ -12,6 +12,9 @@ export default function Panel({
   const [activeTechCategories, setActiveTechCategories] = React.useState([
     "language",
     "frontend",
+    "backend",
+    "testing",
+    "other",
   ]);
   const handleTechCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     const category = e.target.name;
@@ -43,21 +46,21 @@ export default function Panel({
           className={styles["filter-bar__filter"]}
           name="backend"
           label="Backend"
-          defaultChecked={false}
+          defaultChecked={true}
           onChange={handleTechCategories}
         />
         <Checkbox
           className={styles["filter-bar__filter"]}
           name="testing"
           label="Testing"
-          defaultChecked={false}
+          defaultChecked={true}
           onChange={handleTechCategories}
         />
         <Checkbox
           className={styles["filter-bar__filter"]}
           name="other"
           label="Other"
-          defaultChecked={false}
+          defaultChecked={true}
           onChange={handleTechCategories}
         />
       </div>

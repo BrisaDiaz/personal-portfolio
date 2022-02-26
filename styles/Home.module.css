@@ -2,33 +2,20 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-
+  overflow: visible;
   margin-bottom: 0;
 }
 @keyframes winkle {
   0%,
   100% {
-    opacity: 0;
+    opacity: 0.3;
   }
 
   50% {
     opacity: 1;
   }
 }
-.about-section__button::after {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--secondary-light);
-  border-radius: 8px;
-  top: -6px;
-  left: -6px;
-  box-sizing: content-box;
-  padding: 4px;
-  z-index: -1;
-  animation: winkle 1s infinite linear;
-}
+
 .about--section__illustration-container svg {
   height: auto;
   bottom: 0;
@@ -43,7 +30,7 @@
 .about-section__title span {
   font-size: 24px;
   font-weight: 600;
-  margin: 0;
+
   text-transform: capitalize;
   font-family: "IM Fell Double Pica", serif;
   color: var(--primary-dark);
@@ -64,35 +51,15 @@
 .about-section__text:last-child {
   margin-bottom: 20px;
 }
-.skills-section {
-  margin-top: -5rem;
-}
-.skills-section__skills-container {
-  margin-bottom: auto;
-}
-.skills-section__split-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.skills-section__illustration-container {
-  flex: 1;
-  z-index: -20;
-  width: 100%;
-}
 
 @media (min-width: 600px) {
-  .about-section__button {
-    font-size: 1.3rem;
-  }
   .about--section__illustration-container svg {
     margin-left: 20%;
     width: 100%;
   }
 
   .about-section__title span {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 
@@ -105,26 +72,6 @@
 
   .about-section__content {
     max-width: 580px;
-  }
-
-  .skills-section__split-container {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .skills-section__skills-container {
-    order: 2;
-  }
-  .skills-section__illustration-container {
-    order: 1;
-    display: flex;
-    justify-content: center;
-  }
-  .skills-section__illustration-container svg {
-    max-width: 450px;
-  }
-  .skills-section__skills-container {
-    max-width: 50%;
   }
 }
 
@@ -140,8 +87,5 @@
     height: auto;
     margin-left: 10%;
     margin-bottom: -60px;
-  }
-  .skills-section {
-    margin-top: 0;
   }
 }

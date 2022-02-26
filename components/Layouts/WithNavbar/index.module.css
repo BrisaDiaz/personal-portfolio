@@ -4,19 +4,19 @@
   position: fixed;
   top: 1rem;
   right: 0.5rem;
-  font-size: 22px;
+  padding: 0;
   z-index: 500;
   background: transparent;
   border: transparent;
   transition: all 0.5s ease;
   cursor: pointer;
-  padding: 3px 6px;
+
   background: var(--secondary-light);
   border-radius: 50%;
 }
 
 .menu-btn:focus {
-  outline-offset: 0.5rem;
+  outline-offset: 2px;
   outline-color: var(--secondary-light);
 }
 @media (min-width: 900px) {

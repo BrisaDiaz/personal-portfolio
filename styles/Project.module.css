@@ -23,13 +23,15 @@
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-
+  right: 0.5rem;
+  color: #f4f4f4;
+  text-shadow: 0 0 2px #000000;
   z-index: 10;
   border-radius: 50%;
-  padding: 2px;
-  padding-bottom: 3px;
-  background: var(--primary-main);
-  font-size: 1.3rem;
+
+  padding: 0 6px;
+  background: transparent;
+  font-size: 1.5rem;
   border: transparent;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -44,7 +46,7 @@
 
 .carousel-container {
   width: 100%;
-  margin: 10px 0;
+
   height: 250px;
 
   position: relative;
@@ -52,9 +54,10 @@
 
 .page__title {
   text-transform: capitalize;
+  margin: 1em 0;
 }
 .page__subtitle {
-  margin: 1em 0 0.5rem;
+  margin: 0.8em 0;
   color: var(--secondary-dark);
 }
 
@@ -101,6 +104,7 @@
   text-decoration-style: dashed;
   text-underline-offset: 2px;
   font-weight: 600;
+  transition: all 0.2s ease;
 }
 .project-links__link svg {
   margin-right: 2px;
@@ -109,9 +113,11 @@
   width: 60px;
 }
 
-.project-links__link:focus {
-  outline-color: var(--secondary-light);
-  outline-offset: 3px;
+.project-links__link:focus,
+.project-links__link:hover {
+  outline: none;
+  text-decoration-style: solid;
+  transform: translateY(1px);
 }
 
 .featuresList {
@@ -146,7 +152,6 @@
     right: 1rem;
   }
   .carousel-container {
-    margin: 20px 0;
     height: 350px;
   }
 
@@ -159,6 +164,9 @@
   }
 }
 @media (min-width: 900px) {
+  .page__subtitle:first-of-type {
+    margin-top: 0;
+  }
   .featuresList {
     column-count: 2;
     column-gap: 20px;

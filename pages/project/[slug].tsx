@@ -62,7 +62,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 {project?.testingUser ? (
                   <>
                     <h2 className={`title3 ${styles["page__subtitle"]}`}>
-                      🔐 Credentials
+                      Credentials
                     </h2>
                     <div className={styles.credentials}>
                       <p className={styles["credentials__item"]}>
@@ -76,9 +76,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                     </div>
                   </>
                 ) : null}
-                <h2 className={`title3 ${styles["page__subtitle"]}`}>
-                  🌐 Links
-                </h2>
+                <h2 className={`title3 ${styles["page__subtitle"]}`}>Links</h2>
                 <div className={styles["project-links"]}>
                   <a
                     href={project?.demo}
@@ -104,7 +102,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 </div>
 
                 <h2 className={`title3 ${styles["page__subtitle"]}`}>
-                  🛠️ Technologies
+                  Technologies
                 </h2>
                 <p className={styles["tech-list"]}>
                   <b
@@ -227,7 +225,7 @@ function ImageBackdrop({
         aria-label="close image backdrop"
         tabIndex={tabIndex}
       >
-        ❌
+        ✖
       </button>
       {isOpen ? (
         <ImagePlaceholder
