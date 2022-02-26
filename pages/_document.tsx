@@ -113,7 +113,7 @@ class MyDocument extends Document {
 
           <meta
             property="og:title"
-            content="Brisa Díaz | Frontend Development Specialist 👩‍💻"
+            content="Brisa Díaz | Web Developer & Frontend Development Specialist 👩‍💻"
           />
           <meta property="og:type" content="article" />
           <meta property="og:image" content="/org.png" />

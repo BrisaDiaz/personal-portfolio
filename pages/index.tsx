@@ -13,7 +13,9 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Brisa Díaz | Frontend Development Specialist 👩‍💻</title>
+        <title>
+          Brisa Díaz | Web Developer & Frontend Development Specialist 👩‍💻
+        </title>
       </Head>
       <WithNavbar>
         <main className="main">
