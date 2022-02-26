@@ -5,6 +5,7 @@
   top: 1rem;
   right: 0.5rem;
   font-size: 22px;
+  z-index: 500;
   background: transparent;
   border: transparent;
   transition: all 0.5s ease;

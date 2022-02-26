@@ -1,17 +1,15 @@
-.page {
-  margin-top: 0;
-}
 .container {
   padding-top: 0;
   padding-bottom: 3rem;
 }
 .image-backdrop {
-  z-index: 500;
+  z-index: 900;
   position: fixed;
   background: rgba(0, 0, 0, 0.742);
   width: 100vw;
   height: 100vh;
   top: 0;
+  backdrop-filter: grayScale(1) blur(1px);
   left: 0;
   transform: scale(0);
   transition: all 0.5s ease-in-out;
@@ -44,34 +42,6 @@
   transform: scale(1.1);
 }
 
-.breadcrumb-bar {
-  position: relative;
-  top: 1rem;
-}
-.breadcrumb-bar__breadcrumb {
-  text-transform: capitalize;
-  font-family: "IM Fell Double Pica", serif;
-}
-.breadcrumb-bar__breadcrumb + .breadcrumb-bar__breadcrumb:before,
-.breadcrumb-bar__breadcrumb + .breadcrumb-bar__breadcrumb:before {
-  padding: 8px;
-  color: hsl(0, 0%, 0%);
-  content: "/\00a0";
-}
-
-.breadcrumb-bar__link {
-  color: var(--primary-dark);
-  text-decoration: none;
-}
-
-.breadcrumb-bar__link:hover,
-.breadcrumb-bar__link:focus {
-  text-decoration: underline;
-  text-underline-offset: 1px;
-  outline: none;
-  font-weight: 600;
-}
-
 .carousel-container {
   width: 100%;
   margin: 10px 0;
@@ -82,8 +52,6 @@
 
 .page__title {
   text-transform: capitalize;
-
-  margin-top: 1em;
 }
 .page__subtitle {
   margin: 1em 0 0.5rem;
@@ -171,6 +139,9 @@
   border-radius: 2px;
 }
 @media (min-width: 600px) {
+  .page__title {
+    margin-top: 1em;
+  }
   .image-backdrop__btn {
     right: 1rem;
   }

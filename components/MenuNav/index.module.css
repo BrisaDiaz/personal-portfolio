@@ -4,7 +4,7 @@
   height: 100%;
   top: -100%;
   left: 0;
-  z-index: 200;
+  z-index: 700;
   background: var(--primary-main);
   overflow-y: auto;
   transition: all 0.5s ease-in-out;
