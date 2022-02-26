@@ -5,11 +5,12 @@
   top: -100%;
   left: 0;
   z-index: 700;
-  background: var(--primary-main);
+  background: var(--primary-90);
   overflow-y: auto;
   transition: all 0.5s ease-in-out;
   max-width: 100vw;
   overflow: hidden;
+  backdrop-filter: blur(1px) grayscale(1);
 }
 .menu--open {
   top: 0;
@@ -53,6 +54,7 @@
   text-align: center;
   padding: 1rem 0;
   transition: all 0.2s ease-in-out;
+  text-shadow: 0 0 1px #000000;
 }
 
 .menu__nav-link:focus {
@@ -112,6 +114,7 @@
     width: fit-content;
     padding: 4px 8px;
     border-radius: 8px;
+    text-shadow: none;
   }
   .menu__nav-link:hover,
   .menu__nav-link:focus {

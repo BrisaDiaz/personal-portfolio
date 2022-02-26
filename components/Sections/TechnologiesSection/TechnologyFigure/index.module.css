@@ -3,11 +3,11 @@
   content-visibility: auto;
   opacity: 1;
   order: 1;
-}
-.tech-link {
+
   outline-color: var(--secondary-light);
   outline-offset: 3px;
 }
+
 .tech-link__figure {
   position: relative;
   flex-direction: column;

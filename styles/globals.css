@@ -19,10 +19,12 @@
   font-weight: 400;
   font-display: swap;
 }
+
 :root {
   --primary-main: #c78989;
   --primary-dark: #a0616a;
   --primary-light: #cc9798;
+  --primary-90: hsl(0deg 36% 66% / 90%);
   --secondary-main: #3f3d56;
   --secondary-dark: #2f2e41;
   --secondary-light: #726e9e;
