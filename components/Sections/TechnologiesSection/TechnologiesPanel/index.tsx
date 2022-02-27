@@ -14,8 +14,8 @@ export default function Panel({
     "frontend",
     "backend",
     "testing",
-    "other",
   ]);
+
   const handleTechCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     const category = e.target.name;
     if (activeTechCategories.includes(category)) {
@@ -25,6 +25,7 @@ export default function Panel({
     }
     setActiveTechCategories([...activeTechCategories, category]);
   };
+
   return (
     <>
       <div className={styles["filter-bar"]}>
@@ -60,7 +61,7 @@ export default function Panel({
           className={styles["filter-bar__filter"]}
           name="other"
           label="Other"
-          defaultChecked={true}
+          defaultChecked={false}
           onChange={handleTechCategories}
         />
       </div>

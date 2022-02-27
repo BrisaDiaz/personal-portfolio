@@ -7,8 +7,7 @@ import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 export default function Carousel({
   captions,
   objectFit,
-  width,
-  height,
+  thumbnail,
   tabIndex,
   onZoom,
 }: {
@@ -18,6 +17,7 @@ export default function Carousel({
   width: number;
   height: number;
   tabIndex?: 0 | -1;
+  thumbnail?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const { currentSlide, onPrev, onNext } = useCarousel({
@@ -34,7 +34,7 @@ export default function Carousel({
       aria-label="image carrousel"
     >
       <div
-        className={`${styles.backdrop} ${
+        className={`${styles.backdrop} thumbnail  ${
           isOpen ? styles["backdrop--hidden"] : ""
         }`}
       >
@@ -48,16 +48,20 @@ export default function Carousel({
           <svg
             xmlns="http://www.w3.org/2000/svg"
             enableBackground="new 0 0 24 24"
-            height="150px"
+            height="100px"
             viewBox="0 0 24 24"
-            width="150px"
-            fill="#fff"
+            width="100px"
+            fill="#a0616a"
           >
             <g>
               <rect fill="none" height="24" width="24" />
             </g>
             <g>
-              <path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M9.5,16.5v-9l7,4.5L9.5,16.5z" />
+              <path
+                stroke="#c78989"
+                strokeWidth="0.5px"
+                d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M9.5,16.5v-9l7,4.5L9.5,16.5z"
+              />
             </g>
           </svg>
         </div>
@@ -120,6 +124,13 @@ export default function Carousel({
           </div>
         </div>
       ) : null}
+      <style jsx>{`
+        .thumbnail {
+          background: var(--primary-main)
+            ${thumbnail ? `url(${thumbnail})` : "var(--primary-main)"} no-repeat
+            center center;
+        }
+      `}</style>
     </div>
   );
 }

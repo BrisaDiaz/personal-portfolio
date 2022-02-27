@@ -7,7 +7,7 @@ import Head from "next/head";
 import useModalFocus from "@/hooks/useModalFocus";
 import { Project } from "interfaces";
 import Carousel from "@/components/Carousel/index";
-import Link from "next/link";
+
 import styles from "@/styles/Project.module.css";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import WithNavbar from "@/components/Layouts/WithNavbar";
@@ -56,6 +56,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                   objectFit="cover"
                   width={1200}
                   height={500}
+                  thumbnail={project?.captions[0]?.src || ""}
                 />
               </section>
               <section>
