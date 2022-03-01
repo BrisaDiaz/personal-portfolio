@@ -302,20 +302,28 @@ export const PROJECTS = [
         alt: "wikifit app logo",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361152/proyects/wki-2-min_x0zsph.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_west,h_400,w_600/v1644361152/proyects/wki-2-min_x0zsph.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1644361152/proyects/wki-2-min_x0zsph.webp",
         alt: "login screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361150/proyects/wiki-1-min_jf6jpm.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,h_400,w_600/v1646099043/proyects/screencapture-localhost-3000-search-2022-02-28-19_07_13-min_gj3fmb.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1642707454/proyects/screencapture-fitness-wiki-nextjs-app-vercel-app-search-2022-01-19-14_40_16-min_lrko8u.png",
+          "https://res.cloudinary.com/myproyects/image/upload/v1646099043/proyects/screencapture-localhost-3000-search-2022-02-28-19_07_13-min_gj3fmb.webp",
         alt: "search recipe and store in collection screen",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1644361144/proyects/wki-3-min_xc4vrl.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1646099044/proyects/screencapture-localhost-3000-calories-calculator-2022-02-28-20_21_10-min_c0shab.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1645735335/proyects/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d3166596a73415466516d6a4770495a37447143564f4639564639346d6832497154_zxmzpl.png",
+          "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_400,w_600/v1646099044/proyects/screencapture-localhost-3000-calories-calculator-2022-02-28-20_21_10-min_c0shab.webp",
         alt: "ideal caloric and nutrients intake calculator",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_west,h_400,w_600/v1646099044/proyects/screencapture-localhost-3000-collections-2022-02-28-19_08_43-min_jgucje.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1646099044/proyects/screencapture-localhost-3000-collections-2022-02-28-19_08_43-min_jgucje.webp",
+        alt: "menu bar and recipe collection screen",
       },
     ],
 

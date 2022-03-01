@@ -53,7 +53,7 @@
 
 .page__title {
   text-transform: capitalize;
-  margin: 1em 0;
+  margin: 0.8em 0;
 }
 .page__subtitle {
   margin: 0.8em 0;
@@ -144,9 +144,6 @@
   border-radius: 2px;
 }
 @media (min-width: 600px) {
-  .page__title {
-    margin-top: 1em;
-  }
   .image-backdrop__btn {
     right: 1rem;
   }
