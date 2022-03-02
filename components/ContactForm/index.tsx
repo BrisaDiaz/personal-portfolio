@@ -18,14 +18,7 @@ export default function LoginForm({
   });
 
   return (
-    <form
-      className={styles.form}
-      name="login"
-      onSubmit={handleSubmit}
-      action="mailto:brisaabigaildiaz2000@gmail.com"
-      method="post"
-      encType="text/plain"
-    >
+    <form className={styles.form} name="login" onSubmit={handleSubmit}>
       <section className={styles["form__content"]}>
         <Input
           alertProps={{ id: "name-error" }}
