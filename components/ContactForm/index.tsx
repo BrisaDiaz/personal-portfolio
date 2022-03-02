@@ -49,7 +49,6 @@ export default function LoginForm({
 
             "aria-label": "name",
             "aria-required": true,
-            autoComplete: "name",
             "aria-invalid": errors["name"]?.length ? true : false,
             "aria-describedby": "name-error",
             ...register("name", {
@@ -87,7 +86,6 @@ export default function LoginForm({
             "aria-label": "email",
             "aria-required": true,
             autoFocus: true,
-            autoComplete: "email",
             "aria-invalid": errors["email"]?.length ? true : false,
             "aria-describedby": "email-error",
             ...register("email", {
@@ -122,7 +120,6 @@ export default function LoginForm({
 
             "aria-label": "subject",
             "aria-required": true,
-            autoComplete: "subject",
             "aria-invalid": errors["subject"]?.length ? true : false,
             "aria-describedby": "name-error",
             ...register("subject", {
@@ -161,7 +158,6 @@ export default function LoginForm({
             rows: "10",
             "aria-label": "message",
             "aria-required": true,
-            autoComplete: "message",
             "aria-invalid": errors["message"]?.length ? true : false,
             "aria-describedby": "name-error",
             ...register("message", {
