@@ -1,0 +1,73 @@
+.input-container {
+  position: relative;
+  background: transparent;
+}
+
+.input-container__input {
+  -webkit-appearance: none !important;
+  width: 100%;
+
+  padding: 12px 45px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-dark);
+  background: transparent;
+  font-family: inherit;
+  color: var(--black-light);
+  margin: 0.7rem 0;
+}
+.textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+.input-container__message {
+  position: absolute;
+  left: 2px;
+  top: -9px;
+  display: none;
+  color: var(--secondary);
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+.input-container__input:focus {
+  outline-color: var(--primary-light);
+
+  outline-width: 2px;
+}
+.input-container__input::placeholder::after {
+  content: "*";
+  color: #ff00008e;
+}
+
+.input-container__input--invalid {
+  border: 2px solid var(--secondary-main);
+}
+.input-container__message--visible {
+  display: block;
+}
+
+.input-container__icon-container {
+  position: absolute;
+  width: 18px;
+
+  left: 16px;
+  top: 22px;
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+}
+.input-container__icon-container svg {
+  width: 100%;
+  height: auto;
+  fill: var(--primary-dark);
+}
+
+@media (min-width: 500px) {
+  .input-container__input {
+    padding: 16px 45px;
+  }
+  .input-container__icon-container {
+    top: 25px;
+    width: 20px;
+  }
+}

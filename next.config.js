@@ -4,6 +4,16 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 const nextConfig = {
+  env: {
+    OAUTH_USER: process.env.OAUTH_USER,
+    OAUTH_CLIENT_ID: process.env.OAUTH_CLIENT_ID,
+    OAUTH_CLIENT_SECRET: process.env.OAUTH_CLIENT_SECRET,
+    OAUTH_REFRESH_TOKEN: process.env.OAUTH_REFRESH_TOKEN,
+    OAUTH_REDIRECT_URI: process.env.OAUTH_REDIRECT_URI,
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+    NEXT_PUBLIC_SITE_NAME: process.env.NEXT_PUBLIC_SITE_NAME,
+    NEXT_PUBLIC_SITE_LOGO: process.env.NEXT_PUBLIC_SITE_LOGO,
+  },
   reactStrictMode: true,
 
   removeConsole: true,

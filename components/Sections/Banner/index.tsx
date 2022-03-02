@@ -1,21 +1,28 @@
 import styles from "./index.module.css";
 
 import Illustration from "@/components/Sections/Illustration";
-
+import ContactForm from "@/components/ContactForm";
 import SVG from "@/components/SVG";
-export default function Banner() {
+export default function Banner({
+  onSubmit,
+}: {
+  onSubmit: (
+    emailParams: { [key: string]: any },
+    e: React.FormEvent<HTMLFormElement>
+  ) => void;
+}) {
   return (
     <section className={styles.container}>
       <article className={styles.banner}>
-        <div className={styles["banner__inner"]}>
+        <div className={styles["form-section"]}>
           <h1 className={styles["banner__title"]}>Get in touch</h1>
-          <h2 className={` title3 ${styles["banner__subtitle"]}`}>
-            Want to work together or have any questions?
-          </h2>
 
+          <ContactForm onSubmit={onSubmit} />
+        </div>
+        <div className={styles["socials-section"]}>
           <div>
             <div className={styles["banner__illustration"]}>
-              <Illustration name="agreement" />
+              <Illustration name="contact" />
             </div>
             <address className={styles["banner__contact"]}>
               <ul className={styles["banner__contact-list"]}>

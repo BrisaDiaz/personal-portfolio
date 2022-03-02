@@ -1,0 +1,18 @@
+.notification {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.notification__title {
+  margin-top: 0;
+  text-align: center;
+}
+.notification__message {
+  text-align: start;
+}
+@media (min-width: 700px) {
+  .notification {
+    text-align: center;
+    max-width: 500px;
+  }
+}

@@ -30,17 +30,9 @@
   --secondary-light: #726e9e;
   --secondary-extra-light: #e7e4ec;
   --light-gray: #f4f4f4;
-  --bg-transparent-gradient: linear-gradient(
-    180deg,
-    #e7e4ec73 0%,
-    #f0e8e966 0.01%,
-    #e3dae27a 100%
-  );
+  --border-radius: 12px;
+  --box-shadow--primary: 0px 0px 5px 0px hsl(0deg 36% 66% / 50%);
   --bg-gradient: linear-gradient(180deg, #ebeaee 0%, #e9dcdd 100%);
-  --box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
-    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
-  --box-shadow-hover: 0px 3px 20px -2px rgb(0 0 0 / 14%),
-    0px 3px 20px 0px rgb(0 0 0 / 8%), 0px 1px 20px 0px rgb(0 0 0 / 8%);
 }
 * {
   box-sizing: border-box;

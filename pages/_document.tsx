@@ -99,14 +99,6 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#ffffff" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          {/* <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap "
-            rel="stylesheet"
-          /> */}
 
           <link rel="icon" href="/favicon.ico" />
           <meta charSet="utf-8" />
