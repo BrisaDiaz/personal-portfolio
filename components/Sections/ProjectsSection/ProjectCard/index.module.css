@@ -50,7 +50,7 @@
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   opacity: 0;
   transform: scale(0);
   transition: all 0.5s ease-in-out;
@@ -63,8 +63,9 @@
 }
 .project-card__summary {
   color: #fff;
-  line-height: 1.7em;
+  line-height: 1.2em;
   margin: 8px 0;
+  font-size: 16px;
 }
 
 @media (min-width: 600px) {
