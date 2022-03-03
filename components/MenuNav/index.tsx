@@ -1,18 +1,19 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./index.module.css";
-import SVG from "@/components/SVG";
+import { useEffect, useState } from "react";
+
 export default function MenuNav({
   isOpen,
   links,
   onClose,
-  activeLink,
+
   onNavigate,
 }: {
   isOpen: boolean;
   links: Array<{ title: string; href: string }>;
   onClose: () => void;
-  activeLink: string;
+
   onNavigate: (href: string) => void;
 }) {
   return (

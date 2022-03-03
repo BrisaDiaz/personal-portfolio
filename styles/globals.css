@@ -21,6 +21,11 @@
 }
 
 :root {
+  --low-contrast-color: hsl(0, 0%, 94%);
+
+  --high-contrast-color: hsl(0, 0%, 85%);
+  --font-color: #2f2e41;
+  --background-color: #f4f4f4;
   --primary-main: #c78989;
   --primary-dark: #a0616a;
   --primary-light: #cc9798;
@@ -33,6 +38,13 @@
   --border-radius: 12px;
   --box-shadow--primary: 0px 0px 5px 0px hsl(0deg 36% 66% / 50%);
   --bg-gradient: linear-gradient(180deg, #ebeaee 0%, #e9dcdd 100%);
+}
+[data-theme="dark"] {
+  --font-color: #eee;
+  --background-color: #333;
+  --link-color: lightblue;
+  --low-contrast-color: #404040;
+  --high-contrast-color: hsl(0deg 0% 40%);
 }
 * {
   box-sizing: border-box;
@@ -53,14 +65,14 @@ body {
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
   font-display: swap;
+  background-color: var(--background-color);
 }
 .main {
   margin: 1rem auto 0;
   position: relative;
   max-width: 1410px;
-  overflow: auto;
 
-  color: var(--secondary-dark);
+  overflow: auto;
 }
 .full-height {
   min-height: calc(100vh - 60px);
@@ -116,7 +128,7 @@ h4,
 
 * {
   box-sizing: border-box;
-
+  color: var(--font-color);
   scrollbar-width: thin;
 
   scrollbar-color: var(--secondary-dark) transparent;
@@ -148,7 +160,7 @@ h4,
 
 .container {
   scroll-margin-top: 100px;
-  padding: 16px 20px;
+  padding: 2.5rem 1rem;
 
   position: relative;
   margin: 0 auto;

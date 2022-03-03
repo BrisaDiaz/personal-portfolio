@@ -33,10 +33,15 @@
   margin: 10px auto 20px;
   padding: 30px 1rem;
   width: inherit;
-  background: var(--secondary-extra-light);
+  background: var(--low-contrast-color);
   border-radius: 12px;
+  border: 1px solid var(--low-contrast-color);
   overflow: hidden;
   box-shadow: 0px 1px 5px rgb(153 153 153 / 25%);
+}
+.banner svg {
+  position: relative;
+  z-index: 10;
 }
 .form-section {
   animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -87,29 +92,19 @@
 .banner__contact-list-item p {
   position: relative;
 
-  color: var(--secondary-dark);
   transition: all 0.2s ease-in-out;
   z-index: 1;
   font-weight: 600;
 }
-.banner__contact-list-item p::after {
-  box-sizing: content-box;
-  position: absolute;
-  width: 100%;
-  height: 60%;
-  border-bottom: 1px dashed var(--secondary-dark);
-  padding-top: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-  left: 0;
-  content: " ";
-  background: var(--light-gray);
+.banner__contact-list-item a {
+  text-decoration: 1px dashed underline;
+  text-underline-offset: 3px;
 }
 .banner__contact-list-item:hover,
 .banner__contact-list-item a:focus-visible {
-  outline-offset: 3px;
-  outline-color: var(--secondary-light);
+  outline: none;
+  text-decoration: 2px solid underline;
+  text-underline-offset: 3px;
 }
 
 .banner__illustration {
@@ -117,8 +112,13 @@
 }
 .banner__illustration svg {
   width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  transition: all 0.5s ease;
 }
-
+.banner__illustration svg:hover {
+  transform: rotate(-5deg);
+}
 @media (min-width: 600px) {
   .banner {
     padding: 30px 60px;
@@ -139,5 +139,8 @@
   }
   .banner > div {
     width: 100%;
+  }
+  .banner__illustration svg {
+    margin: 0;
   }
 }

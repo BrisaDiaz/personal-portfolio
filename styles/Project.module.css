@@ -57,24 +57,25 @@
 }
 .page__subtitle {
   margin: 0.8em 0;
-  color: var(--secondary-dark);
+  color: var(--font-color);
 }
 
 .label {
-  font-weight: 600;
-  font-family: "IM Fell Double Pica", serif;
+  font-weight: 400;
+
   margin-right: 5px;
 }
 .credentials {
   width: 100%;
   border-radius: 12px;
-  background: var(--light-gray);
+  background: var(--low-contrast-color);
   padding: 0.1rem 1.5rem;
 }
 
 .credentials__item {
   align-items: center;
   display: flex;
+  color: var(--primary-dark);
 }
 .project-links {
   width: 100%;
@@ -86,19 +87,19 @@
   gap: 10px;
 
   border-radius: 12px;
-  background: var(--light-gray);
+  background: var(--low-contrast-color);
   padding: 1rem 1.5rem;
 }
 .project-links__link {
   display: flex;
   align-items: center;
-
+  color: var(--primary-dark);
   margin: 0;
   border-radius: 4px;
   padding-right: 5px;
   font-size: 12px;
   margin: 0;
-  color: var(--primary-dark);
+
   text-decoration: underline;
   text-decoration-style: dashed;
   text-underline-offset: 2px;
@@ -116,7 +117,7 @@
 .project-links__link:hover {
   outline: none;
   text-decoration-style: solid;
-  transform: translateY(1px);
+  text-decoration-thickness: 2px;
 }
 
 .featuresList {

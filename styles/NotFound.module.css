@@ -2,8 +2,8 @@
   min-height: 100vh;
   position: relative;
   margin: 0 auto;
-  color: var(--secondary-dark);
-  background: var(--secondary-extra-light);
+
+  background: var(--low-contrast-color);
   display: flex;
   flex-direction: column;
   padding: 20px 0;
@@ -31,6 +31,9 @@
 }
 .page__illustration-container svg {
   width: 100%;
+  max-width: 600px;
+  margin: auto;
+  height: auto;
 }
 .page__content {
   width: 100%;
@@ -69,6 +72,7 @@
 @media (min-width: 768px) {
   .page {
     flex-direction: row;
+    justify-content: center;
   }
   .page__illustration-container {
     width: 50vw;

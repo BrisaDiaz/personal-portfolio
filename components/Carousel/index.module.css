@@ -3,8 +3,8 @@
   width: 100%;
   position: relative;
   background: var(--primary-light);
-  border: 2px dashed var(--primary-dark);
-  box-shadow: 0px 1px 10px rgb(153 153 153 / 25%);
+  border: 2px solid var(--high-contrast-color);
+  box-shadow: 0px 1px 5px rgb(153 153 153 / 25%);
 }
 
 .carousel__slide {

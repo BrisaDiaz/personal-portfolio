@@ -1,8 +1,10 @@
-.about-section {
+.section {
   display: flex;
+  position: relative;
+  width: 100%;
   align-items: flex-start;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: visible;
   margin-bottom: 0;
 }
 @keyframes slide-in-left {
@@ -17,78 +19,85 @@
     opacity: 1;
   }
 }
-
-.about--section__illustration-container svg {
-  height: auto;
-  bottom: 0;
-  width: 150%;
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes float-big {
+  0% {
+    transform: translateY(0px) scale(1.2);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0px) scale(1.2);
+  }
 }
 
-.about-section__content {
+.section__illustration-container {
+  margin: auto;
+}
+
+.section__content {
   position: relative;
   z-index: 10;
   margin: 0 0 auto;
   animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-.about-section__title span {
+.section__title span {
   font-size: 24px;
-  font-weight: 600;
 
   text-transform: capitalize;
   font-family: "IM Fell Double Pica", serif;
   color: var(--primary-dark);
 }
 
-.about-section__text {
+.section__text {
   margin: 20px 0;
+  line-height: 1.7em;
 
-  line-height: 1.5em;
+  opacity: 0.9;
 }
-.about-section__content a:active:active,
-.about-section__content a:focus {
+.section__content a:active:active,
+.section__content a:focus {
   outline: 2px solid var(--secondary-light);
   outline-offset: 3px;
   border-radius: 8px;
 }
 
-.about-section__text:last-child {
+.section__text:last-child {
   margin-bottom: 20px;
 }
-
+.section__illustration-container svg {
+  animation: float 6s ease-in-out infinite;
+}
 @media (min-width: 600px) {
-  .about--section__illustration-container svg {
-    margin-left: 20%;
-    width: 100%;
-  }
-
-  .about-section__title span {
+  .section__title span {
     font-size: 30px;
   }
 }
 
 @media (min-width: 900px) {
-  .about--section__illustration-container svg {
-    width: 100%;
-
-    margin-left: 30%;
-  }
-
-  .about-section__content {
+  .section__content {
     max-width: 580px;
+  }
+  .section {
+    flex-direction: row;
+    align-items: flex-end;
   }
 }
 
 @media (min-width: 1200px) {
-  .about-section {
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  .about--section__illustration-container svg {
-    margin-top: 0;
-    max-width: 100%;
-    height: auto;
-    margin-left: 10%;
-    margin-bottom: -60px;
+  .section__illustration-container svg {
+    margin-top: auto;
+    animation: float-big 6s ease-in-out infinite;
   }
 }

@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import Illustration from "@/components/Sections/Illustration";
+import Illustration from "@/components/Sections/Banner/Illustration";
 import ContactForm from "@/components/ContactForm";
 import SVG from "@/components/SVG";
 export default function Banner({
@@ -22,7 +22,7 @@ export default function Banner({
         <div className={styles["socials-section"]}>
           <div>
             <div className={styles["banner__illustration"]}>
-              <Illustration name="contact" />
+              <Illustration />
             </div>
             <address className={styles["banner__contact"]}>
               <ul className={styles["banner__contact-list"]}>

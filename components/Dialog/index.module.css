@@ -18,7 +18,8 @@
 .modal__header {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  background-color: var(--primary-light);
+  background: var(--low-contrast-color);
+
   padding: 20px 15px;
 }
 .modal__close-btn {
@@ -48,23 +49,25 @@
 .modal__close-btn svg {
   width: 100%;
   height: auto;
+  fill: var(--font-color);
 }
 .modal__close-btn button:focus {
   outline-color: var(--secondary-light);
 }
 .modal__inner {
   width: 100%;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   max-width: max-content;
   height: max-content;
   position: absolute;
   top: 40%;
   right: 50%;
   transform: translate(50%, -50%);
-  background: var(--light-gray);
+  background-color: var(--background-color);
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.5s ease-in-out;
+  border: 1px solid var(--low-contrast-color);
   border-radius: var(--border-radius);
 }
 .modal.modal--close div {

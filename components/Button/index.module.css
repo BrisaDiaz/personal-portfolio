@@ -2,15 +2,16 @@
   padding: 10px 16px;
   position: relative;
   z-index: 1;
-  background: var(--secondary-main);
+  background: var(--secondary-light);
   color: #fff;
   border: 2px solid transparent;
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
-  border: 2px solid var(--secondary-main);
+  border: 2px solid var(--secondary-light);
 }
+
 .button:hover {
   background: var(--secondary-dark);
   border: 2px solid var(--secondary-dark);

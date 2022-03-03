@@ -11,6 +11,7 @@ import Carousel from "@/components/Carousel/index";
 import styles from "@/styles/Project.module.css";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import WithNavbar from "@/components/Layouts/WithNavbar";
+import ParticlesBackground from "@/components/ParticlesBackground";
 const SocialShareButtons = dynamic(
   () => import("@/components/SocialShareButtons/index")
 );
@@ -42,7 +43,9 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
       <WithNavbar>
         <main className={`main ${styles["page"]}`}>
           <SocialShareButtons />
+
           <section className={`container ${styles.container}`}>
+            <ParticlesBackground />
             {project?.subtitle && (
               <h1 className={`title2 ${styles["page__title"]}`}>
                 {project?.subtitle}

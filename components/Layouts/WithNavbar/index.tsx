@@ -1,12 +1,35 @@
 import React from "react";
 import MenuNav from "@/components/MenuNav";
 
+import { useRouter } from "next/router";
 import styles from "./index.module.css";
 export default function WithNavbar({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const router = useRouter();
+  const [isRouteChanging, setIsRouteChanging] = React.useState(false);
+  const focusableElements =
+    'a,button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  React.useEffect(() => {
+    router.events.on("routeChangeStart", () => {
+      setIsRouteChanging(true);
+    });
+    router.events.on("routeChangeComplete", () => {
+      setIsRouteChanging(false);
+      const main = document.querySelector("main");
+      if (!main) return;
+      const firstFocusableElement = main.querySelectorAll(
+        focusableElements
+      )[0] as HTMLButtonElement;
+
+      if (firstFocusableElement) {
+        firstFocusableElement.focus();
+      }
+    });
+  }, [router.events]);
   const [menuState, setMenuState] = React.useState<{
     isOpen: boolean;
     activeLink: string;
@@ -41,13 +64,22 @@ export default function WithNavbar({
   ];
   return (
     <>
+      {isRouteChanging && (
+        <div
+          className={styles["progress-bar"]}
+          aria-label="loading page"
+          role="alert"
+          aria-live="assertive"
+        >
+          <div className={styles["progress-bar-value"]}></div>
+        </div>
+      )}
       <MenuBtn onClick={handleOpenMenu} />
 
       <MenuNav
         isOpen={menuState.isOpen}
         links={MENU_LINKS}
         onClose={handleCloseMenu}
-        activeLink={menuState.activeLink}
         onNavigate={handleNavigation}
       />
       {children}
