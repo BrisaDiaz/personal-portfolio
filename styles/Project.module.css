@@ -1,7 +1,3 @@
-.container {
-  padding-top: 0;
-  padding-bottom: 3rem;
-}
 .image-backdrop {
   z-index: 900;
   position: fixed;
@@ -50,10 +46,13 @@
 
   position: relative;
 }
-
+.page {
+  position: relative;
+  z-index: 1;
+}
 .page__title {
   text-transform: capitalize;
-  margin: 0.8em 0;
+  margin-bottom: 1em;
 }
 .page__subtitle {
   margin: 0.8em 0;
