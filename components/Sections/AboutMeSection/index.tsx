@@ -21,9 +21,8 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           </p>
           <p className={styles["section__text"]}>
             I describe myself as a curious and determined person, passionate
-            about providing solutions in a creative and ingenious way, who{" "}
-            {"don't "}hesitate to face new challenges, seeing each of them as an
-            opportunity to improve and bring value.
+            about providing solutions in a creative and ingenious way, seeing
+            each new challenge as an opportunity to improve and bring value.
           </p>
         </div>
       </div>

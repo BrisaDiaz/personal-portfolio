@@ -9,11 +9,13 @@ export default function WithNavbar({
   children: React.ReactNode;
 }) {
   const router = useRouter();
+
   const [isRouteChanging, setIsRouteChanging] = React.useState(false);
-  const focusableElements =
-    'a,button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
   React.useEffect(() => {
+    const focusableElements =
+      'a,button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
     router.events.on("routeChangeStart", () => {
       setIsRouteChanging(true);
     });
@@ -29,6 +31,9 @@ export default function WithNavbar({
         firstFocusableElement.focus();
       }
     });
+    return () => {
+      setIsRouteChanging(false); // This worked for me
+    };
   }, [router.events]);
   const [menuState, setMenuState] = React.useState<{
     isOpen: boolean;

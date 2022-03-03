@@ -160,22 +160,22 @@ h4,
 
 .container {
   scroll-margin-top: 100px;
-  padding: 2.5rem 1rem;
-
+  padding: 3rem 1rem;
+  max-width: 1250px;
   position: relative;
   margin: 0 auto;
   overflow-x: hidden;
   overflow: hidden;
 }
 @media (min-width: 600px) {
-  .container {
-    padding: 30px 60px;
-    max-width: 1250px;
-  }
   .main {
     font-size: 16px;
     margin: 0 auto 0;
   }
+  .container {
+    padding: 4rem;
+  }
+
   h1,
   .title1 {
     font-size: 45px;
@@ -191,5 +191,10 @@ h4,
   h4,
   .title4 {
     font-size: 18px;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    padding: 2rem 4rem;
   }
 }
