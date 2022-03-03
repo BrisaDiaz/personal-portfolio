@@ -31,37 +31,36 @@
 
 .facebook {
   background: #3b5998;
-  color: white;
 }
 
 .twitter {
   background: #55acee;
-  color: white;
 }
 
-.google {
-  background: #dd4b39;
-  color: white;
+.telegram {
+  background: #1c93e3;
 }
 
 .linkedin {
   background: #007bb5;
-  color: white;
 }
 
 .youtube {
   background: #bb0000;
-  color: white;
 }
 
 .instagram {
   background: #125688;
-  color: white;
 }
 
 .reddit {
   background: #ff5700;
-  color: white;
+}
+.email {
+  background: #0866ff;
+}
+.whatsapp {
+  background: #01e675;
 }
 @media (min-width: 768px) {
   .bar {

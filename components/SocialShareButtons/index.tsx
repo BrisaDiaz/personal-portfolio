@@ -13,8 +13,12 @@ export default function SocialShareButton() {
     linkedin: "https://www.linkedin.com/shareArticle?mini=true&url=",
     facebook: "https://www.facebook.com/sharer/sharer.php?u=",
     twitter: "https://twitter.com/intent/tweet?text=",
-    google: "https://plus.google.com/share?url=",
+    telegram:
+      "https://telegram.me/share/url?text=Hi, I found this website and thought you might like it&url=",
     reddit: "https://www.reddit.com/submit?url=",
+    email:
+      "mailto:?subject=<Look at this website&body=Hi, I found this website and thought you might like it ",
+    whatsapp: "https://api.whatsapp.com/send/?phone&text=",
   };
 
   const SOCIALS = [
@@ -29,10 +33,21 @@ export default function SocialShareButton() {
       shareUrl: SHARE_LINKS["twitter"] + pageUrl,
     },
     {
-      name: "google",
-      className: `${styles.google}  ${styles["bar__link"]} `,
-      shareUrl: SHARE_LINKS["google"] + pageUrl,
+      name: "email",
+      className: `${styles.email}  ${styles["bar__link"]} `,
+      shareUrl: SHARE_LINKS["email"] + pageUrl,
     },
+    {
+      name: "telegram",
+      className: `${styles.telegram}  ${styles["bar__link"]} `,
+      shareUrl: SHARE_LINKS["telegram"] + pageUrl,
+    },
+    {
+      name: "whatsapp",
+      className: `${styles.whatsapp}  ${styles["bar__link"]} `,
+      shareUrl: SHARE_LINKS["whatsapp"] + pageUrl,
+    },
+
     {
       name: "linkedin",
       className: `${styles.linkedin}   ${styles["bar__link"]}`,
@@ -50,7 +65,7 @@ export default function SocialShareButton() {
         <a
           target="_blank"
           key={social.name}
-          title={"share on " + social.name}
+          title={"share via " + social.name}
           href={social.shareUrl}
           rel="noreferrer"
           className={social.className}
