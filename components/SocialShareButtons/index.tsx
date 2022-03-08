@@ -32,21 +32,21 @@ export default function SocialShareButton() {
       className: `${styles.twitter} ${styles["bar__link"]}`,
       shareUrl: SHARE_LINKS["twitter"] + pageUrl,
     },
-    {
-      name: "email",
-      className: `${styles.email}  ${styles["bar__link"]} `,
-      shareUrl: SHARE_LINKS["email"] + pageUrl,
-    },
-    {
-      name: "telegram",
-      className: `${styles.telegram}  ${styles["bar__link"]} `,
-      shareUrl: SHARE_LINKS["telegram"] + pageUrl,
-    },
-    {
-      name: "whatsapp",
-      className: `${styles.whatsapp}  ${styles["bar__link"]} `,
-      shareUrl: SHARE_LINKS["whatsapp"] + pageUrl,
-    },
+    // {
+    //   name: "email",
+    //   className: `${styles.email}  ${styles["bar__link"]} `,
+    //   shareUrl: SHARE_LINKS["email"] + pageUrl,
+    // },
+    // {
+    //   name: "telegram",
+    //   className: `${styles.telegram}  ${styles["bar__link"]} `,
+    //   shareUrl: SHARE_LINKS["telegram"] + pageUrl,
+    // },
+    // {
+    //   name: "whatsapp",
+    //   className: `${styles.whatsapp}  ${styles["bar__link"]} `,
+    //   shareUrl: SHARE_LINKS["whatsapp"] + pageUrl,
+    // },
 
     {
       name: "linkedin",

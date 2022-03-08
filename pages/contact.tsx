@@ -7,7 +7,7 @@ import Modal from "@/components/Modal";
 import EmailLoader from "@/components/EmailLoader";
 import Banner from "@/components/Sections/Banner";
 import Notification from "@/components/Notification";
-import ParticlesBackground from "@/components/ParticlesBackground";
+
 const Technologies: NextPage = () => {
   const [loading, setLoading] = React.useState(false);
   const [notification, setNotification] = React.useState({
@@ -80,7 +80,7 @@ const Technologies: NextPage = () => {
       <WithNavbar>
         <main className="main full-height ">
           <>
-            <ParticlesBackground />
+      
             <Banner onSubmit={sendEmail} />
             <Modal isOpen={loading}>
               <EmailLoader />

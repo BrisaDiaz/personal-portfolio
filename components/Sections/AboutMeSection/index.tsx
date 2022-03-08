@@ -1,9 +1,7 @@
-import ParticlesBackground from "@/components/ParticlesBackground";
 import Avatar from "@/components/Avatar";
 export default function AboutMeSection({ styles }: { styles: any }) {
   return (
     <section className={`container ${styles["section"]}`} id="/">
-      <ParticlesBackground />
       <div className={styles["section__content"]}>
         <div>
           <h1 className={styles["section__title"]}>

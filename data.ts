@@ -222,7 +222,7 @@ export const PROJECTS = [
     id: 4,
     slug: "booking_app",
     title: "booking app",
-    subtitle: "End-to-end type safety SPA ",
+    subtitle: "End-to-end type safety SPA",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_2_aqjj3g.webp",
@@ -348,7 +348,7 @@ export const PROJECTS = [
       "Loading indicators.",
       "Protected routes.",
       "Conditional content.",
-      "Social signIn.",
+      "Social sign in.",
     ],
     language: "javascript",
     technologies: {

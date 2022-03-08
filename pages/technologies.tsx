@@ -12,6 +12,14 @@ const Technologies: NextPage = () => {
     <div>
       <Head>
         <title>Brisa Díaz | Technologies </title>
+        <meta name="description" content="technologies i have worked with" />
+        <meta
+          name="keywords"
+          content={TECHS.map((tech) => tech.name)
+            .toString()
+            .concat("frontend,backed,testing")}
+          key="titleKeywords"
+        />
       </Head>
       <WithNavbar>
         <main className="main">

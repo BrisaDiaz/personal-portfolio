@@ -11,7 +11,7 @@ import Carousel from "@/components/Carousel/index";
 import styles from "@/styles/Project.module.css";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import WithNavbar from "@/components/Layouts/WithNavbar";
-import ParticlesBackground from "@/components/ParticlesBackground";
+
 const SocialShareButtons = dynamic(
   () => import("@/components/SocialShareButtons/index")
 );
@@ -35,10 +35,22 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
       image: { src: "", alt: "" },
     });
   };
+  const technologies = Object.values(project.technologies).flat();
+
   return (
     <div>
       <Head>
         <title>Brisa Díaz | {project.title}</title>
+        <meta name="description" content={project.summary} />
+        <meta
+          name="keywords"
+          content={[
+            project.title,
+            project.subtitle,
+            ...technologies,
+          ].toString()}
+          key="titleKeywords"
+        />
       </Head>
       <WithNavbar>
         <>
@@ -184,7 +196,6 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             <ImageBackdrop {...backdropState} onClose={closeBackdrop} />
           </main>
           <SocialShareButtons />
-          <ParticlesBackground />
         </>
       </WithNavbar>
     </div>

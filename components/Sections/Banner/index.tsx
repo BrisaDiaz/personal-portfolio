@@ -25,7 +25,7 @@ export default function Banner({
               <Illustration />
             </div>
             <address className={styles["banner__contact"]}>
-              <ul className={styles["banner__contact-list"]}>
+              {/* <ul className={styles["banner__contact-list"]}>
                 <li className={styles["banner__contact-list-item"]}>
                   <a
                     className={styles["banner__contact-link"]}
@@ -51,7 +51,7 @@ export default function Banner({
                     <p>brisaabigaildiaz2000@gmail.com</p>
                   </a>
                 </li>
-              </ul>
+              </ul> */}
               <ul className={styles["banner__contact-list"]}>
                 <li className={styles["banner__contact-list-item"]}>
                   <a
