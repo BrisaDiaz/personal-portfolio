@@ -143,6 +143,9 @@
   font-size: 12px;
   border-radius: 2px;
 }
+.feature_item {
+  line-height: 2em;
+}
 @media (min-width: 600px) {
   .image-backdrop__btn {
     right: 1rem;
@@ -159,7 +162,7 @@
     font-size: 14px;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .page__subtitle:first-of-type {
     margin-top: 0;
   }
@@ -169,9 +172,20 @@
   }
   .page__content-container {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 2rem;
+  }
+  .metadata-container {
+    flex: 1;
   }
   .carousel-container {
     max-width: 500px;
+  }
+  .features_container {
+    min-width: 100%;
+    flex: 0;
+    border-top: 1px solid var(--high-contrast-color);
+    padding-top: 1rem;
+    margin-top: 1rem;
   }
 }

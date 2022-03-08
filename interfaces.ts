@@ -6,7 +6,7 @@ export interface Project {
   captions: { src: string; alt: string; original?: string }[];
   summary: string;
   language: string;
-  features?: string[];
+  features: string[];
   technologies: {
     frontend: string[];
     backend?: string[];

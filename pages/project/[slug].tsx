@@ -60,7 +60,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                     thumbnail={project?.captions[0]?.src || ""}
                   />
                 </section>
-                <section>
+                <section className={styles["metadata-container"]}>
                   {project?.testingUser ? (
                     <>
                       <h2 className={`title3 ${styles["page__subtitle"]}`}>
@@ -165,6 +165,18 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                       ))}
                     </p>
                   ) : null}
+                </section>
+                <section className={styles["features_container"]}>
+                  <h2 className={`title3 ${styles["page__subtitle"]}`}>
+                    Features
+                  </h2>
+                  <ul>
+                    {project.features.map((feature) => (
+                      <li key={feature} className={styles["feature_item"]}>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </section>
               </div>
             </section>
