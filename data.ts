@@ -504,7 +504,6 @@ export const PROJECTS = [
     },
     features: [
       `Modularized javaScript code.`,
-      `Responsive layout.`,
       `Projects gallery with hover effect and animated zoom modal.`,
       `On scroll animations.`,
       `Auto-played slider with clients testimonials.`,
