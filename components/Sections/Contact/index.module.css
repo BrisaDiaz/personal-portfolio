@@ -30,7 +30,7 @@
 }
 
 .banner {
-  margin: 3rem auto;
+  margin: 4rem auto;
   padding: 2rem 1rem;
   width: inherit;
   background: var(--low-contrast-color);
@@ -137,6 +137,11 @@
   }
   .banner__illustration {
     margin: 2rem 0;
+  }
+}
+@media (min-width: 900px) {
+  .banner {
+    margin: 2rem auto;
   }
 }
 @media (min-width: 1000px) {

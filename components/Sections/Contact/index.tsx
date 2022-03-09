@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
 
-import Illustration from "@/components/Sections/Banner/Illustration";
+import Illustration from "@/components/Sections/Contact/Illustration";
 import ContactForm from "@/components/ContactForm";
 import SVG from "@/components/SVG";
-export default function Banner({
+export default function Contact({
   onSubmit,
 }: {
   onSubmit: (

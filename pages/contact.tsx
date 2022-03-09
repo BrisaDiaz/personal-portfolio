@@ -5,7 +5,7 @@ import WithNavbar from "@/components/Layouts/WithNavbar";
 import Head from "next/head";
 import Modal from "@/components/Modal";
 import EmailLoader from "@/components/EmailLoader";
-import Banner from "@/components/Sections/Banner";
+import Contact from "@/components/Sections/Contact";
 import Notification from "@/components/Notification";
 
 const Technologies: NextPage = () => {
@@ -80,8 +80,7 @@ const Technologies: NextPage = () => {
       <WithNavbar>
         <main className="main full-height ">
           <>
-      
-            <Banner onSubmit={sendEmail} />
+            <Contact onSubmit={sendEmail} />
             <Modal isOpen={loading}>
               <EmailLoader />
             </Modal>
