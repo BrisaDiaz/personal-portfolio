@@ -40,6 +40,7 @@ export default function Placeholder({
           loading={loading || "lazy"}
           priority={priority || false}
           objectPosition={"center center"}
+          unoptimized={src.includes(".gif")}
         />
       </div>
     </div>
