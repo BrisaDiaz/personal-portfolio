@@ -29,7 +29,7 @@
 
 .menu-btn:focus {
   outline-offset: 2px;
-  outline-color: var(--secondary-light);
+  outline-color: var(--font-color);
 }
 .progress-bar {
   position: absolute;

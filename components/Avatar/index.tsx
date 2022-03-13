@@ -43,11 +43,15 @@ export default function Avatar() {
       </defs>
       <g fill="none" fillRule="evenodd">
         <g transform="translate(12 40)">
-          <mask id="b" fill="#fff">
+          <mask id="b" fill="var(--high-contrast-color)">
             <use xlinkHref="#a" />
           </mask>
-          <use fill="var(--font-color)" xlinkHref="#a" />
-          <g mask="url(#b)" fill="#cc9798">
+          <use
+            fill="var(--high-contrast-color)"
+            xlinkHref="#a"
+            stroke="var(--high-contrast-color)"
+          />
+          <g mask="url(#b)" fill="var(--high-contrast-color)">
             <path d="M0 0h240v240H0z" />
           </g>
         </g>
@@ -85,7 +89,7 @@ export default function Avatar() {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xlinkHref="#g"
             />
-            <g mask="url(#h)" fill="#c78989">
+            <g mask="url(#h)" fill="var(--primary-dark)">
               <path d="M0 0h264v110H0z" />
             </g>
             <path

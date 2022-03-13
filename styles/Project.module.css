@@ -32,7 +32,7 @@
   transition: all 0.5s ease;
 }
 .image-backdrop__btn:focus {
-  outline-color: var(--secondary-light);
+  outline-color: var(--font-color);
   transform: scale(1.1);
 }
 .image-backdrop__btn:hover {

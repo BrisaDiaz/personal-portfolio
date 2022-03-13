@@ -24,7 +24,7 @@
 }
 
 .bar__link:focus {
-  outline-color: var(--secondary-light);
+  outline-color: var(--font-color);
   outline-offset: 1px;
   opacity: 1;
 }

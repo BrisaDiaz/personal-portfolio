@@ -52,7 +52,7 @@
   fill: var(--font-color);
 }
 .modal__close-btn button:focus {
-  outline-color: var(--secondary-light);
+  outline-color: var(--font-color);
 }
 .modal__inner {
   width: 100%;

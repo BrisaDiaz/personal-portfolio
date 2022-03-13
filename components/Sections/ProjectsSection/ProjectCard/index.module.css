@@ -15,7 +15,7 @@
   min-height: 230px;
 }
 .project-card__link:focus {
-  outline: 2px solid var(--secondary-light);
+  outline: 2px solid var(--font-color);
   outline-offset: 6px;
   border-radius: 8px;
 }

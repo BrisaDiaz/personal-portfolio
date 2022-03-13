@@ -18,7 +18,7 @@
 }
 .button:active,
 .button:focus {
-  outline: 2px solid var(--secondary-light);
+  outline: 2px solid var(--font-color);
   outline-offset: 3px;
 }
 @media (min-width: 600px) {

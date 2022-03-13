@@ -70,7 +70,7 @@
 }
 .section__content a:active:active,
 .section__content a:focus {
-  outline: 2px solid var(--secondary-light);
+  outline: 2px solid var(--font-color);
   outline-offset: 3px;
   border-radius: 8px;
 }

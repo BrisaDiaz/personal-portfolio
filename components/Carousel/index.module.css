@@ -36,7 +36,7 @@
   transform: scale(1.1);
 }
 .zoom-btn:focus {
-  outline-color: var(--secondary-light);
+  outline-color: var(--font-color);
 }
 .carousel__slide-count {
   z-index: 10;
@@ -85,7 +85,7 @@
   transform: rotate(45deg);
 }
 .carousel button:focus {
-  outline-color: var(--secondary-light);
+  outline-color: var(--font-color);
   outline-offset: 3px;
 }
 
