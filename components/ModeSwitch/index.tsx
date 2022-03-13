@@ -48,6 +48,7 @@ const DarkMode = () => {
           tabIndex={0}
           type="checkbox"
           id="dark-mode-checkbox"
+          arial-label="toggle darkmode"
           onChange={toggleTheme}
           defaultChecked={isDarkDefault}
         />

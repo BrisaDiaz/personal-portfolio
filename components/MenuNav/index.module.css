@@ -2,8 +2,8 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  top: -100%;
-  left: 0;
+  top: 0;
+  left: -100%;
   z-index: 700;
   background: var(--primary-90);
   overflow-y: auto;
@@ -13,7 +13,7 @@
   backdrop-filter: blur(1px) grayscale(1);
 }
 .menu--open {
-  top: 0;
+  left: 0;
 }
 .menu__close-btn {
   position: relative;

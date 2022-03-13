@@ -46,7 +46,7 @@ export default function Avatar() {
           <mask id="b" fill="#fff">
             <use xlinkHref="#a" />
           </mask>
-          <use fill="#c78989" xlinkHref="#a" />
+          <use fill="var(--font-color)" xlinkHref="#a" />
           <g mask="url(#b)" fill="#cc9798">
             <path d="M0 0h240v240H0z" />
           </g>
@@ -85,7 +85,7 @@ export default function Avatar() {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xlinkHref="#g"
             />
-            <g mask="url(#h)" fill="#3f3d56">
+            <g mask="url(#h)" fill="#c78989">
               <path d="M0 0h264v110H0z" />
             </g>
             <path

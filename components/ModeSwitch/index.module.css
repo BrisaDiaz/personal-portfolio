@@ -6,7 +6,7 @@
   border: 2px solid transparent;
   top: 0.5rem;
   left: 0.5rem;
-  z-index: 700;
+  z-index: 699;
   width: min-content;
   height: min-content;
 }
