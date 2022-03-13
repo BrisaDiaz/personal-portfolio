@@ -41,10 +41,10 @@
 }
 [data-theme="dark"] {
   --font-color: #eee;
-  --background-color: #333;
+  --background-color: #202020;
   --link-color: lightblue;
-  --low-contrast-color: #404040;
-  --high-contrast-color: hsl(0deg 0% 40%);
+  --low-contrast-color: #333;
+  --high-contrast-color: #404040;
 }
 * {
   box-sizing: border-box;

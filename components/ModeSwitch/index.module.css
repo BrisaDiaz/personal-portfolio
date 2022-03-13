@@ -18,7 +18,7 @@
   width: 60px;
 }
 .toggle-theme-wrapper:focus-within {
-  border: 2px solid var(--secondary-light);
+  border: 2px solid var(--font-color);
   border-radius: 30px;
 }
 .toggle-theme input {
