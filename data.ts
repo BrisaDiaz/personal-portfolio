@@ -181,7 +181,7 @@ export const TECHS = [
     resource_url: "https://cusdis.com",
   },
   {
-    name: "Cl ",
+    name: "Nodemailer",
     logoName: "nodemailer",
     category: "other",
 
