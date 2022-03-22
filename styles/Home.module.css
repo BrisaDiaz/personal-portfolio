@@ -40,6 +40,7 @@
   flex-direction: column;
   overflow: visible;
   margin-bottom: 0;
+  gap:2rem;
 }
 .section__illustration-container {
   margin: auto;
@@ -80,7 +81,10 @@
 }
 @media (min-width: 600px) {
   .section__title span {
-    font-size: 30px;
+    font-size: 35px;
+  }
+   .section__title  {
+    font-size: 55px;
   }
 }
 

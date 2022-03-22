@@ -69,6 +69,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                     objectFit="cover"
                     width={1200}
                     height={500}
+                    background={project.color}
                     thumbnail={project?.captions[0]?.src || ""}
                   />
                 </section>

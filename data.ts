@@ -3,28 +3,28 @@ export const TECHS = [
     name: "Javascript",
     logoName: "javascript",
     category: "language",
-    image: "/techs/javascript.svg",
+
     resource_url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
   },
   {
     name: "Typescript",
     logoName: "typescript",
     category: "language",
-    image: "/techs/typescript.svg",
+
     resource_url: "https://www.typescriptlang.org",
   },
   {
     name: "HTML",
     logoName: "html",
     category: "frontend",
-    image: "/techs/html.svg",
+
     resource_url: "https://developer.mozilla.org/es/docs/Web/HTML",
   },
   {
     name: "CSS",
     logoName: "css",
     category: "frontend",
-    image: "/techs/css.svg",
+
     resource_url: "https://developer.mozilla.org/es/docs/Web/CSS",
   },
 
@@ -32,7 +32,7 @@ export const TECHS = [
     name: "React",
     logoName: "react",
     category: "frontend",
-    image: "/techs/react.svg",
+
     resource_url: "https://es.reactjs.org/docs/getting-started.html",
   },
 
@@ -40,7 +40,7 @@ export const TECHS = [
     name: "Next.js",
     logoName: "next-js",
     category: "frontend",
-    image: "/techs/next-js.svg",
+
     resource_url: "https://nextjs.org/docs/getting-started",
   },
 
@@ -48,21 +48,21 @@ export const TECHS = [
     name: "Material-UI",
     logoName: "material-ui",
     category: "frontend",
-    image: "/techs/material-ui.svg",
+
     resource_url: "https://mui.com/",
   },
   {
     name: "Styled Components",
     logoName: "styled-components",
     category: "frontend",
-    image: "/techs/styled-components.svg",
+
     resource_url: "https://styled-components.com/",
   },
   {
     name: "Tailwind",
     logoName: "tailwind",
     category: "frontend",
-    image: "/techs/tailwind.svg",
+
     resource_url: "https://tailwindcss.com",
   },
 
@@ -70,42 +70,42 @@ export const TECHS = [
     name: "Apollo GraphQL",
     logoName: "apollo",
     category: "backend",
-    image: "/techs/graphql.svg",
+
     resource_url: "https://www.apollographql.com/docs/react",
   },
   {
     name: "Node.js",
     logoName: "node",
     category: "backend",
-    image: "/techs/nodejs.svg",
+
     resource_url: "https://nodejs.org/es/docs",
   },
   {
     name: "Express",
     logoName: "express",
     category: "backend",
-    image: "/techs/express.svg",
+
     resource_url: "https://expressjs.com/",
   },
   {
     name: "MongoDB",
     logoName: "mongodb",
     category: "backend",
-    image: "/techs/mongodb.svg",
+
     resource_url: "https://docs.mongodb.com",
   },
   {
     name: "Mongoose",
     logoName: "mongoose",
     category: "backend",
-    image: "/techs/mongoose.svg",
+
     resource_url: "https://mongoosejs.com/",
   },
   {
     name: "PostgreSQL",
     logoName: "postgresql",
     category: "backend",
-    image: "/techs/postgresql.svg",
+
     resource_url: "https://www.postgresql.org/docs",
   },
   {
@@ -120,7 +120,7 @@ export const TECHS = [
     name: "React Testing",
     logoName: "react-testing-library",
     category: "testing",
-    image: "/techs/react-testing-library.svg",
+
     resource_url:
       "https://testing-library.com/docs/react-testing-library/intro/",
   },
@@ -128,43 +128,63 @@ export const TECHS = [
     name: "Jest",
     logoName: "jest",
     category: "testing",
-    image: "/techs/jest.svg",
+
     resource_url: "https://jestjs.io/docs/getting-started",
   },
   {
     name: "Cypress",
     logoName: "cypress",
     category: "testing",
-    image: "/techs/cypress.svg",
+
     resource_url: "https://docs.cypress.io",
   },
   {
     name: "Socket.io",
     logoName: "socket-io",
     category: "other",
-    image: "/techs/socket-io.svg",
+
     resource_url: "https://socket.io/docs/v4",
   },
   {
     name: "Next Auth",
     logoName: "next-auth",
     category: "other",
-    image: "/techs/next-auth.svg",
+
     resource_url: "https://next-auth.js.org/",
   },
+  {
+    name: "Auth0",
+    logoName: "auth0",
+    category: "other",
 
+    resource_url: "https://auth0.com/",
+  },
+  {
+    name: "Contentful",
+    logoName: "contentful",
+    category: "other",
+
+    resource_url: "https://www.contentful.com",
+  },
   {
     name: "Cloudinary",
     logoName: "cloudinary",
     category: "other",
-    image: "/techs/cloudinary.svg",
+
     resource_url: "https://cloudinary.com/documentation",
   },
   {
-    name: "Nodemailer ",
+    name: "Cusdis ",
+    logoName: "cusdis",
+    category: "other",
+
+    resource_url: "https://cusdis.com",
+  },
+  {
+    name: "Cl ",
     logoName: "nodemailer",
     category: "other",
-    image: "/techs/nodemailer.svg",
+
     resource_url: "https://nodemailer.com/about",
   },
 
@@ -172,15 +192,69 @@ export const TECHS = [
     name: "Git",
     logoName: "git",
     category: "other",
-    image: "/techs/git.svg",
+
     resource_url: "https://git-scm.com/doc",
   },
 ];
 export const PROJECTS = [
   {
+    id: 6,
+    slug: "tecno-rev",
+    title: "TecnoRev",
+    subtitle: "JAMstack blog",
+    color: "#fff",
+    captions: [
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1647889209/proyects/Component_10_1_dwj9o4.webp",
+
+        alt: "logo",
+      },
+      {
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1647912966/proyects/screencapture-tecno-rev-vercel-app-2022-03-21-18_30_29_dwqoch.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_1000,y_404/v1647912966/proyects/screencapture-tecno-rev-vercel-app-2022-03-21-18_30_29_dwqoch.webp",
+        alt: "posts filters",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_1000/v1647979286/proyects/screencapture-tecno-rev-vercel-app-posts-why-tech-literacy-is-key-for-educators-2022-03-22-16_49_45_lkleol.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1647979286/proyects/screencapture-tecno-rev-vercel-app-posts-why-tech-literacy-is-key-for-educators-2022-03-22-16_49_45_lkleol.webp",
+        alt: "post details",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_1000/v1647913023/proyects/screencapture-tecno-rev-vercel-app-privacy-policy-2022-03-21-18_52_04_jal0v7.png",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/v1647913023/proyects/screencapture-tecno-rev-vercel-app-privacy-policy-2022-03-21-18_52_04_jal0v7.webp",
+        alt: "generic page",
+      },
+    ],
+    summary: "Optimized serverless blog, with fully customizable content.",
+    features: [
+      "User Authentication.",
+      "Unit tests and Integration tests setup.",
+      "Accessible components.",
+      "Lazy loading and loading indicators.",
+      "Ability to set random posts,popular posts,feature post and social channels.",
+      "Ability to publish,unpublish and delete posts and new pages.",
+      "Ability to share and comment post.",
+      "Ability  to receive notifications of comments and make them public if desired.",
+    ],
+    language: "Typescript",
+    technologies: {
+      frontend: ["next.js", "css"],
+      backend: ["contentful  CMS", "Auth0", "cusdis"],
+      testing: ["react-testing-library", "jest", "cypress"],
+      hosting: "Vercel",
+    },
+
+    source_code: "https://github.com/BrisaDiaz/JAMstack-blog",
+    demo: "https://tecno-rev.vercel.app/",
+  },
+  {
     id: 5,
     slug: "ORTEX_login",
     title: "ORTEX login",
+    color: "#0f181b",
     subtitle: "ORTEX Technical task",
     captions: [
       {
@@ -222,6 +296,7 @@ export const PROJECTS = [
     id: 4,
     slug: "booking_app",
     title: "booking app",
+    color: "#fff",
     subtitle: "End-to-end type safety SPA",
     captions: [
       {
@@ -300,6 +375,7 @@ export const PROJECTS = [
     id: 3,
     slug: "wikifit_app",
     title: "wikifit app",
+    color: "#fff",
     subtitle: "Progressive web App",
     captions: [
       {
@@ -374,6 +450,7 @@ export const PROJECTS = [
     id: 2,
     slug: "delivery_app",
     title: "delivery app",
+    color: "#262626",
     subtitle: "With real time notifications SPA",
 
     captions: [
@@ -470,7 +547,7 @@ export const PROJECTS = [
     slug: "photographer_portfolio",
     title: "photographer portfolio",
     subtitle: "Modern and interactive website",
-
+    color: "#34393f",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642998071/proyects/target_3_jhisbz.webp",

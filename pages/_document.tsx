@@ -118,18 +118,14 @@ class MyDocument extends Document {
             property="og:description"
             content="I'm enthusiastic web developer, passionate about learning innovative technologies and digital-product development."
           />
-          <meta
-            name="twitter:card"
-            content="I'm enthusiastic web developer, passionate about learning innovative technologies and digital-product development."
-          />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:title"
             content="Brisa Díaz | Web Developer & Frontend Specialist 👩‍💻"
           />
           <meta property="twitter:image" content="/org.png" />
           <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
-          <meta name="twitter:creator" content="Brisa Díaz" />
-          <meta name="author" content="Brisa Díaz" />
+
           <meta
             name="twitter:image:alt"
             content="Brisa Díaz frontend developer"
@@ -138,11 +134,6 @@ class MyDocument extends Document {
           <meta
             name="description"
             content="I'm enthusiastic web developer width  2 years of experience and accumulated  knowledge on the development of websites and fullstack  applications."
-          />
-          <meta
-            name="keywords"
-            content="brisa diaz,web developer,frontend developer,fullstack developer,front end developer,front-end developer,frontend engineer,full stack developer,full-stack developer,app,application,experience,projects,work,testing,knowledge,application,ability,personal,stack,working,project,projects,team,skills,SEO,web apps,web applications,specialist,web development,software,brisa diaz portfolio,portfolio,frontend developer portfolio,javascript,typescript,react,next.js,node.js,graphql"
-            key="titleKeywords"
           />
 
           <script

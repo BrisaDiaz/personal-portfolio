@@ -49,13 +49,14 @@
 .page {
   position: relative;
   z-index: 1;
+  max-width: 1024px;
 }
 .page__title {
   text-transform: capitalize;
   margin-bottom: 1em;
 }
 .page__subtitle {
-  margin: 0.8em 0;
+  margin:1em 0;
   color: var(--font-color);
 }
 
@@ -151,7 +152,7 @@
     right: 1rem;
   }
   .carousel-container {
-    height: 350px;
+    height: 450px;
   }
 
   .tech-ist__legend {
@@ -163,9 +164,7 @@
   }
 }
 @media (min-width: 800px) {
-  .page__subtitle:first-of-type {
-    margin-top: 0;
-  }
+ 
   .featuresList {
     column-count: 2;
     column-gap: 20px;
@@ -178,14 +177,13 @@
   .metadata-container {
     flex: 1;
   }
-  .carousel-container {
-    max-width: 500px;
-  }
+
   .features_container {
     min-width: 100%;
     flex: 0;
-    border-top: 1px solid var(--high-contrast-color);
-    padding-top: 1rem;
-    margin-top: 1rem;
+  }
+  .features_container ul{
+    padding: 0;
+    margin-left: 1.5rem;
   }
 }

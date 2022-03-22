@@ -8,6 +8,7 @@ export default function Carousel({
   captions,
   objectFit,
   thumbnail,
+  background,
   tabIndex,
   onZoom,
 }: {
@@ -18,6 +19,7 @@ export default function Carousel({
   height: number;
   tabIndex?: 0 | -1;
   thumbnail?: string;
+  background?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const { currentSlide, onPrev, onNext } = useCarousel({
@@ -46,6 +48,7 @@ export default function Carousel({
             title="Play Gallery"
           />
           <svg
+            onClick={() => openGallery()}
             xmlns="http://www.w3.org/2000/svg"
             enableBackground="new 0 0 24 24"
             height="100px"
@@ -125,7 +128,7 @@ export default function Carousel({
       ) : null}
       <style jsx>{`
         .thumbnail {
-          background: var(--primary-main)
+          background: ${background ? background : "var(--primary - main)"}
             ${thumbnail ? `url(${thumbnail})` : "var(--primary-main)"} no-repeat
             center center;
         }
