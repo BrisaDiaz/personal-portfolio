@@ -27,6 +27,5 @@ export interface Technology {
   name: string;
   logoName: string;
   category: string;
-  image: string;
   resource_url: string;
 }
