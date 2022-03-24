@@ -39,17 +39,16 @@ function Input({
     </div>
   ) : (
     <div className={styles["input-container"]}>
-      {errors?.length && (
-        <small
-          className={`${styles["input-container__message"]} ${
-            errors?.length ? styles["input-container__message--visible"] : ""
-          }`}
-          role="alert"
-          {...alertProps}
-        >
-          {errors && errors?.length ? errors[errors?.length - 1] : ""}
-        </small>
-      )}
+      <small
+        className={`${styles["input-container__message"]} ${
+          errors?.length ? styles["input-container__message--visible"] : ""
+        }`}
+        role="alert"
+        {...alertProps}
+      >
+        {errors && errors?.length ? errors[errors?.length - 1] : ""}
+      </small>
+
       <div className={styles["input-container__icon-container"]}>{icon}</div>
       <input
         className={`${styles["input-container__input"]} ${

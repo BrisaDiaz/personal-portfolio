@@ -245,8 +245,8 @@ export const PROJECTS = [
       },
       {
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1647912966/proyects/screencapture-tecno-rev-vercel-app-2022-03-21-18_30_29_dwqoch.webp",
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_1000,y_404/v1647912966/proyects/screencapture-tecno-rev-vercel-app-2022-03-21-18_30_29_dwqoch.webp",
+          "https://res.cloudinary.com/myproyects/image/upload/v1648159025/proyects/screenshot-tecno-rev.vercel.app-2022.03.24-18_41_56_drbakq.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_1000,y_404/v1648159025/proyects/screenshot-tecno-rev.vercel.app-2022.03.24-18_41_56_drbakq.webp",
         alt: "posts filters",
       },
       {
@@ -256,9 +256,9 @@ export const PROJECTS = [
         alt: "post details",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_1000/v1647913023/proyects/screencapture-tecno-rev-vercel-app-privacy-policy-2022-03-21-18_52_04_jal0v7.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_1000/v1648159379/proyects/screenshot-tecno-rev.vercel.app-2022.03.24-19_01_47_i8fveh.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1647913023/proyects/screencapture-tecno-rev-vercel-app-privacy-policy-2022-03-21-18_52_04_jal0v7.webp",
+          "https://res.cloudinary.com/myproyects/image/upload/v1648159379/proyects/screenshot-tecno-rev.vercel.app-2022.03.24-19_01_47_i8fveh.webp",
         alt: "generic page",
       },
     ],
@@ -293,7 +293,7 @@ export const PROJECTS = [
     subtitle: "ORTEX Technical task",
     captions: [
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/v1645665799/proyects/ortex_1_ishhld.png",
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1645665799/proyects/ortex_1_ishhld.webp",
 
         alt: "portfolio logo",
       },
@@ -496,25 +496,25 @@ export const PROJECTS = [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361165/proyects/burger-2-min_oatxvw.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1645735028/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_57_33_og3iul.png",
+          "https://res.cloudinary.com/myproyects/image/upload/v1645735028/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_57_33_og3iul.webp",
         alt: "call to action hero slider",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361146/proyects/burger-1-min_qu6v2e.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1642716738/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_58_45-min_yid3wi.png",
+          "https://res.cloudinary.com/myproyects/image/upload/v1642716738/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_58_45-min_yid3wi.webp",
         alt: "search on menu and add to cart screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.png",
+          "https://res.cloudinary.com/myproyects/image/upload/v1642716729/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-16_59_51-min_rdnaaz.webp",
         alt: "orders management  admin screen",
       },
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1644361139/proyects/burger-3-min_y4eorf.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1642716732/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-17_01_06-min_gwnomp.png",
+          "https://res.cloudinary.com/myproyects/image/upload/v1642716732/proyects/screencapture-fast-food-delivery-app-herokuapp-2022-01-20-17_01_06-min_gwnomp.webp",
         alt: "load a new product admin screen",
       },
     ],
