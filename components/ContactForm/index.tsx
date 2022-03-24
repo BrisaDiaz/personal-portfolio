@@ -118,7 +118,7 @@ export default function LoginForm({
             ...register("subject", {
               minLength: {
                 value: 3,
-                message: "The message most be at least 3  characters long",
+                message: "The subject most be at least 3  characters long",
               },
               maxLength: {
                 value: 150,

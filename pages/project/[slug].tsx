@@ -55,6 +55,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
       <WithNavbar>
         <>
           <main className="main">
+            <SocialShareButtons />
             <section className={`container ${styles["page"]}`}>
               {project?.subtitle && (
                 <h1 className={`title2 ${styles["page__title"]}`}>
@@ -196,7 +197,6 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
 
             <ImageBackdrop {...backdropState} onClose={closeBackdrop} />
           </main>
-          <SocialShareButtons />
         </>
       </WithNavbar>
     </div>

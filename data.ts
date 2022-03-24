@@ -32,7 +32,6 @@ export const TECHS = [
     name: "React",
     logoName: "react",
     category: "frontend",
-
     resource_url: "https://es.reactjs.org/docs/getting-started.html",
   },
 
@@ -43,7 +42,18 @@ export const TECHS = [
 
     resource_url: "https://nextjs.org/docs/getting-started",
   },
-
+  {
+    name: "React Hook Form",
+    category: "frontend",
+    logoName: "react-hook-form",
+    resource_url: "https://react-hook-form.com",
+  },
+  {
+    name: "React Query",
+    logoName: "react-query",
+    category: "frontend",
+    resource_url: "https://react-query.tanstack.com",
+  },
   {
     name: "Material-UI",
     logoName: "material-ui",
@@ -115,7 +125,12 @@ export const TECHS = [
     image: "/techs/prisma-3.svg",
     resource_url: "https://www.prisma.io/docs",
   },
-
+  {
+    name: "Socket.io",
+    logoName: "socket-io",
+    category: "backend",
+    resource_url: "https://socket.io/docs/v4",
+  },
   {
     name: "React Testing",
     logoName: "react-testing-library",
@@ -139,11 +154,25 @@ export const TECHS = [
     resource_url: "https://docs.cypress.io",
   },
   {
-    name: "Socket.io",
-    logoName: "socket-io",
-    category: "other",
+    name: "Lighthouse",
+    logoName: "lighthouse",
+    category: "testing",
 
-    resource_url: "https://socket.io/docs/v4",
+    resource_url: "https://developers.google.com/web/tools/lighthouse",
+  },
+  {
+    name: "WAVE",
+    logoName: "wave",
+    category: "testing",
+
+    resource_url: "https://wave.webaim.org",
+  },
+  {
+    name: "Schema.org",
+    logoName: "schema-org",
+    category: "testing",
+
+    resource_url: "https://schema.org/",
   },
   {
     name: "Next Auth",
@@ -187,7 +216,12 @@ export const TECHS = [
 
     resource_url: "https://nodemailer.com/about",
   },
-
+  {
+    name: "Email.js",
+    logoName: "email-js",
+    category: "other",
+    resource_url: "https://www.emailjs.com",
+  },
   {
     name: "Git",
     logoName: "git",
@@ -237,12 +271,13 @@ export const PROJECTS = [
       "Ability to set random posts,popular posts,feature post and social channels.",
       "Ability to publish,unpublish and delete posts and new pages.",
       "Ability to share and comment post.",
-      "Ability  to receive notifications of comments and make them public if desired.",
+      "Comments notifications by email  and a vcbility make them public if desired.",
+      "Contact form with real time validation.",
     ],
     language: "Typescript",
     technologies: {
-      frontend: ["next.js", "css"],
-      backend: ["contentful  CMS", "Auth0", "cusdis"],
+      frontend: ["next.js", "react-hook-form", "react-query", "css"],
+      backend: ["contentful  CMS", "Auth0", "cusdis", "email.js"],
       testing: ["react-testing-library", "jest", "cypress"],
       hosting: "Vercel",
     },
