@@ -88,7 +88,7 @@ export function generateProjectSchema(project: Project) {
     "@type": "CreativeWork",
     name: project.title,
     author: "Brisa Diaz",
-    image: project.captions,
+    image: project.captions[0].src,
     alternateName: project.subtitle,
     sameAs: [project.demo, project.source_code],
     keywords: Object.values(project.technologies).flat(),
