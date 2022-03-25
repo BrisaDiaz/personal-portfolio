@@ -6,7 +6,7 @@ import Head from "next/head";
 import { PROJECTS } from "data";
 
 import ProjectsSection from "@/components/Sections/ProjectsSection";
-
+import { generateProjectListSchema } from "schemaData";
 const Projects: NextPage = () => {
   return (
     <div>
@@ -19,11 +19,17 @@ const Projects: NextPage = () => {
             (project) =>
               `${project.title},${project.language},${project.summary
                 .split(" ")
-                .join(",")}`
+                .join(",")}`,
           )
             .toString()
             .concat("frontend,backed,testing")}
           key="titleKeywords"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProjectListSchema(PROJECTS)),
+          }}
         />
       </Head>
       <WithNavbar>

@@ -6,7 +6,7 @@ import Head from "next/head";
 import { TECHS } from "data";
 
 import TechnologiesSection from "@/components/Sections/TechnologiesSection";
-
+import { generateTechnologiesSchema } from "schemaData";
 const Technologies: NextPage = () => {
   return (
     <div>
@@ -19,6 +19,12 @@ const Technologies: NextPage = () => {
             .toString()
             .concat("frontend,backed,testing")}
           key="titleKeywords"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateTechnologiesSchema(TECHS)),
+          }}
         />
       </Head>
       <WithNavbar>

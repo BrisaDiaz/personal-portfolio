@@ -11,9 +11,9 @@ import Carousel from "@/components/Carousel/index";
 import styles from "@/styles/Project.module.css";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import WithNavbar from "@/components/Layouts/WithNavbar";
-
+import { generateProjectSchema } from "schemaData";
 const SocialShareButtons = dynamic(
-  () => import("@/components/SocialShareButtons/index")
+  () => import("@/components/SocialShareButtons/index"),
 );
 const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
   project,
@@ -41,7 +41,10 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
     <div>
       <Head>
         <title>Brisa Díaz | {project.title}</title>
-        <meta name="description" content={project.summary} />
+        <meta
+          name="description"
+          content={project.summary + " features: " + project.features.join("")}
+        />
         <meta
           name="keywords"
           content={[
@@ -50,6 +53,12 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             ...technologies,
           ].toString()}
           key="titleKeywords"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProjectSchema(project)),
+          }}
         />
       </Head>
       <WithNavbar>
