@@ -12,9 +12,7 @@ import styles from "@/styles/Project.module.css";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
 import WithNavbar from "@/components/Layouts/WithNavbar";
 import { generateProjectSchema } from "schemaData";
-const SocialShareButtons = dynamic(
-  () => import("@/components/SocialShareButtons/index"),
-);
+
 const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
   project,
 }) => {
@@ -64,7 +62,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
       <WithNavbar>
         <>
           <main className="main">
-            <SocialShareButtons />
+          
             <section className={`container ${styles["page"]}`}>
               {project?.subtitle && (
                 <h1 className={`title2 ${styles["page__title"]}`}>

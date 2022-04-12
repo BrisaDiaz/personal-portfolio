@@ -42,12 +42,12 @@ export const TECHS = [
 
     resource_url: "https://nextjs.org/docs/getting-started",
   },
-  {
-    name: "React Hook Form",
-    category: "frontend",
-    logoName: "react-hook-form",
-    resource_url: "https://react-hook-form.com",
-  },
+  // {
+  //   name: "React Hook Form",
+  //   category: "frontend",
+  //   logoName: "react-hook-form",
+  //   resource_url: "https://react-hook-form.com",
+  // },
   {
     name: "React Query",
     logoName: "react-query",
@@ -58,8 +58,13 @@ export const TECHS = [
     name: "Material-UI",
     logoName: "material-ui",
     category: "frontend",
-
     resource_url: "https://mui.com/",
+  },
+  {
+    name: "Ant Desing",
+    logoName: "ant-desing",
+    category: "frontend",
+    resource_url: "https://ant.design/",
   },
   {
     name: "Styled Components",
@@ -72,10 +77,14 @@ export const TECHS = [
     name: "Tailwind",
     logoName: "tailwind",
     category: "frontend",
-
     resource_url: "https://tailwindcss.com",
   },
-
+  // {
+  //   name: "D3.js",
+  //   logoName: "d3",
+  //   category: "frontend",
+  //   resource_url: "https://d3js.org",
+  // },
   {
     name: "Apollo GraphQL",
     logoName: "apollo",
@@ -122,8 +131,33 @@ export const TECHS = [
     name: "Prisma",
     logoName: "prisma",
     category: "backend",
-    image: "/techs/prisma-3.svg",
+
     resource_url: "https://www.prisma.io/docs",
+  },
+  {
+    name: "Firebase",
+    logoName: "firebase",
+    category: "backend",
+
+    resource_url: "https://firebase.google.com/",
+  },
+  {
+    name: "Redis",
+    logoName: "redis",
+    category: "backend",
+    resource_url: "https://redis.io/",
+  },
+  {
+    name: "Puppeteer",
+    logoName: "puppeteer",
+    category: "backend",
+    resource_url: "https://developers.google.com/web/tools/puppeteer",
+  },
+  {
+    name: "Swagger",
+    logoName: "swagger",
+    category: "backend",
+    resource_url: "https://swagger.io/specification",
   },
   {
     name: "Socket.io",
@@ -154,31 +188,34 @@ export const TECHS = [
     resource_url: "https://docs.cypress.io",
   },
   {
+    name: "Supertest",
+    logoName: "supertest",
+    category: "testing",
+    resource_url: "https://www.npmjs.com/package/supertest",
+  },
+  {
     name: "Lighthouse",
     logoName: "lighthouse",
     category: "testing",
-
     resource_url: "https://developers.google.com/web/tools/lighthouse",
   },
   {
     name: "WAVE",
     logoName: "wave",
     category: "testing",
-
     resource_url: "https://wave.webaim.org",
   },
   {
     name: "Schema.org",
     logoName: "schema-org",
     category: "testing",
-
     resource_url: "https://schema.org/",
   },
+
   {
     name: "Next Auth",
     logoName: "next-auth",
     category: "other",
-
     resource_url: "https://next-auth.js.org/",
   },
   {
@@ -195,6 +232,7 @@ export const TECHS = [
 
     resource_url: "https://www.contentful.com",
   },
+
   {
     name: "Cloudinary",
     logoName: "cloudinary",
@@ -202,13 +240,7 @@ export const TECHS = [
 
     resource_url: "https://cloudinary.com/documentation",
   },
-  {
-    name: "Cusdis ",
-    logoName: "cusdis",
-    category: "other",
 
-    resource_url: "https://cusdis.com",
-  },
   {
     name: "Nodemailer",
     logoName: "nodemailer",
@@ -216,12 +248,7 @@ export const TECHS = [
 
     resource_url: "https://nodemailer.com/about",
   },
-  {
-    name: "Email.js",
-    logoName: "email-js",
-    category: "other",
-    resource_url: "https://www.emailjs.com",
-  },
+
   {
     name: "Git",
     logoName: "git",
@@ -231,6 +258,53 @@ export const TECHS = [
   },
 ];
 export const PROJECTS = [
+  {
+    id: 7,
+    slug: "smart-buy",
+    title: "Smart Buy",
+    color: "#FDE5BF",
+    subtitle: "Web Scraper App",
+
+    captions: [
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1649722451/proyects/logo_1_h6lncq.webp",
+        alt: "delivery app logo",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1649722704/proyects/screencapture-smart-buy-vercel-app-2022-04-11-21_14_36_nkmamm.webp",
+
+        alt: "home pager",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_500,w_900/v1649722727/proyects/screencapture-smart-buy-vercel-app-2022-04-11-21_17_23_o8kurc.webp",
+        original:
+          "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_1660,w_900/v1649722727/proyects/screencapture-smart-buy-vercel-app-2022-04-11-21_17_23_o8kurc.webp",
+        alt: "search screen",
+      },
+    ],
+    summary: "Supermarket products search engine and price tracker.",
+    language: "Typescript",
+    features: [
+      "Ability to search product in multiple supermarkets.",
+      "Ability to track product price variations.",
+    ],
+    technologies: {
+      frontend: ["react", "react router dom", "ant design", "d3.js"],
+      backend: [
+        "node.js",
+        "express",
+        "firebase",
+        "puppeteer",
+        "redis",
+        "supertest",
+        "swagger",
+      ],
+      hosting: "Vercel/Heroku",
+    },
+
+    source_code: "https://github.com/BrisaDiaz/smart-buy-backend",
+    demo: "https://smart-buy.vercel.app",
+  },
   {
     id: 6,
     slug: "tecno-rev",
@@ -550,7 +624,7 @@ export const PROJECTS = [
     technologies: {
       frontend: [
         "react",
-        "react-router-dom",
+        "react router dom",
         "styled-components",
         "react-hook-form",
         "socket.io-client",
