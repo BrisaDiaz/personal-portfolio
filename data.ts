@@ -281,6 +281,10 @@ export const PROJECTS = [
           "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_north,h_1660,w_900/v1649722727/proyects/screencapture-smart-buy-vercel-app-2022-04-11-21_17_23_o8kurc.webp",
         alt: "search screen",
       },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1649798824/proyects/screencapture-localhost-3000-2022-04-12-15_51_57_thkk7p.webp",
+        alt: "tracking page",
+      },
     ],
     summary: "Supermarket products search engine and price tracker.",
     language: "Typescript",
