@@ -79,6 +79,18 @@ export const TECHS = [
     category: "frontend",
     resource_url: "https://tailwindcss.com",
   },
+  {
+    name: "Storybook",
+    logoName: "storybook",
+    category: "frontend",
+    resource_url: "https://storybook.js.org/",
+  },
+  {
+    name: "Graphql",
+    logoName: "graphql",
+    category: "frontend",
+    resource_url: "https://graphql.org/",
+  },
   // {
   //   name: "D3.js",
   //   logoName: "d3",
@@ -86,7 +98,7 @@ export const TECHS = [
   //   resource_url: "https://d3js.org",
   // },
   {
-    name: "Apollo GraphQL",
+    name: "Apollo",
     logoName: "apollo",
     category: "backend",
 
@@ -159,6 +171,7 @@ export const TECHS = [
     category: "backend",
     resource_url: "https://swagger.io/specification",
   },
+
   {
     name: "Socket.io",
     logoName: "socket-io",
@@ -199,18 +212,18 @@ export const TECHS = [
     category: "testing",
     resource_url: "https://developers.google.com/web/tools/lighthouse",
   },
-  {
-    name: "WAVE",
-    logoName: "wave",
-    category: "testing",
-    resource_url: "https://wave.webaim.org",
-  },
-  {
-    name: "Schema.org",
-    logoName: "schema-org",
-    category: "testing",
-    resource_url: "https://schema.org/",
-  },
+  // {
+  //   name: "WAVE",
+  //   logoName: "wave",
+  //   category: "testing",
+  //   resource_url: "https://wave.webaim.org",
+  // },
+  // {
+  //   name: "Schema.org",
+  //   logoName: "schema-org",
+  //   category: "testing",
+  //   resource_url: "https://schema.org/",
+  // },
 
   {
     name: "Next Auth",
@@ -388,14 +401,14 @@ export const PROJECTS = [
       "Integration tests pipeline.",
       "Unit tests pipeline.",
       "Customizable form with validation.",
-      "Accessible components.",
+      "Documented, accessible components.",
       "Push notification.",
       "Loading indicators.",
       "Websocket connection.",
     ],
     language: "Typescript",
     technologies: {
-      frontend: ["next.js", "css"],
+      frontend: ["next.js", "css", "storybook"],
       backend: ["tradingeconomics websocket API"],
       testing: ["react-testing-library", "jest", "cypress", "lighthouse CL"],
       hosting: "Vercel",
@@ -673,16 +686,10 @@ export const PROJECTS = [
         alt: "website home page",
       },
       {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_custom,h_400,w_600,y_508,x_0/v1645834002/proyects/screencapture-photographer-portfolio-vercel-app-contacto-contact-html-2022-02-25-20_37_27_w5yciq.webp",
+        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,g_custom,y_508,x_0/v1650151381/proyects/screencapture-photographer-portfolio-vercel-app-contacto-contact-html-2022-04-16-20_21_13_yb9j8k.webp",
         original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1645834002/proyects/screencapture-photographer-portfolio-vercel-app-contacto-contact-html-2022-02-25-20_37_27_w5yciq.webp",
+          "https://res.cloudinary.com/myproyects/image/upload/v1650151381/proyects/screencapture-photographer-portfolio-vercel-app-contacto-contact-html-2022-04-16-20_21_13_yb9j8k.webp",
         alt: "contact screen",
-      },
-      {
-        src: "https://res.cloudinary.com/myproyects/image/upload/c_thumb,h_400,w_600/v1645833951/proyects/Captura_de_pantalla_2022-02-25_204752_yiw3fh.webp",
-        original:
-          "https://res.cloudinary.com/myproyects/image/upload/v1645833951/proyects/Captura_de_pantalla_2022-02-25_204752_yiw3fh.webp",
-        alt: "dispositive resolutions",
       },
     ],
 

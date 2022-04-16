@@ -12,10 +12,10 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           </h1>
 
           <p className={styles["section__text"]}>
-            I have two years of experience working on personal projects like
-            websites and web applications, using technologies at the forefront
-            in terms of improving the user experience, development process and
-            scalability of digital products.
+            I have experience working on personal projects like websites and web
+            applications, using technologies at the forefront in terms of
+            improving the user experience, development process and scalability
+            of digital products.
           </p>
           <p className={styles["section__text"]}>
             I describe myself as a curious and determined person, passionate
