@@ -5,12 +5,13 @@
   top: 0;
   left: -100%;
   z-index: 668;
-  background: var(--primary-90);
+
   overflow-y: auto;
   transition: all 0.5s ease-in-out;
   max-width: 100vw;
   overflow: hidden;
-  backdrop-filter: blur(1px) grayscale(1);
+    background: var(--background-color);
+
 }
 .menu--open {
   left: 0;
@@ -61,7 +62,7 @@
 }
 
 .menu__nav-link {
-  color: #ffffff;
+  color: var(--font-color);
 
   font-size: 24px;
   font-family: "IM Fell Double Pica", serif;
@@ -72,7 +73,7 @@
 }
 
 .menu__nav-link:hover {
-  background: var(--primary-light);
+  background: var(--high-contrast-color);
 }
 
 .menu__nav-link {

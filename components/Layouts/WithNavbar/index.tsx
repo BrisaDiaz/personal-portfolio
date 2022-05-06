@@ -63,9 +63,9 @@ export default function WithNavbar({
   };
   const MENU_LINKS = [
     { title: "About Me", href: "/" },
-    { title: "Tech Stack", href: "/technologies" },
-    { title: "Projects", href: "/projects" },
-    { title: "Contact", href: "/contact" },
+    { title: "Tech Stack", href: "/#technologies" },
+    { title: "Projects", href: "/#projects" },
+    { title: "Contact", href: "/#contact" },
   ];
   return (
     <>

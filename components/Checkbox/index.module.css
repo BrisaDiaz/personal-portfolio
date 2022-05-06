@@ -1,6 +1,6 @@
 .form-check {
   display: flex;
-
+align-items: center;
   margin: 12px 0;
 }
 
@@ -26,6 +26,10 @@
   appearance: none;
   margin: 0;
   cursor: pointer;
+}
+.form-check__label {
+  font-weight: 400;
+  opacity: 0.85;
 }
 .form-check__input:focus-visible {
   outline: 2px solid var(--primary-main);

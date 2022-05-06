@@ -8,19 +8,23 @@ export default function ProjectCard({ project }: { project: Project }) {
   const ref = React.useRef(null);
   const isVisible = useOnScreen(ref, "0px", true);
   return (
-    <article className={styles["project-card"]} role="article" ref={ref}>
-      {isVisible && (
-        <Link href={`/project/${project.slug}`} passHref>
-          <a href="" className={styles["project-card__link"]}>
-            <div className={styles["project-card__image-container"]}>
-              <Image
-                src={project.captions[0].src}
-                alt={project.captions[0].alt}
-                objectFit="cover"
-                layout="fill"
-                loading="eager"
-              />
-
+    <Link href={`/project/${project.slug}`} passHref>
+      <a href="" className={styles["project-card__link"]}>
+        <article className={styles["project-card"]} role="article" ref={ref}>
+          {isVisible && (
+            <>
+              <div className={styles["project-card__image-container"]}>
+                <p className={styles["project-card__tag"]}>
+                  {project.subtitle}
+                </p>
+                <Image
+                  src={project.captions[0].src}
+                  alt={project.captions[0].alt}
+                  objectFit="cover"
+                  layout="fill"
+                  loading="eager"
+                />
+              </div>
               <div className={styles["project-card__content"]}>
                 <h2 className={`title3 ${styles["project-card__title"]} `}>
                   {project.title}
@@ -29,10 +33,10 @@ export default function ProjectCard({ project }: { project: Project }) {
                   {project.summary}
                 </p>
               </div>
-            </div>
-          </a>
-        </Link>
-      )}
-    </article>
+            </>
+          )}
+        </article>
+      </a>
+    </Link>
   );
 }

@@ -6,7 +6,8 @@
   border: 2px solid transparent;
   top: 0.5rem;
   left: 0.5rem;
-  z-index: 699;
+      z-index:660;
+
   width: min-content;
   height: min-content;
 }
@@ -78,5 +79,6 @@ input:checked + .slider .crescent {
 @media (min-width: 900px) {
   .toggle-theme-wrapper {
     position: fixed;
+  z-index: 699;
   }
 }

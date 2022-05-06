@@ -37,6 +37,7 @@ import Typescript from "./Typescript";
 import Auth0 from "./Auth0";
 import NextAuth from "./NextAuth";
 import Graphql from "./Graphql";
+import GithubActions from './GithubActions'
 function TechLogo({ name }: { name: string }) {
   return name === "apollo" ? (
     <Apollo />
@@ -114,6 +115,8 @@ function TechLogo({ name }: { name: string }) {
     <Firebase />
   ) : name === "storybook" ? (
     <Storybook />
+  ) : name === "github-actions" ? (
+    <GithubActions />
   ) : null;
 }
 

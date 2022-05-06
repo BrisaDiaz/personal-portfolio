@@ -1,18 +1,18 @@
-import Avatar from "@/components/Avatar";
+import Image from "next/image";
 export default function AboutMeSection({ styles }: { styles: any }) {
   return (
-    <section className={`container ${styles["section"]}`} id="/">
+    <section className={`container  ${styles["section"]}`} id="/">
       <div className={styles["section__content"]}>
         <div>
           <h1 className={styles["section__title"]}>
             <span> {"Hi!, I'm brisa díaz\n"}</span>
             <br />
-            {"I'm a Web Developer"}
+            {"Full Stack Developer"}
             <br />& Frontend Specialist
           </h1>
 
           <p className={styles["section__text"]}>
-            I have experience working on personal projects like websites and web
+            I have experience working on side projects like websites and web
             applications, using technologies at the forefront in terms of
             improving the user experience, development process and scalability
             of digital products.
@@ -26,7 +26,9 @@ export default function AboutMeSection({ styles }: { styles: any }) {
       </div>
       <div className={styles["section__illustration-container"]}>
         {" "}
-        <Avatar />
+        <div className={styles["avatar"]}>
+          <Image src="/img/avatar.png" alt="avatar" width={320} height={320} />
+        </div>
       </div>
     </section>
   );

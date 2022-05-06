@@ -1,15 +1,16 @@
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid var(--low-contrast-color);
+  border: 1px solid var(--high-contrast-color);
+  
   margin-top: 30px;
   max-width: max-content;
   padding: 0 1rem;
   border-radius: 12px;
-  background: var(--low-contrast-color);
+
 }
 .filter-bar__filter {
-  width: 120px;
+  width: 130px;
 }
 
 .tech-grid {

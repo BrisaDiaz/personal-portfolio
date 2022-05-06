@@ -21,11 +21,11 @@
 }
 
 :root {
-  --low-contrast-color: hsl(0, 0%, 94%);
+  --low-contrast-color: #f6f6f6;
 
   --high-contrast-color: hsl(0, 0%, 85%);
   --font-color: #2f2e41;
-  --background-color: #f4f4f4;
+  --background-color: rgb(248, 248, 248);
   --primary-main: #c78989;
   --primary-dark: #a0616a;
   --primary-light: #cc9798;
@@ -59,13 +59,13 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
-  scroll-margin-top: 60px;
   font-size: 14px;
   position: relative;
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
   font-display: swap;
   background-color: var(--background-color);
+
 }
 .main {
   margin: 1rem auto 0;
@@ -75,10 +75,8 @@ body {
 }
 .full-height {
   min-height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  
+
 }
 .noScroll {
   overflow: hidden;
@@ -104,8 +102,7 @@ h1,
 h2,
 .title2 {
   font-size: 30px;
-  font-family: "IM Fell Double Pica", serif;
-
+    font-family: "Roboto", sans-serif;
   margin: 0;
   color: var(--primary-dark);
 }
@@ -159,7 +156,7 @@ h4,
 
 .container {
   scroll-margin-top: 100px;
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   max-width: 1250px;
   position: relative;
   margin: 0 auto;

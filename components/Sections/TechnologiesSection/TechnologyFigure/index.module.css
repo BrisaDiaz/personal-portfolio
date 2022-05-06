@@ -36,7 +36,8 @@
 .tech-link__figcaption {
   margin: 1rem auto;
   font-size: 14px;
-  font-weight: 600;
+  font-family: "IM Fell Double Pica", serif;
+
 }
 .tech-link:hover:after {
   content: "◥";

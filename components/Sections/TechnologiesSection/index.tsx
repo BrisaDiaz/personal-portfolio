@@ -7,7 +7,7 @@ export default function TechnologiesSection({
   technologies: Technology[];
 }) {
   return (
-    <section className="container" id="technologies">
+    <section className="container full-height" id="technologies">
       <h1 className="title2">Tech Stack</h1>
       <TechnologiesPanel technologies={technologies} />
     </section>

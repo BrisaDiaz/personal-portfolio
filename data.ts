@@ -269,6 +269,13 @@ export const TECHS = [
 
     resource_url: "https://git-scm.com/doc",
   },
+    {
+    name: "Github Actions",
+    logoName: "github-actions",
+    category: "other",
+
+    resource_url: "https://github.com/features/actions",
+  },
 ];
 export const PROJECTS = [
   {
@@ -302,8 +309,8 @@ export const PROJECTS = [
     summary: "Supermarket products search engine and price tracker.",
     language: "Typescript",
     features: [
-      "Ability to search product in multiple supermarkets.",
-      "Ability to track product price variations.",
+      "Search product in multiple supermarkets.",
+      "Track product price variations.",
     ],
     technologies: {
       frontend: ["react", "react router dom", "ant design", "d3.js"],
@@ -359,9 +366,9 @@ export const PROJECTS = [
       "Unit tests and Integration tests setup.",
       "Accessible components.",
       "Lazy loading and loading indicators.",
-      "Ability to set random posts,popular posts,feature post and social channels.",
-      "Ability to publish,unpublish and delete posts and new pages.",
-      "Ability to share and comment post.",
+      "Set random posts,popular posts,feature post and social channels.",
+      "Publish,unpublish and delete posts and new pages.",
+      "Share and comment post.",
       "Comments notifications by email  and a vcbility make them public if desired.",
       "Contact form with real time validation.",
     ],
@@ -423,7 +430,7 @@ export const PROJECTS = [
     slug: "booking_app",
     title: "booking app",
     color: "#fff",
-    subtitle: "End-to-end type safety SPA",
+    subtitle: "Graphql App",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1642998067/proyects/target_2_aqjj3g.webp",
@@ -464,17 +471,17 @@ export const PROJECTS = [
       "Hotel filtering by category, facilities, services, activities, spoken languages and restrictions.",
       "Pagination.",
       "Push notifications.",
-      "Ability to check availability and reserve hotel rooms.",
+      "Check availability and reserve hotel rooms.",
       "Authentication.",
       "Multi hotels and admins support.",
-      "Ability to customize hotel and room thumbnails.",
-      "Ability to edit hotel and rooms genetic information and booking logistics.",
-      "Ability to categorize, assign available quota and unique identifier to each hotel room.",
-      "Ability to visualize, search, filter, accept or reject booking requests.",
-      "Possibility of uploading and managing reservations made by external methods.",
-      "Ability to visualize information, search, filter guests.",
-      "Ability to view the calendar of active, canceled or completed reservations, to be able to view details and cancel reservations.",
-      "Ability to manage through a folder system and upload media files to cloudinary.",
+      "Customize hotel and room thumbnails.",
+      "Edit hotel and rooms genetic information and booking logistics.",
+      "Categorize, assign available quota and unique identifier to each hotel room.",
+      "Visualize, search, filter, accept or reject booking requests.",
+      "Update and manage reservations made by external methods.",
+      "Visualize information, search, filter guests.",
+      "Calendar with active, canceled or completed reservations, reservations details and cancel reservations.",
+      "Folder system and upload media files to cloudinary.",
     ],
     language: "Typescript",
     technologies: {
@@ -540,12 +547,12 @@ export const PROJECTS = [
       "Progressive web app.",
       "Unit Tests.",
       "End to end tests.",
-      "Ability to display the collection tag on recipes already stored by the user.",
+      "Display of the collection tag on recipes already stored by the user.",
       "Full tested ARM, macros and meal size calculators.",
       "Recipe details page.",
       "User recipes collections pages.",
-      "Ability to create, rename and delete collections.",
-      "Ability to store, move and delete recipes.",
+      "Create, rename and delete collections.",
+      "Store, move and delete recipes.",
       "Real time form validation.",
       "Loading indicators.",
       "Protected routes.",
@@ -577,7 +584,7 @@ export const PROJECTS = [
     slug: "delivery_app",
     title: "delivery app",
     color: "#262626",
-    subtitle: "With real time notifications SPA",
+    subtitle: "SocketIO MERN stack App",
 
     captions: [
       {
@@ -630,13 +637,13 @@ export const PROJECTS = [
       "Access to Public and Private routes base on roles.",
       "Functional contact section with form validation.",
       "Loading modal and loading form indicators.",
-      "Ability to add, set desired units and remove products from the cart.",
-      "Ability to edit profile.",
-      "Ability to view the history of orders with their status.",
-      "Ability of placing an order and being able to cancel it easily in case it has not yet been accepted.",
-      "Ability to add new products, edit, delete or hide them.",
-      "Ability of adding new categories, renaming them or eliminating them together with the products that belong to them.",
-      "Ability of updating the current status of the order.",
+      "Add, set desired units and remove products from the cart.",
+      "Editable profile.",
+      "History of orders with their status.",
+      "Make an order and cancel it easily in case it has not yet been accepted.",
+      "Add new products, edit, delete or hide them.",
+      "Add new categories, renaming them or eliminating them together with the products that belong to them.",
+      "Update of the order status.",
     ],
     technologies: {
       frontend: [
@@ -672,7 +679,7 @@ export const PROJECTS = [
     id: 1,
     slug: "photographer_portfolio",
     title: "photographer portfolio",
-    subtitle: "Modern and interactive website",
+    subtitle: "interactive vanillaJS website",
     color: "#34393f",
     captions: [
       {
@@ -725,5 +732,5 @@ export const SKILLS = [
   "Experience implementing Github pipelines.",
   "Experience  applying SEO optimization and accessibility.",
 
-  "Ability to translate business logic into code.",
+  " translate business logic into code.",
 ];

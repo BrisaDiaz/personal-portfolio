@@ -16,6 +16,6 @@
 }
 @media (min-width: 1200px) {
   .panel {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
   }
 }
