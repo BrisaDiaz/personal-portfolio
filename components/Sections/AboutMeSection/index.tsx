@@ -27,7 +27,14 @@ export default function AboutMeSection({ styles }: { styles: any }) {
       <div className={styles["section__illustration-container"]}>
         {" "}
         <div className={styles["avatar"]}>
-          <Image src="/img/avatar.png" alt="avatar" width={320} height={320} />
+          <Image
+            src="/img/avatar.png"
+            alt="avatar"
+            width={320}
+            height={320}
+            placeholder="blur"
+            blurDataURL="/img/avatar.png"
+          />
         </div>
       </div>
     </section>
