@@ -101,7 +101,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
 
           <link rel="icon" href="/favicon.ico" />
-          <meta charSet="utf-8" />
+    
 
           <meta
             property="og:title"

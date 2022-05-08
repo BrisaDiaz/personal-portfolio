@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/project/${project.slug}`} passHref>
       <a href="" className={styles["project-card__link"]}>
-        <article className={styles["project-card"]} role="article" ref={ref}>
+        <article className={styles["project-card"]} ref={ref}>
           {isVisible && (
             <>
               <div className={styles["project-card__image-container"]}>

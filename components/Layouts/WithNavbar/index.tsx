@@ -13,23 +13,11 @@ export default function WithNavbar({
   const [isRouteChanging, setIsRouteChanging] = React.useState(false);
 
   React.useEffect(() => {
-    const focusableElements =
-      'a,button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-
     router.events.on("routeChangeStart", () => {
       setIsRouteChanging(true);
     });
     router.events.on("routeChangeComplete", () => {
       setIsRouteChanging(false);
-      const main = document.querySelector("main");
-      if (!main) return;
-      const firstFocusableElement = main.querySelectorAll(
-        focusableElements
-      )[0] as HTMLButtonElement;
-
-      if (firstFocusableElement) {
-        firstFocusableElement.focus();
-      }
     });
     return () => {
       setIsRouteChanging(false); // This worked for me

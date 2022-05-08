@@ -8,7 +8,7 @@ export default function LoadingModal({
   children: React.ReactElement;
 }) {
   return (
-    <aside
+    <div
       aria-busy={isOpen}
       aria-hidden={!isOpen}
       aria-label="loading"
@@ -17,6 +17,6 @@ export default function LoadingModal({
       role="alert"
     >
       {children}
-    </aside>
+    </div>
   );
 }

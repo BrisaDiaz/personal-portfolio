@@ -4,7 +4,7 @@ export default function useModalFocus({
   isOpen,
   onEscape,
 }: {
-  ref: any;
+  ref: React.MutableRefObject<null>;
   isOpen: boolean;
   onEscape?: () => void;
 }) {
@@ -32,7 +32,7 @@ export default function useModalFocus({
     const modal = ref.current as HTMLElement;
 
     const firstFocusableElement = modal.querySelectorAll(
-      focusableElements
+      focusableElements,
     )[0] as HTMLElement; // get first element to be focused inside modal
     const focusableContent = modal.querySelectorAll(focusableElements);
     const lastFocusableElement = focusableContent[

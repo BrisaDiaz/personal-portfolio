@@ -14,9 +14,7 @@ export default function Modal({
   children: React.ReactNode;
 }) {
   const [isInteracting, setIsInteracting] = React.useState<boolean>(false);
-  const modalRef = React.useRef(null) as
-    | React.LegacyRef<HTMLElement>
-    | undefined;
+  const modalRef = React.useRef(null) 
   const handleModalInteraction = () => {
     if (isInteracting) return;
     onClose();
@@ -28,7 +26,7 @@ export default function Modal({
   });
 
   return (
-    <aside
+    <div
       ref={modalRef}
       aria-hidden={!isOpen}
       className={`${styles.modal} ${
@@ -61,6 +59,6 @@ export default function Modal({
         </div>
         {children}
       </article>
-    </aside>
+    </div>
   );
 }

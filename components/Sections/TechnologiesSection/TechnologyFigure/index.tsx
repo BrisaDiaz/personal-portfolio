@@ -11,13 +11,11 @@ function TechnologyFigure({ technology }: { technology: Technology }) {
       title={"documentation"}
       className={`${styles["tech-link"]} `}
     >
-      <figure role="figure" className={styles["tech-link__figure"]}>
+      <div className={styles["tech-link__figure"]}>
         <TechLogo name={technology.logoName} />
 
-        <figcaption className={styles["tech-link__figcaption"]}>
-          {technology.name}
-        </figcaption>
-      </figure>
+        <p className={styles["tech-link__figcaption"]}>{technology.name}</p>
+      </div>
     </a>
   );
 }
