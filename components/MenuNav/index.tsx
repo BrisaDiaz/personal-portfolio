@@ -7,13 +7,13 @@ export default function MenuNav({
   isOpen,
   links,
   onClose,
-
+  activeLink,
   onNavigate,
 }: {
   isOpen: boolean;
   links: Array<{ title: string; href: string }>;
   onClose: () => void;
-
+  activeLink?: string;
   onNavigate: (href: string) => void;
 }) {
   return (
@@ -29,7 +29,9 @@ export default function MenuNav({
               role="menuitem"
               href=""
               title={link.title + " section"}
-              className={styles["menu__nav-link"]}
+              className={`${styles["menu__nav-link"]} ${
+                activeLink === link.href && styles["menu__nav-link--active"]
+              }`}
               onClick={() => onNavigate(link.href)}
             >
               {link.title}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
+
 import SVG from "@/components/SVG";
 import { PROJECTS } from "data";
 import type { NextPage } from "next";
@@ -10,7 +10,7 @@ import Carousel from "@/components/Carousel/index";
 
 import styles from "@/styles/Project.module.css";
 import ImagePlaceholder from "@/components/ImagePlaceholder/index";
-import WithNavbar from "@/components/Layouts/WithNavbar";
+
 import { generateProjectSchema } from "schemaData";
 
 const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
@@ -59,7 +59,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
           }}
         />
       </Head>
-      <WithNavbar>
+  
         <>
           <main className="main">
           
@@ -205,7 +205,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
             <ImageBackdrop {...backdropState} onClose={closeBackdrop} />
           </main>
         </>
-      </WithNavbar>
+     
     </div>
   );
 };

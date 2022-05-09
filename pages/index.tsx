@@ -1,7 +1,7 @@
 import React from "react";
 
 import type { NextPage } from "next";
-import WithNavbar from "@/components/Layouts/WithNavbar";
+
 import Head from "next/head";
 
 import styles from "@/styles/Home.module.css";
@@ -33,15 +33,14 @@ const Home: NextPage = () => {
           }}
         />
       </Head>
-      <WithNavbar>
-        <main className={`main full-height `}>
-          <SocialShareButtons />
-          <AboutMeSection styles={styles} />
-          <TechnologiesSection technologies={TECHS} />
-          <ProjectsSection projects={PROJECTS} />
-          <Contact />
-        </main>
-      </WithNavbar>
+
+      <main className={`main full-height `}>
+        <SocialShareButtons />
+        <AboutMeSection styles={styles} />
+        <TechnologiesSection technologies={TECHS} />
+        <ProjectsSection projects={PROJECTS} />
+        <Contact />
+      </main>
     </div>
   );
 };

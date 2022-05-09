@@ -31,7 +31,7 @@
   overflow: visible;
   margin-bottom: 0;
   gap:2rem;
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 30px);
 
 }
 .section__illustration-container {

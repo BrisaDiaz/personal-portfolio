@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MenuNav from "@/components/MenuNav";
 
 import { useRouter } from "next/router";
 import styles from "./index.module.css";
+import { route } from "next/dist/server/router";
 export default function WithNavbar({
   children,
 }: {
@@ -28,7 +29,7 @@ export default function WithNavbar({
     activeLink: string;
   }>({
     isOpen: false,
-    activeLink: "aboutMe",
+    activeLink: "/",
   });
 
   const handleNavigation = (href: string) => {
@@ -49,6 +50,7 @@ export default function WithNavbar({
       isOpen: false,
     });
   };
+
   const MENU_LINKS = [
     { title: "About Me", href: "/" },
     { title: "Tech Stack", href: "/#technologies" },
