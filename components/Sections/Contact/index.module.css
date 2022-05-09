@@ -91,24 +91,28 @@
   height: 1rem;
   align-items: center;
   gap: 0.5rem;
-}
 
+}
+.banner__contact-link{
+  border: 1px solid;
+    padding:1.3rem 0.6rem 1.3rem 0.5rem ;
+    border-radius: 4px;
+}
+.banner__contact-link:hover,.banner__contact-link:focus-within{
+opacity: 0.8;
+}
 .banner__contact-list-item p {
   position: relative;
 
-  transition: all 0.2s ease-in-out;
-  z-index: 1;
+
+
   font-weight: 600;
 }
-.banner__contact-list-item a {
-  text-decoration: 1px dashed underline;
-  text-underline-offset: 3px;
-}
+
 .banner__contact-list-item:hover,
 .banner__contact-list-item a:focus-visible {
   outline: none;
-  text-decoration: 2px solid underline;
-  text-underline-offset: 3px;
+
 }
 
 .banner__illustration {

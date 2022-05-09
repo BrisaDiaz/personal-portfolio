@@ -21,11 +21,11 @@ export default function SVG({
     >
       <path
         d="M40 0H10C4.47715 0 0 4.47715 0 10V40C0 45.5228 4.47715 50 10 50H40C45.5228 50 50 45.5228 50 40V10C50 4.47715 45.5228 0 40 0Z"
-        fill={bg || "var(--high-contrast-color)"}
+        fill={bg || "transparent"}
       />
       <path
         d="M40 0H10C4.47715 0 0 4.47715 0 10V40C0 45.5228 4.47715 50 10 50H40C45.5228 50 50 45.5228 50 40V10C50 4.47715 45.5228 0 40 0Z"
-        fill={bg || "var(--high-contrast-color)"}
+        fill={bg || "transparent"}
       />
       <path
         fillRule="evenodd"
@@ -44,7 +44,7 @@ export default function SVG({
     >
       <path
         d="M40 0H10C4.47715 0 0 4.47715 0 10V40C0 45.5228 4.47715 50 10 50H40C45.5228 50 50 45.5228 50 40V10C50 4.47715 45.5228 0 40 0Z"
-        fill={bg || "var(--high-contrast-color)"}
+        fill={bg || "transparent"}
       />
       <path
         d="M8.33984 16.425L25.0003 24.7541L41.6607 16.425C41.599 15.3634 41.1338 14.3656 40.3603 13.6359C39.5868 12.9061 38.5637 12.4998 37.5003 12.5H12.5003C11.4369 12.4998 10.4137 12.9061 9.64022 13.6359C8.86674 14.3656 8.40152 15.3634 8.33984 16.425Z"
@@ -65,7 +65,7 @@ export default function SVG({
     >
       <path
         d="M40 0H10C4.47715 0 0 4.47715 0 10V40C0 45.5228 4.47715 50 10 50H40C45.5228 50 50 45.5228 50 40V10C50 4.47715 45.5228 0 40 0Z"
-        fill={bg || "var(--high-contrast-color)"}
+        fill={bg || "transparent"}
       />
       <path
         fillRule="evenodd"
@@ -104,8 +104,8 @@ export default function SVG({
           y2="50"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={bg || "var(--high-contrast-color)"} />
-          <stop offset="1" stopColor={bg || "var(--high-contrast-color)"} />
+          <stop stopColor={bg || "transparent"} />
+          <stop offset="1" stopColor={bg || "transparent"} />
         </linearGradient>
       </defs>
     </svg>
@@ -119,7 +119,7 @@ export default function SVG({
     >
       <path
         d="M40 0H10C4.47715 0 0 4.47715 0 10V40C0 45.5228 4.47715 50 10 50H40C45.5228 50 50 45.5228 50 40V10C50 4.47715 45.5228 0 40 0Z"
-        fill={bg || "var(--high-contrast-color)"}
+        fill={bg || "transparent"}
       />
       <path
         d="M8.3335 10.4163C8.3335 9.86381 8.55298 9.3339 8.94368 8.9432C9.33438 8.5525 9.8643 8.33301 10.4168 8.33301H14.9022C15.3954 8.33323 15.8724 8.50838 16.2486 8.8273C16.6247 9.14621 16.8756 9.58821 16.9564 10.0747L18.4981 19.3142C18.5717 19.7543 18.5022 20.2063 18.2997 20.6038C18.0972 21.0015 17.7723 21.3235 17.3731 21.5226L14.1481 23.133C15.3046 25.999 17.0269 28.6023 19.2122 30.7876C21.3974 32.973 24.0009 34.6952 26.8668 35.8517L28.4793 32.6267C28.6783 32.2278 29.0001 31.9033 29.3972 31.7008C29.7943 31.4983 30.2458 31.4286 30.6856 31.5017L39.9252 33.0435C40.4116 33.1243 40.8536 33.3751 41.1726 33.7512C41.4914 34.1273 41.6666 34.6045 41.6668 35.0976V39.583C41.6668 40.1356 41.4473 40.6655 41.0567 41.0561C40.6659 41.4468 40.1361 41.6663 39.5834 41.6663H35.4168C20.4584 41.6663 8.3335 29.5413 8.3335 14.583V10.4163Z"
@@ -156,8 +156,8 @@ export default function SVG({
           y2="50"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={bg || "var(--high-contrast-color)"} />
-          <stop offset="1" stopColor={bg || "var(--high-contrast-color)"} />
+          <stop stopColor={bg || "transparent"} />
+          <stop offset="1" stopColor={bg || "transparent"} />
         </linearGradient>
       </defs>
     </svg>
