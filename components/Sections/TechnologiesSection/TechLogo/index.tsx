@@ -38,6 +38,7 @@ import Auth0 from "./Auth0";
 import NextAuth from "./NextAuth";
 import Graphql from "./Graphql";
 import GithubActions from './GithubActions'
+import W3c from "./W3c";
 function TechLogo({ name }: { name: string }) {
   return name === "apollo" ? (
     <Apollo />
@@ -117,6 +118,8 @@ function TechLogo({ name }: { name: string }) {
     <Storybook />
   ) : name === "github-actions" ? (
     <GithubActions />
+  ) : name === "w3c" ? (
+    <W3c />
   ) : null;
 }
 

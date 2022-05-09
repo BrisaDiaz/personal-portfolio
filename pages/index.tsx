@@ -18,14 +18,15 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>
-          Brisa Díaz | Web Developer & Frontend Development Specialist 👩‍💻
+          Brisa Díaz | Full Stack Developer & Frontend Development Specialist 👩‍💻
         </title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateProjectListSchema(PROJECTS)),
           }}
-        />  <script
+        />{" "}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateTechnologiesSchema(TECHS)),

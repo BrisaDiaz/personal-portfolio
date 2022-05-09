@@ -212,18 +212,18 @@ export const TECHS = [
     category: "testing",
     resource_url: "https://developers.google.com/web/tools/lighthouse",
   },
-  // {
-  //   name: "WAVE",
-  //   logoName: "wave",
-  //   category: "testing",
-  //   resource_url: "https://wave.webaim.org",
-  // },
-  // {
-  //   name: "Schema.org",
-  //   logoName: "schema-org",
-  //   category: "testing",
-  //   resource_url: "https://schema.org/",
-  // },
+  {
+    name: "WAVE",
+    logoName: "wave",
+    category: "testing",
+    resource_url: "https://wave.webaim.org",
+  },
+  {
+    name: "W3c Validators",
+    logoName: "w3c",
+    category: "testing",
+    resource_url: "https://validator.w3.org/services",
+  },
 
   {
     name: "Next Auth",
@@ -269,7 +269,7 @@ export const TECHS = [
 
     resource_url: "https://git-scm.com/doc",
   },
-    {
+  {
     name: "Github Actions",
     logoName: "github-actions",
     category: "other",

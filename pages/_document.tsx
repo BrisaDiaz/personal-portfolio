@@ -101,11 +101,10 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
 
           <link rel="icon" href="/favicon.ico" />
-    
 
           <meta
             property="og:title"
-            content="Brisa Díaz | Web Developer & Frontend Development Specialist 👩‍💻"
+            content="Brisa Díaz | Full Stack Developer & Frontend Development Specialist 👩‍💻"
           />
           <meta property="og:type" content="article" />
           <meta property="og:image" content="/org.png" />
@@ -116,24 +115,24 @@ class MyDocument extends Document {
           <meta property="og:image:height" content="630" />
           <meta
             property="og:description"
-            content="I'm enthusiastic web developer, passionate about learning innovative technologies and digital-product development."
+            content="I'm enthusiastic full stack developer, passionate about learning innovative technologies and digital-product development."
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:title"
-            content="Brisa Díaz | Web Developer & Frontend Specialist 👩‍💻"
+            content="Brisa Díaz | Full Stack Developer & Frontend Specialist 👩‍💻"
           />
           <meta property="twitter:image" content="/org.png" />
           <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
 
           <meta
             name="twitter:image:alt"
-            content="Brisa Díaz frontend developer"
+            content="Brisa Díaz full stack developer "
           />
 
           <meta
             name="description"
-            content="I'm enthusiastic web developer width  2 years of experience and accumulated  knowledge on the development of websites and fullstack  applications."
+            content="I'm enthusiastic full stack developer width  2 years of experience and accumulated  knowledge on the development of websites and fullstack  applications."
           />
 
           <script
