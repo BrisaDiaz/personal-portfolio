@@ -1,21 +1,46 @@
-@keyframes appear {
+@keyframes scale-up-center {
   0% {
-    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 0;
+             order: 2;
+                   
   }
   100% {
-    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+  order: 1;
+    
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+             order: 1;
+               
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+             opacity: 0;
+             order: 2;
+         
   }
 }
 .tech-link {
   transition: all 1s ease-in-out;
- 
-  opacity: 1;
-  order: 1;
-  animation: appear 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+   position: relative;
+
+animation: scale-up-center .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   outline-color: var(--font-color);
   outline-offset: 3px;
 }
-
+.tech-link--hidden{
+  animation: scale-down-center .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 .tech-link__figure {
   position: relative;
   flex-direction: column;
@@ -34,6 +59,7 @@
   transition: all 0.3s ease-in-out;
 }
 .tech-link__figcaption {
+
   margin: 1rem auto;
   font-size: 14px;
   font-family: "IM Fell Double Pica", serif;

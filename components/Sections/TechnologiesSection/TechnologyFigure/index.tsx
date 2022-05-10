@@ -2,14 +2,27 @@ import React from "react";
 import styles from "./index.module.css";
 import TechLogo from "@/components/Sections/TechnologiesSection/TechLogo";
 import { Technology } from "interfaces";
-function TechnologyFigure({ technology }: { technology: Technology }) {
+import useOnScreen from "@/hooks/useOnScreen";
+
+function TechnologyFigure({
+  technology,
+  visible,
+}: {
+  technology: Technology;
+  visible: boolean;
+}) {
+  const ref = React.useRef(null);
+  const isInScrollView = useOnScreen(ref, "0px", true);
   return (
     <a
+      ref={ref}
       href={technology.resource_url}
       target="_blank"
       rel="noreferrer"
       title={"documentation"}
-      className={`${styles["tech-link"]} `}
+      className={`${styles["tech-link"]} ${
+        !visible || !isInScrollView ? styles["tech-link--hidden"] : ""
+      }`}
     >
       <div className={styles["tech-link__figure"]}>
         <TechLogo name={technology.logoName} />

@@ -24,6 +24,10 @@ export default function WithNavbar({
       setIsRouteChanging(false); // This worked for me
     };
   }, [router.events]);
+  useEffect(() => {
+    if (!window.location.hash) window.scrollTo(0, 0);
+  }, []);
+  
   const [menuState, setMenuState] = React.useState<{
     isOpen: boolean;
     activeLink: string;

@@ -1,7 +1,7 @@
-@keyframes slide-in-left {
+@keyframes slide-left {
   0% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
@@ -43,9 +43,7 @@
   position: relative;
   z-index: 10;
 }
-.form-section {
-  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
+
 
 .banner__inner {
   margin: auto;
@@ -65,10 +63,15 @@
   flex-wrap: wrap;
   margin: 0 auto;
   grid-gap: 0;
-  column-gap: 2rem;
 
   font-style: inherit;
   font-size: 12px;
+}
+.socials-section{
+  transform: translateX(1000px);
+}
+.socials-section--visible{
+  animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .banner__contact-list {
   padding: 0;

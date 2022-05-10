@@ -67,11 +67,13 @@ export default function Panel({
       </div>
 
       <div className={styles["tech-grid"]}>
-        {technologies.map((technology) =>
-          Boolean(activeTechCategories.includes(technology.category)) ? (
-            <TechnologyFigure key={technology.name} technology={technology} />
-          ) : null
-        )}
+        {technologies.map((technology) => (
+          <TechnologyFigure
+            key={technology.name}
+            technology={technology}
+            visible={activeTechCategories.includes(technology.category)}
+          />
+        ))}
       </div>
     </>
   );

@@ -388,7 +388,7 @@ export const PROJECTS = [
     slug: "ORTEX_login",
     title: "ORTEX login",
     color: "#0f181b",
-    subtitle: "ORTEX Technical task",
+    subtitle: "Github actions pipeline",
     captions: [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1645665799/proyects/ortex_1_ishhld.webp",

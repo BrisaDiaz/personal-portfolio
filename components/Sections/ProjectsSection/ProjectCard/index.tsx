@@ -10,31 +10,32 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/project/${project.slug}`} passHref>
       <a href="" className={styles["project-card__link"]}>
-        <article className={styles["project-card"]} ref={ref}>
-          {isVisible && (
-            <>
-              <div className={styles["project-card__image-container"]}>
-                <p className={styles["project-card__tag"]}>
-                  {project.subtitle}
-                </p>
-                <Image
-                  src={project.captions[0].src}
-                  alt={project.captions[0].alt}
-                  objectFit="cover"
-                  layout="fill"
-                  loading="eager"
-                />
-              </div>
-              <div className={styles["project-card__content"]}>
-                <h2 className={`title3 ${styles["project-card__title"]} `}>
-                  {project.title}
-                </h2>
-                <p className={styles["project-card__summary"]}>
-                  {project.summary}
-                </p>
-              </div>
-            </>
-          )}
+        <article
+          className={`${styles["project-card"]} ${
+            isVisible ? styles["project-card--visible"] : ""
+          }`}
+          ref={ref}
+        >
+          <>
+            <div className={styles["project-card__image-container"]}>
+              <p className={styles["project-card__tag"]}>{project.subtitle}</p>
+              <Image
+                src={project.captions[0].src}
+                alt={project.captions[0].alt}
+                objectFit="cover"
+                layout="fill"
+                loading="eager"
+              />
+            </div>
+            <div className={styles["project-card__content"]}>
+              <h2 className={`title3 ${styles["project-card__title"]} `}>
+                {project.title}
+              </h2>
+              <p className={styles["project-card__summary"]}>
+                {project.summary}
+              </p>
+            </div>
+          </>
         </article>
       </a>
     </Link>
