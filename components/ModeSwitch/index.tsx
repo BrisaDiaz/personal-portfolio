@@ -1,5 +1,6 @@
 import { ChangeEventHandler, useEffect, useState } from "react";
 import styles from "./index.module.css";
+import * as ga from "@/libs/googleAnalytics";
 
 const DarkMode = () => {
   const [isDarkDefault, setDefaultDarkTheme] = useState(false);
@@ -33,11 +34,24 @@ const DarkMode = () => {
   }, []);
 
   const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
-    console.log("change");
     if (e.target.checked) {
       setDark();
+      ga.event({
+        action: "Settings",
+        params: {
+          setting: "mode",
+          status: "dark",
+        },
+      });
     } else {
       setLight();
+      ga.event({
+        action: "Settings",
+        params: {
+          setting: "mode",
+          status: "light",
+        },
+      });
     }
   };
   if (!isMounted) return <div />;

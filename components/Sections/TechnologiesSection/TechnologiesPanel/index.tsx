@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
 import Checkbox from "@/components/Checkbox";
-
+import * as ga from "@/libs/googleAnalytics";
 import { Technology } from "interfaces";
 import TechnologyFigure from "../TechnologyFigure";
 export default function Panel({
@@ -19,11 +19,26 @@ export default function Panel({
   const handleTechCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     const category = e.target.name;
     if (activeTechCategories.includes(category)) {
-      return setActiveTechCategories(
-        activeTechCategories.filter((cat) => cat !== category)
+      setActiveTechCategories(
+        activeTechCategories.filter((cat) => cat !== category),
       );
+      ga.event({
+        action: "Tecnology Filter",
+        params: {
+          category,
+          status: "hidden",
+        },
+      });
+      return;
     }
     setActiveTechCategories([...activeTechCategories, category]);
+    ga.event({
+      action: "Tecnology Filter",
+      params: {
+        category,
+        status: "shown",
+      },
+    });
   };
 
   return (

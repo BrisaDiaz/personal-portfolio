@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export default function AboutMeSection({ styles }: { styles: any }) {
   return (
     <section className={`container  ${styles["section"]}`} id="/">

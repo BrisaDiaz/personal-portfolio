@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import MenuNav from "@/components/MenuNav";
-
+import * as ga from "@/libs/googleAnalytics";
 import { useRouter } from "next/router";
 import styles from "./index.module.css";
-import { route } from "next/dist/server/router";
+
 export default function WithNavbar({
   children,
 }: {
@@ -19,6 +19,13 @@ export default function WithNavbar({
     });
     router.events.on("routeChangeComplete", () => {
       setIsRouteChanging(false);
+      ga.pageview(window.location.pathname);
+    });
+    router.events.on("hashChangeComplete", () => {
+      ga.event({
+        action: "Navigation",
+        params: { section_name: window.location.hash?.replace("#", "") },
+      });
     });
     return () => {
       setIsRouteChanging(false); // This worked for me
@@ -27,7 +34,7 @@ export default function WithNavbar({
   useEffect(() => {
     if (!window.location.hash) window.scrollTo(0, 0);
   }, []);
-  
+
   const [menuState, setMenuState] = React.useState<{
     isOpen: boolean;
     activeLink: string;

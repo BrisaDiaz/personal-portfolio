@@ -4,6 +4,7 @@ import Illustration from "@/components/Sections/Contact/Illustration";
 import ContactForm from "@/components/ContactForm";
 import SVG from "@/components/SVG";
 import useOnScreen from "@/hooks/useOnScreen";
+import * as ga from "@/libs/googleAnalytics";
 export default function Contact({
   onSubmit,
 }: {
@@ -14,6 +15,14 @@ export default function Contact({
 }) {
   const ref = React.useRef(null);
   const isVisible = useOnScreen(ref, "-200px", true);
+  const handleSocialsNavigation = (socialMedia: string) => {
+    ga.event({
+      action: "Profile Visit",
+      params: {
+        social_media: socialMedia,
+      },
+    });
+  };
   return (
     <section className={styles.container} ref={ref}>
       <article className={styles.banner}>
@@ -40,6 +49,7 @@ export default function Contact({
                     target="_blank"
                     rel="noreferrer"
                     title="Linkedin profile"
+                    onClick={() => handleSocialsNavigation("linkedin")}
                   >
                     <SVG name="linkedin-fill" />
 
@@ -53,6 +63,7 @@ export default function Contact({
                     target="_blank"
                     rel="noreferrer"
                     title="Github repository"
+                    onClick={() => handleSocialsNavigation("github")}
                   >
                     <SVG name="github-fill" />
                     <p>/BrisaDiaz</p>

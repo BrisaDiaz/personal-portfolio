@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./index.module.css";
 import Logo from "./Logo";
-
+import * as ga from "@/libs/googleAnalytics";
 export default function SocialShareButton() {
   const [pageUrl, setPageUrl] = React.useState("");
 
@@ -59,10 +59,21 @@ export default function SocialShareButton() {
       shareUrl: SHARE_LINKS["reddit"] + pageUrl,
     },
   ];
+
+  const handleMediaShare = (socialMedia: string, url: string) => {
+    ga.event({
+      action: "Social Share",
+      params: {
+        social_media: socialMedia,
+        page_url: url,
+      },
+    });
+  };
   return (
     <nav className={styles.bar} aria-label="social share">
       {SOCIALS.map((social) => (
         <a
+          onClick={() => handleMediaShare(social.name, pageUrl)}
           target="_blank"
           key={social.name}
           title={"share via " + social.name}

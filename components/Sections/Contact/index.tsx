@@ -4,7 +4,7 @@ import Modal from "@/components/Modal";
 import EmailLoader from "@/components/EmailLoader";
 import ContactForm from "./ContactForm";
 import Notification from "@/components/Notification";
-
+import * as ga from "@/libs/googleAnalytics";
 const Contact = () => {
   const [loading, setLoading] = React.useState(false);
   const [notification, setNotification] = React.useState({
@@ -56,7 +56,12 @@ const Contact = () => {
         title: `Thank you for getting in touch!`,
         message: `I appreciate you for contacting me. i'll get back in touch with you soon! Have a great day!`,
       });
-
+      ga.event({
+        action: "Contact form submition",
+        params: {
+          status: "success",
+        },
+      });
       return handleNotification(null, 6000);
     } catch (error) {
       toggleLoading();
@@ -65,7 +70,12 @@ const Contact = () => {
         message:
           "It seems an error has occurred on the server. Please retry again or try later.",
       });
-
+      ga.event({
+        action: "Contact form submition",
+        params: {
+          status: "error",
+        },
+      });
       return handleNotification(null, 6000);
     }
   };

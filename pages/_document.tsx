@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+
 import { env } from "env";
 import { schemaData } from "schemaData";
 class MyDocument extends Document {
@@ -108,8 +109,8 @@ class MyDocument extends Document {
           />
           <meta property="og:type" content="article" />
           <meta property="og:image" content="/org.png" />
-          <meta property="og:url" content={env.NEXT_PUBLIC_SITE_URL} />
-          <meta property="og:site_name" content={env.NEXT_PUBLIC_SITE_NAME} />
+          <meta property="og:url" content={env.SITE_URL} />
+          <meta property="og:site_name" content={env.SITE_NAME} />
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
@@ -123,7 +124,7 @@ class MyDocument extends Document {
             content="Brisa Díaz | Full Stack Developer & Frontend Specialist 👩‍💻"
           />
           <meta property="twitter:image" content="/org.png" />
-          <meta property="witter:site" content={env.NEXT_PUBLIC_SITE_URL} />
+          <meta property="witter:site" content={env.SITE_URL} />
 
           <meta
             name="twitter:image:alt"
@@ -141,6 +142,7 @@ class MyDocument extends Document {
               __html: JSON.stringify(schemaData),
             }}
           />
+          
         </Head>
         <body>
           <Main />

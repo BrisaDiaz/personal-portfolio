@@ -1,4 +1,5 @@
 import { Project, Technology } from "interfaces";
+import { env } from "env";
 export const schemaData = {
   "@context": "https://schema.org/",
   "@type": "Person",
@@ -11,12 +12,12 @@ export const schemaData = {
   nationality: "Argentine",
   knowsAbout: "web development",
   email: "brisaabigaildiaz2000@gmail.com",
-  url: "https://brisa-diaz.netlify.app",
+  url: env.SITE_URL,
   image:
     "https://avatars.githubusercontent.com/u/80206872?s=400&u=be6bbe546e131904a49630c7e1eded15dbff4d45&v=4",
   sameAs: [
     "https://linkedin.com/in/brisa-díaz",
-    "https://brisa-diaz.netlify.app",
+    env.SITE_URL,
     "https://github.com/BrisaDiaz",
     "https://mobile.twitter.com/Brisa_A_Diaz",
   ],
@@ -41,12 +42,8 @@ export function generateProjectListSchema(projects: Project[]) {
       item: {
         name: project.title,
         image: project.captions[0].src,
-        mainEntityOfPage: `${
-          process.env.NEXT_PUBLIC_SITE_URL || "https://brisa-diaz.netlify.app"
-        }/project/${project.slug}`,
-        url: `${
-          process.env.NEXT_PUBLIC_SITE_URL || "https://brisa-diaz.netlify.app"
-        }/project/${project.slug}`,
+        mainEntityOfPage: `${env.SITE_URL}/project/${project.slug}`,
+        url: `${env.SITE_URL}/project/${project.slug}`,
         sameAs: [project.demo, project.source_code],
         description: project.summary,
       },
