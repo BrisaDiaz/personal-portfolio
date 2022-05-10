@@ -39,6 +39,10 @@ import NextAuth from "./NextAuth";
 import Graphql from "./Graphql";
 import GithubActions from './GithubActions'
 import W3c from "./W3c";
+import GoogleAnalytics from "./GoogleAnalytics";
+import Redux from "./Redux";
+import ReactNative from "./ReactNative";
+import Jira from "./Jira";
 function TechLogo({ name }: { name: string }) {
   return name === "apollo" ? (
     <Apollo />
@@ -120,6 +124,14 @@ function TechLogo({ name }: { name: string }) {
     <GithubActions />
   ) : name === "w3c" ? (
     <W3c />
+  ) : name === "google-analytics" ? (
+    <GoogleAnalytics />
+  ) : name === "redux" ? (
+    <Redux />
+  ) : name === "react-native" ? (
+    <ReactNative />
+  ) : name === "jira" ? (
+    <Jira />
   ) : null;
 }
 
