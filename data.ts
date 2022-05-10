@@ -339,7 +339,7 @@ export const PROJECTS = [
       {
         src: "https://res.cloudinary.com/myproyects/image/upload/v1647889209/proyects/Component_10_1_dwj9o4.webp",
 
-        alt: "logo",
+        alt: "TecnoRev logo",
       },
       {
         original:

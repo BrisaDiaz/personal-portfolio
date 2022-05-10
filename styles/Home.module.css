@@ -53,7 +53,7 @@ align-self: center;
 
   text-transform: capitalize;
   font-family: "IM Fell Double Pica", serif;
-  color: var(--primary-dark);
+  color: var(--primary-main);
 }
 
 .section__text {

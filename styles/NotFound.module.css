@@ -19,7 +19,7 @@
   outline: 2px solid var(--font-color);
 }
 .page strong {
-  color: var(--primary-dark);
+  color: var(--primary-main);
 }
 .page__title {
   margin-bottom: 1rem;
@@ -53,8 +53,8 @@
   justify-self: center;
   font-size: 1.2rem;
   padding: 0.7rem 1rem;
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background: var(--primary-main);
+  border-color: var(--primary-main);
 }
 @media (min-width: 600px) {
   .page {

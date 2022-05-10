@@ -14,18 +14,17 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           <p className={styles["section__text"]}>
             I am a self-taught developer with solid experience in the javascript
             ecosystem having developed fully functional websites and web
-            applications as side projects, using technologies at the forefront in terms of
-            improving the user experience, development process and scalability
-            of digital products.
+            applications as side projects, using technologies at the forefront
+            in terms of improving the user experience, development process and
+            scalability of digital products.
           </p>
         </div>
       </div>
       <div className={styles["section__illustration-container"]}>
-        {" "}
         <div className={styles["avatar"]}>
           <Image
             src="/img/avatar.png"
-            alt="avatar"
+            alt=""
             width={320}
             height={320}
             placeholder="blur"

@@ -80,7 +80,7 @@ border:1px solid var(--high-contrast-color);
 .credentials__item {
   align-items: center;
   display: flex;
-  color: var(--primary-dark);
+  color: var(--primary-main);
 }
 .project-links {
   width: 100%;
@@ -98,7 +98,7 @@ border:1px solid var(--high-contrast-color);
 .project-links__link {
   display: flex;
   align-items: center;
-  color: var(--primary-dark);
+  color: var(--primary-main);
   margin: 0;
   border-radius: 4px;
   padding-right: 5px;
@@ -140,7 +140,7 @@ border: 1px solid;
 .tech-list__chip {
   text-transform: capitalize;
   padding: 2px 6px;
-  background: var(--primary-dark);
+  background: var(--primary-main);
   color: #fff;
 
   font-size: 12px;

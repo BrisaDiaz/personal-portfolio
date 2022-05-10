@@ -44,11 +44,11 @@ const DarkMode = () => {
   return (
     <div className={styles["toggle-theme-wrapper"]}>
       <label className={styles["toggle-theme"]} htmlFor="dark-mode-checkbox">
+        toggle darkmode
         <input
           tabIndex={0}
           type="checkbox"
           id="dark-mode-checkbox"
-          arial-label="toggle darkmode"
           onChange={toggleTheme}
           defaultChecked={isDarkDefault}
         />

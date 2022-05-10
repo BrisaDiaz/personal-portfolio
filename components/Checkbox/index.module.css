@@ -10,7 +10,7 @@ align-items: center;
   --checkbox-radius: 4px;
   --checkbox-border-color: hsl(217, 15%, 83%);
   --checkbox-hover-border-color: hsl(215, 13%, 70%);
-  --checkbox-checked-bg: var(--primary-dark);
+  --checkbox-checked-bg: var(--primary-main);
   --checkbox-disabled-bg: hsl(214, 16%, 92%);
   --checkbox-disabled-checked-bg: hsl(215, 13%, 70%);
 

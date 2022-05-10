@@ -89,7 +89,7 @@ export default function Avatar() {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xlinkHref="#g"
             />
-            <g mask="url(#h)" fill="var(--primary-dark)">
+            <g mask="url(#h)" fill="var(--primary-main)">
               <path d="M0 0h264v110H0z" />
             </g>
             <path
