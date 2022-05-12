@@ -27,7 +27,7 @@ export default function useModalFocus({
   const handleFocus = () => {
     const focusableElements =
       'a,button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    if (!ref || !ref.current) return;
+    if (!ref || !ref.current || !isOpen) return;
 
     const modal = ref.current as HTMLElement;
 
@@ -64,7 +64,7 @@ export default function useModalFocus({
       }
     });
 
-    firstFocusableElement.focus();
+    if (isOpen) firstFocusableElement.focus(); 
   };
   return { tabIndex };
 }
