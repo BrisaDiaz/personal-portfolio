@@ -55,6 +55,12 @@ export const TECHS = [
     resource_url: "https://react-query.tanstack.com",
   },
   {
+    name: "Redux Toolkit",
+    logoName: "redux",
+    category: "frontend",
+    resource_url: "https://redux-toolkit.js.org/",
+  },
+  {
     name: "Material-UI",
     logoName: "material-ui",
     category: "frontend",
@@ -91,6 +97,7 @@ export const TECHS = [
     category: "frontend",
     resource_url: "https://graphql.org/",
   },
+
   // {
   //   name: "D3.js",
   //   logoName: "d3",
@@ -313,7 +320,13 @@ export const PROJECTS = [
       "Track product price variations.",
     ],
     technologies: {
-      frontend: ["react", "react router dom", "ant design", "d3.js"],
+      frontend: [
+        "react",
+        "redux toolkit",
+        "react router dom",
+        "ant design",
+        "d3.js",
+      ],
       backend: [
         "node.js",
         "express",
@@ -648,6 +661,7 @@ export const PROJECTS = [
     technologies: {
       frontend: [
         "react",
+        "context api",
         "react router dom",
         "styled-components",
         "react-hook-form",
