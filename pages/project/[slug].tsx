@@ -316,9 +316,9 @@ function CloseBtn({
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        height="30px"
+        height="25px"
         viewBox="0 0 24 24"
-        width="30px"
+        width="25px"
         fill="#fff"
       >
         <path d="M0 0h24v24H0z" fill="none" />

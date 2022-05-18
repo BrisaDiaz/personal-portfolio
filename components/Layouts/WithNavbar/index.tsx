@@ -103,8 +103,8 @@ function MenuBtn({ onClick }: { onClick: () => void }) {
         xmlns="http://www.w3.org/2000/svg"
         id="emoji"
         viewBox="0 0 72 72"
-        width={35}
-        height={35}
+        width={30}
+        height={30}
       >
         <g id="color">
           <path

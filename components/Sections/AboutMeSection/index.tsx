@@ -26,8 +26,7 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           <Image
             src="/img/avatar.png"
             alt=""
-            width={320}
-            height={320}
+            layout="fill"
             placeholder="blur"
             blurDataURL="/img/avatar.png"
           />

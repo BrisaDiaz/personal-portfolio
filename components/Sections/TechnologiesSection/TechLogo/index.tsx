@@ -43,6 +43,7 @@ import GoogleAnalytics from "./GoogleAnalytics";
 import Redux from "./Redux";
 import ReactNative from "./ReactNative";
 import Jira from "./Jira";
+import ReactNativeReanimated from "./ReactNativeReanimated";
 function TechLogo({ name }: { name: string }) {
   return name === "apollo" ? (
     <Apollo />
@@ -130,6 +131,8 @@ function TechLogo({ name }: { name: string }) {
     <Redux />
   ) : name === "react-native" ? (
     <ReactNative />
+  ) : name === "react-native-reanimated" ? (
+    <ReactNativeReanimated />
   ) : name === "jira" ? (
     <Jira />
   ) : null;

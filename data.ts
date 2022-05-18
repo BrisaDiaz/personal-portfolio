@@ -43,6 +43,20 @@ export const TECHS = [
     resource_url: "https://nextjs.org/docs/getting-started",
   },
   // {
+  //   name: "React Native",
+  //   logoName: "react-native",
+  //   category: "frontend",
+
+  //   resource_url: "https://reactnative.dev/",
+  // },
+  // {
+  //   name: "React Native Reanimated",
+  //   logoName: "react-native-reanimated",
+  //   category: "frontend",
+
+  //   resource_url: "https://docs.swmansion.com/react-native-reanimated",
+  // },
+  // {
   //   name: "React Hook Form",
   //   category: "frontend",
   //   logoName: "react-hook-form",
@@ -186,7 +200,7 @@ export const TECHS = [
     resource_url: "https://socket.io/docs/v4",
   },
   {
-    name: "React Testing",
+    name: "React Testing Library",
     logoName: "react-testing-library",
     category: "testing",
 
@@ -219,19 +233,19 @@ export const TECHS = [
     category: "testing",
     resource_url: "https://developers.google.com/web/tools/lighthouse",
   },
-  {
-    name: "WAVE",
-    logoName: "wave",
-    category: "testing",
-    resource_url: "https://wave.webaim.org",
-  },
+
   {
     name: "W3c Validators",
     logoName: "w3c",
     category: "testing",
     resource_url: "https://validator.w3.org/services",
   },
-
+  {
+    name: "WAVE",
+    logoName: "wave",
+    category: "testing",
+    resource_url: "https://wave.webaim.org",
+  },
   {
     name: "Next Auth",
     logoName: "next-auth",

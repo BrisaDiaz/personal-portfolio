@@ -57,10 +57,10 @@ animation: scale-up-center .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   position: relative;
   flex-direction: column;
   align-items: center;
-  width: 80px;
+  width: 90px;
   min-height: 80px;
   margin: 0;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 
   justify-content: center;
   display: flex;
@@ -74,7 +74,7 @@ animation: scale-up-center .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
   margin: 1rem auto;
   font-size: 14px;
-  font-family: "IM Fell Double Pica", serif;
+
 
 }
 .tech-link:hover:after {
