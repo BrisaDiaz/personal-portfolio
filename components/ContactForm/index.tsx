@@ -78,7 +78,7 @@ export default function LoginForm({
             type: "text",
             "aria-label": "email",
             "aria-required": true,
-            autoFocus: true,
+
             "aria-invalid": errors["email"]?.length ? true : false,
             "aria-describedby": "email-error",
             ...register("email", {
