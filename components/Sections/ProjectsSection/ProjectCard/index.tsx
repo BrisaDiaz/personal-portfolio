@@ -19,6 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <>
             <div className={styles["project-card__image-container"]}>
               <p className={styles["project-card__tag"]}>{project.subtitle}</p>
+
               <Image
                 src={project.captions[0].src}
                 alt={project.captions[0].alt}
@@ -27,6 +28,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 loading="eager"
               />
             </div>
+
             <div className={styles["project-card__content"]}>
               <h2 className={`title3 ${styles["project-card__title"]} `}>
                 {project.title}

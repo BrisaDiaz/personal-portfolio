@@ -92,7 +92,7 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 <Carousel
                   onZoom={openImageBackdrop}
                   captions={project?.captions?.slice(1) || []}
-                  objectFit="cover"
+                  objectFit={project.id === 7 ? "contain" : "cover"}
                   width={1200}
                   height={500}
                   background={project.color}
@@ -119,23 +119,25 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                 ) : null}
                 <h2 className={`title3 ${styles["page__subtitle"]}`}>Links</h2>
                 <div className={styles["project-links"]}>
-                  <a
-                    href={project?.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    title="Link to live demo"
-                    className={styles["project-links__link"]}
-                    onClick={() =>
-                      handleResourceNavigation(
-                        project?.title,
-                        "demo",
-                        project?.demo,
-                      )
-                    }
-                  >
-                    <SVG name="website-fill" width={20} height={20} />
-                    Live Demo
-                  </a>
+                  {project?.demo && (
+                    <a
+                      href={project?.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Link to live demo"
+                      className={styles["project-links__link"]}
+                      onClick={() =>
+                        handleResourceNavigation(
+                          project?.title,
+                          "demo",
+                          project?.demo as string,
+                        )
+                      }
+                    >
+                      <SVG name="website-fill" width={20} height={20} />
+                      Live Demo
+                    </a>
+                  )}
 
                   <a
                     href={project?.source_code}
@@ -169,17 +171,18 @@ const ProjectPage: NextPage<{ project: Project; notFound?: boolean }> = ({
                     {project?.language}
                   </span>
                 </p>
-                <p className={styles["tech-list"]}>
-                  <b
-                    className={`${styles.label} ${styles["tech-list__legend"]}`}
-                  >
-                    Hosting:
-                  </b>
-                  <span className={styles["tech-list__chip"]}>
-                    {project?.technologies?.hosting}
-                  </span>
-                </p>
-
+                {project?.technologies?.hosting && (
+                  <p className={styles["tech-list"]}>
+                    <b
+                      className={`${styles.label} ${styles["tech-list__legend"]}`}
+                    >
+                      Hosting:
+                    </b>
+                    <span className={styles["tech-list__chip"]}>
+                      {project?.technologies?.hosting}
+                    </span>
+                  </p>
+                )}
                 <p className={styles["tech-list"]}>
                   <b
                     className={`${styles.label} ${styles["tech-list__legend"]}`}

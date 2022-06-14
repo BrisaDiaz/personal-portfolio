@@ -301,6 +301,83 @@ export const TECHS = [
 export const PROJECTS = [
   {
     id: 7,
+    slug: "pinterest-clone",
+    title: "Pinterest Clone",
+    color: "#fff",
+    subtitle: "React Native App",
+
+    captions: [
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653423487/proyects/pinterest_clone_cnv9gm.webp",
+        alt: "Pinterest clone logo",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653603180/proyects/mobile_24_df1f5z.webp",
+        alt: "home screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653603181/proyects/mobile_9_k31hqn.webp",
+        alt: "search screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653603180/proyects/mobile_8_gzm7hp.webp",
+        alt: "pin details screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653603176/proyects/mobile_20_lpjyzy.webp",
+        alt: "pin options bottom modal",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653603175/proyects/mobile_22_smc6pb.webp",
+        alt: "login screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653603179/proyects/mobile_23_frwn8b.webp",
+        alt: "account authenticated screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653603181/proyects/mobile_25_lcznz6.webp",
+        alt: "store pin bottom modal",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1653425002/proyects/mobile_16_oyn6ec.webp",
+        alt: "create board screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1654298647/proyects/mobile_2_qiicrc.webp",
+        alt: "create pin screen",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1654298647/proyects/mobile_7_hh3g9o.webp",
+        alt: "create pin screen first step",
+      },
+      {
+        src: "https://res.cloudinary.com/myproyects/image/upload/v1654298647/proyects/mobile_10_lrlrlw.webp",
+        alt: "create pin screen last step",
+      },
+    ],
+    summary: "Pinterest UI interactive clone.",
+    language: "Typescript",
+    features: [
+      "State management and server mock server with redux",
+      "Custom components.",
+      "Loading Skeletons.",
+      "Share Photo.",
+      "Download Photo.",
+    ],
+    technologies: {
+      frontend: [
+        "react native",
+        "expo",
+        "react native reanimated",
+        "redux toolkit",
+      ],
+    },
+
+    source_code: "https://github.com/BrisaDiaz/react-native-pinterest-clone",
+  },
+  {
+    id: 7,
     slug: "smart-buy",
     title: "Smart Buy",
     color: "#FDE5BF",
@@ -569,7 +646,7 @@ export const PROJECTS = [
     ],
 
     summary:
-      "Application created to search for recipes and calculate nutritional requirements adjusted to the profile and diet of users.",
+      "Application created for the search for recipes and calculate nutritional requirements adjusted to the profile and diet of users.",
     features: [
       "Progressive web app.",
       "Unit Tests.",

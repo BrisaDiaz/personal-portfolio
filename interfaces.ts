@@ -12,7 +12,7 @@ export interface Project {
     frontend: string[];
     backend?: string[];
     testing?: string[];
-    hosting: string;
+    hosting?: string;
   };
   testingUser?: {
     email: string;
@@ -20,7 +20,7 @@ export interface Project {
   };
 
   source_code: string;
-  demo: string;
+  demo?: string;
 }
 
 export interface Technology {

@@ -14,8 +14,8 @@ export default function AboutMeSection({ styles }: { styles: any }) {
 
           <p className={styles["section__text"]}>
             I am a self-taught developer with solid experience in the javascript
-            ecosystem having developed fully functional websites and web
-            applications as side projects, using technologies at the forefront
+            ecosystem having developed fully functional personal projects like
+            websites and web applications, using technologies at the forefront
             in terms of improving the user experience, development process and
             scalability of digital products.
           </p>
@@ -28,7 +28,7 @@ export default function AboutMeSection({ styles }: { styles: any }) {
             alt=""
             layout="fill"
             placeholder="blur"
-            blurDataURL="/img/avatar.png"
+            blurDataURL="/img/avatar.webp"
           />
         </div>
       </div>
