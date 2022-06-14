@@ -23,9 +23,8 @@ export default function useOnScreen(
     if (ref.current) {
       observer.observe(ref.current);
     }
-    return () => {
-      ref?.current && observer.unobserve(ref.current);
-    };
+    return () => ref?.current && observer.unobserve(ref.current);
+  
   }, [ref, once, rootMargin]); // Empty array ensures that effect is only run on mount and unmount
   return isIntersecting;
 }

@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Roboto";
-  src: local("sans-serif"), url("/fonts/Roboto/Roboto-Regular.ttf");
+  src: local("sans-serif"), url("/fonts/Roboto/Roboto-Regular.ttf") format('woff2');
   font-style: normal;
-
+  font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: local("sans-serif"), url("/fonts/Roboto/Roboto-Black.ttf");
+  src: local("sans-serif"), url("/fonts/Roboto/Roboto-Black.ttf") format('woff2');
   font-style: normal;
   font-weight: 900;
   font-display: swap;
@@ -15,7 +15,7 @@
 @font-face {
   font-family: "IM Fell Double Pica";
   src: local("serif"),
-    url("/fonts/IM_Fell_Double_Pica/IMFellDoublePica-Regular.ttf");
+    url("/fonts/IM_Fell_Double_Pica/IMFellDoublePica-Regular.ttf") format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
