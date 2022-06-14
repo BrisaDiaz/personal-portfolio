@@ -148,7 +148,7 @@ export default function LoginForm({
             placeholder: "Message*",
             id: "message",
 
-            rows: "10",
+            rows: "6",
             "aria-label": "message",
             "aria-required": true,
             "aria-invalid": errors["message"]?.length ? true : false,

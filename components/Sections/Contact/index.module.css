@@ -120,6 +120,8 @@ opacity: 0.8;
 
 .banner__illustration {
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .banner__illustration svg {
   width: 100%;
@@ -127,9 +129,7 @@ opacity: 0.8;
   margin: 1rem 0;
   transition: all 0.5s ease;
 }
-.banner__illustration svg:hover {
-  transform: rotate(-5deg);
-}
+
 @media (min-width: 600px) {
   .banner {
     padding: 30px 60px;
@@ -149,6 +149,7 @@ opacity: 0.8;
 @media (min-width: 900px) {
   .banner {
     margin: 2rem auto;
+    
   }
 }
 @media (min-width: 1000px) {
@@ -161,5 +162,6 @@ opacity: 0.8;
   }
   .banner__illustration svg {
     margin: 0;
+        width: 75%;
   }
 }
