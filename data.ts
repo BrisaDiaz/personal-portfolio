@@ -359,7 +359,7 @@ export const PROJECTS = [
     summary: "Pinterest UI interactive clone.",
     language: "Typescript",
     features: [
-      "State management and server mock server with redux",
+      "State management and mock server with redux",
       "Custom components.",
       "Loading Skeletons.",
       "Share Photo.",
@@ -513,7 +513,7 @@ export const PROJECTS = [
       "Unit tests pipeline.",
       "Customizable form with validation.",
       "Documented, accessible components.",
-      "Push notification.",
+      "Push notifications.",
       "Loading indicators.",
       "Websocket connection.",
     ],
