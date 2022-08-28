@@ -19,7 +19,7 @@
   transition: all 0.5s ease;
   opacity: 0;
 }
-.zoom-btn {
+.expand-btn {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -27,15 +27,15 @@
 
   background: rgb(0 0 0 / 20%);
   cursor: pointer;
-  padding: 2px 2px 0 3px;
+  padding: 4px 4px 0 4px  ;
   border: 2px solid transparent;
   transition: all 0.5s ease;
   border-radius: 50%;
 }
-.zoom-btn:hover {
+.expand-btn:hover {
   transform: scale(1.1);
 }
-.zoom-btn:focus {
+.expand-btn:focus {
   outline-color: var(--font-color);
 }
 .carousel__slide-count {
