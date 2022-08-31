@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
 import type { NextPage } from "next";
@@ -23,6 +23,7 @@ import { PROJECTS } from "data";
 import { generateProjectListSchema } from "schemaData";
 import { generateTechnologiesSchema } from "schemaData";
 const Home: NextPage = () => {
+  const [isMount, setIsMount] = useState(() => true);
   return (
     <div>
       <Head>
@@ -46,10 +47,13 @@ const Home: NextPage = () => {
       <main className={`main full-height `}>
         <SocialShareButtons />
         <AboutMeSection styles={styles} />
-
-        <TechnologiesSection technologies={TECHS} />
-        <ProjectsSection projects={PROJECTS} />
-        <Contact />
+        {isMount && (
+          <>
+            <TechnologiesSection technologies={TECHS} />
+            <ProjectsSection projects={PROJECTS} />
+            <Contact />
+          </>
+        )}
       </main>
     </div>
   );

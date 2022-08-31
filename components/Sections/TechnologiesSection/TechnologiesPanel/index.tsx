@@ -23,7 +23,7 @@ export default function Panel({
         activeTechCategories.filter((cat) => cat !== category),
       );
       ga.event({
-        action: "Tecnology Filter",
+        action: "Technology Filter",
         params: {
           category,
           status: "hidden",
@@ -33,7 +33,7 @@ export default function Panel({
     }
     setActiveTechCategories([...activeTechCategories, category]);
     ga.event({
-      action: "Tecnology Filter",
+      action: "Technology Filter",
       params: {
         category,
         status: "shown",
