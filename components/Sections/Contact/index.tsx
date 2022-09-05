@@ -57,7 +57,7 @@ const Contact = () => {
         message: `I appreciate you for contacting me. i'll get back in touch with you soon! Have a great day!`,
       });
       ga.event({
-        action: "Contact form submition",
+        action: "Contact form submission",
         params: {
           status: "success",
         },
@@ -71,7 +71,7 @@ const Contact = () => {
           "It seems an error has occurred on the server. Please retry again or try later.",
       });
       ga.event({
-        action: "Contact form submition",
+        action: "Contact form submission",
         params: {
           status: "error",
         },

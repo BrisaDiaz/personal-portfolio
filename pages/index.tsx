@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import dynamic from "next/dynamic";
-
+import useOnScreen from "../hooks/useOnScreen";
 import type { NextPage } from "next";
 
 import Head from "next/head";
@@ -17,13 +17,15 @@ const ProjectsSection = dynamic(
   () => import("../components/Sections/ProjectsSection"),
 );
 
-import { TECHS } from "data";
-import { PROJECTS } from "data";
+import { TECHS, PROJECTS } from "data";
 
-import { generateProjectListSchema } from "schemaData";
-import { generateTechnologiesSchema } from "schemaData";
+import { useProjectListSchema, useTechnologiesSchema } from "schemaData";
+
 const Home: NextPage = () => {
   const [isMount, setIsMount] = useState(() => true);
+  const lazyRef = useRef(null);
+  const isIntersecting = useOnScreen(lazyRef, "300px", true);
+
   return (
     <div>
       <Head>
@@ -33,13 +35,13 @@ const Home: NextPage = () => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProjectListSchema(PROJECTS)),
+            __html: useProjectListSchema(PROJECTS),
           }}
         />{" "}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateTechnologiesSchema(TECHS)),
+            __html: JSON.stringify(useTechnologiesSchema(TECHS)),
           }}
         />
       </Head>
@@ -50,8 +52,20 @@ const Home: NextPage = () => {
         {isMount && (
           <>
             <TechnologiesSection technologies={TECHS} />
-            <ProjectsSection projects={PROJECTS} />
-            <Contact />
+
+            <div ref={lazyRef}>
+              {isIntersecting ? (
+                <>
+                  <ProjectsSection projects={PROJECTS} />
+                  <Contact />
+                </>
+              ) : (
+                <>
+                  <div id="projects" />
+                  <div id="contact" />
+                </>
+              )}
+            </div>
           </>
         )}
       </main>

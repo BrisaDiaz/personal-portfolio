@@ -1,5 +1,6 @@
 import { Project, Technology } from "interfaces";
 import { env } from "env";
+import { useMemo } from "react";
 export const schemaData = {
   "@context": "https://schema.org/",
   "@type": "Person",
@@ -28,55 +29,61 @@ export const schemaData = {
   },
 };
 
-export function generateProjectListSchema(projects: Project[]) {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "projects",
-    description:
-      "software development projects i have worked in, from stand alone websites, single page applications, progressive web apps to  websites implementing multiples content management systems",
-    numberOfItems: projects.length,
-    itemListElement: projects.map((project, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        name: project.title,
-        image: project.captions[0].src,
-        mainEntityOfPage: `${env.SITE_URL}/project/${project.slug}`,
-        url: `${env.SITE_URL}/project/${project.slug}`,
-        sameAs: [project.demo, project.source_code],
-        description: project.summary,
-      },
-    })),
-  };
-  return schema;
+export function useProjectListSchema(projects: Project[]) {
+  return useMemo(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "projects",
+      description:
+        "software development projects i have worked in, from stand alone websites, single page applications, progressive web apps to  websites implementing multiples content management systems",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          name: project.title,
+          image: project.captions[0].src,
+          mainEntityOfPage: `${env.SITE_URL}/project/${project.slug}`,
+          url: `${env.SITE_URL}/project/${project.slug}`,
+          sameAs: [project.demo, project.source_code],
+          description: project.summary,
+        },
+      })),
+    };
+    return JSON.stringify(schema);
+  }, [projects]);
 }
-export function generateTechnologiesSchema(technologies: Technology[]) {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "technologies",
-    description:
-      "technologies and tools used during the software development process.",
-    numberOfItems: technologies.length,
-    itemListElement: technologies.map((tech, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        name: tech.name,
+export function useTechnologiesSchema(technologies: Technology[]) {
+
+
+    return useMemo(() => {
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "technologies",
         description:
-          tech.category === "language"
-            ? "programing language"
-            : `${
-                tech.category === "other"
-                  ? "service/development"
-                  : tech.category
-              } tool`,
-        sameAs: [tech.resource_url],
-      },
-    })),
-  };
-  return schema;
+          "technologies and tools used during the software development process.",
+        numberOfItems: technologies.length,
+        itemListElement: technologies.map((tech, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            name: tech.name,
+            description:
+              tech.category === "language"
+                ? "programing language"
+                : `${
+                    tech.category === "other"
+                      ? "service/development"
+                      : tech.category
+                  } tool`,
+            sameAs: [tech.resource_url],
+          },
+        })),
+      };
+      return JSON.stringify(schema);
+    }, [technologies]);
 }
 
 export function generateProjectSchema(project: Project) {

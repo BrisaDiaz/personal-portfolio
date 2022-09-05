@@ -13,7 +13,6 @@ export default function Panel({
     "language",
     "frontend",
     "backend",
-    "testing",
   ]);
 
   const handleTechCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,7 +68,7 @@ export default function Panel({
           className={styles["filter-bar__filter"]}
           name="testing"
           label="Testing"
-          defaultChecked={true}
+          defaultChecked={false}
           onChange={handleTechCategories}
         />
         <Checkbox
