@@ -30,7 +30,7 @@ export const schemaData = {
 };
 
 export function useProjectListSchema(projects: Project[]) {
-  return useMemo(() => {
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "ItemList",
@@ -52,7 +52,7 @@ export function useProjectListSchema(projects: Project[]) {
       })),
     };
     return JSON.stringify(schema);
-  }, [projects]);
+
 }
 export function useTechnologiesSchema(technologies: Technology[]) {
 
