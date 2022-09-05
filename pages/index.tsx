@@ -6,7 +6,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import styles from "@/styles/Home.module.css";
-import SocialShareButtons from "@/components/SocialShareButtons/index";
+
 import AboutMeSection from "@/components/Sections/AboutMeSection";
 const TechnologiesSection = dynamic(
   () => import("../components/Sections/TechnologiesSection"),
@@ -47,7 +47,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={`main full-height `}>
-        <SocialShareButtons />
         <AboutMeSection styles={styles} />
         {isMount && (
           <>
