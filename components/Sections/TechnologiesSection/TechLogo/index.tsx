@@ -34,16 +34,16 @@ import ReactQuery from "./ReactQuery";
 import StyledComponents from "./StyledComponents";
 import Wave from "./Wave";
 import Typescript from "./Typescript";
-import Auth0 from "./Auth0";
+// import Auth0 from "./Auth0";
 import NextAuth from "./NextAuth";
 import Graphql from "./Graphql";
 import GithubActions from './GithubActions'
 import W3c from "./W3c";
-import GoogleAnalytics from "./GoogleAnalytics";
+// import GoogleAnalytics from "./GoogleAnalytics";
 import Redux from "./Redux";
-import ReactNative from "./ReactNative";
-import Jira from "./Jira";
-import ReactNativeReanimated from "./ReactNativeReanimated";
+// import ReactNative from "./ReactNative";
+// import Jira from "./Jira";
+// import ReactNativeReanimated from "./ReactNativeReanimated";
 function TechLogo({ name }: { name: string }) {
   return name === "apollo" ? (
     <Apollo />
@@ -97,9 +97,11 @@ function TechLogo({ name }: { name: string }) {
     <Typescript />
   ) : name === "contentful" ? (
     <Contentful />
-  ) : name === "auth0" ? (
-    <Auth0 />
-  ) : name === "react-query" ? (
+  ) : 
+  // name === "auth0" ? (
+  //   <Auth0 />
+  // ) :
+   name === "react-query" ? (
     <ReactQuery />
   ) : name === "lighthouse" ? (
     <Lighthouse />
@@ -125,17 +127,19 @@ function TechLogo({ name }: { name: string }) {
     <GithubActions />
   ) : name === "w3c" ? (
     <W3c />
-  ) : name === "google-analytics" ? (
-    <GoogleAnalytics />
+  // ) : name === "google-analytics" ? (
+  //   <GoogleAnalytics />
   ) : name === "redux" ? (
     <Redux />
-  ) : name === "react-native" ? (
-    <ReactNative />
-  ) : name === "react-native-reanimated" ? (
-    <ReactNativeReanimated />
-  ) : name === "jira" ? (
-    <Jira />
-  ) : null;
+  ) : 
+  // name === "react-native" ? (
+  //   <ReactNative />
+  // ) : name === "react-native-reanimated" ? (
+  //   <ReactNativeReanimated />
+  // ) : name === "jira" ? (
+  //   <Jira />
+  // ) :
+   null;
 }
 
 export default memo(TechLogo);
