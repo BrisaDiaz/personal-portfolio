@@ -50,6 +50,7 @@ animation: scale-up-center .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   outline-color: var(--font-color);
   outline-offset: 3px;
 }
+
 .tech-link--hidden{
   animation: scale-down-center .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }

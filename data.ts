@@ -252,13 +252,13 @@ export const TECHS = [
     category: "other",
     resource_url: "https://next-auth.js.org/",
   },
-  {
-    name: "Auth0",
-    logoName: "auth0",
-    category: "other",
+  // {
+  //   name: "Auth0",
+  //   logoName: "auth0",
+  //   category: "other",
 
-    resource_url: "https://auth0.com/",
-  },
+  //   resource_url: "https://auth0.com/",
+  // },
   {
     name: "Contentful",
     logoName: "contentful",

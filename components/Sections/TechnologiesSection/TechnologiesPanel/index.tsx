@@ -13,6 +13,7 @@ export default function Panel({
     "language",
     "frontend",
     "backend",
+
   ]);
 
   const handleTechCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
