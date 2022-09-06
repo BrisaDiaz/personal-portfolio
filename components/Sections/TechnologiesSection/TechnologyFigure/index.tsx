@@ -32,11 +32,7 @@ function TechnologyFigure({
       rel="noreferrer"
       title={"documentation"}
       className={`${styles["tech-link"]} ${
-        visible
-          ? "tech-link--visible"
-          : !visible || !isInScrollView
-          ? styles["tech-link--hidden"]
-          : ""
+        !visible || !isInScrollView ? styles["tech-link--hidden"] : ""
       }`}
     >
       <div className={styles["tech-link__figure"]}>

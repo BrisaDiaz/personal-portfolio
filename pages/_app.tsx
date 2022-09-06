@@ -8,10 +8,10 @@ import { env } from "env";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${env.GOOGLE_ANALYTICS_MESUREMENT_ID}`}
-      />
+      /> */}
       <Script id="google-analytics" strategy="afterInteractive">
         {`
                     window.dataLayer = window.dataLayer || [];
