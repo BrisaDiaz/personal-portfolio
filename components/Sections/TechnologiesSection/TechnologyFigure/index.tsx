@@ -40,6 +40,7 @@ function TechnologyFigure({
         <Image
           width={25}
           height={25}
+          alt={"technology.name logo"}
           src={"/techs/" + technology.logoName + ".png"}
         />
         <p className={styles["tech-link__figcaption"]}>{technology.name}</p>
