@@ -24,6 +24,7 @@ export default function AboutMeSection({ styles }: { styles: any }) {
         <div className={styles["avatar"]}>
           <Image
             src="/img/avatar.webp"
+            alt="brisa díaz avatar"
             width={320}
             height={320}
             quality={100}
