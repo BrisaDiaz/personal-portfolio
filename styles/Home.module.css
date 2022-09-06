@@ -53,17 +53,14 @@ align-self: center;
 
       width: 200px;
   aspect-ratio: 1;
+  width: 100%;
 }
 .avatar img{
   object-fit: cover;
 
-
-}
-.avatar svg{
 width: 100%;
-
-
 }
+
 @media (min-width: 600px) {
   .section__title span {
     font-size: 35px;
@@ -72,14 +69,14 @@ width: 100%;
     font-size: 55px;
   }
     .avatar {
-  width: 300px;
+  width: 350px;
   aspect-ratio: 1;
 }
 }
 
 @media (min-width: 900px) {
   .section__content {
-    max-width: 670px;
+    max-width: 600px;
     margin-top: 3rem;
   }
   .section {

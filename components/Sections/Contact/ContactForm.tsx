@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import React from "react";
-import Illustration from "@/components/Sections/Contact/Illustration";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import SVG from "@/components/SVG";
 import useOnScreen from "@/hooks/useOnScreen";
@@ -37,9 +37,7 @@ export default function Contact({
           } `}
         >
           <div>
-            <div className={styles["banner__illustration"]}>
-              <Illustration />
-            </div>
+          
             <address className={styles["banner__contact"]}>
               <ul className={styles["banner__contact-list"]}>
                 <li className={styles["banner__contact-list-item"]}>
