@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./index.module.css";
-import TechLogo from "@/components/Sections/TechnologiesSection/TechLogo";
+// import TechLogo from "@/components/Sections/TechnologiesSection/TechLogo";
 import { Technology } from "interfaces";
 import useOnScreen from "@/hooks/useOnScreen";
 import * as ga from "@/libs/googleAnalytics";
+import Image from "next/image";
 function TechnologyFigure({
   technology,
   visible,
@@ -39,8 +40,12 @@ function TechnologyFigure({
       }`}
     >
       <div className={styles["tech-link__figure"]}>
-        <TechLogo name={technology.logoName} />
-
+        {/* <TechLogo name={technology.logoName} /> */}
+        <Image
+          width={25}
+          height={25}
+          src={"/techs/" + technology.logoName + ".png"}
+        />
         <p className={styles["tech-link__figcaption"]}>{technology.name}</p>
       </div>
     </a>

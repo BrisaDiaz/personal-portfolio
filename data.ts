@@ -37,7 +37,7 @@ export const TECHS = [
 
   {
     name: "Next.js",
-    logoName: "next-js",
+    logoName: "next",
     category: "frontend",
 
     resource_url: "https://nextjs.org/docs/getting-started",
