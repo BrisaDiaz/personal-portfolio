@@ -48,10 +48,9 @@ return (
 
     <main className={`main full-height `}>
       <AboutMeSection styles={styles} />
+      <TechnologiesSection technologies={TECHS} />
       {isMount && (
         <>
-          <TechnologiesSection technologies={TECHS} />
-
           <div ref={lazyRef}>
             <>
               <div className={isIntersecting ? "visible" : "hidden-left"}>
