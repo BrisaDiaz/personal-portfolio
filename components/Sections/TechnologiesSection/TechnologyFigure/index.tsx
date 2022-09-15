@@ -42,7 +42,7 @@ function TechnologyFigure({
           height={25}
           alt={"technology.name logo"}
           src={"/techs/" + technology.logoName + ".png"}
-          loading="lazy"
+          loading={visible ?"eager":"lazy"}
         />
         <p className={styles["tech-link__figcaption"]}>{technology.name}</p>
       </div>
