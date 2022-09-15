@@ -44,7 +44,12 @@ export default function Modal({
       >
         <div className={styles["modal__header"]}>
           <div className={styles["modal__close-btn"]}>
-            <button aria-label="close" name="close" onClick={onClose} />
+            <button
+              aria-label="close"
+              name="close"
+              tabIndex={tabIndex}
+               onClick={onClose}
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="30px"
