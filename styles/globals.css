@@ -83,6 +83,20 @@ body {
   
 
 }
+.hidden-left{
+  transform: translateX(-100vw);
+opacity: 0;
+}
+.hidden-right{
+  transform: translateX(100vw);
+opacity: 0;
+}
+.visible{
+  transform: translateX(0);
+  opacity: 1;
+
+}
+
 .noScroll {
   overflow: hidden;
 }

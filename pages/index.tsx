@@ -26,50 +26,47 @@ const Home: NextPage = () => {
   const lazyRef = useRef(null);
   const isIntersecting = useOnScreen(lazyRef, "300px", true);
 
-  return (
-    <div>
-      <Head>
-        <title>
-          Brisa Díaz | Full Stack Developer & Frontend Development Specialist 👩‍💻
-        </title>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: useProjectListSchema(PROJECTS),
-          }}
-        />{" "}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(useTechnologiesSchema(TECHS)),
-          }}
-        />
-      </Head>
+return (
+  <div>
+    <Head>
+      <title>
+        Brisa Díaz | Full Stack Developer & Frontend Development Specialist 👩‍💻
+      </title>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: useProjectListSchema(PROJECTS),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(useTechnologiesSchema(TECHS)),
+        }}
+      />
+    </Head>
 
-      <main className={`main full-height `}>
-        <AboutMeSection styles={styles} />
-        {isMount && (
-          <>
-            <TechnologiesSection technologies={TECHS} />
+    <main className={`main full-height `}>
+      <AboutMeSection styles={styles} />
+      {isMount && (
+        <>
+          <TechnologiesSection technologies={TECHS} />
 
-            <div ref={lazyRef}>
-              {isIntersecting ? (
-                <>
-                  <ProjectsSection projects={PROJECTS} />
-                  <Contact />
-                </>
-              ) : (
-                <>
-                  <div id="projects" />
-                  <div id="contact" />
-                </>
-              )}
-            </div>
-          </>
-        )}
-      </main>
-    </div>
-  );
+          <div ref={lazyRef}>
+            <>
+              <div className={isIntersecting ? "visible" : "hidden-left"}>
+                <ProjectsSection projects={PROJECTS} />
+              </div>
+              <div className={isIntersecting ? "visible" : "hidden-right"}>
+                <Contact />
+              </div>
+            </>
+          </div>
+        </>
+      )}
+    </main>
+  </div>
+);
 };
 
 export default Home;
