@@ -51,14 +51,14 @@ align-self: center;
 .avatar{
   position: relative;
 
-      width: 200px;
-  aspect-ratio: 1;
-  width: 100%;
+
+
+
 }
 .avatar img{
   object-fit: cover;
-
-width: 100%;
+  aspect-ratio: 1;
+    
 }
 
 @media (min-width: 600px) {
@@ -66,27 +66,30 @@ width: 100%;
     font-size: 35px;
   }
    .section__title  {
-    font-size: 55px;
+    font-size: 50px;
   }
     .avatar {
-  width: 350px;
+  width: 300px;
   aspect-ratio: 1;
 }
 }
 
 @media (min-width: 900px) {
   .section__content {
-    max-width: 600px;
+    max-width: 690px;
     margin-top: 3rem;
   }
-  .section {
-    flex-direction: row;
-    align-items: flex-end;
-  }
+
   .section__text {
     font-size: 18px;
   }
 .avatar{
-      margin-top: 3rem;
+      margin-top: 4.5rem;
 }
+}
+@media (min-width: 1020px) {
+  .section {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }

@@ -25,7 +25,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 alt={project.captions[0].alt}
                 objectFit="cover"
                 layout="fill"
-                loading="eager"
+                loading="lazy"
               />
             </div>
 

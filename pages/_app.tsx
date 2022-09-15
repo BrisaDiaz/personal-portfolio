@@ -12,6 +12,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${env.GOOGLE_ANALYTICS_MESUREMENT_ID}`}
       /> */}
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+      ></meta>
       <Script id="google-analytics" strategy="afterInteractive">
         {`
                     window.dataLayer = window.dataLayer || [];

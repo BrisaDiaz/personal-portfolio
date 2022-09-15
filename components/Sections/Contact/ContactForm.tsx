@@ -1,6 +1,5 @@
 import styles from "./index.module.css";
 import React from "react";
-import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import SVG from "@/components/SVG";
 import useOnScreen from "@/hooks/useOnScreen";

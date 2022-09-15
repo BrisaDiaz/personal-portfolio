@@ -12,11 +12,10 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           </h1>
 
           <p className={styles["section__text"]}>
-            I am a self-taught developer with solid experience in the javascript
-            ecosystem having developed fully functional personal projects like
-            websites and web applications, using technologies at the forefront
-            in terms of improving the user experience, development process and
-            scalability of digital products.
+            Self-taught developer with solid experience in javascript having
+            developed fully functional personal projects using technologies at
+            the forefront in terms of improving the user experience, development
+            and scalability of digital products.
           </p>
         </div>
       </div>
@@ -25,9 +24,10 @@ export default function AboutMeSection({ styles }: { styles: any }) {
           <Image
             src="/img/avatar.webp"
             alt="brisa díaz avatar"
-            width={320}
-            height={320}
+            width={270}
+            height={270}
             quality={100}
+            loading="eager"
           />
         </div>
       </div>
