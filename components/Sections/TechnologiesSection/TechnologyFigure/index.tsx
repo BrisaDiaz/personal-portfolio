@@ -31,6 +31,7 @@ function TechnologyFigure({
       target="_blank"
       rel="noreferrer"
       title={"documentation"}
+      tabIndex={visible ? 0 : -1}
       className={`${styles["tech-link"]} ${
         !visible || !isInScrollView ? styles["tech-link--hidden"] : ""
       }`}
@@ -42,7 +43,7 @@ function TechnologyFigure({
           height={25}
           alt={"technology.name logo"}
           src={"/techs/" + technology.logoName + ".png"}
-          loading={visible ?"eager":"lazy"}
+          loading={visible ? "eager" : "lazy"}
         />
         <p className={styles["tech-link__figcaption"]}>{technology.name}</p>
       </div>
