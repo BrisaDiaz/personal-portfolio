@@ -63,7 +63,7 @@ function GithubProfileSVG() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="280"
-      height="50"
+      height="40"
       fill="none"
       viewBox="0 0 274 60"
     >
@@ -83,7 +83,7 @@ function LinkedinProfileSVG() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="286"
-      height="50"
+      height="40"
       fill="none"
       viewBox="0 0 286 59"
     >
