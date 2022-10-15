@@ -27,7 +27,7 @@
 display: flex;
     flex-direction: column;
   overflow: hidden;
-  background-color: var(--low-contrast-color);
+
 
 }
 .project-card--visible{
@@ -81,7 +81,7 @@ display: flex;
 .project-card__title {
   font-weight: 400;
   margin-bottom: 1rem;
-  color: var(--primary-main);
+  color: var(--font-color);
  
   text-transform: capitalize;
 }
