@@ -18,7 +18,7 @@
   position: relative;
   display: inline-block;
   height: 25px;
-  width: 51px;
+  width: 45px;
   color: transparent;
   font-size: 10;
   
@@ -66,7 +66,7 @@
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(19px);
   background: linear-gradient(40deg, #8983f7, #a3dafb 70%);
 }
 input:checked + .slider .crescent {
