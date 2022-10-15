@@ -58,7 +58,7 @@
 .page__title {
   text-transform: capitalize;
   margin-bottom: 1em;
-      align-self:center;
+      align-self:flex-start;
 }
 .page__subtitle {
   margin:1em 0;
@@ -92,8 +92,8 @@ border:1px solid var(--high-contrast-color);
   gap: 10px;
 
   border-radius: 12px;
-border:1px solid var(--high-contrast-color);
-  padding: 1rem 1.5rem;
+
+
 }
 .project-links__link {
   display: flex;
